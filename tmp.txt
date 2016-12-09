@@ -100,24 +100,80 @@ Glossario.
 			E' stato scelto/creato un template LaTeX utilizzato per la stesura di tutta la documentazione, mantendo costanti tutte le scelte stilistiche. Il template può essere trovato <inserire locazione del template qui>.
 		
 		3.2 Struttura del documento
-
+			Questa sezione tratta della struttura generale dei diversi documenti
 			3.2.1 Prima pagina
 				. Nome gruppo
 				. Nome progetto
 				. Logo
 				. Nome documento
-				. Informazioni sul documento
+				. Informazioni sul documento (versione, redazione, verifica, responsabile, uso, lista di distribuzione)
 				. Descrizione del documento
-			3.2.2 Cronologia delle modifiche
-				.
-				.
-				.
-				.
-				.
-				
-			
-			 
-			
-			
-			
 
+			3.2.2 Diario delle modifiche
+				Il diario delle modifiche viene rappresentato tramite una tabella. Ogni riga della tabella indica una versione del documento. Ogni riga indica: La versione corrente del documento; La data della modifica che ha portato al cambiamento di versione; L'Autore della modifica; Il ruolo dell'autore; Una breve descrizione della modifica. La tabella è ordinata secondo la colonna delle date in ordine decrescente, in modo tale da avere l'ultima versione come prima riga della tabella.
+
+			3.2.3 Indici
+				Ogni documento avrà tre indici: L'indice delle sezioni, l'indice delle figure e l'indice delle tabella. Nel caso di mancanza all'interno del documento di figure o tabelle non verranno inseriti neanche i rispettivi indici.
+
+			3.2.4 Formattazione generale delle pagine
+				Ciascuna pagina seguirà la seguente struttura:
+					-Intestazione:
+						. Logo del gruppo affiancato dal nome
+						. Sezione corrente 
+					-Corpo:
+						. Testo della pagina corrente
+					-Pie' pagina:
+						. Nome e versione del documento
+						. Numero della pagina corrente nel formato N di T dove N è il numero di pagina corrente e T è il numero di pagine totali.
+
+		3.3 Norme tipografiche
+			In questa sezione vengono descritte tutte le norme stilistiche che devono essere sguite nella scrittura dei documenti
+ 
+			3.3.1 Orinamento del testo
+				I 'tipi' tipografici utilizzati nei documenti saranno il tondo(documento), il corsivo(documento scritto in corsivo), il maiuscolo(DOCUMENTO)
+
+				3.3.1.1 Corsivo-Tondo-Maiuscoletto
+					
+					Vanno composti in corsivo(scritto in corsivo):
+						. I titoli di libri e documentazioni esterne (altri documenti di progetto, libri di riferimento ecc.)
+						. le parole o brevi espressioni in lingua diversa da quella del testo, che seguiranno le flessioni proprie della lingua originale
+					
+					Vanno composti in tondo:
+						. Le parole in lingua straniera che, pur conservando ancora la forma grafica originaria, sono ormai assimilate all'italiano: come tali esse non seguono la flessione originaria e sono considerate invariabili. Qualsiasi parola straniera , che ricorra con particolare frequenzza in un testo, potrà essere stampata in tondo, e diventerà invariabile (eventualmente inserire esempio con parole da informatici).
+						. I nomi propri stranieri di associazioni, cariche pubbliche, istituzioni, ecc., che non hanno equivalente in italiano.
+						. I nomi delle parti interne di un volume con iniziale maiuscola (Introduzione, Appendice, Glossario ecc.)
+
+				3.3.1.2 Lettere maiuscole
+					Come norma generale, l'uso dell'iniziale maiuscola, a parte ovviamente i nomi propri e le parole che seguono un punto fermo, andrà limitati ai casi veramente necessari.
+					Si fornisce una lista esemplificativa:
+						. Soprannomi e pseudonimi: esempi
+						. Aggettivi sostantivi che indicano territori: esempi
+						. Nomi geografici costituiti da due sostantivi o da un sostantivo e un aggettivo in funzione di nomi propri: esempi
+						. Il primo termine delle denominazioni ufficiali di associazioni, enti, organismi istituzionali, ecc.: esempi
+						. Titoli, cariche e gradi, quando facciano parte integrante del nome: esempi	
+
+				3.3.1.4 I segni di interpunzione
+
+				3.3.1.5 Parentesi, rigati e trattini
+
+				3.3.1.6 Uso delle virgolette
+
+				3.3.1.7 Citazioni
+
+				3.3.1.8 Rinvii interni
+
+				3.3.1.9 Le date e i numeri
+
+				3.3.1.10 La scrittura delle quantità misurate
+
+				3.3.1.11 Uso delle d eufoniche
+
+			3.3.2 Sigle e abbreviazioni
+
+			3.3.3 Note
+
+			3.3.4 Citazioni biblografiche
+
+			3.3.5 Indici
+
+		
