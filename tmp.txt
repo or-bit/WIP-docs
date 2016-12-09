@@ -153,27 +153,39 @@ Glossario.
 						. Titoli, cariche e gradi, quando facciano parte integrante del nome: esempi	
 
 				3.3.1.4 I segni di interpunzione
+				-I segni di interpunzione e le parentesi mantengono sempre lo stile di formattazione del testo in cui sono inserite
+				-I periodi interi fra virgolette o fra parentesi avranno il punto fermo prima della parentesi di chiusura
+				-Evitare l’uso consecutivo dei due punti all’interno di uno stesso periodo.
 
 				3.3.1.5 Parentesi, rigati e trattini
+				-Si usano normalmente le parentesi tonde.
+				-I trattini congiuntivi (-) si usano tra due parole formanti un nome composto
 
-				3.3.1.6 Uso delle virgolette
+				3.3.1.6 Citazioni
+				Le citazioni si compongonmo in tondo fra virgolette basse.
 
-				3.3.1.7 Citazioni
+				3.3.1.7 Le date
+				Le date saranno suddivise fra forma estesa e forma breve. IL formato della forma estesa sarà composta da numero delo giorno del mese seguito da nome del mese in maiuscolo e dall'anno scritto per intero: nn Mese aaaa.
+				Il formato breve sarà uniformato in tutti i documenti e consisterà in numero del mese segiuto da numero del giorno e dall'anno per intero, tutti separarti da trattini: mm-nn-aaaa.
 
-				3.3.1.8 Rinvii interni
-
-				3.3.1.9 Le date e i numeri
-
-				3.3.1.10 La scrittura delle quantità misurate
-
-				3.3.1.11 Uso delle d eufoniche
+				Saranno utilizzati numeri arabi con uso anglosassone del punto nei numeri decimali, tranne nelle seguenti eccezioni: numeri di pagina di Prefazioni.
 
 			3.3.2 Sigle e abbreviazioni
-
+			Le denominazioni di  enti e Organizzazioni varie si abbreviano nelle sigle d’uso,composte
+di seguito, senza interporre punti e in maiuscolo/minuscolo.
+			Si raccomanda di usare le seguenti abbreviazioni: [inserire abbreviazioni].
+			
 			3.3.3 Note
-
-			3.3.4 Citazioni biblografiche
+			Tutte le note sono composte normalmente in tondo, in un corpo più piccolo di quelli del testo e
+dei riportati.
+			Le note saranno numerate normalmente con numeri arabi a esponente (esponenti di nota). La numerazione ripartirà di regola da 1 a ogni nuovo capitolo.
+			Le note seguiranno la consuetudine della linmgua inglese di essere riportate dopo la punteggiatura.
 
 			3.3.5 Indici
+			Sono presenti l' indice delle sezioni, l'indice delle figure e l'indice dei nomi.
+			L'indice delle sezioni presenta in ordine le sezioni del documento e ne evidenzia le pagine di inizio.
+			L'indice delle figure riporta il nome ed il numero di tutte e figure presenti nel documento.
+			L'indice dei nomi è composto da tutte le parole più importatnti nel documento per semplificarn la consultaziuone dei termini.
+			
 
 		
