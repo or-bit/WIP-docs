@@ -80,6 +80,16 @@ Glossario.
 				Nel caso di riunione con i proponenti ho con il professore il verbale sarà un documento ufficiale verrà inserito quindi nella documentazione del progetto.
 				Questo documento dovrà essere redatto utilizzando un particolare template di latex.
 				
+	2.3 Repository e strumenti per la condivisione dei file
+		
+		2.3.1 Repository 
+			Per il versionamento sia dei documenti che del sorgente del progetto utilizzeremo i due repository di git.
+			Il repository del sorgente ha licenza MIT ed è accedibile al seguente indirizzo: <indirizzo da mettere>
+			
+			La documentazione avrà lo stesso tipo di licenza su un altro repository git al seguente indirizzo: <indirizzo da mettere>
+			
+			
+				
 			
 			 
 			
