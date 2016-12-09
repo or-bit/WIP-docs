@@ -1,4 +1,4 @@
-Or-bit
+﻿Or-bit
 Monolith: an interactive bubble provider
 
 <logo>
@@ -77,18 +77,43 @@ Glossario.
 				Ciascun tipo di riunione dovrà produrre un verbale. Nel caso di riunione interna il documento prodotto verrà conservato su una repository condivisa tra tutti membri del progetto. Persone incaricate di scriverlo saranno scelte di volta in volta rotazione. Il documento avrà come titolo verbale è il giorno della riunione. Il primo paragrafo sarà un elenco puntato con l'ordine del giorno trattato nella riunione in questione.
 				
 			2.2.4.2 Riunione esterna
-				Nel caso di riunione con i proponenti ho con il professore il verbale sarà un documento ufficiale verrà inserito quindi nella documentazione del progetto.
+				Nel caso di riunione con i proponenti o con il professore il verbale sarà un documento ufficiale verrà inserito quindi nella documentazione del progetto.
 				Questo documento dovrà essere redatto utilizzando un particolare template di latex.
 				
 	2.3 Repository e strumenti per la condivisione dei file
 		
 		2.3.1 Repository 
-			Per il versionamento sia dei documenti che del sorgente del progetto utilizzeremo i due repository di git.
+			Per il versionamento sia dei documenti che del codice sorgente del progetto utilizzeremo due repository di git.
 			Il repository del sorgente ha licenza MIT ed è accedibile al seguente indirizzo: <indirizzo da mettere>
 			
-			La documentazione avrà lo stesso tipo di licenza su un altro repository git al seguente indirizzo: <indirizzo da mettere>
+			La documentazione avrà lo stesso tipo di licenza e sarà mantenuta su un altro repository git al seguente indirizzo: <indirizzo da mettere>
+			Il repo dei documenti dovrà strutturato nella seguente maniera: Saranno presenti due cartelle: Una, dal titolo "Documenti interni", che conterrà tutti i documenti interni (da mettere nel glossario la definizione di documento interno/esterno); Una, dal titolo "Documenti esterni", che conterrà tutti i documenti esterni.
 			
-			
+			Tutti i partecipanti al progetto verranno aggiunti come collaboratori ai due repo.
+
+		2.3.2 Condivisione file
+			Tutti i file principali del progetto saranno sempre accessibili tramite la piattaforma di github. Per tutti gli altri file di utilità non compresi di cui sia necessaria la condivisione viene utilizzato il servizio offerto da Mega. 
+
+	3 Documentazione
+		
+		3.1 Template
+			E' stato scelto/creato un template LaTeX utilizzato per la stesura di tutta la documentazione, mantendo costanti tutte le scelte stilistiche. Il template può essere trovato <inserire locazione del template qui>.
+		
+		3.2 Struttura del documento
+
+			3.2.1 Prima pagina
+				. Nome gruppo
+				. Nome progetto
+				. Logo
+				. Nome documento
+				. Informazioni sul documento
+				. Descrizione del documento
+			3.2.2 Cronologia delle modifiche
+				.
+				.
+				.
+				.
+				.
 				
 			
 			 
