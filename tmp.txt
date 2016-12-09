@@ -56,12 +56,30 @@ Glossario.
 			
 		2.1.3 Regole di stesura delle mail
 		
-			L'utilizzo della mail è previsto solamente per comunicazioni formali verso l'esterno quindi il mittente dovrà essere necessariamente il nome del gruppo e la mail trasferita dal responsabile di progetto.
+			L'utilizzo della mail è previsto solamente per comunicazioni formali verso l'esterno quindi il mittente dovrà essere necessariamente il nome del gruppo e la mail inviata dal responsabile di progetto.
 			
 	2.2 Riunioni 
 		
 		2.2.1 Frequenza delle riunioni
 			Le riunioni sono previste principalmente tramite chat vocale con una cadenza più frequenza bisettimanale.
+			
+		2.2.2 Convocazione delle riunioni 
+			Il compito di convocare le riunioni spetta al responsabile di progetto, il quale dovrà comunicare agli altri membri del gruppo con un preavviso di almeno quattro giorni tramite slack la data dell'incontro e l'ordine del giorno, indifferentemente sia la riunione per via digitale o di persona.
+			Gli altri membri dovranno accettare sempre tramite slack e la riunione si terrà solamente se tutti i membri del gruppo sono disponibili.
+			Qualora fosse necessaria una riunione tra un sottoinsieme dei membri del gruppo, per esempio in caso di bisogno di comunicazione tra persone con funzioni affini o complementari, le decisioni prese in essa dovranno essere comunicate agli altri tramite il canale di slack.
+			
+		2.2.3 Svolgimento riunione 
+			Verranno selezionate tra i partecipanti del gruppo due persone, la quali avranno l'incarico di mettere a verbale le cose più importanti dette durante la riunione. 			All'inizio della riunione verranno comunicati i progressi fatti da ciascuno e verranno prese decisioni su come procedere con lo sviluppo del progetto. Si procederà quindi a trattare gli argomenti specificati nell'ordine del giorno. Le due persone incaricate di mettere a verbale la riunione dovranno anche verificare che l'ordine del giorno venga rispettato.
+			
+		2.2.4 Verbale
+		
+			2.2.4.1 Riunione interna 
+				Ciascun tipo di riunione dovrà produrre un verbale. Nel caso di riunione interna il documento prodotto verrà conservato su una repository condivisa tra tutti membri del progetto. Persone incaricate di scriverlo saranno scelte di volta in volta rotazione. Il documento avrà come titolo verbale è il giorno della riunione. Il primo paragrafo sarà un elenco puntato con l'ordine del giorno trattato nella riunione in questione.
+				
+			2.2.4.2 Riunione esterna
+				Nel caso di riunione con i proponenti ho con il professore il verbale sarà un documento ufficiale verrà inserito quindi nella documentazione del progetto.
+				Questo documento dovrà essere redatto utilizzando un particolare template di latex.
+				
 			
 			 
 			
