@@ -201,3 +201,32 @@ dei riportati.
 			Le tabelle saranno individuate da un numero progerssivo relativo al capitolo di appartenenza per l'inserimento di esse nell'indice delle tablelle.
 			
 			
+		4 Documenti
+			4.1 Documenti interni
+			I Documenti interni sono rivolti ai componennti del gruppo e sono redatti in lingua italiana.
+			
+			4.2  Documenti esterni
+			I Documeni estrni sono rivolti ai proponenti del capitolato e sono redatti in lingua inglese.
+			
+			4.3 Documenti informali
+			I documenti informali sono tutti i documenti prima della revisione e validazione e conseguente approvazione da parte del Resonsabile di Progetto.
+			
+			4.4 Documenti formali
+			I Documenti formali soono tutti i documenti approvati dal Responsabile di Progetto.
+			
+			4.5 Versionamento
+			Il ciclo di vita dei documenti è tracciato dal numero di versione degli stessi.
+			Viene rispettato il segunte formato: una v piccola seguita da tre lettere interavllateda un puhnto:
+			va.b.c
+			dove a rappresenta prograssivamnete le approvazioni attraversate dal documento b le  modifica al documento e c correzione di errori minori
+			
+			5 Ciclo di vita
+			Il ciclo di vita rappresenta tutte le fasi in cui un documneto si trova dalla modifica  all'approvazione.
+			Nello stato iniziale di lavorazione un documento può essere nato oppure aver subito una modifica, divenrtando cosi un documento formale.
+			Dovrà poi essere sottoposto a verifica che verrà affettuata dai verificatori.
+			Una volta passata la verifica il docomuneto verrà approvato dal Responsabile di progetto e quindi diventerà un documento formale.
+			6 Glossario
+			Per la definizione di tutti i termini si rimanda alla colsulatzione del Glossario 0.0.0 .
+			
+			
+			
