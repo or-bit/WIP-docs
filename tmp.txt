@@ -1,0 +1,70 @@
+Or-bit
+Monolith: an interactive bubble provider
+
+<logo>
+
+Norme di progetto
+
+Informazioni sul documento
+Versione: 0.0.0
+Redazione:
+Verifica:
+Responsabile:
+Uso: interno
+
+Descrizione 
+Documento relativo alle norme stabilite dal gruppo Or-bit per la realizzazione del progetto Monolith
+
+Diario delle modifiche 
+
+//indice che tanto genera latex
+
+Introduzione
+
+Scopo del documento
+
+	Lo scopo di questo documento è quello di andare a definire le norme interne utilizzate per regolare lo svolgimento dell'attività del progetto monolith svolto dal gruppo Or-bit.
+	Il presente, tra le altre cose, tratterà di:
+		modalità di stesura dei documenti
+		norme relative alle comunicazioni sia interne sia esterne
+		norme relative alla pianificazione delle attività da svolgere e allo svolgimento delle stesse
+	
+Scopo del prodotto.
+	Lo scopo di questo progetto è quello di andare a sviluppare un frame work volto alla costruzione di bolle interattive, per andare ad aggiungere funzionalità al programma di comunicazione rocket chat.
+	Oltre a questo,  utilizzare il framework prodotto per fornire esempi sigificativi delle suddette bolle.
+	
+Glossario.
+	Insieme al progetto il gruppo fornirà anche un glossario nel quale saranno raccolti i termini tecnici, acronimi e le parole che necessitano di chiarimenti, che verranno utilizzate nella documentazione.
+	I vocaboli presenti nel documeto Glossario v0.0.1 saranno marcati con una g al pedice. (per il momento)
+	
+2Collaborzione
+
+	2.1 Comunicazioni
+	
+		2.1.1 Comunicazioni esterne
+			Per le comunicazioni esterne al gruppo sono stati previsti diversi canali.
+			Il principale tra questi è la mail orbit.swe@gmail.com che verrà impiegata per le comunicazioni ufficiali.
+			
+			Sotto suggerimento dei proponenti del progetto, verrà utilizzato anche un canale slack, per comunicazioni più dirette e rapide al fine di mantenere un contatto con i proponenti durante la durata del progetto, nel caso in cui le comunicazioni scritte non dovessero essere sufficienti è stata prevista la possibilità di sentirsi tramite Skype. A tale scopo è stato costruito un gruppo su Skype contenente sia i partecipanti del gruppo che proponenti del progetto
+			
+		2.1.2 Comunicazioni interne 
+			
+			Il mezzo predefinito per le comunicazioni tra i membri del gruppo è un canale slack.
+			In aggiunta a questo verrà utilizzato anche discord per le chat vocali.
+			Ogni comunicazione inerente a decisioni importanti di progetto tra membri del gruppo dovrà essere verbalizzata. 
+			E' stato previsto un incontro quotidiano tramite chat vocale della durata di 30 minuti, compatibilmente con gli impegni dei singoli, per tenersi aggiornati sui progressi e prendere le decisioni per cui è necessaria la presenza degli altri, che verranno verbalizzate.
+			
+		2.1.3 Regole di stesura delle mail
+		
+			L'utilizzo della mail è previsto solamente per comunicazioni formali verso l'esterno quindi il mittente dovrà essere necessariamente il nome del gruppo e la mail trasferita dal responsabile di progetto.
+			
+	2.2 Riunioni 
+		
+		2.2.1 Frequenza delle riunioni
+			Le riunioni sono previste principalmente tramite chat vocale con una cadenza più frequenza bisettimanale.
+			
+			 
+			
+			
+			
+
