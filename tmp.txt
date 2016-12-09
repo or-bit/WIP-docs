@@ -187,5 +187,17 @@ dei riportati.
 			L'indice delle figure riporta il nome ed il numero di tutte e figure presenti nel documento.
 			L'indice dei nomi è composto da tutte le parole più importatnti nel documento per semplificarn la consultaziuone dei termini.
 			
-
-		
+			3.4 Norme grafiche
+			
+			3.4.6 Colori
+			E' permesso l'uso del colore nelle immagini ed è assicurata la corretta visibilità per la stampa di esse.
+			
+			3.4.5 Immagini
+			Per convenzione le immagini saranno salvate in formato vettoriale ".svg" ma è prevista l'eccezione per l'utilizzo di screenshot che saranno invece salvati in formato ad alta risoluzione ".bitmap" .
+			
+			3.4.6 Tabelle
+			In tutte le tabelle le righe saranno numerate e i termini nell'intestatzione saranno in grassetto.
+			Per aumentarne la leggibilita sara dottat la convenzione di colorare righe alterne in grigio chiaro.
+			Le tabelle saranno individuate da un numero progerssivo relativo al capitolo di appartenenza per l'inserimento di esse nell'indice delle tablelle.
+			
+			
