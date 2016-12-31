@@ -1,0 +1,59 @@
+\section{Capitolato C3}
+
+\subsection{Descrizione}
+Il capitolato proposto da \Proponente{}, prevede la definizione di un algoritmo predittivo in grado d'interagire con una moltitudine d'oggetti eterogenei, facenti parte dell'\glossario{IoT}, e capace di prevedere guasti o malfunzionamenti futuri degli stessi.
+L'applicativo software inoltre sar\`a composto da tre parti:
+\begin{itemize}
+	\item \textbf{Console Web di amministrativa per la definizione di regole di apprendimento a seconda del contesto e tipo di dati};
+	\item\textbf{Console Web di amministrativa per le singole aziende};
+	\item \textbf{Servizi Web Restful \glossario{JSON} interrogabili}.
+\end{itemize}
+
+La comunicazione prevista dalla per piattaforma sar\`a realizzata attraverso l'utilizzo di protocolli \glossario{HTTP/HTTPS} standard e del protocollo \glossario{MQTT}, mentre il dataset sui cui sviluppare gli algoritmi sopracitati verranno forniti direttamente dal team \Proponente{}.
+
+\subsection{Studio del dominio}
+\subsubsection{Dominio applicativo}
+Ci\`o che si prefissa questo progetto \`e di ottenere un algoritmo predittivo che opera nell'ambiente dell'\glossario{IoT} legato alla nuova ondata delle \glossario{Machine learning}, in particolare si pensa che questo software possa essere utilizzato per confrontare ed analizzare dati provenienti da macchine industriali, distribuite in diverse zone del globo e funzionanti in ambienti e circostanze eterogene, ma che nonostante ci\`o riesca ad avvisare in maniera proattiva la casa produttrice la necessit\`a di manutenzioni, decisive a ridurre i fermi macchina ottenendo ricavi e diminuendo le perdite di produttivit\`a.
+Si capisce pertanto come gli utenti interessati all'utilizzo di questo dominio applicativo siano principalmente aziende operanti nel settore industriale, ma che non escludono, vista la generalit\`a dell'algoritmo e l'interesse del mondo tecnologico ed informatico sull'\glossario{IoT}, piccole-medio imprese ed anche il singolo utente che pu\`o usufruirne i vantaggi anche i otterr\`a avendo una casa che si appresta ad essere sempre pi\`u connessa alla rete.
+
+ 
+\subsubsection{Dominio tecnologico}
+L'azienda \Proponente{} che ci ha esposto il capitolato \ProjectName{} \`e solita lavorare utilizzando lo stack tecnologico dell'infrastruttura \glossario{Amazon web service}, per tanto anche noi come gruppo abbiamo deciso di usufruirne.
+Inoltre dovendo interrogare database \glossario{NoSQL}, abbiamo stabilito, come suggeritoci dalla stessa \Proponente{}, di utilizzare \glossario{MongoDB}.
+Per quanto riguarda il linguaggio di programmazione impiegato nello sviluppo del progetto, avendo avuto la possibilit\`a di scegliere tra \glossario{Java} e \glossario{Scala}, abbiamo scelto di adottare quest'ultimo, utilizzando \glossario{Play Framework} come \glossario{framework} di sviluppo.
+Dovendo anche operare nella costruzione di un'interfaccia web sono inoltre utilizzate le seguenti tecnologie:
+\begin{itemize}
+	\item \textbf{\glossario{HTML5}};
+	\item\textbf{\glossario{CSS3}};
+	\item \textbf{\glossario{Javascript}}.
+\end{itemize}
+Integrate poi utilizzando il \glossario{framework} responsive: \glossario{Twitter Bootstrap}.
+Viene poi previsto l'utilizzo di \glossario{Node.js} per quanto riguarda la comunicazione con i vari oggetti, che comunicano tramite \glossario{MQTT}, con l'applicativo.
+
+\subsection{Valutazione costi e benefici}
+Il capitolato volge la sua attenzione alla creazione di un software generico per un'analisi di grandi quantit\`a di dati provenienti da macchinari non precedentemente definiti. Questo software deve essere in grado di individuare i dati sensibili dalla base dati prodotta dal sistema cui verr\`a applicato, riportarli all'utente attraverso un front-end applicativo e mantenere un'attivit\`a di apprendimento di quelli che potrebbero essere cambi o aggiunte di nuovi dati rilevanti. Il software che si andrebbe a creare avrebbe un ottimo inserimento all'interno del mercato attuale vista la crescente espansione del campo delle \glossario{IoT}. Ci\`o che lo rende veramente competitivo \`e il fatto di non essere specializzato per un singolo macchinario, quindi creato ad hoc, ma applicabile in potenza a qualsiasi ambiente che richieda analisi reattiva di dati ricevuti da macchine collegate ad una rete.
+
+\subsection{Potenziali Criticit\'a}
+
+\begin{itemize}
+	\item \textbf{Tecnologie Nuove:} molte delle tecnologie che verranno utilizzate, come \glossario{Node.js}, \glossario{Scala} e \glossario{Amazon web service}, sono del tutto o in parte sconosciute ai componenti del gruppo. Sar\'a dunque nostro compito colmare queste lacune prima di cominciare a lavorare con questi nuovi strumenti;
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{Generalit\'a dell'algoritmo:} l'algoritmo predittivo richiesto deve potersi adattare a diversi tipi di macchine e apparecchiature. Pur non essendo richiesta la generalizzazione vera e propria, l'algoritmo dovr\'a comunque essere tale da poterla permettere in futuro, questo potrebbe comportare qualche difficoltà nella sua produzione.
+\end{itemize}
+
+\subsection{Valutazione finale}
+Il gruppo si \'e dimostrato interessato al capitolato proposto da \Proponente{} per i seguenti motivi:
+\begin{itemize}
+	\item innovazione nel sistema di gestione delle basi di dati, soprattutto dal punto di vista della sua virtualit\'a;
+	\item studio all'interno dell'ambiente \glossario{IoT} in grande via di espansione in questo periodo;
+	\item interesse verso il campo legato al \glossario{Machine learning}.
+\end{itemize}
+
+\'E stata anche riscontrata la seguente criticit\'a ritenuta non trascurabile per le conoscenze del gruppo:
+
+\begin{itemize}
+	\item generalità dell'algoritmo predittivo.
+\end{itemize}
+

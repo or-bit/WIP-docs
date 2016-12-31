@@ -1,0 +1,197 @@
+\section{Procedure a Supporto dei Processi}
+
+Descritti, quindi, i ruoli di progetto e le relative funzioni nella precedente sezione, si vanno a elencare quali procedure devono seguire in modo rigoroso al fine di convergere agli obiettivi posti nel \PianoDiQualifica.
+
+\subsection{Gestione di Progetto}
+
+La gestione di progetto, dalla nascita alla sua conclusione, viene affidata al \textit{Responsabile di Progetto}. Con lo scopo di garantire un corretto sviluppo delle varie attività inerenti al progetto, dovrà utilizzare degli strumenti che gli consentano di:
+
+\begin{itemize}
+\item Gestire e controllare le risorse;
+\item Pianificare, controllare e coordinare le varie attività;
+\item Analizzare e gestire i rischi;
+\item Elaborare i dati.
+\end{itemize}
+
+\subsubsection{Pianificazione delle Attività}
+Per pianificare al meglio le attività correlate al progetto, il \textit{Responsabile di Progetto} deve realizzare un diagramma di \glossario{Gantt}, utilizzando lo strumento integrato nel tool fornito da \textbf{Teamwork}. Tale diagramma viene automaticamente generato da Teamwork una volta che si vanno ad inserire le varie attività, sotto forma di elenchi di compiti.
+
+\subsubsection{Coordinazione e Controllo delle Attività}
+Per coordinare e controllare le attività, il \textit{Responsabile di Progetto} deve informare dell'avvenuta creazione del diagramma di \glossario{Gantt} tutti i membri del gruppo tramite post nel forum citato in §2.1, in modo che questi abbiano la possibilità di adempiere efficacemente ai propri compiti, inserendone lo stato di avanzamento. Così facendo il \textit{Responsabile di Progetto} sarà sempre al corrente dello stato di avanzamento del progetto stesso.
+
+\subsubsection{Gestione e Controllo delle Risorse}
+Per gestire e controllare le risorse, il \textit{Responsabile di Progetto} deve utilizzare Teamwork come indicato in §6.4. Tale norma gli consente, inoltre, di controllare lo stato di avanzamento di ogni processo.
+
+\subsubsection{Analisi e Gestione dei Rischi}
+Durante l'avanzamento del progetto, il \textit{Responsabile di Progetto} deve controllare sempre che i rischi descritti nel \PianoDiProgetto{} o eventuali nuovi rischi non vadano a verificarsi. Nel caso ciò dovesse accadere, dovrà attuare le contromisure ivi descritte e riportare gli effettivi riscontri.
+
+\subsubsection{Elaborazione dei Dati}
+Il \textit{Responsabile di Progetto} deve sfruttare il software Calc, o in alternativa Excel, come descritto in §6.3.4, per elaborare i dati raccolti durante lo sviluppo del progetto e riportarli nel \PianoDiProgetto{}.
+
+\subsubsection{Delega}
+Qualora il \textit{Responsabile di Progetto} partecipasse alla redazione di un documento, potrà delegarne l'approvazione ad un \textit{Verificatore}.
+
+\subsubsection{Assegnazione di Attività}
+Per assegnare le attività alle risorse disponibili, il \textit{Responsabile di Progetto}, o in alternativa un responsabile da lui delegato, dovrà seguire le procedure descritte in §6.4.2.
+
+\subsubsection{Gestione dei Cambiamenti}
+In seguito ad un errore trovato da un \textit{Verificatore} e segnalato tramite una notifica nel forum del gruppo, il \textit{Responsabile di Progetto}, o un suo delegato, dovrà assegnare la correzione come descritto sempre in §6.4, nella sezione riguardante i bug. Al termine della correzione, sarà compito del \textit{Responsabile di Progetto}, o di un suo delegato, approvarne o meno la modifica; in caso di non accettazione, provvederà al rifacimento della correzione.
+
+\subsection{Analisi dei Requisiti}
+\subsubsection{Studio di Fattibilità e Analisi dei Rischi}
+Una volta pubblicati i capitolati, è compito del \textit{Responsabile di Progetto} convocare tutte le riunioni necessarie per consentire il confronto tra tutti i membri del gruppo riguardo ogni capitolato proposto. Queste riunioni saranno utili agli \textit{Analisti} per carpire le conoscenze tecnologiche e le preferenze di ogni componente del team. È sempre compito di questi ultimi redigere uno \StudioDiFattibilita{} dei capitolati basandosi su:
+\begin{itemize}
+\item \textbf{Dominio tecnologico e applicativo}: conoscenza delle tecnologie richieste e del dominio, esperienze precedenti con le problematiche poste dal capitolato;
+\item \textbf{Rapporto costi/benefici}: prodotti simili già sviluppati e presenti sul mercato, quantità di requisiti obbligatori, costo della realizzazione rapportato al risultato previsto;
+\item \textbf{Individuazione dei rischi}: comprensione dei punti critici della realizzazione, individuazione di eventuali lacune tecniche o di conoscenza del dominio dei membri del gruppo, analisi delle difficoltà nell'individuazione dei requisiti e loro verificabilità.
+\end{itemize}
+Un'ultima riunione, a \StudioDiFattibilita{} concluso, presenterà la decisione finale sul capitolato scelto. \\
+\textbf{N.B.}: ad ogni componente del gruppo non creerà alcun disagio il dover apprendere tecnologie differenti da quelle già acquisite in esperienze precedenti o grazie allo studio: in tal modo si andrà ad arricchire il bagaglio tecnico ed esperienziale di ogni componente del team.
+
+\subsubsection{Analisi dei Requisiti}
+La stesura del documento denominato \textit{Analisi dei Requisiti} è compito degli \textit{Analisti}, e si divide nelle fasi illustrate in questa sezione.
+
+\paragraph{Classificazione dei Requisiti}\mbox{}\\
+Compito degli \textit{Analisti} sarà quello di stilare una lista di tutti quei requisiti che andranno ad emergere dal capitolato di progetto e da eventuali riunioni col proponente. Tali requisiti andranno catalogati per tipo ed importanza, secondo la seguente codifica:
+\begin{center}
+R[importanza][tipo][codice]
+\end{center}
+\begin{itemize}
+\item \textbf{Importanza}: può assumere i seguenti valori:
+\begin{enumerate}
+\setcounter{enumi}{-1}
+\item Requisito obbligatorio;
+\item Requisito desiderabile;
+\item Requisito opzionale.
+\end{enumerate}
+Tale uso dei numeri renderà molto semplice l'ordinamento per importanza.
+\item \textbf{Tipo}: può assumere i seguenti valori:
+\begin{enumerate}
+\item[]F: Funzionale;
+\item[]Q: Di Qualità;
+\item[]P: Prestazionale;
+\item[]V: Vincolo.
+\end{enumerate}
+\item \textbf{Codice}: identifica la relazione gerarchica che c'è tra i requisiti di uno stesso tipo. C'è quindi una struttura gerarchica per ogni tipologia di requisito.
+\end{itemize}
+
+\paragraph{Casi d'Uso}\mbox{}\\
+Successivamente al tracciamento dei requisiti, si procede con l'Analisi dei \glossario{casi d'uso}, denominati anche \textit{use case} con l'acronimo UC. Ogni UC dovrà presentare i seguenti campi:
+\begin{itemize}
+\item Codice identificativo;
+\item Titolo;
+\item Diagramma \glossario{UML}2.x;
+\item Attori Primari;
+\item Attori Secondari;
+\item Scopo e Descrizione;
+\item Precondizione;
+\item Postcondizione;
+\item Flusso principale degli eventi;
+\item Scenari alternativi;
+\item Requisiti dedotti dal caso d'uso.
+\end{itemize}
+
+Come detto sopra, ogni UC sarà accompagnato da un codice univoco e identificativo, che segue il seguente formalismo:
+\begin{center}
+UC\{X\}\{Gerarchia\}
+\end{center}
+Dove:
+\begin{itemize}
+\item \textbf{X}: corrisponde all'ambito di riferimento e può assumere i seguenti valori:
+\begin{itemize}
+\item \textbf{U} = Ambito Utente;
+\item \textbf{S} = Ambito Sviluppatore.
+\end{itemize}
+\item \textbf{Gerarchia}: identifica la relazione gerarchica che c'è tra i casi d'uso di uno stesso ambito. C'è quindi una struttura gerarchica per ogni ambito dei casi d'uso. La numerazione potrebbe non essere continua nel caso in cui vengano rimossi alcuni degli use case numerati in precedenza.
+\end{itemize}
+
+\subsection{Progettazione}
+\subsubsection{Specifica Tecnica}
+I \textit{Progettisti} dovranno descrivere la progettazione ad alto livello dell'architettura dell'applicazione e dei singoli componenti nella \SpecificaTecnica{}.
+
+\paragraph{Diagrammi UML}\mbox{}\\
+Devono essere realizzati i seguenti diagrammi:
+\begin{itemize}
+\item Diagrammi dei \glossario{package};
+\item Diagrammi delle classi;
+\item Diagrammi di sequenza;
+\item Diagrammi di attività.
+\end{itemize}
+
+\paragraph{Design Pattern}\mbox{}\\
+I \textit{Progettisti} devono descrivere i \glossario{design pattern} che andranno utilizzati nella realizzazione dell'architettura: di essi si deve includere una breve descrizione che ne esemplifichi il funzionamento e la struttura.
+
+\paragraph{Tracciamento Componenti}\mbox{}\\
+Ogni requisito deve essere tracciato al componente che lo soddisfa. In questo modo sarà possibile misurare il progresso nell'attività di progettazione e garantire che ogni requisito venga soddisfatto.
+
+\paragraph{Test di Integrazione}\mbox{}\\
+I \textit{Progettisti} devono definire delle classi di verifica necessarie per verificare che i componenti del sistema funzionino nella maniera prevista.
+
+\subsubsection{Definizione di Prodotto}
+I \textit{Progettisti} devono produrre la \DefinizioneDiProdotto{} in cui viene descritta la progettazione di dettaglio del sistema, ampliando quanto scritto nella \SpecificaTecnica{}.
+
+\paragraph{Diagrammi UML}\mbox{}\\
+Devono essere aggiornati di conseguenza i seguenti diagrammi:
+\begin{itemize}
+\item Diagrammi delle classi;
+\item Diagrammi di sequenza;
+\item Diagrammi di attività.
+\end{itemize}
+
+\paragraph{Definizione di Classe}\mbox{}\\
+Ogni classe prevista e progettata deve essere descritta nella \DefinizioneDiProdotto{}; tale descrizione comprenderà l'elenco dei metodi e degli attributi, una breve spiegazione sullo scopo della classe e deve specificare le funzionalità che modella.
+
+\paragraph{Tracciamento delle Classi}\mbox{}\\
+Ogni requisito deve essere tracciato alle classi che lo soddisfano. In questo modo sarà possibile misurare il progresso nell'attività di progettazione e garantire che ogni classe soddisfi almeno un requisito.
+
+\paragraph{Test di Unità}\mbox{}\\
+I \textit{Progettisti} dovranno definire i test d'unità necessari per verificare che i componenti del sistema funzionino nella modo previsto.
+
+\subsection{Codifica}
+Tutti i file contenenti codice o documentazione dovranno essere conformi alla codifica \glossario{UTF-8}.
+
+\subsubsection{Nomi}
+I nomi di variabili, metodi, classi, funzioni e commenti dovranno essere scritti in Inglese. I nomi di variabili, metodi e funzioni dovranno avere la prima lettera minuscola, i nomi delle classi dovranno avere la prima lettera maiuscola. Nel caso in cui ci siano nomi composti da più parole, non devono essere inseriti caratteri di separazione: infatti, ogni parola, dalla seconda in poi, sarà distinta dalla lettera maiuscola. Ad esempio possiamo avere il nome di un metodo in questa forma:
+\begin{center}
+thisIsAMethod()
+\end{center}
+oppure il nome di una classe in questa forma:
+\begin{center}
+ThisIsAClass\{ ... \}
+\end{center}
+
+\subsubsection{Ricorsione}
+La ricorsione va evitata nella maniera più assoluta, onde evitare un elevato consumo di memoria a discapito quindi delle performance del prodotto software. 
+
+\subsubsection{Documentazione del Codice}
+Tutti i file contenenti codice dovranno essere provvisti di un'intestazione contenente:
+\begin{lstlisting}
+/*!
+* \file Nome del file 
+* \author Autore (indirizzo email dell'autore) 
+* \date Data di creazione 
+* \brief Breve descrizione del file 
+* 
+* Descrizione dettagliata del file 
+*/
+\end{lstlisting}
+
+Prima di ogni classe dovrà essere presente un commento contenente:
+\begin{lstlisting}
+/*!
+* \class Nome della Classe
+* \brief Breve descrizione della classe
+*/
+\end{lstlisting}
+
+Prima di ogni metodo/funzione dovrà essere presente un commento contenente: 
+\begin{lstlisting}
+/*!
+* \brief Breve descrizione del metodo/funzione
+* \param Nome del primo parametro
+* \param Nome del secondo parametro parametro
+* \return Valore ritornato dal metodo/funzione
+*/
+\end{lstlisting}
+
+Nel caso in cui si sentisse la necessità di spiegare codice di difficile comprensione, si potranno inserire dei commenti dalla riga precedente al codice che si vuole appunto commentare.

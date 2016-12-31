@@ -1,0 +1,193 @@
+\section{Documenti}
+Questa sezione descrive tutte le convenzioni scelte e messe in pratica da \GroupName{} riguardo la compilazione, la verifica e l'approvazione dei documenti da produrre.
+
+\subsection{Template}
+
+Per rendere più facile la stesura dei vari documenti sono stati realizzati una serie di template \LaTeX{} contenenti tutte le impostazioni stilistiche, di layout, tutti i comandi definiti da utente e le impostazioni locali riguardanti ciascun file. I file di impostazioni “globali” sono reperibili nel \glossario{repository} \texttt{LaTeXeBiscotti/modello}, e sono titolati \texttt{global.tex} e \texttt{layout.tex}; i file di impostazioni “locali” sono denominati \texttt{local.tex} e sono presenti in ogni \glossario{repository} dei vari documenti redatti.
+
+\subsection{Struttura del Documento}
+\subsubsection{Frontespizio}
+Ogni documento redatto nella realizzazione del progetto è caratterizzato da un frontespizio così definito:
+\begin{itemize}
+\item Logo del Gruppo;
+\item Titolo del documento;
+\item Nome del Gruppo - Nome Progetto;
+\item Versione del documento;
+\item Nome e cognome del/i Redattore/i del documento;
+\item Nome e cognome del/i Verificatore/i del documento;
+\item Nome e cognome del/i Responsabile/i approvatore/i del documento;
+\item Destinazione d'uso del documento;
+\item Lista di distribuzione del documento;
+\item Breve descrizione del contenuto del documento.
+\end{itemize}
+
+\subsubsection{Diario delle Modifiche}
+La seconda pagina del documento, o eventualmente anche la terza, contiene il diario delle modifiche del documento. Ogni riga della tabella che si viene a formare contiene:
+\begin{itemize}
+\item \textbf{Versione}: numero di versione dopo la modifica; 
+\item \textbf{Data}: data della modifica;
+\item \textbf{Persone coinvolte}: persone che sono state coinvolte alla specifica modifica;
+\item \textbf{Descrizione}: breve descrizione delle modifiche effettuate al documento.
+\end{itemize}
+
+Tale tabella così composta è ordinata per data in ordine decrescente: si ha così che la prima riga conterrà la modifica più recente e quindi la versione attuale del documento.
+
+\subsubsection{Indici}
+In ogni documento è presente un indice delle sezioni che lo compongono; nell'eventualità che in esso ci siano tabelle o figure, verranno composti i relativi indici.
+
+\subsubsection{Formattazione delle Pagine}
+L'intestazione di ogni pagina del documento, escluso il frontespizio, contiene:
+\begin{itemize}
+\item Logo del gruppo;
+\item Nome del gruppo;
+\item Nome del progetto;
+\item Sezione corrente del documento.
+\end{itemize}
+
+Il piè di pagina, invece, contiene:
+\begin{itemize}
+\item Nome e versione del documento;
+\item Pagina corrente nel formato X di Y, dove X è il numero di pagina in cui ci si trova, Y è il numero di pagine totali del documento.
+\end{itemize}
+
+\subsection{Regole Tipografiche}
+In questa sezione si vogliono indicare le convenzioni tipografiche e ortografiche in modo tale da mantenere uno stile uniforme su tutti i documenti inerenti al progetto.
+
+\subsubsection{Punteggiatura e Norme Grammaticali}
+
+\begin{itemize}
+\item \textbf{Punteggiatura}: un carattere di punteggiatura non deve mai seguirne uno di spaziatura e dopo ogni carattere di punteggiatura, eccetto l'apostrofo, deve esserci un carattere di spaziatura;
+\item \textbf{Parentesi}: quanto racchiuso tra due parentesi non deve mai iniziare e/o finire con un carattere di spaziatura;
+\item \textbf{Lettere maiuscole}: le lettere maiuscole sono da inserire dove lo prevede la lingua italiana e:
+\begin{itemize}
+\item All'inizio di ogni elemento di un elenco puntato;
+\item Per indicare il nome del gruppo di progetto;
+\item Per indicare il nome dei ruoli;
+\item Per indicare il nome dei documenti;
+\item Per indicare il nome delle fasi di lavoro;
+\item Per rimarcare le parole Committente e Proponente;
+\item Nelle parole principali dei titoli dei vari paragrafi.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Stile di Testo}
+\begin{itemize}
+\item \textbf{Grassetto}: il grassetto può essere utilizzato nei seguenti casi:
+\begin{itemize}
+\item \textbf{Elenchi puntati}: per evidenziare il concetto di cui si va a parlare in tale punto della lista;
+\item \textbf{Casi particolari}: in situazioni eccezionali, per andare ad indicare concetti o parole chiave.
+\end{itemize}
+\item \textbf{Corsivo}: il corsivo deve essere usato nelle seguenti occasioni:
+\begin{itemize}
+\item \textbf{Citazioni};
+\item \textbf{Abbreviazioni};
+\item \textbf{Nomi particolari}: ad esempio \textit{Progettista};
+\item \textbf{Documenti}.
+\end{itemize}
+\item \textbf{Typewriter}: tale font serve per formattare nomi di classi o file, indirizzi web e percorsi;
+\item \textbf{Maiuscolo}: è consentito scrivere una parola completamente in maiuscolo solamente in caso di acronimi o nelle macro \LaTeX;
+\item \textbf{\LaTeX}: ogni riferimento a \LaTeX va scritto usando il comando \textbackslash{LaTeX}.
+\end{itemize}
+
+\subsubsection{Composizione del Testo}
+\begin{itemize}
+\item \textbf{Elenchi puntati}: ogni punto di un elenco puntato deve terminare con un punto e virgola, se si tratta dell'ultimo con un punto; ogni item dell'elenco deve iniziare con una lettera maiuscola, a meno di casi particolari, come, ad esempio, il nome di un file. Nel caso in cui il testo dei punti sia nel formato \{Oggetto\}: \{descrizione\} e la descrizione contenga alla fine un ulteriore elenco puntato il tutto terminerà con il punto di tale sotto-elenco puntato;
+\item \textbf{Nota a piè di pagina}: tale elemento deve iniziare con una lettera maiuscola per la prima parola, ad eccezione del caso un cui si tratti di un url, e questa non deve essere mai preceduta da un carattere di spaziatura. 
+\end{itemize}
+
+\subsubsection{Formati}
+\begin{itemize}
+\item \textbf{Indirizzi web}: per gli indirizzi web deve essere utilizzato il comando \LaTeX \textbackslash{url};
+\item \textbf{Date}: le date presenti in tutti i documenti devono seguire lo standard \glossario{ISO} 8601:2004: 
+\begin{center}
+\textit{AAAA-MM-GG}
+\end{center}
+dove:
+\begin{itemize}
+\item \textit{AAAA}: rappresentazione anno con quattro cifre;
+\item \textit{MM}: rappresentazione mese con due cifre;
+\item \textit{GG}: rappresentazione giorno con due cifre.
+\end{itemize}
+\item \textbf{Comandi utente}: sono stati creati nel file \texttt{modello/global.tex} tutti quei comandi utente che possono rendere più fluida e comoda la scrittura dei documenti; si rimanda alla consultazione di tale file per utilizzarli al meglio. Ogni modifica che un membro del gruppo intende fare a tale file deve essere prima autorizzata dall'\textit{Amministratore di Progetto};
+\item \textbf{Nomi propri}: l'utilizzo dei nomi propri dei membri del team deve seguire la forma \virgolette{Nome Cognome}, a meno di una lista ordinata alfabeticamente, in cui è preferibile un ordinamento \virgolette{Cognome Nome}.
+\end{itemize}
+
+\subsubsection{Sigle}
+
+Le sigle dei documenti e delle revisioni sono da utilizzare solamente all'interno di tabelle o diagrammi, in modo da non appesantirne la lettura. Sono previste le seguenti sigle:
+
+\begin{itemize}
+\item \textbf{AdR} = Analisi dei Requisiti;
+\item \textbf{GL} = Glossario;
+\item \textbf{NdP} = Norme di Progetto;
+\item \textbf{PdP} = Piano di Progetto;
+\item \textbf{PdQ} = Piano di Qualifica;
+\item \textbf{SdF} = Studio di Fattibilità;
+\item \textbf{ST} = Specifica Tecnica;
+\item \textbf{RA} = Revisione di Accettazione;
+\item \textbf{RP} = Revisione di Progettazione;
+\item \textbf{RQ} = Revisione di Qualifica;
+\item \textbf{RR} = Revisione dei Requisiti.
+\end{itemize}
+
+\subsection{Componenti Grafiche}
+\subsubsection{Tabelle}
+Per tutte le tabelle presenti in ogni documento, eccetto il diario delle modifiche, deve essere presente una didascalia che ne spieghi sinteticamente il contenuto; questa deve inoltre essere marcata con un numero identificativo incrementale per la tracciabilità della stessa all'interno del documento. \\
+Altre convenzioni o implementazioni speciali per qualche tabella devono essere motivate e spiegate all'inizio del documento in questione.
+
+\subsubsection{Immagini}
+Le immagini che si andranno ad inserire all'interno dei documenti devono essere nel formato \glossario{SVG} per garantirne una migliore qualità in caso di ridimensionamento. Se non dovesse essere possibile questo tipo di formato, è da preferire il formato \glossario{PNG}.
+
+
+\subsection{Classificazione Documenti}
+\subsubsection{Documenti informali}
+Un documento informale è da considerarsi tale dal momento della sua creazione fino all'approvazione da parte del \textit{Responsabile di Progetto}. Prima di questo momento, il documento va considerato prettamente a uso interno del gruppo.
+
+\subsubsection{Documenti formali}
+Un documento viene inteso come formale una volta passata l'approvazione del \textit{Responsabile di Progetto}. Tale documento sarà quindi pronto per essere presentato ai richiedenti. Per poter definire tale un documento, esso deve aver seguito il percorso di verifica e validazione descritto nel \PianoDiQualifica{} e nel paragrafo 4.7 riguardante il ciclo di vita dei documenti.
+
+\subsection{Versionamento}
+La documentazione prodotta deve essere corredata dal numero di versione attuale tramite la seguente codifica:
+\begin{center}
+\textit{vX.Y.Z}
+\end{center}
+dove:
+\begin{itemize}
+\item \textit{X}: indica il numero crescente di uscite formali del documento; è limitato superiormente dal numero di revisioni effettuate ed è l'unico elemento che parte da 1;
+\item \textit{Y}: indica il numero di modifiche sostanziali del documento, partendo da 0; in particolare:
+\begin{enumerate}
+\setcounter{enumi}{-1}
+\item Fase di stesura del documento;
+\item Fase di verifica del documento;
+\item Approvazione del documento.
+\end{enumerate}
+Nel momento in cui inizia l'attività di stesura, l'\textit{Amministratore} deve
+controllare che tale indice sia correttamente impostato a 0. All'inizio della verifica
+il \textit{Verificatore} deve variare l'indice impostandolo a 1, previo consenso
+dal \textit{Responsabile}. Conclusa la verifica, quest'ultimo provvede all'approvazione
+del documento e deve impostare l'indice a 2.
+Il variare dell'indice sancisce un cambio di stato del documento. L'indice deve
+seguire la numerazione progressiva indicata e non sono ammessi indici diversi da
+quelli elencati;
+\item \textit{Z}: indica il numero di modifiche minori fatte al documento, e, come in \textit{Y}, si parte da 0. Ad
+ogni modifica effettuata al documento che corrisponde ad un'aggiunta di una voce
+nel diario delle modifiche, l'\textit{Amministratore} o il \textit{Verificatore} devono aggiornare l'indice
+seguendo una numerazione progressiva. Non viene fissato un limite superiore per
+tale indice.
+\end{itemize}
+Per citare correttamente un documento in un altro basta rifarsi ai comandi utente definiti in \texttt{modello/global.tex}. La citazione del documento \textit{Analisi dei Requisiti}, ad esempio, avrà il seguente formato: 
+\begin{center}
+\AnalisiDeiRequisiti
+\end{center}
+
+\subsection{Ciclo di Vita}
+Ogni documento può trovarsi all'interno di tre stati diversi: questi stati costituiscono il suo ciclo di vita. In particolare abbiamo questi stati:
+\begin{itemize}
+\item \textbf{In lavorazione}: stato in cui si entra dal momento della creazione del documento; vi si rimane per tutto il tempo necessario alla sua stesura;
+\item \textbf{Da verificare}: una volta ultimato il documento, esso viene preso in consegna dai \textit{Verificatori}, i quali hanno il compito di rilevare e correggere tutti gli errori e/o imprecisioni sintattici e semantici;
+\item \textbf{Approvato}: terminata la fase di verifica, il documento deve essere approvato dal \textit{Responsabile di Progetto}. L'approvazione ne sancisce lo stato finale per la corrente versione.
+\end{itemize}
+Ovviamente, ogni documento può attraversare ogni fase più di una volta, partendo sempre dallo stato iniziale. Una volta che si andrà a completare nuovamente il ciclo, viene definita una nuova versione del documento in questione.
+
+\subsection{Glossario}
+Il Glossario è un documento di utilità che va a spiegare, in modo conciso e comprensibile, tutte quelle parole presenti negli altri documenti e facenti parte del contesto applicativo che potrebbero essere soggette a fraintendimenti. Tale documento dovrà essere aggiornato di pari passo con la stesura dei documenti.
