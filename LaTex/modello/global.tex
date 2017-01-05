@@ -88,7 +88,8 @@ I vocaboli presenti nel documento \Glossario{} saranno marcati con una \textit{\
 
 % Altri comandi utili
 \newcommand{\email}{e-mail}
-\newcommand{\sezione}{sezione §}
+\newcommand*{\sezione}[1]{\hyperref[{#1}]{sezione §\ref*{#1}}}
+\newcommand*{\appendice}[1]{\hyperref[{#1}]{Appendice \autoref*{#1}}}
 
 %%%%%%%%%%%%%%
 %  FUNZIONI  %
@@ -132,7 +133,7 @@ I vocaboli presenti nel documento \Glossario{} saranno marcati con una \textit{\
   \includegraphics[width=8cm]{../../modello/or-bit_bkg.png}
   \end{center}
   
-  \vspace{1cm}
+%  \vspace{1cm}
 
   \begin{Huge}
   \textbf{\DocTitle{}}
@@ -165,7 +166,13 @@ I vocaboli presenti nel documento \Glossario{} saranno marcati con una \textit{\
   \vspace{22pt}
 
   \textbf{Descrizione} \\
-  \DocDescription{}
+  \DocDescription{}  
+
+  \vspace{0.5cm}
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[height=4.3cm]{../../modello/monolith}
+  \end{figure}
 
   \end{center}
   \end{titlepage}

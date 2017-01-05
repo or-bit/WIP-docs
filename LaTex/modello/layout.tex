@@ -28,6 +28,7 @@
 % comandi per l'appendice
 \usepackage{appendix}
 \renewcommand\appendixtocname{Appendici}
+\renewcommand{\appendixpagename}{Appendici}
 
 % numera anche i paragrafi
 \setcounter{secnumdepth}{6}
@@ -81,6 +82,7 @@
 
 % colore di sfondo per le celle
 \usepackage[table]{xcolor}
+%\rowcolors{2}{gray!25}{} % Colora righe alterne in grigio (non funziona bene) 
 
 % permette di fare longtable larghe tutta la pagina (parametro x)
 % su Ubuntu non si può installare il pacchetto, deve essere in modello/
@@ -203,3 +205,12 @@
 \usepackage{gensymb}
 \usepackage{newunicodechar}
 \newunicodechar{°}{\degree}
+
+% Per importare svg
+\usepackage{svg}
+%\setsvg{inkscape = inkscape -z -D}
+
+% Per numerare le tabelle e le figure con la sezione in cui si trovano 
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
