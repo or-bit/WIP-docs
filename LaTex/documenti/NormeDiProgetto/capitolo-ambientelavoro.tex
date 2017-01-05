@@ -14,7 +14,7 @@ Discord viene scelto come canale di chat vocale. Esso è disponibile in versione
 Per le comunicazioni che richiedono funzionalità video si è scelto di utilizzare Skype. La scelta è principalmente basata sulla popolarità di questo strumento, sebbene le prestazioni di questo software non siano delle migliori nel caso di connessioni più lente. È stata valutata l'idea di utilizzare come alternativa Google Hangouts, poi abbandonata.
 
 \subsection{Software di gestione del progetto}
-La piattaforma di gestione del progetto prescelta è \textbf{Teamwork}. Le funzionalità complete di questo strumento vengono descritte in \sezione\ref{sec:teamwork}.\\
+La piattaforma di gestione del progetto prescelta è \textbf{Teamwork}. Le funzionalità complete di questo strumento vengono descritte in \sezione{sec:teamwork}.\\
 Si è scelto di utilizzare questo software in quanto comprensivo, nel piano gratuito, di molte delle funzionalità comprese nella versione a pagamento, tra cui un numero illimitato di collaboratori e di progetti creabili. Sono stati valutati altri software, tra cui RedMine, Asana, Trello, Kimai ed OpenProject. Asana e Trello sono stati scartati in quanto non offrivano funzionalità sufficienti per la gestione del progetto; RedMine e OpenProject sono stati scartati in quanto richiedevano l'installazione di un server dedicato, mentre Teamwork offriva un servizio hosted. L'opzione Kimai è caduta con la proposta di Teamwork, poiché questo comprende di suo la funzione di time tracking. Non sono poi state trovate altre opzioni gratuite alla pari di Teamwork.
 
 \subsection{Software di versionamento}
@@ -136,7 +136,15 @@ Rocket.Chat è una piattaforma di messaggistica open-source, ispirata a Slack. �
 È stato preso in considerazione anche Docker, per lo stesso scopo, ma è stato scartato in quanto presenta alcuni problemi di gestione e configurazione dell'ambiente run-time, oltre ad essere stato sconsigliato dal Proponente, mentre vi è un esplicito riferimento ad Heroku nel capitolato.
 
 \subsection{Strumenti per la documentazione}
-\underline{TODO: da fare}
+Come strumento di generazione per la documentazione del codice è stato scelto \textbf{Meteor-JSDoc}.\\
+Meteor-JSDoc fa uso della versione in sviluppo di \textbf{JSDoc} per fornire maggior supporto alla nuova sintassi Javascript.
+JSDoc è un generatore di documentazione API per Javascript. Aggiungendo commenti che documentino il codice direttamente all'interno dei sorgenti, questo strumento analizza il codice e genera una documentazione completa in formato HTML.
+Alcune caratteristiche di Meteor-JSDoc sono:
+\begin{itemize}
+	\item è basato sui template della documentazione stessa di Meteor;
+	\item la documentazione prodotta è usata anche dall'applicazione Meteor, che la mostra ben formattata per l'applicazione creata;
+	\item supporta il collegamento dal repository GitHub.
+\end{itemize}
 
 \subsection{Strumenti per la codifica}
 L'IDE scelto per l'attività di codifica è \textbf{WebStorm}. Esso è disponibile in versione gratuita ed è compreso nel pacchetto studenti offerto da JetBrains. Alcune funzionalità che rende disponibili sono:
@@ -168,4 +176,4 @@ In questo modo è possibile definire in modo chiaro il comportamento che ci si a
 
 \subsubsection{ESLint} \label{sec:eslint}
 ESLint è uno strumento di linting open source per Javascript. Questo strumento permette di scovare gli errori e i problemi nel codice prodotto senza eseguirlo.\\ ESLint è completamente estendibile tramite plugin, pertanto permette agli sviluppatori di creare regole personalizzate.\\
-In questo progetto ESLint viene configurato per seguire le convenzioni relative al codice descritte in \sezione \ref{sec:convenzioni} di questo documento.
+In questo progetto ESLint viene configurato per seguire le convenzioni relative al codice descritte in \sezione{sec:convenzioni} di questo documento.
