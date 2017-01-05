@@ -1,38 +1,62 @@
-\section{Ruoli di Progetto}
+\section{Ruoli di progetto}
 
-Per tutta la durata del progetto, i componenti del gruppo andranno ad assumere diversi ruoli, rappresentativi di figure aziendali specializzate, indispensabili per una buona organizzazione interna e per il buon esito del lavoro. Ogni membro dovrà, a rotazione, assumere \textit{almeno una volta} ogni ruolo, come specificato nei vincoli di organigramma. Per evitare possibili conflitti causati dalla rotazione dei ruoli, le attività
-principali assegnabili a specifici ruoli sono pianificate nel \PianoDiProgetto{}. Ogni componente del
-gruppo è tenuto a svolgere le attività assegnategli e a rispettare il ruolo che ne consegue. Il \textit{Responsabile
-di Progetto} ha il compito di fare rispettare i ruoli assegnati durante le attività, mentre il \textit{Verificatore}
-deve individuare le possibili incongruenze tra i ruoli e le modifiche registrate nei diari delle modifiche.
-Segue quindi una breve descrizione dei vari ruoli e delle varie mansioni che dovranno adempiere.
+Questa sezione si occupa di descrivere esaustivamente le responsabilità e i compiti di ciascun ruolo all'interno del team di sviluppo durante lo svolgimento del progetto.
+Ogni ruolo deve essere ricoperto a rotazione da ogni membro del gruppo almeno una volta ed in maniera significativa. Nell'assegnazione dei ruoli deve essere prestata particolare attenzione ad evitare che il processo di verifica di una particolare attività sia effettuato dalle stesse persone che l'hanno svolta originariamente.
+
+
+\subsection{Responsabile di Progetto} \label{sec:responsabile}
+Il \Responsabile\space si occupa degli aspetti organizzativi e decisionali.\\
+Sono compiti specifici del \Responsabile:
+\begin{itemize}
+	\item assegnare i compiti ai vari componenti del team;
+	\item pianificare le attività e la loro distribuzione;
+	\item redigere il \textit{Piano di Progetto} insieme agli \Amministratori;
+	\item istanziare i processi nel progetto, cercando le dipendenze tra le varie attività;
+	\item gestire e controllare le risorse impiegate, stimando i costi e i tempi delle attività;
+	\item analizzare i rischi connessi al progetto;
+	\item approvare i documenti, eventualmente delegando un \Verificatore;
+	\item verificare che le attività di \VV\space siano svolte in maniera conforme a quanto riportato nelle \NormeDiProgetto;
+	\item controllare che non vi siano conflitti di interesse tra attività di Verifica e di Produzione. Nello specifico ciascun membro del team non potrà mai verificare quello che ha prodotto.
+\end{itemize}
+Il \Responsabile\space deve occuparsi delle relazioni con il Committente.
+Egli è anche il responsabile ultimo dei risultati conseguiti.
+
 
 \subsection{Amministratore}
-L'\textit{Amministratore} equipaggia, organizza e gestisce l'ambiente di lavoro e di produzione. Collabora con il \textit{Responsabile di Progetto} alla stesura del \textit{Piano di Progetto} e redige le \textit{Norme di Progetto}. Le responsabilità che andrà ad assumere sono:
+L'\Amministratore\space garantisce il funzionamento dell'infrastruttura tecnologica predisponendo strumenti e regole. Si assicura che tutte le risorse siano operanti. È compito dell'\Amministratore\space garantire l'efficienza e l'operatività dell'ambiente. A questo fine tra le sue mansioni si annoverano:
 \begin{itemize}
-\item Attuare le scelte tecnologiche concordate con il \textit{Responsabile di Progetto};
-\item Controllare versioni e configurazioni del prodotto;
-\item Risolvere i problemi legati alla gestione dei processi.
+	\item ricerca degli strumenti volti all'automatizzazione dei vari compiti;
+	\item controllo delle versioni e configurazioni del prodotto;
+	\item gestione dell'archiviazione della documentazione del progetto;
+	\item redazione delle \textit{Norme di Progetto} e del \textit{Piano di Qualifica}.
 \end{itemize}
 
 \subsection{Analista}
-L'\textit{Analista} è responsabile dell'attività di analisi. Per poter giungere correttamente a tale scopo deve comprendere a fondo il dominio applicativo. Redige lo \textit{Studio di Fattibilità} e l'\textit{Analisi dei Requisiti}, ovvero una specifica di progetto che cerca di comprenderne i vincoli e i rischi tecnologici. Non si occupa di trovare una soluzione al problema posto dal capitolato di progetto, ma cerca di estrarre il maggior numero di requisiti.
+Il compito dell'\Analista\space è quello di svolgere tutte le attività di analisi necessarie prima dello svolgimento del progetto o di una particolare attività. Sottopone ad analisi il problema reale per soddisfare le richieste degli stakeholders. Deve quindi possedere una piena conoscenza della natura e complessità del progetto in tutte le sue parti. L'\Analista\space ha il compito di redigere due documenti:
+\begin{itemize}
+	\item \textit{Studio di Fattibilità};
+	\item \textit{Analisi dei Requisiti}.
+\end{itemize}
+Lo \textit{Studio di Fattibilità} definisce formalmente e ufficialmente quelle che saranno le funzionalità offerte dal prodotto, mentre l'\textit{Analisi dei Requisiti} elenca tutte le risorse e attività necessarie a realizzarle. I documenti citati dovranno essere resi facilmente comprensibili a:
+\begin{itemize}
+	\item Proponente;
+	\item Committente;
+	\item Progettista.
+\end{itemize}
+L'\Analista\space partecipa anche alla redazione del \textit{Piano di Qualifica} rendendo disponibile le sue approfondite conoscenze dal punto di vista teorico e applicativo.
 
 \subsection{Progettista}
-Il \textit{Progettista} è responsabile dell'attività di progettazione, ha una profonda conoscenza delle tecnologie che si andranno ad utilizzare ed è aggiornato alle ultime novità proposte da queste. Ha il compito di trovare una soluzione dati i requisiti forniti dall'\textit{Analista}, e, una volta compiuta la scelta, se ne assume la piena responsabilità. Redige la \textit{Specifica Tecnica}, la \textit{Definizione di Prodotto} e la parte programmatica del \textit{Piano di Qualifica}.
-
-\subsection{Programmatore}
-Il \textit{Programmatore} ha responsabilità circoscritte: si occupa dell'attività di codifica nel rispetto delle \textit{Norme di Progetto} e di quanto stabilito dal \textit{Progettista}, senza spazio per fantasie o idee personali.
-
-\subsection{Responsabile di Progetto}
-Il \textit{Responsabile} ha sempre l'ultima voce in capitolo per quanto concerne le decisioni sul progetto e ne è il responsabile ultimo dei risultati. Approva l'emissione di tutti i documenti, redige il \textit{Piano di Progetto} in collaborazione con l'\textit{Amministratore}. Le principali responsabilità che si deve assumere sono le seguenti:
+È compito del \Progettista:
 \begin{itemize}
-\item Pianificazione e organizzazione dello sviluppo del progetto, stima tempi e costi, e assegnazione delle attività ai componenti del gruppo;
-\item Riportare lo stato del progetto ai committenti;
-\item Analizzare i rischi che possono incorrere, monitorarli e prendere provvedimenti a riguardo;
-\item Stabilire una \glossario{way of working} per ogni componente del gruppo, ai fini di un'influenza positiva delle performance del gruppo.
+	\item studiare il dominio e stabilire l'insieme delle tecnologie impiegate per lo svolgimento del progetto;
+	\item sviluppare la soluzione al problema rispettando i vincoli;
+	\item redigere la \textit{Specifica Tecnica} e la \textit{Definizione di Prodotto};
+	\item individuare le metriche di verifica da includere nel \textit{Piano di Qualifica}.
 \end{itemize}
 
+\subsection{Programmatore}
+Il \Programmatore\space ha il compito di implementare le soluzioni determinate dal \Progettista, per aderire a quanto stabilito dagli \Analisti\space durante le attività di analisi. È inoltre responsabilità del \Programmatore\space documentare il codice prodotto secondo gli standard descritti nella \sezione \ref{sec:convenzioni} delle \NormeDiProgetto\space e dotare il codice di appropriati test per le attività di \VV. Il \Programmatore\space deve inoltre assicurarsi che il codice prodotto sia correttamente versionato e facilmente manutenibile.
+
 \subsection{Verificatore}
-Il \textit{Verificatore} organizza ed attua le attività di verifica e controlla che le attività siano conformi
-alle norme. Va a controllare la struttura grammaticale e semantica di ogni documento, andando a correggere eventuali errori. Redige la parte del \textit{Piano di Qualifica} che illustra l'esito e la completezza delle verifiche e delle prove effettuate.
+Il \Verificatore\space ha il compito di valutare la correttezza del lavoro svolto dagli altri membri del team e di assicurarsi che sia svolto in maniera conforme a quanto descritto nelle \NormeDiProgetto. In caso trovi errori il \Verificatore, se na ha la possibilità, deve anche provvedere a correggerli. In caso l'attività di correzione risulti troppo dispendiosa è compito del \Verificatore\space comunicarlo al \Responsabile, il quale provvederà ad aggiornare l'ordine del giorno della successiva riunione.\\
+Il \Verificatore\space redige parte del \textit{Piano di Qualifica}, in particolare quanto concerne l'esito e la completezza delle verifiche e delle prove effettuate.

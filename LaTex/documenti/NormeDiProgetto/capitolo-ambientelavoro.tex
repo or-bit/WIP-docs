@@ -1,89 +1,171 @@
 \section{Ambiente di Lavoro}
 
-\subsection{Coordinamento}
-\subsubsection{Software di Versionamento}
+\subsection{Software di supporto alla collaborazione}
+Gli strumenti di supporto alla collaborazione scelti sono Slack e Discord, affiancati da Skype in caso si ritenga necessario effettuare videochiamate.
 
-Il software scelto per la gestione del versionamento, dopo accurata analisi di altri prodotti (come SVN o Mercurial), è \glossario{GitHub}. I motivi principali della scelta sono:
+\subsubsection{Slack}
+Si è scelto di utilizzare Slack per le comunicazioni tra i componenti del gruppo in quanto permette di creare diversi canali, in modo tale da distinguere le conversazioni inerenti il progetto da quelle sociali. Viene così rispettato un certo ordine all'interno delle conversazioni.\\
+Vengono inoltre creati canali dedicati a particolari scopi, tra cui i sondaggi, la condivisione dei file e l'aggregazione di informazioni importanti.
+
+\subsubsection{Discord}
+Discord viene scelto come canale di chat vocale. Esso è disponibile in versione gratuita come applicazione, sia per mobile che per Windows e MacOS, ed è inoltre utilizzabile direttamente tramite browser. Le motivazioni alla base di questa scelta ricadono anche sulle origini di questo applicativo: Discord nasce come strumento di chat vocale per videogiochi online e pertanto garantisce buone prestazioni anche in caso di connessioni a banda limitata o sovraccaricata. Ciò non è invece stato riscontrato con altri strumenti.
+
+\subsubsection{Skype}
+Per le comunicazioni che richiedono funzionalità video si è scelto di utilizzare Skype. La scelta è principalmente basata sulla popolarità di questo strumento, sebbene le prestazioni di questo software non siano delle migliori nel caso di connessioni più lente. È stata valutata l'idea di utilizzare come alternativa Google Hangouts, poi abbandonata.
+
+\subsection{Software di gestione del progetto}
+La piattaforma di gestione del progetto prescelta è \textbf{Teamwork}. Le funzionalità complete di questo strumento vengono descritte in \sezione\ref{sec:teamwork}.\\
+Si è scelto di utilizzare questo software in quanto comprensivo, nel piano gratuito, di molte delle funzionalità comprese nella versione a pagamento, tra cui un numero illimitato di collaboratori e di progetti creabili. Sono stati valutati altri software, tra cui RedMine, Asana, Trello, Kimai ed OpenProject. Asana e Trello sono stati scartati in quanto non offrivano funzionalità sufficienti per la gestione del progetto; RedMine e OpenProject sono stati scartati in quanto richiedevano l'installazione di un server dedicato, mentre Teamwork offriva un servizio hosted. L'opzione Kimai è caduta con la proposta di Teamwork, poiché questo comprende di suo la funzione di time tracking. Non sono poi state trovate altre opzioni gratuite alla pari di Teamwork.
+
+\subsection{Software di versionamento}
+La piattaforma di versionamento scelta è \glossario{\textbf{Git}} in tandem al servizio di \glossario{hosting} fornito in \glossario{\textbf{GitHub}}. \glossario{Git} è stato preferito alle alternative (\glossario{SVN}, \glossario{Mercurial}) in quanto precedentemente conosciuto ed usato dalla maggioranza dei membri del team di sviluppo.\\
+\glossario{GitHub} è stato considerato perché:
 \begin{itemize}
-\item \textbf{Interfaccia Grafica}: a differenza di \glossario{Git} che prevede un utilizzo unicamente da linea di comando, \glossario{GitHub} fornisce un'interfaccia grafica molto ben fatta e comprensibile per tutti i membri del gruppo; inoltre è possibile consultare online tutti i file inseriti nel \glossario{repository}, senza fare una copia locale, ed è permesso controllare le differenze tra la versione ed un'altra di un singolo file, in modo da capire le differenze ed eventualmente risolvere i conflitti che si possono venire a creare;
-\item \textbf{Flessibilità}: \glossario{GitHub} è un \glossario{repository} distribuito che prevede la possibilità di \glossario{commit} e \glossario{revert} locali;
-\item \textbf{Servizi aggiuntivi}: \glossario{GitHub} provvede a fornire, ad esempio, servizi di controllo accessi e \glossario{bug tracking}, molto utili per la gestione efficiente del progetto;
-\item \textbf{Esperienza del Gruppo}: \glossario{GitHub} è già stato usato da alcuni componenti del gruppo \GroupName{}.
+	\item tutti i componenti del gruppo erano già in possesso di un account;
+	\item con il pacchetto educational offerto agli studenti vi è la possibilità di creare illimitate repository private;
+	\item offre varie integrazioni, utili per il processo di integrazione continua;
+	\item è il più utilizzato e diffuso.
 \end{itemize}
 
-\subsubsection{Condivisione dei File}
-Si è scelto di usare come strumento di condivisione dei file il tool fornito dal software per la pianificazione e gestione del gruppo, descritto meglio nel paragrafo successivo. C'è la possibilità, infatti, di andare a condividere in un'apposita sezione \virgolette{Documenti} tutti quei file che non necessitano di \glossario{controllo di versione}, in modo da essere facilmente reperibili da tutti i membri del gruppo al momento del bisogno. Si potranno condividere appunti personali, manuali o altro, per andare ad uniformare le conoscenze di tutti i componenti del team.
+\subsubsection{Procedure di utilizzo del repository}
 
-\subsection{Software di Pianificazione e Gestione dei Compiti}
-Per pianificare e gestire tutte le attività e i compiti annessi al progetto, si è deciso di utilizzare lo strumento Teamwork, programma gratuito funzionale in tutto e per tutto allo svolgimento del progetto. Si è deciso di utilizzare tale strumento per le seguenti caratteristiche:
+\subsection{Software di integrazione continua}
+Come software di integrazione continua viene utilizzato \textbf{Travis}.
+Travis è un servizio open source sotto licenza MIT, quindi disponibile in versione gratuita, hosted ed integrabile con vari altri servizi, tra cui GitHub e Heroku.\\ Travis permette di produrre e testare progetti ospitati su GitHub. Ad ogni nuovo commit o pull request in GitHub, vengono quindi eseguiti specifici test e ne viene segnalato l'esito agli sviluppatori interessati. Travis è inoltre integrabile con strumenti e servizi esterni, per esempio per l'analisi statica.
+
+\subsection{Software di pianificazione} \label{sec:teamwork}
+Per la gestione e la pianificazione delle attività del progetto è stato scelto di utilizzare \textbf{Teamwork Project}. Teamwork Project è un programma web-based che permette la gestione completa di un progetto.\\
+Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste per la coordinazione ed il controllo delle attività.
 \begin{itemize}
-\item \textbf{Gestione dei singoli compiti}: i compiti possono essere facilmente inseriti ed assegnati ad un singolo membro del gruppo; per ogni compito è possibile definire una priorità, data di inizio e fine, aggiungere una descrizione ed inserire come allegati eventuali file; inoltre, il membro del gruppo responsabile del compito può aggiungere una percentuale di completamento del suddetto compito e il numero di ore lavoro che vi ha dedicato. Ogni compito può essere contrassegnato come chiuso una volta completato;
-\item \textbf{Gestione lista di compiti}: viene così implementato il concetto di attività come insieme di compiti: ad ogni lista è possibile inserire un qualsiasi numero di compiti;
-\item \textbf{Gestione pietre miliari}: nella stessa modalità della creazione di un singolo compito, è possibile creare una \glossario{milestone};
-\item \textbf{Diagrammi Gantt}: a partire dai compiti, dalle liste di compiti e dalle \glossario{milestone}, viene generato automaticamente un diagramma di \glossario{Gantt}, utile per una visione di insieme di tutte le attività e per evitare conflitti tra l'una e l'altra;
-\item \textbf{Calendario}: viene fornito un calendario che fornisce una vista d'insieme su tutte le attività da svolgere nel corso del mese selezionato; si può inoltre fruire di filtri che fanno visualizzare solamente i compiti assegnati ai singoli individui o le \glossario{milestone} previste dal gruppo;
-\item \textbf{Condivisione Documenti}: vedi spiegazione in §6.1.2;
-\item \textbf{Forum}: vedi paragrafo §2.1.
+	\item \textbf{Task}:
+	gestione chiara e intuitiva dei vari task, catalogabili per importanza, e delle dipendenze tra essi, anche attraverso subtask.\\
+	I task sono assegnabili anche a più persone per consentire una distribuzione del lavoro efficace all'interno del team.
+	
+	\item \textbf{Time tracking}:
+	Teamwork fornisce la possibilità di calcolare il tempo richiesto per effettuare un determinato task senza utilizzare altri strumenti. Questo permette di avere una visuale generale del tempo richiesto per ciascun task e quindi di organizzarsi al meglio per lo svolgimento delle diverse attività.
+	
+	\item \textbf{Milestone}:
+	alle milestone possono essere associate liste di task, facilitando la comprensione dello stato di avanzamento delle attività relative a tali milestone.\\
+	Le milestone possono essere assegnate a uno o più membri, dividendo in questo modo le responsabilità. Esse inoltre possono essere incorporate nel calendario: in questo modo i membri del gruppo interessati al completamento di una milestone vengono avvisati in prossimità della sua scadenza.
+	
+	\item \textbf{Diagrammi di Gantt}:	
+	sono la rappresentazione grafica della pianificazione temporale delle attività, per studiare sequenzialità, parallelismo e interdipendenza tra task e relative scadenze.\\
+	Teamwork genera in automatico questi diagrammi dalle liste di task create, agevolando il lavoro del \Responsabile.
+	
+	\item \textbf{Gestione riunioni}:
+	Teamwork permette la creazione di riunioni con notifiche, reminder, e conferma di partecipazione.
+	
+	\item \textbf{Gestione pagamenti}:
+	tracciamento dei costi di progetto, valutando il costo unitario a seconda dei ruoli e del lavoro svolto.
 \end{itemize}
 
-\subsection{Strumenti per i Documenti}
+\subsubsection{Modalità di utilizzo} \label{sec:procedure_teamwork}
+
+\subsection{Software per la stesura dei documenti}
+La stesura dei documenti va fatta tramite linguaggio di markup LaTeX, integrato con Google Documents per la scrittura del contenuto. 
+
 \subsubsection{\LaTeX}
-Per la stesura dei documenti si è scelto di utilizzare il linguaggio di markup \LaTeX. Il motivo principale che ha portato a questa scelta è la facilità di separazione tra contenuto e formattazione: con \LaTeX è possibile definire l'aspetto delle pagine in un file template condiviso da tutti i documenti. Altre soluzioni come Microsoft Office, LibreOffice o Google Docs non avrebbero consentito questa separazione, duplicando il lavoro di formattazione del testo e non garantendo un risultato uniforme. Il grande numero di pacchetti esistenti consente di implementare funzionalità comuni in maniera semplice. L'estensibilità di \LaTeX può essere sfruttata per creare funzioni e variabili globali che rendono la scrittura del contenuto più corretta da un punto di
-vista semantico. Un esempio è dato dal comando \textbackslash GroupName che va a scrivere il nome del gruppo. Per la scrittura di documenti \LaTeX, l'editor consigliato è \textbf{TeXstudio}\footnote[2]{\url{http://www.texstudio.org/}}; per gli utenti Mac OS X è consigliato, invece, l'utilizzo di \textbf{TeXShop}. Si veda inoltre §3.1 per informazioni sulla facilitazione alla scrittura dei documenti.
+La scelta di usare \LaTeX{} è stata determinata dalla possibilità di separare il contenuto dalla formattazione, che questo strumento propone in maniera automatica tramite l'utilizzo di costrutti e template. Questi ultimi sono inoltre condivisibili tra documenti diversi, semplificando così il lavoro di aggiornamento e mantenimento di contenuti condivisi, come le versioni dei documenti, il nome del gruppo e altro ancora.
 
-\subsubsection{Verifica}
-Per la verifica dei documenti si utilizza TeXstudio, in quanto integra i dizionari di OpenOffice.org e segnala potenziali errori ortografici presenti nel testo, anche durante la stesura del testo stesso.
+\paragraph{TeXstudio}\mbox{}\\
+È stato scelto TeXstudio come editor per \LaTeX in quanto offre funzionalità complete ed è quello con aggiornamenti più recenti. Sono stati valutati altri editor, tra cui TeXMaker e OverLeaf, ma dopo una attenta analisi sono stati scartati. Più precisamente la versione gratuita di OverLeaf limitava il numero di progetti e lo spazio disponibile per il salvataggio di documenti nel cloud offerto, sebbene esso offrisse la possibilità di lavorare contemporaneamente su uno stesso documento in real-time. TeXMaker invece non offriva nulla di più di TeXstudio, e risultava meno aggiornato.
+
+\paragraph{Google Documents}\mbox{}\\
+Questo strumento è stato scelto per emulare la funzionalità di collaborazione offerta da OverLeaf. In particolare viene utilizzato per la stesura del contenuto dei documenti in maniera collaborativa, sfruttando gli strumenti di comunicazione vocale e testuale. Google Documents permette inoltre di tenere traccia delle modifiche fatte da ogni componente, tramite cronologia delle modifiche, e di commentare parti di testo. 
 
 \subsubsection{Diagrammi UML}
+Per la modellazione UML è stato scelto di utilizzare \textbf{Visual Paradigm}, disponibile in versione gratuita per Windows, MacOs e Linux. È uno strumento completo e già conosciuto da alcuni componenti del gruppo. Permette di creare in modo intuitivo diagrammi UML e di esportarli in file immagini, condivisibili e visualizzabili rapidamente attraverso gli strumenti di comunicazione, oltre che integrabili direttamente nei documenti di testo.
 
-Per quanto concerne la modellazione dei diagrammi dei caso d'uso, diagrammi di sequenza e diagrammi di attività è stato scelto l'editor \textbf{Astah Professional}\footnote[3]{\url{http://astah.net/}}. Dopo aver valutato numerose altre alternative, tale strumento è risultato un ottimo software in grado di coniugare il completo supporto a \glossario{UML} 2.0; si rilevano come pregi per tutti i componenti del team l'interfaccia semplice e molto usabile.
+\subsection{Fogli di calcolo} \label{sec:fogli_di_calcolo}
+\paragraph{Google Sheets}\mbox{}\\
+L'elaborazione dei dati avviene tramite Google Sheets, in quanto permette la collaborazione real-time tra i componenti del gruppo. Vengono prodotti con questo software:
+	\begin{itemize}
+	\item tabelle orarie e dei costi per il calcolo del preventivo;
+	\item tabelle di confronto tra preventivo e consuntivo.
+	\end{itemize}
 
-\subsubsection{Fogli di Calcolo}
-Viene sfruttato il prodotto Calc di del pacchetto LibreOffice, o in alternativa Excel del pacchetto Office, per produrre:
+\paragraph{Microsoft Excel} \mbox{}\\
+Viene usato per creare grafici personalizzati ed esportarli nei formati immagine. Queste funzionalità sono supportate in modo parziale o nullo in Google Sheets. 
+
+\subsection{Tecnologie utilizzate}
+\subsubsection{Javascript}
+JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi. Viene comunemente utilizzato nella programmazione web lato client, per la creazione di effetti dinamici interattivi, tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso.\\
+Le caratteristiche principali di JavaScript sono:
 \begin{itemize}
-\item Grafici a torta per l'utilizzo delle risorse;
-\item Grafici a torta per il costo dedicato a ciascuna risorsa;
-\item Istogrammi per le ore assegnate ad ogni componente del gruppo;
-\item Tabelle per il confronto tra preventivo e consuntivo;
-\item Istogrammi per il confronto tra ore preventivate e ore realmente impiegate da ciascuna risorsa.
+	\item è un linguaggio interpretato: il codice non viene compilato, ma interpretato;
+	\item definisce le funzionalità tipiche dei linguaggi di programmazione ad alto livello e consente l'utilizzo del paradigma object oriented;
+	\item è un linguaggio debolmente tipizzato;
+	\item il codice viene eseguito direttamente sul client e non sul server: il vantaggio di questo approccio è che, anche con la presenza di script particolarmente complessi, il web server non viene sovraccaricato a causa delle richieste dei client.
+\end{itemize}
+La versione utilizzata per questo progetto è ECMAScript 6 con un approccio promise.
+Tramite Javascript verranno creati il framework e la demo del prodotto finale.
+
+\paragraph{Meteor}\mbox{}\\
+Meteor è una piattaforma Javascript full-stack per lo sviluppo di applicazioni web e mobile moderne. Include un set di tecnologie chiave per costruire applicazioni connected-client reactive, uno strumento di build e un set di pacchetti offerti dalla community Node.js e Javascript.\\
+Meteor permette di sviluppare in un solo linguaggio, Javascript, in tutti gli ambienti: applicazioni server, browser web e dispositivi mobile.\\
+In Meteor è il server a inviare i dati, e non HTML, mentre il client li renderizza.
+Alcune caratteristiche di Meteor sono:
+\begin{itemize}
+	\item isomorfismo: il codice viene eseguito sia lato server che lato client;
+	\item reattività: l'interfaccia utente rispecchia il reale stato delle variabili con uno sforzo di sviluppo minimale.
 \end{itemize}
 
-\subsubsection{Software per le Presentazioni}
-Il software ufficiale di cui il gruppo di lavoro farà uso per la preparazione delle presentazioni sarà \textbf{Prezi}\footnote[4]{\url{https://prezi.com/}}
+\paragraph{React}\mbox{}\\
+React è una libreria Javascript per la costruzione di interfacce utente dinamiche e complesse, ma dall'utilizzo semplice e intuitivo. È alla base del frontend di Facebook, dal quale è stata creata.\\
+React consente l'uso di un approccio dichiarativo simile all'HTML per definire i componenti che rappresentano parti significative e logiche dell'interfaccia utente. Nonostante ciò, la rappresentazione del componente in realtà si traduce in chiamate all'API di React che intervengono sul DOM della pagina per creare gli elementi necessari.
 
-\subsection{Protocollo per lo Sviluppo dell'Applicazione}
+\subsubsection{SCSS (Sass 3)}
+Sass (Syntactically Awesome StyleSheets) è un'estensione del linguaggio CSS che permette di utilizzare variabili, di creare funzioni e di organizzare il foglio di stile in più file.\\
+Il linguaggio Sass si basa sul concetto di preprocessore CSS, il quale serve a definire fogli di stile con una forma più semplice, completa e potente rispetto ai CSS e a generare file CSS ottimizzati, aggregando le strutture definite anche in modo complesso.\\
+SCSS è la versione 3 di Sass e la sua sintassi è basata completamente su CSS. In questo modo è garantita la compatibilità di CSS verso SCSS.
 
-Per procedere con uno sviluppo controllato dei documenti e del codice si è scelto di adottare il sistema di gestione di progetto fornito da Teamwork. Tale scelta è stata motivata in §6.2. Si andranno ora a descrivere passo passo le varie operazioni possibili e consentite all'interno di tale portale.
-
-\subsubsection{Creare un Nuovo Progetto}
-
-La creazione di un nuovo progetto è demandata al \textit{Responsabile di Progetto}. Le operazioni da svolgere sono le seguenti:
+\subsubsection{Rocket.Chat}
+Rocket.Chat è una piattaforma di messaggistica open-source, ispirata a Slack. È un servizio multi piattaforma, accessibile tramite browser e applicazione desktop e mobile. È altamente personalizzabile, in quanto, oltre ad essere su un repository pubblico, è espandibile tramite pacchetti disponibili online. Alcune funzionalità base di Rocket.Chat sono:
 \begin{itemize}
-\item Selezionare l'opzione \textbf{Quick Add} nel menu superiore;
-\item Selezionare \textbf{Add a New Project};
-\item Associare un \textbf{nome} significativo al progetto;
-\item Inserire una breve \textbf{descrizione} del progetto (facoltativo).
+	\item livechat;
+	\item conferenze video;
+	\item condivisione di file;
+	\item TeX rendering di formule matematiche;
+	\item condivisione dello schermo;
+	\item integrazione con servizi esterni (GitHub, GitLab, Jira ad esempio);
+	\item estendibilità tramite pacchetti sviluppabili da chiunque.
 \end{itemize}
 
-\subsubsection{Assegnazione di un Nuovo Compito}
+\subsection{Strumenti per lo sviluppo dell'applicazione}
+\textbf{Heroku} è un Platform-as-a-Service (PaaS) su cloud basato sul concetto di contenitori, che permette di sviluppare applicazioni in modo indipendente dall'ambiente di sviluppo dei singoli membri del gruppo. È integrabile con Git e con i sistemi di integrazione continua e pertanto permette un approccio \virgolette{app-centric} e la scalabilità delle applicazioni.\\
+È stato preso in considerazione anche Docker, per lo stesso scopo, ma è stato scartato in quanto presenta alcuni problemi di gestione e configurazione dell'ambiente run-time, oltre ad essere stato sconsigliato dal Proponente, mentre vi è un esplicito riferimento ad Heroku nel capitolato.
 
-Tale operazione è consentita al \textit{Responsabile di Progetto} o ai \textit{Verificatori}, in caso questi ultimi trovassero bug o errori durante la fase di verifica. Ogni compito deve essere inserito in una lista di compiti, la quale modula il concetto di attività, precedentemente creata. La creazione e l'assegnazione di un nuovo compito viene descritta nel diagramma di attività che segue.
+\subsection{Strumenti per la documentazione}
+\underline{TODO: da fare}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=10cm]{CreazioneCompito.png}
-\caption{Diagramma attività - Creazione nuovo compito}
-\end{figure}
+\subsection{Strumenti per la codifica}
+L'IDE scelto per l'attività di codifica è \textbf{WebStorm}. Esso è disponibile in versione gratuita ed è compreso nel pacchetto studenti offerto da JetBrains. Alcune funzionalità che rende disponibili sono:
+\begin{itemize}
+	\item assistenza nella codifica per React, Meteor e CSS;
+	\item supporto di Cordova per lo sviluppo mobile e Node.js per il lato server;
+	\item autocompletamento di metodi, funzioni e framework esterni;
+	\item debugger integrato;
+	\item test di unità tramite Mocha;
+	\item tracciamento del codice Javascript;
+	\item integrazione con npm;
+	\item strumenti per la qualità integrati, tra cui ESLint;
+	\item sistema di versionamento integrato, sia per cambiamenti locali, sia per servizi esterni, tra i quali GitHub.
+\end{itemize}
 
-\subsubsection{Modifica di un Compito}
-L'operazione di modifica è molto semplice ed intuitiva. Viene descritta dal diagramma di attività che segue.
-\begin{figure}[H]
-\centering
-\includegraphics[width=10cm]{ModificaCompito.png}
-\caption{Diagramma attività - Modifica Compito}
-\end{figure}
+\subsection{Strumenti per la verifica}
+\subsubsection{Script}
+Vengono utilizzati degli script per il calcolo degli indici di leggibilità dei documenti.
 
-\subsection{Strumenti per lo Sviluppo dell'Applicazione e per la Codifica}
-\subsubsection{Framework}
-Per realizzare il progetto si fa uso del \glossario{framework} \textbf{Play Framework}\footnote[5]{\url{https://www.playframework.com/}}. \\
-\textbf{IntelliJ IDEA}\footnote[6]{\url{https://www.jetbrains.com/idea/}} è, invece, l'\glossario{IDE} utilizzato per lo sviluppo. La scelta è stata operata per una serie di motivi, tra cui l'ottima integrazione con lo strumento di versionamento, la pulita e semplice interfaccia grafica e gli strumenti per il \glossario{debugging}.
+\subsubsection{Test di integrazione}
+\paragraph{Mocha}\mbox{}\\
+Mocha è un framework per il test di Javascript, eseguibile su Node.js e nel browser. I test di Mocha vengono eseguiti in modo seriale, permettendo un controllo flessibile e accurato, mentre vengono mappate le eccezioni non rilevate al corretto test.\\
+Tra le varie funzionalità offerte da questo framework ci sono il supporto dell'asincronia, incluse le promise.
+
+\paragraph{Chai}\mbox{}\\
+Chai è una libreria BDD/TDD per Node.js ed il browser che può essere accoppiata con qualunque framework di testing per Javascript.\\
+Il vantaggio che questa libreria offre è la possibilità di costruire test facilmente leggibili, in quanto molto simili al linguaggio parlato. Questo avviene grazie alla concatenazione di costrutti quali \textit{to}, \textit{be}, \textit{is}, insieme ai costrutti base \textit{expect} e \textit{should}. La concatenazione può terminare quindi con funzioni quali \textit{include} o \textit{equals}, che richiedono dei parametri in input, oppure \textit{not}, \textit{true} o \textit{false}.\\
+In questo modo è possibile definire in modo chiaro il comportamento che ci si aspetta il codice abbia, o il risultato atteso dalle operazioni contenute in esso.
+
+\subsubsection{ESLint} \label{sec:eslint}
+ESLint è uno strumento di linting open source per Javascript. Questo strumento permette di scovare gli errori e i problemi nel codice prodotto senza eseguirlo.\\ ESLint è completamente estendibile tramite plugin, pertanto permette agli sviluppatori di creare regole personalizzate.\\
+In questo progetto ESLint viene configurato per seguire le convenzioni relative al codice descritte in \sezione \ref{sec:convenzioni} di questo documento.

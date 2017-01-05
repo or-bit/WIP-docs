@@ -30,10 +30,10 @@
 \renewcommand\appendixtocname{Appendici}
 
 % numera anche i paragrafi
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{6}
 
 % elenca anche i paragrafi nell'indice
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{6}
 
 % permetti di definire dei colori
 \usepackage[usenames,dvipsnames]{color}
@@ -58,7 +58,8 @@
 }
 
 % permette al comando \url{...} di andare a capo a metà di un link
-\usepackage{breakurl}
+% COMMENT: non so se conviene usarlo, non è tanto bello un link spezzato
+%\usepackage{breakurl}
 
 % immagini
 \usepackage{graphicx}
@@ -77,9 +78,6 @@
 
 % multirow per tabelle
 \usepackage{multirow}
-
-% Permette tabelle su più pagine
-\usepackage{longtable}
 
 % colore di sfondo per le celle
 \usepackage[table]{xcolor}
@@ -141,9 +139,9 @@
 		}
 	}
 	\chead{}
-	\rhead{
-		\slshape \leftmark
-	}
+	%\rhead{
+	%	\slshape \leftmark
+	%}
 
 	\lfoot{
 		\DocTitle{} \\
@@ -197,3 +195,11 @@
 % Permetti di utilizzare il grassetto per i caratteri Typewriter (per es. il font di \code{...} e \file{...})
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+
+% Permette di resettare il contatore delle note a piè di pagina ad ogni pagina
+\usepackage[perpage]{footmisc}
+
+% Per poter usare il carattere ° (anche nelle formule matematiche)
+\usepackage{gensymb}
+\usepackage{newunicodechar}
+\newunicodechar{°}{\degree}
