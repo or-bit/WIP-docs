@@ -129,10 +129,9 @@
 % permetti di calcolare le larghezze facendo calcoli
 \usepackage{calc}
 
-\fancypagestyle{plain}{
+\fancypagestyle{plain}{	
 	% cancella tutti i campi di intestazione e piè di pagina
 	\fancyhf{}
-
 	\lhead{
 		\includegraphics[height=1.5cm, width=1.5cm, keepaspectratio=true]{../../modello/or-bit_bkg.png}
 		\parbox[b]{10cm}{
@@ -144,6 +143,10 @@
 	%\rhead{
 	%	\slshape \leftmark
 	%}
+	% Stampa la sezione in alto a destra sull'header
+	\rhead{	
+		\includegraphics[height=1.25cm, width=1.25cm, keepaspectratio=true]{../../modello/monolith}
+	}
 
 	\lfoot{
 		\DocTitle{} \\
