@@ -3,6 +3,9 @@
 %%%%%%%%%%%%%%
 
 % In questa prima parte vanno definite le 'costanti' utilizzate da due o più documenti.
+% Serve a dare la giusta formattazione alle parole presenti nel glossario
+% il nome del comando \glossary è già usato da LaTeX
+\newcommand{\glossario}[1]{#1\ped{\ped{G}}}
 
 % Meglio non mettere gli \emph dentro le costanti, in certi casi creano problemi
 \newcommand{\GroupName}{Or-bit}
@@ -77,18 +80,19 @@
 
 
 \newcommand{\ScopoDelProdotto}{
-Lo scopo di questo progetto è sviluppare un framework volto alla costruzione di bubble interattive, per aggiungere funzionalità al programma di comunicazione Rocket.Chat.
-In secondo luogo, utilizzare il framework prodotto per fornire esempi significativi delle suddette bubble.
+Lo scopo di questo progetto è sviluppare un \glossario{framework} volto alla costruzione di \glossario{bubble} interattive, per aggiungere funzionalità al programma di comunicazione \glossario{Rocket.Chat}.
+In secondo luogo, utilizzare il \glossario{framework} prodotto per fornire esempi significativi delle suddette \glossario{bubble}.
 }
 
 \newcommand{\GlossarioIntroduzione}{
-Insieme al progetto il gruppo fornirà anche un glossario nel quale saranno raccolti i termini tecnici, acronimi e le parole che necessitano di chiarimenti, che verranno utilizzati nella documentazione.\\
-I vocaboli presenti nel documento \Glossario\space saranno marcati con una \textit{\small{G}} al pedice.
+Insieme al progetto il gruppo fornirà anche un glossario nel quale saranno raccolti i termini tecnici, gli acronimi e le parole che necessitano di chiarimenti, che verranno utilizzati nella documentazione.\\
+I vocaboli presenti nel documento \Glossario{} saranno marcati con una \textit{\small{G}} al pedice.
 }
 
 % Altri comandi utili
 \newcommand{\email}{e-mail}
-\newcommand{\sezione}{sezione §}
+\newcommand*{\sezione}[1]{\hyperref[{#1}]{sezione §\ref*{#1}}}
+\newcommand*{\appendice}[1]{\hyperref[{#1}]{Appendice \autoref*{#1}}}
 
 %%%%%%%%%%%%%%
 %  FUNZIONI  %
@@ -98,10 +102,6 @@ I vocaboli presenti nel documento \Glossario\space saranno marcati con una \text
 
 % Comando per usare comodamente le virgolette
 \newcommand{\virgolette}[1]{``#1''}
-
-% Serve a dare la giusta formattazione alle parole presenti nel glossario
-% il nome del comando \glossary è già usato da LaTeX
-\newcommand{\glossario}[1]{\textit{#1\ped{\ped{G}}}}
 
 \newcommand*\flextt{%
   \fontdimen2\font=0.4em% interword space
@@ -120,10 +120,13 @@ I vocaboli presenti nel documento \Glossario\space saranno marcati con una \text
 % Permette di andare a capo all'interno di una cella in una tabella
 \newcommand{\multiLineCell}[2][c]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
+% Per l'allineamento delle immagini
+\usepackage[export]{adjustbox}
+
 % Genera automaticamente la pagina di copertina
 \newcommand{\makeFrontPage}{
   % Declare new goemetry for the title page only.
-  \newgeometry{top=3.5cm}
+  \newgeometry{top=3cm}
   
   \begin{titlepage}
   \begin{center}
@@ -132,7 +135,7 @@ I vocaboli presenti nel documento \Glossario\space saranno marcati con una \text
   \includegraphics[width=8cm]{../../modello/or-bit_bkg.png}
   \end{center}
   
-  \vspace{1cm}
+%  \vspace{1cm}
 
   \begin{Huge}
   \textbf{\DocTitle{}}
@@ -140,7 +143,7 @@ I vocaboli presenti nel documento \Glossario\space saranno marcati con una \text
   
   \textbf{\emph{Gruppo \GroupName{} \, \texttwelveudash{} \, Progetto \ProjectName{}}}
   
-  \vspace{11pt}
+  \vspace{10pt}
 
   \bgroup
   \def\arraystretch{1.3}
@@ -162,12 +165,18 @@ I vocaboli presenti nel documento \Glossario\space saranno marcati con una \text
   \end{tabular}
   \egroup
 
-  \vspace{22pt}
+  \vspace{10pt}
 
   \textbf{Descrizione} \\
-  \DocDescription{}
+  \DocDescription{}  
+
+%  \vspace{0.2cm}
+  
 
   \end{center}
+  \begin{figure}[H]
+	\includegraphics[height=3.7cm, right]{../../modello/monolith}
+  \end{figure}
   \end{titlepage}
   
   % Ends the declared geometry for the titlepage

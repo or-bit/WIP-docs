@@ -28,6 +28,7 @@
 % comandi per l'appendice
 \usepackage{appendix}
 \renewcommand\appendixtocname{Appendici}
+\renewcommand{\appendixpagename}{Appendici}
 
 % numera anche i paragrafi
 \setcounter{secnumdepth}{6}
@@ -81,6 +82,7 @@
 
 % colore di sfondo per le celle
 \usepackage[table]{xcolor}
+%\rowcolors{2}{gray!25}{} % Colora righe alterne in grigio (non funziona bene) 
 
 % permette di fare longtable larghe tutta la pagina (parametro x)
 % su Ubuntu non si può installare il pacchetto, deve essere in modello/
@@ -127,10 +129,9 @@
 % permetti di calcolare le larghezze facendo calcoli
 \usepackage{calc}
 
-\fancypagestyle{plain}{
+\fancypagestyle{plain}{	
 	% cancella tutti i campi di intestazione e piè di pagina
 	\fancyhf{}
-
 	\lhead{
 		\includegraphics[height=1.5cm, width=1.5cm, keepaspectratio=true]{../../modello/or-bit_bkg.png}
 		\parbox[b]{10cm}{
@@ -142,6 +143,10 @@
 	%\rhead{
 	%	\slshape \leftmark
 	%}
+	% Stampa la sezione in alto a destra sull'header
+	\rhead{	
+		\includegraphics[height=1.25cm, width=1.25cm, keepaspectratio=true]{../../modello/monolith}
+	}
 
 	\lfoot{
 		\DocTitle{} \\
@@ -197,9 +202,18 @@
 \usepackage{lmodern}
 
 % Permette di resettare il contatore delle note a piè di pagina ad ogni pagina
-\usepackage[perpage]{footmisc}
+\usepackage[perpage, bottom]{footmisc}
 
 % Per poter usare il carattere ° (anche nelle formule matematiche)
 \usepackage{gensymb}
 \usepackage{newunicodechar}
 \newunicodechar{°}{\degree}
+
+% Per importare svg
+\usepackage{svg}
+%\setsvg{inkscape = inkscape -z -D}
+
+% Per numerare le tabelle e le figure con la sezione in cui si trovano 
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
