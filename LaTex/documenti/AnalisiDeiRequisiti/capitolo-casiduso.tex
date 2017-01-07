@@ -1,1 +1,914 @@
-\section{capitolo-casiduso}
+\section{Casi d'uso}
+
+\subsection{Framework}
+
+\subsubsection{UC1.00 Connessione a database mongo} \label{UC1.00}
+
+\begin{itemize}
+\item \textbf{Attori:}
+\\Utilizzatore del framework.
+\item \textbf{Scopo e descrizione:} 
+\\Connettersi ad un database mongo esterno all’applicazione.
+\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere l’indirizzo del database \glossario{MongoDB} a cui si desidera connettersi.
+	\end{itemize}
+\item \textbf{Flusso principale degli eventi:}
+\\L’utilizzatore passa l’indirizzo del database a cui connettersi al metodo che genera una connessione con il database mongo.
+\item \textbf{Post-condizione:}
+\\La bubble generica da cui è invocato il metodo è connessa al database.
+\end{itemize}
+
+\subsubsection{UC1.01 Lettura da database mongo} \label{UC1.01}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Prelevare dati dal database connesso alla bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item La bubble è connessa al database \glossario{MongoDB} \hyperref[UC1.00]{(UC1.00)};
+		\item L’utilizzatore deve conoscere il nome della \glossario{collection} da cui prelevare i dati.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore chiama il metodo su una bolla, il quale gli ritorna un oggetto json letto dal database eventualmente assegnabile ad un campo della bubble memory.
+	\item \textbf{Post-condizione:}
+	\\I dati sono prelevati dal database e sono pronti all’uso nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.02 Scrittura su database mongo} \label{UC1.02}
+
+\begin{itemize}
+\item \textbf{Attori:}
+\\Utilizzatore del framework.
+\item \textbf{Scopo e descrizione:} 
+\\Scrittura dati nel database connesso alla bubble.
+\item \textbf{Precondizioni:}
+\begin{itemize}
+	\item Avere già istanziato una bubble generica;
+	\item La bubble è connessa al database \glossario{MongoDB};
+	\item L’utilizzatore deve conoscere il nome della \glossario{collection} da cui prelevare i dati.
+\end{itemize}
+\item \textbf{Flusso principale degli eventi:}
+\\L’utilizzatore chiama il metodo su una bolla passandogli un oggetto \glossario{javascript}, serializzabile in \glossario{json}, e il metodo lo salva nel database.
+\item \textbf{Post-condizione:}
+\\I dati sono scritti nel database collegato.
+\end{itemize}
+
+\subsubsection{UC1.03.1 Rimozione di un elemento} \label{UC1.03.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Rimuovere dalla bubble un elemento specificato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item La bubble possiede degli elementi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore chiama il metodo il quale rimuove l’elemento dalla bubble.
+	\item \textbf{Scenari alternativi:}
+	\\L'elemento non è presente nella bubble \hyperref[UC1.03.2]{(UC1.03.2)}.
+	\item \textbf{Post-condizione:}
+	\\La bubble non contiene l’elemento indicato da rimuovere.
+\end{itemize}
+
+\subsubsection{UC1.03.2 Rimozione di un elemento} \label{UC1.03.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Rimuovere dalla bubble un elemento specificato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item La bubble possiede degli elementi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore chiama il metodo il quale, non trovando l’elemento, restituisce un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\L'elemento è presente nella bubble \hyperref[UC1.03.1]{(UC1.03.1)}.
+	\item \textbf{Post-condizione:}
+	\\La bubble non contiene l’elemento indicato da rimuovere e l’utilizzatore è stato avvisato della sua mancanza.
+\end{itemize}
+
+\subsubsection{UC1.04 Aggiunta di un elemento} \label{UC1.04}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Inserire nella bubble un elemento.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Aver istanziato un elemento.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore invoca il metodo sulla bubble e il metodo lo aggiunge alla bubble.
+	\item \textbf{Post-condizione:}
+	\\La bubble avrà al suo interno l'elemento passato al metodo.
+\end{itemize}
+
+\subsubsection{UC1.05.1 Modifica di un elemento} \label{UC1.05.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Modifica un elemento di una bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item All'interno della bubble sono presenti degli elementi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore invoca il metodo sulla bubble e il metodo va a modificare l’elemento.
+	\item \textbf{Scenari alternativi:}
+	\\ L’elemento non è presente nella bubble \hyperref[UC1.05.2]{(UC1.05.2)}.
+	\item \textbf{Post-condizione:}
+	\\La bubble contiene l’elemento modificato.
+\end{itemize}
+
+\subsubsection{UC1.05.2 Modifica di un elemento} \label{UC1.05.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Modifica un elemento di una bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item All'interno della bubble sono presenti degli elementi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore invoca il metodo sulla bubble e il metodo, non trovando l’elemento da modificare, lancia un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\L’elemento è presente nella bubble \hyperref[UC1.05.1]{(UC1.05.1)}.
+	\item \textbf{Post-condizione:}
+	\\L’utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l’elemento da modificare.
+\end{itemize}
+
+\subsubsection{UC1.06.1 Cambiamento di stato alla bubble} \label{UC1.06.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Modificare lo specifico stato della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore invoca il metodo sulla bubble indicando il nuovo stato e il metodo esegue la modifica.
+	\item \textbf{Scenari alternativi:}
+	\\L'oggetto che si sta cercando di modificare non ha la proprietà cercata \hyperref[UC1.06.2]{(UC1.06.2)}.
+	\item \textbf{Post-condizione:}
+	\\L'oggetto è stato modificato.
+\end{itemize}
+
+\subsubsection{UC1.06.2 Cambiamento di stato alla bubble} \label{UC1.06.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Modificare lo specifico stato della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore invoca il metodo sulla bubble indicando il nuovo stato e il metodo, non trovando la proprietà cercata, restituisce un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\L'oggetto che si sta cercando di modificare ha la proprietà cercata \hyperref[UC1.06.1]{(UC1.06.1)}.
+	\item \textbf{Post-condizione:}
+	\\L'oggetto non è stato modificato.
+\end{itemize}
+
+\subsubsection{UC1.07.1 Chiamata api esterne} \label{UC1.07.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Ottenere il risultato dell’ interrogazione di un servizio esterno al framework tramite chiamata di api.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Conoscere l'url del servizio desiderato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il metodo prende l'indirizzo del servizio e ritorna in formato json il risultato della chiamata.
+	\item \textbf{Scenari alternativi:}
+	\\Il servizio che si sta cercando di contattare non è disponibile \hyperref[UC1.07.2]{(UC1.07.2)}.
+	\item \textbf{Post-condizione:}
+	\\All’interno della logica della bubble è utilizzabile il risultato della consultazione del servizio.
+\end{itemize}
+
+\subsubsection{UC1.07.2 Chiamata api esterne} \label{UC1.07.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Ottenere il risultato dell’ interrogazione di un servizio esterno al framework tramite chiamata di api.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Conoscere l'url del servizio desiderato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il metodo prende l'indirizzo del servizio e, non trovandolo disponibile, ritorna un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\Il servizio che si sta cercando di contattare è disponibile \hyperref[UC1.07.1]{(UC1.07.1)}.
+	\item \textbf{Post-condizione:}
+	\\L’utilizzatore del metodo è stato avvisato della non disponibilità del servizio.
+\end{itemize}
+
+\subsubsection{UC1.08 Limite interazioni per persona} \label{UC1.08}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Porre un limite superiore al numero delle interazioni che un utente di \glossario{Rocket.Chat} può avere con una stessa bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per una persona con una singola istanza della bubble.
+	\item \textbf{Post-condizione:}
+	\\Il singolo utilizzatore della bubble come utente di rocketchat non potrà’ interagire con la stessa istanza della bubble più volte di quelle specificate.
+\end{itemize}
+
+\subsubsection{UC1.09 Limite interazioni totali} \label{UC1.09}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Porre un limite superiore al numero delle interazioni che tutti gli utenti possono avere con una stessa istanza della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per l’istanza della bubble.
+	\item \textbf{Post-condizione:}
+	\\La singola istanza della bubble ha un numero massimo di interazioni possibili condiviso tra tutti i suoi utenti. 
+\end{itemize}
+
+\subsubsection{UC1.10 Match con espressione regolare} \label{UC1.10}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Verificare che l’input testuale di una bubble sia compatibile con un'espressione regolare data.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato l’elemento da verificare e l'espressione regolare in base a cui controllarlo.
+	\item \textbf{Post-condizione:}
+	\\É noto se l’input della bubble è corretto secondo l’espressione regolare.
+\end{itemize}
+
+\subsubsection{UC1.11 Dimensione massima del file} \label{UC1.11}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Verificare che la dimensione dei file caricati in input sia minore o uguale a quella specificata.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificata la dimensione massima accettata per i file di input.
+	\item \textbf{Post-condizione:}
+	\\É stata impostata una dimensione massima per i file allegabili.
+\end{itemize}
+
+\subsubsection{UC1.12 Controllo sul json} \label{UC1.12}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Verificare che la struttura di un oggetto json sia compatibile con lo schema fornito.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere un oggetto json da validare;
+		\item Avere lo schema attraverso cui validare l’oggetto \glossario{json}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato il \glossario{json} da verificare e lo schema di dati rispetto al quale validare tale oggetto. Il metodo poi si occupa della validazione.
+	\item \textbf{Post-condizione:}
+	\\É noto se l'oggetto \glossario{json} è compatibile con la struttura indicata.
+\end{itemize}
+
+\subsubsection{UC1.13 Durata della bubble} \label{UC1.13}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Dare la possibilità all'utilizzatore del framework di impostare un limite temporale entro il cui la bubble smetterà di essere attiva.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato il tempo per il quale la bubble sarà attiva.
+	\item \textbf{Post-condizione:}
+	\\Al termine del periodo di tempo specificato dal metodo verrà invocata la sua terminazione secondo quanto specificato nel caso d’uso \hyperref[UC1.19]{UC1.19} termina bubble.
+\end{itemize}
+
+\subsubsection{UC1.14 Lista utenti partecipanti} \label{UC1.14}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Possibilità di visualizzare gli utilizzatori correnti della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato l’elenco degli utilizzatori correnti della bubble.
+	\item \textbf{Post-condizione:}
+	\\Viene restituita una lista di utilizzatori della bubble.
+\end{itemize}
+
+\subsubsection{UC1.15.1 Storico interazioni con la bubble per utente} \label{UC1.15.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Dare la possibilità all'utilizzatore del framework di consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere elementi di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni.
+	\item \textbf{Scenari alternativi:}
+	\\Non è presente l’utente specificato all’interno della conversazione \hyperref[UC1.15.2]{(UC1.15.2)}.
+	\item \textbf{Post-condizione:}
+	\\L'informazione relativa allo storico delle interazioni di un singolo utente con la bubble è noto all'interno della bubble stessa.
+\end{itemize}
+
+\subsubsection{UC1.15.2 Storico interazioni con la bubble per utente} \label{UC1.15.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Dare la possibilità all'utilizzatore del framework di consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere elementi di input all'interno della bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni e il metodo, non trovando l’utente, restituisce un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\É presente l’utente specificato all'interno della conversazione \hyperref[UC1.15.1]{(UC1.15.1)}.
+	\item \textbf{Post-condizione:}
+	\\L’utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa dell’assenza all’inerno della conversazione dell’utente di cui aveva richiesto lo storico.
+\end{itemize}
+
+\subsubsection{UC1.16 Esecuzione in orario specificato} \label{UC1.16}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può fornire un orario per l’esecuzione della funzionalità della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere la funzione di callback che si desidera eseguire all’orario specificato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Alla chiamata del metodo viene specificato l’orario di esecuzione della specifica funzionalità della bubble.
+	\item \textbf{Post-condizione:}
+	\\Nell’orario stabilito viene eseguita la funzionalità della bubble.
+\end{itemize}
+
+\subsubsection{UC1.17 Creazione Notifica Statica} \label{UC1.17}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà creare una notifica statica specificandone il testo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Essere in possesso del messaggio che si desidera notificare sotto forma di testo.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando il testo da visualizzare nella notifica statica.
+	\item \textbf{Post-condizione:}
+	\\Sul dispositivo sul quale si sta utilizzando \glossario{Rocket.Chat} sarà notificato il testo specificato nel metodo.
+\end{itemize}
+
+\subsubsection{UC1.18 Visualizza Notifica Statica} \label{UC1.18}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può far visualizzare all’utente una notifica statica che visualizzi del testo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Aver creato una notifica statica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework fa visualizzare una certa notifica da lui creata.
+	\item \textbf{Post-condizione:}
+	\\La notifica contiene il valore del testo specificato.
+\end{itemize}
+
+\subsubsection{UC1.19 Termina bubble} \label{UC1.19}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà terminare la bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo.
+	\item \textbf{Post-condizione:}
+	\\La bubble è stata terminata e quindi non sarà più possibile interagire con la stessa. L’interfaccia verrà aggiornata, disabilitando la possibilità di dare input e avere output dinamico ma mantenendo un’istantanea del suo ultimo stato.
+\end{itemize}
+
+\subsubsection{UC1.20.1 Converti in pdf} \label{UC1.20.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà convertire il testo specificato in un pdf.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Possedere il testo da convertire in formato pdf;
+		\item Conoscere il percorso in cui si desidera che il file sia salvato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando il testo da convertire in pdf e il percorso in cui si desidera salvare il file.
+	\item \textbf{Scenari alternativi:}
+	\\Il salvataggio del file pdf non ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\item \textbf{Post-condizione:}
+	\\Un file pdf è stato creato nella posizione corretta e contiene il testo specificato.
+\end{itemize}
+
+\subsubsection{UC1.20.2 Conversione in pdf fallita} \label{UC1.20.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà convertire il testo specificato in un pdf.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Possedere il testo da convertire in formato pdf;
+		\item Conoscere il percorso in cui si desidera che il file sia salvato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando il testo da convertire in pdf e il percorso in cui si desidera salvare il file, ma il salvataggio non avviene e l’utilizzatore del framework visualizza un messaggio d’errore.
+	\item \textbf{Scenari alternativi:}
+	\\Il salvataggio del file pdf ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\item \textbf{Post-condizione:}
+	\\L’utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa che il file pdf non è stato salvato.
+\end{itemize}
+
+\subsubsection{UC1.21 Mostra elemento grafico} \label{UC1.21}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà terminare la bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando quale elemento della bubble vuole mostrare.
+	\item \textbf{Post-condizione:}
+	\\Il componente specificato è visibile.
+\end{itemize}
+
+\subsubsection{UC1.22 Nascondi elemento grafico} \label{UC1.22}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework potrà nascondere un elemento grafico.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando quale elemento della bubble vuole nascondere.
+	\item \textbf{Post-condizione:}
+	\\Il componente specificato non è più visibile.
+\end{itemize}
+
+\subsubsection{UC1.23 Imposta posizione elemento grafico} \label{UC1.23}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può specificare una posizione per un elemento grafico della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un componente nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo specificando la posizione e l’elemento di cui vuole fissare la posizione.
+	\item \textbf{Post-condizione:}
+	\\L’elemento specificato si trova nella posizione specificata.
+\end{itemize}
+
+\subsubsection{UC1.24.1 File output} \label{UC1.24.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può salvare l’output della bubble in un file.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che specifica che l’output della bubble sia un file e le informazioni da salvare in esso.
+	\item \textbf{Scenari alternativi:}
+	\\Il salvataggio del file file non ha successo, in tale caso verrà notificata la condizione anomala con un messaggio d’errore \hyperref[UC1.24.2]{(UC1.24.2)}.
+	\item \textbf{Post-condizione:}
+	\\Verrà generato un file contenente l'informazione desiderata.
+\end{itemize}
+
+\subsubsection{UC1.24.2 Errore File output} \label{UC1.24.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può salvare l’output della bubble in un file, il salvataggio non va a buon fine e viene generato un messaggio d’errore.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere delle informazioni da esportare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che specifica che l’output della bubble sia un file e le informazioni da salvare in esso,  il salvataggio non va a buon fine e viene generato un messaggio d’errore.
+	\item \textbf{Scenari alternativi:}
+	\\Il salvataggio del file file ha successo \hyperref[UC1.24.1]{(UC1.24.1)}.
+	\item \textbf{Post-condizione:}
+	\\Verrà generato un messaggio d’errore.
+\end{itemize}
+
+\subsubsection{UC1.25 Immagine} \label{UC1.25}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire all'interno della bubble un file immagine.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere un'immagine di cui fare la preview.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che specifica il file immagine da includere nella bubble.
+	\item \textbf{Post-condizione:}
+	\\Il file immagine è stato incluso nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.26 TextView} \label{UC1.26}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire all'interno della bubble una \glossario{TextView}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere un testo da visualizzare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che specifica il testo da includere nella bubble.
+	\item \textbf{Post-condizione:}
+	\\Il testo è stato incluso nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.27 Label} \label{UC1.27}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire all'interno della bubble una label.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere un testo da visualizzare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che specifica il testo da includere nella label.
+	\item \textbf{Post-condizione:}
+	\\Il testo è stato incluso nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.28 Grafico a torta} \label{UC1.28}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire all'interno della bubble un grafico a torta.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a torta.
+	\item \textbf{Post-condizione:}
+	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.29 Grafico a istogramma} \label{UC1.29}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire all'interno della bubble un grafico istogramma.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico istogramma.
+	\item \textbf{Post-condizione:}
+	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella bubble.
+\end{itemize}
+
+\subsubsection{UC1.30 Checkbox} \label{UC1.30}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del \glossario{framework} può inserire un elemento checkbox all’interno della bubble specificando la variabile della bubble memory a cui l'elemento è assegnato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla bubble una checkbox relativa ad un elemento della bubble memory specificato.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble è presente la checkbox, nella bubble memory è presente la variabile a cui è assegnata.
+\end{itemize}
+
+\subsubsection{UC1.31 Bottone Radio} \label{UC1.31}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del \glossario{framework} può inserire un elemento radiobutton di scelta di un elemento tra molti all’interno della bubble specificando la variabile della bubble memory a cui la scelta è assegnata.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla bubble un radiobutton relativo ad un elemento della bubble memory specificato.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble è presente il radiobutton, nella bubble memory è presente la variabile a cui è assegnata.
+\end{itemize}
+
+\subsubsection{UC1.32 Bottone} \label{UC1.32}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può inserire un elemento bottone all’interno della bubble specificando la funzione che verrà eseguita alla pressione del bottone da parte dell’utente.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere la funzione da eseguire.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del \glossario{framework} chiama il metodo per aggiungere il bottone specificando la funzione da assegnare ad esso.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble è presente il bottone. Alla pressione da parte dell'utente della bubble la funzione di callback specificata verrà eseguita.
+\end{itemize}
+
+\subsubsection{UC1.33 TextEdit} \label{UC1.33}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del \glossario{framework} può richiedere un input testuale \glossario{TextEdit}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo per aggiungere il testo ricevuto nella bubble memory.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble è presente il bottone. Nella bubble memory è presente il valore attuale del testo presente nell’elemento della bubble.
+\end{itemize}
+
+\subsubsection{UC1.34 File input} \label{UC1.34}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del framework può richiedere l’input di un file.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo che restituisce il file in input.
+	\item \textbf{Post-condizione:}
+	\\Il file è stato caricato e passato alla bubble.
+\end{itemize}
+
+\subsubsection{UC1.35 Istanziazione della bubble generica} \label{UC1.35}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del \glossario{framework} può istanziare il contenitore bubble generica, la quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo istanziare la bubble generica e la memoria ad essa associata.
+	\item \textbf{Post-condizione:}
+	\\É presente la bubble generica, e la sua memoria.
+\end{itemize}
+
+\subsubsection{UC1.36 Mostrare bubble generica} \label{UC1.36}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utilizzatore del \glossario{framework} utilizzando questo metodo rende la bubble visibile all'interno della chat.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del framework chiama il metodo.
+	\item \textbf{Post-condizione:}
+	\\La bubble specificata viene mostrata all'interno della chat.
+\end{itemize}
+
+\subsection{To-do list}
+
+\subsubsection{UC2.1 Creare una lista} \label{UC2.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Creare una lista di cose da fare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Essere utenti di Rocket.Chat;
+		\item Avere monolith installato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item L’utente invoca il comando di creazione della bubble to-do list \hyperref[UC2.1.1]{(UC2.1.1)};
+		\item Caricare il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
+		\item L’utente inserisce tutte le informazioni necessarie \hyperref[UC2.1.3]{(UC2.1.3)};
+		\item L’utente seleziona “Crea lista” \hyperref[UC2.1.4]{(UC2.1.4)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Nella conversazione è presente una bubble todo list con il titolo indicato.
+\end{itemize}
+
+\subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Creare un todo-list all'interno della chat.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Essere utenti di Rocket.Chat;
+		\item Avere monolith installato;
+		\item Avere accesso alla bubble to-do list.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore di monolith utilizzando l'apposito comando inizia la creazione della bubble to do list.
+	\item \textbf{Post-condizione:}
+	\\Viene istanziata la bubble.
+\end{itemize}
+
+\subsubsection{UC2.1.2 Caricare il form in cui inserire le informazioni} \label{UC2.1.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Creare un todo-list all'interno della chat.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Essere utenti di Rocket.Chat;
+		\item Avere monolith installato;
+		\item Aver invocato il comando di creazione di to-do list \hyperref[UC2.1.1]{UC2.1.1}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Viene caricato il form per l’inserimento delle informazioni.
+	\item \textbf{Post-condizione:}
+	\\Nella conversazione è presente una bubble to-do list con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della to do list.
+\end{itemize}
+
+\subsubsection{UC2.1.3 Inserire tutte le informazioni necessarie} \label{UC2.1.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Specificare le informazioni necessarie alla creazione della lista.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Essere utenti di Rocket.Chat;
+		\item Avere monolith installato;
+		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.1.2]{UC2.1.2}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore della bubble inserisce i dati necessari nel form visualizzato al caso d’uso \hyperref[UC2.1.2]{UC2.1.2}.
+	\item \textbf{Post-condizione:}
+	\\Nella memoria della bubble sono salvati i dati richiesti nel caso d’uso \hyperref[UC2.1.4]{UC2.1.4}. 
+\end{itemize}
+
+\subsubsection{UC2.1.4 Selezionare “Crea lista”} \label{UC2.1.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Creazione una lista di cose da fare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Essere utenti di Rocket.Chat;
+		\item Avere monolith installato;
+		\item Sono stati inseriti i dati come da \hyperref[UC2.1.3]{UC2.1.3}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della bubble.
+	\item \textbf{Post-condizione:}
+	\\Nella conversazione è presente una bubble todo list con il titolo indicato. 
+\end{itemize}
