@@ -812,7 +812,7 @@
 	\\La bubble specificata viene mostrata all'interno della chat.
 \end{itemize}
 
-\subsection{To-do list}
+\subsection{To-do List}
 
 \subsubsection{UC2.1 Creare una lista} \label{UC2.1}
 
@@ -828,27 +828,27 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L’utente invoca il comando di creazione della bubble to-do list \hyperref[UC2.1.1]{(UC2.1.1)};
+		\item L’utente invoca il comando di creazione della bubble \glossario{To-do List} \hyperref[UC2.1.1]{(UC2.1.1)};
 		\item Caricare il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
 		\item L’utente inserisce tutte le informazioni necessarie \hyperref[UC2.1.3]{(UC2.1.3)};
 		\item L’utente seleziona “Crea lista” \hyperref[UC2.1.4]{(UC2.1.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una bubble to-do list con il titolo indicato.
+	\\Nella conversazione è presente una bubble \glossario{To-do List} con il titolo indicato.
 \end{itemize}
 
-\subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
+\subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della \glossario{To-do List}} \label{UC2.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un to-do list all'interno della chat.
+	\\Creare un \glossario{To-do List} all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di Rocket.Chat;
 		\item Avere monolith installato;
-		\item Avere accesso alla bubble to-do list.
+		\item Avere accesso alla bubble \glossario{To-do List}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore di monolith utilizzando l'apposito comando inizia la creazione della bubble to do list.
@@ -862,17 +862,17 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un to-do list all'interno della chat.
+	\\Creare un \glossario{To-do List} all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di Rocket.Chat;
 		\item Avere monolith installato;
-		\item Aver invocato il comando di creazione di to-do list \hyperref[UC2.1.1]{UC2.1.1}.
+		\item Aver invocato il comando di creazione di \glossario{To-do List} \hyperref[UC2.1.1]{UC2.1.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene caricato il form per l’inserimento delle informazioni.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una bubble to-do list con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della to do list.
+	\\Nella conversazione è presente una bubble \glossario{To-do List} con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della to do list.
 \end{itemize}
 
 \subsubsection{UC2.1.3 Inserire tutte le informazioni necessarie} \label{UC2.1.3}
@@ -910,19 +910,19 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della bubble.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una bubble to-do list con il titolo indicato. 
+	\\Nella conversazione è presente una bubble \glossario{To-do List} con il titolo indicato. 
 \end{itemize}
 
-\subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
+\subsubsection{UC2.2 Aggiungere elemento alla \glossario{To-do List}} \label{UC2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Un utente inserisce un nuovo elemento alla to-do list.
+	\\Un utente inserisce un nuovo elemento alla \glossario{To-do List}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item L’elemento non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -933,7 +933,7 @@
 		\item L’utente conferma l’aggiunta \hyperref[UC2.2.4]{(UC2.2.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\La to-do list avrà il nuovo elemento aggiunto.
+	\\La \glossario{To-do List} avrà il nuovo elemento aggiunto.
 \end{itemize}
 
 \subsubsection{UC2.2.1 Selezionare l’opzione aggiungi elemento} \label{UC2.2.1}
@@ -942,10 +942,10 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\L’utente seleziona l’opzione per inserire un nuovo elemento alla to-do list.
+	\\L’utente seleziona l’opzione per inserire un nuovo elemento alla \glossario{To-do List}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list.
+		\item Avere ricevuto una bubble di \glossario{To-do List}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore del metodo seleziona l’opzione apposita.
@@ -959,16 +959,16 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo elemento della to-do list.
+	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo elemento della \glossario{To-do List}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item Avere selezionato l'opzione aggiungi elemento come da \hyperref[UC2.2.1]{UC2.2.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L’utilizzatore del metodo scrive il testo da inserire nel nuovo elemento e lo aggiunge alla to-do list.
+	\\L’utilizzatore del metodo scrive il testo da inserire nel nuovo elemento e lo aggiunge alla \glossario{To-do List}.
 	\item \textbf{Post-condizione:}
-	\\Il nuovo elemento è aggiunto alla bubble to-do list.
+	\\Il nuovo elemento è aggiunto alla bubble \glossario{To-do List}.
 \end{itemize}
 
 \subsubsection{UC2.2.3  Inserire le informazioni} \label{UC2.2.3}
@@ -977,16 +977,16 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\L’utente inserisce le informazioni necessarie ad aggiungere un elemento alla to-do list.
+	\\L’utente inserisce le informazioni necessarie ad aggiungere un elemento alla \glossario{To-do List}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.2.2]{UC2.2.2};
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore del metodo completa il form di inserimento di un nuovo elemento in tutte le sue parti.
 	\item \textbf{Post-condizione:}
-	\\La to-do list ha tutte le informazioni necessarie ad aggiungere il nuovo elemento.
+	\\La \glossario{To-do List} ha tutte le informazioni necessarie ad aggiungere il nuovo elemento.
 \end{itemize}
 
 \subsubsection{UC2.2.4 Confermare l’aggiunta} \label{UC2.2.4}
@@ -995,46 +995,46 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Un utente conferma l’inserimento del nuovo elemento alla to-do list.
+	\\Un utente conferma l’inserimento del nuovo elemento alla \glossario{To-do List}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item Aver inserito le informazioni per il nuovo elemento secondo lo \hyperref[UC2.2.3]{UC2.2.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L’utilizzatore del metodo conferma l’aggiunta alla to-do list.
+	\\L’utilizzatore del metodo conferma l’aggiunta alla \glossario{To-do List}.
 	\item \textbf{Post-condizione:}
-	\\L’elemento è stato aggiunto alla to-do list.
+	\\L’elemento è stato aggiunto alla \glossario{To-do List}.
 \end{itemize}
 
-\subsubsection{UC2.3 Indicare come completati gli elementi della to-do list} \label{UC2.3}
+\subsubsection{UC2.3 Indicare come completati gli elementi della \glossario{To-do List}} \label{UC2.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di Rocket.Chat in possesso di monolith che abbia ricevuto come messaggio una bubble to-do list.
+	\\Utente di Rocket.Chat in possesso di monolith che abbia ricevuto come messaggio una bubble \glossario{To-do List}.
 	\item \textbf{Scopo e descrizione:} 
 	\\L’utente con questo metodo può indicare come completato uno degli elementi della lista.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item L’elemento non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L’utilizzatore del metodo seleziona un elemento della to-do list e lo indica come completato. 
+	\\L’utilizzatore del metodo seleziona un elemento della \glossario{To-do List} e lo indica come completato. 
 	\item \textbf{Post-condizione:}
-	\\L’elemento della to-do list è settato come completato.
+	\\L’elemento della \glossario{To-do List} è settato come completato.
 \end{itemize}
 
 \subsubsection{UC2.4 Possibilità di mettere un reminder come notifica statica} \label{UC2.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di Rocket.Chat in possesso di monolith che ha creato la to-do list.
+	\\Utente di Rocket.Chat in possesso di monolith che ha creato la \glossario{To-do List}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista imposta una notifica statica da visualizzare ai membri del canale ad un orario specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list.
+		\item Avere ricevuto una bubble di \glossario{To-do List}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1053,15 +1053,15 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il creatore della lista seleziona l’opzione “aggiungi notifica”per la to-do list che ha creato.
+	\\Il creatore della lista seleziona l’opzione “aggiungi notifica”per la \glossario{To-do List} che ha creato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere creato una bubble di to-do list.
+		\item Avere creato una bubble di \glossario{To-do List}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore del metodo seleziona l’opzione “aggiungi notifica” sulla bubble.
 	\item \textbf{Post-condizione:}
-	\\L’utente ha selezionato l’opzione di aggiungere una notifica alla to-do list che ha creato.
+	\\L’utente ha selezionato l’opzione di aggiungere una notifica alla \glossario{To-do List} che ha creato.
 \end{itemize}
 
 \subsubsection{UC2.4.2 Mostrare il form di aggiunta} \label{UC2.4.2}
@@ -1073,11 +1073,11 @@
 	\\Questa funzionalità permette alla bubble di caricare il form necessario ad inserire i dati per aggiungere una notifica alla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item Essere entrati nell’opzione “aggiungi modifica” della propria bubble secondo lo \hyperref[UC2.4.1]{UC2.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\La bubble to-do list carica il form di inserimento dati per le notifiche.
+	\\La bubble \glossario{To-do List} carica il form di inserimento dati per le notifiche.
 	\item \textbf{Post-condizione:}
 	\\La bubble ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
 \end{itemize}
@@ -1091,13 +1091,13 @@
 	\\Il creatore della lista completa il form di aggiunta notifica.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item La bubble ha caricato il form di inserimento dati secondo lo \hyperref[UC2.4.2]{UC2.4.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore del metodo inserirà tutte le informazioni necessarie a completare il form di aggiunta di una notifica.
 	\item \textbf{Post-condizione:}
-	\\La bubble possiede tutte le informazioni necessarie ad aggiungere una notifica alla to-do list.
+	\\La bubble possiede tutte le informazioni necessarie ad aggiungere una notifica alla \glossario{To-do List}.
 \end{itemize}
 
 \subsubsection{UC2.4.4 Confermare l’aggiunta della notifica} \label{UC2.4.4}
@@ -1109,13 +1109,13 @@
 	\\Il creatore della lista conferma l’aggiunta della notifica.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una bubble di to-do list;
+		\item Avere ricevuto una bubble di \glossario{To-do List};
 		\item Aver completato il form di aggiunta di una notifica secondo lo \hyperref[UC2.4.3]{UC2.4.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utilizzatore del metodo seleziona l’opzione “conferma aggiunta” e la bubble aggiunge la notifica alla lista.
 	\item \textbf{Post-condizione:}
-	\\La bubble ha aggiunto la notifica alla to-do list.
+	\\La bubble ha aggiunto la notifica alla \glossario{To-do List}.
 \end{itemize}
 
 \subsection{Demo}
@@ -1124,16 +1124,16 @@
 Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto una bubble interattiva legata alla gestione di un'attività di ristorazione per asporto.
 \\Questa bubble apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà i servizi.
 \\L’utente generico della bubble potrà visualizzare il menù del ristorante e fare un ordine, previo inserimento dei propri dati, inclusivi di indirizzo in cui consegnare il cibo ordinato.
-\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble “to-do list”, sotto forma di casella aggiunta automaticamente in fondo alla lista, il cuoco una volta completato l'ordine avrà facoltà di segnare completata l’ordinazione dalla lista.
+\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble “\glossario{To-do List}”, sotto forma di casella aggiunta automaticamente in fondo alla lista, il cuoco una volta completato l'ordine avrà facoltà di segnare completata l’ordinazione dalla lista.
 \\Contemporaneamente alla notifica alla cucina dell’ordine verrà registrato automaticamente sul database dell’attività il consumo di ingredienti.
-\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all’addetto agli acquisti dell’azienda tramite to-do list, il quale provvederà a recuperare gli ingredienti mancanti.
+\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all’addetto agli acquisti dell’azienda tramite \glossario{To-do List}, il quale provvederà a recuperare gli ingredienti mancanti.
 \\È prevista anche la figura del direttore dell'attività il quale avrà facoltà di inserire nuove pietanze nel menù e deciderne il prezzo.
 
 \subsubsection{Attori:}
 \begin{itemize}
 	\item Utente: colui che ha facoltà di creare un ordine previa consultazione del menù e registrazione dei propri dati;
 	\item Cuoco: addetto alla preparazione della pietanza selezionata in precedenza dall’utente, ha facoltà di eliminare dalla propria to do list le pietanze che ha già preparato;
-	\item Responsabile Acquisti: addetto a rifornire il magazzino sulla base degli ingredienti consumati dal cuoco in base a quanto gli è notificato dalla sua to-do list nella bubble;
+	\item Responsabile Acquisti: addetto a rifornire il magazzino sulla base degli ingredienti consumati dal cuoco in base a quanto gli è notificato dalla sua \glossario{To-do List} nella bubble;
 	\item Direttore: può modificare il menù e il prezzo di ciascuna pietanza riportata in esso.
 \end{itemize}
 
@@ -1940,7 +1940,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla to-do list del cuoco.
+	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -1957,7 +1957,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aggiornare il database \hyperref[UC3.12.6]{(UC3.12.6)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+	\\L’ordine è stato cancellato dalla \glossario{To-do List} del cuoco.
 \end{itemize}
 
 \subsubsection{UC3.12.1 Recuperare dal database la lista degli ordini(direttore)} \label{UC3.12.1}
@@ -1976,7 +1976,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore consulta la bubble in modalità di cancellazione dell’ordinazione del cuoco.
 	\item \textbf{Post-condizione:}
-	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+	\\L’ordine è stato cancellato dalla \glossario{To-do List} del cuoco.
 \end{itemize}
 
 \subsubsection{UC3.12.2 Visualizzare lista ordini(direttore)} \label{UC3.12.2}
@@ -1985,7 +1985,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla to-do list del cuoco.
+	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2004,7 +2004,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di selezionare ordini da cancellare dalla to-do list del cuoco.
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare ordini da cancellare dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2013,7 +2013,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item La lista degli ordini da eliminare è visualizzata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\\Il direttore sceglie l’ordine da eliminare dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Post-condizione:}
 	\\Sono stati selezionati degli ordini dalla lista.
 \end{itemize}
@@ -2033,7 +2033,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Sono stati selezionati ordini da eliminare \hyperref[UC3.12.3]{(UC3.12.3)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\\Il direttore sceglie l’ordine da eliminare dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Post-condizione:}
 	\\L’ordine da cancellare è selezionato.
 \end{itemize}
@@ -2054,7 +2054,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item E stata selezionata l’eliminazione di ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\\Il direttore sceglie l’ordine da eliminare dalla \glossario{To-do List} del cuoco.
 	\item \textbf{Post-condizione:}
 	\\Il direttore ha confermato quale ordine cancellare.
 \end{itemize}
@@ -2076,7 +2076,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Vengono aggiornati nel database i dati relativi agli ordini da eliminare.
 	\item \textbf{Post-condizione:}
-	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+	\\L’ordine è stato cancellato dalla \glossario{To-do List} del cuoco.
 \end{itemize}
 
 \subsubsection{UC3.13 Cambiare il menù} \label{UC3.13}
@@ -2484,7 +2484,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di aggiungere ordini alla to-do list del responsabile acquisti.
+	\\Lo scopo di questa funzione è permettere al direttore di aggiungere ordini alla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2501,7 +2501,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aggiornare il database \hyperref[UC3.14.6]{(UC3.14.6)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il direttore ha aggiunto gli elementi desiderati alla to-do list del responsabile acquisti.
+	\\Il direttore ha aggiunto gli elementi desiderati alla \glossario{To-do List} del responsabile acquisti.
 \end{itemize}
 
 \subsubsection{UC3.14.1 Recuperare la lista degli ordini da effettuare dal database(direttore)} \label{UC3.14.1}
@@ -2549,7 +2549,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per aggiungere ordini alla to-do list del responsabile acquisti.
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per aggiungere ordini alla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2569,7 +2569,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di aggiungere informazioni all’ordine da aggiungere alla to-do list del responsabile acquisti.
+	\\Lo scopo di questa funzione è permettere al direttore di aggiungere informazioni all’ordine da aggiungere alla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2578,7 +2578,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver selezionato l’opzione “aggiungi ordine” \hyperref[UC3.14.3]{(UC3.14.3)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore aggiunge gli elementi desiderati all’ordine per la to-do list del responsabile acquisti.
+	\\Il direttore aggiunge gli elementi desiderati all’ordine per la \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Post-condizione:}
 	\\Le informazioni sull’ordine possono essere aggiunte.
 \end{itemize}
@@ -2618,7 +2618,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver confermato l’ordine \hyperref[UC3.14.5]{(UC3.14.5)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il database deve essere aggiornato con gli elementi aggiunti dal direttore alla to-do list del responsabile acquisti.
+	\\Il database deve essere aggiornato con gli elementi aggiunti dal direttore alla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Post-condizione:}
 	\\Il database è aggiornato con i nuovi dati.
 \end{itemize}
@@ -2629,7 +2629,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di eliminare ordini dalla to-do list del responsabile acquisti.
+	\\Lo scopo di questa funzione è permettere al direttore di eliminare ordini dalla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2646,7 +2646,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Viene aggiornato il database \hyperref[UC3.15.5]{(UC3.15.5)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il direttore ha eliminato gli elementi desiderati dalla to-do list del responsabile acquisti.
+	\\Il direttore ha eliminato gli elementi desiderati dalla \glossario{To-do List} del responsabile acquisti.
 \end{itemize}
 
 \subsubsection{UC3.15.1 Recuperare la lista degli ordini da effettuare dal database(direttore)} \label{UC3.15.1}
@@ -2713,7 +2713,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per rimuovere ordini dalla to-do list del responsabile acquisti.
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per rimuovere ordini dalla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2743,7 +2743,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver eliminato degli ordini.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il database deve essere aggiornato con gli elementi rimossi dal direttore alla to-do list del responsabile acquisti.
+	\\Il database deve essere aggiornato con gli elementi rimossi dal direttore alla \glossario{To-do List} del responsabile acquisti.
 	\item \textbf{Post-condizione:}
 	\\Il database è aggiornato.
 \end{itemize}
