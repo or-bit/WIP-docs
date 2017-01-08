@@ -1,5 +1,5 @@
 \section{capitolo-requisiti}
-Vengono ora presentati i requisiti emersi durante l’analisi del capitolato, dei casi d’uso e discussi nelle riunioni interne e con i proponenti.
+Vengono ora presentati i requisiti emersi durante l’analisi del capitolato e di ogni \glossario{Caso d'uso} e i requisiti discussi nelle riunioni interne e con i proponenti.
 Si è deciso di inserire i requisiti in una tabella dei requisiti per permettere una consultazione agevole degli stessi.
 La tabella dei requisiti presenta i requisiti fino al massimo livello di dettaglio insieme alle loro caratteristiche, in particolare ne specifica:
 \begin{itemize}
@@ -20,11 +20,11 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline R1 & Obbligatorio & Il framework è sviluppato in javascript. & Capitolato \\
-	\hline R2 & Obbligatorio & Il framework è sviluppato come pachetto per \glossario{RocketChat} & Capitolato \\
+	\hline R1 & Obbligatorio & Il \glossario{Framework} è sviluppato in \glossario{Javascript}. & Capitolato \\
+	\hline R2 & Obbligatorio & Il \glossario{Framework} è sviluppato come pachetto per \glossario{RocketChat} & Capitolato \\
 	\hline R3 & Obbligatorio & Viene sviluppata una bubble di tipo to-do list. & Capitolato \\
 	\hline R4 & Obbligatorio & Viene sviluppata una bubble per la gestione di un esercizio commerciale di ristorazione che permetta la gestione da parte del ristorante delle attività da svolgere che comprendono consegne da effettuare,  piatti da preparare, aqcuisti di merce, e permetta ai clienti l’ordinazione dei pasti. & Capitolato \\
-	\hline R5 & Obbligatorio & Il framework offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & verbale x.x.x \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
+	\hline R5 & Obbligatorio & Il \glossario{Framework} offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & verbale x.x.x \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
 	\hline
 \end{longtable}
 
@@ -32,19 +32,40 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline R6 & Obbligatorio & L’utilizzatore del framework può istanziare una bubble generica. & \hyperref[UC1.35]{UC1.35} \\
-	\hline R7 & Obbligatorio & L’utilizzatore del framework può rendere visibile una bubble generica precedentemente istanziata. & \hyperref[UC1.36]{UC1.36} \\
-	\hline R8 & Obbligatorio & Il framework offre la funzionalità di interfacciarsi con un database mongo fornito dall’utente. & verbale x.x.x \linebreak \hyperref[UC1.00]{UC1.00} \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
-	\hline R9 & Obbligatorio & Il framework offre funzionalità di settaggio di durata delle bubble. & \hyperref[UC1.13]{UC1.13} \\
-	\hline R10 & Obbligatorio & Il framework offre funzionalità di terminazione bubble. & \hyperref[UC1.19]{UC1.19} \\
-	\hline R11 & Obbligatorio & Il framework offre la possibilità di aggiungere rimuovere o modificare elementi dalla bubble. & \hyperref[UC1.03]{UC1.03} \hyperref[UC]{UC} \hyperref[UC]{UC} \\
-	\hline R12 & Obbligatorio & Il framework offre la possibilità di inserire label nella bubble & \hyperref[UC1.27]{UC1.27} \\
-	\hline R13 & Obbligatorio & Il framework fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.23]{UC1.23} \\
-	\hline R14 & Obbligatorio & Il framework fornisce le funzionalità per mostrare e nascondere la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.21]{UC1.21} \hyperref[UC1.22]{UC1.22} \\
-	\hline R15 & Obbligatorio & Il framework mette a disposizione funzionalità di creazione di notifica per le bubble & \hyperref[UC1.18]{UC1.18} \\
-	\hline R16 & Obbligatorio & Il framework mette a disposizione funzionalità di visualizzazione per le notifiche per le bubble & \hyperref[UC1.17]{UC1.17} \\
+	\hline R6 & Obbligatorio & L’utilizzatore del \glossario{Framework} può istanziare una bubble generica. & \hyperref[UC1.35]{UC1.35} \\
+	\hline R7 & Obbligatorio & L’utilizzatore del \glossario{Framework} può rendere visibile una bubble generica precedentemente istanziata. & \hyperref[UC1.36]{UC1.36} \\
+	\hline R8 & Obbligatorio & Il \glossario{Framework} offre la funzionalità di interfacciarsi con un database \glossario{MongoDB} fornito dall’utente. & verbale x.x.x \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
+	\hline R9 & Obbligatorio & Il \glossario{Framework} offre funzionalità di settaggio di durata delle bubble. & \hyperref[UC1.13]{UC1.13} \\
+	\hline R10 & Obbligatorio & Il \glossario{Framework} offre funzionalità di terminazione bubble. & \hyperref[UC1.19]{UC1.19} \\
+	\hline R11 & Obbligatorio & Il \glossario{Framework} offre la possibilità di aggiungere rimuovere o modificare elementi dalla bubble. & \hyperref[UC1.03.1]{UC1.03.1} \hyperref[UC1.04]{UC1.04} \hyperref[UC1.05.1]{UC1.05.1} \\
+	\hline R12 & Obbligatorio & Il \glossario{Framework} offre la possibilità di inserire label nella bubble & \hyperref[UC1.27]{UC1.27} \\
+	\hline R13 & Obbligatorio & Il \glossario{Framework} fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.23]{UC1.23} \\
+	\hline R14 & Obbligatorio & Il \glossario{Framework} fornisce le funzionalità per mostrare e nascondere la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.21]{UC1.21} \linebreak \hyperref[UC1.22]{UC1.22} \\
+	\hline R15 & Obbligatorio & Il \glossario{Framework} mette a disposizione funzionalità di creazione di notifica per le bubble & \hyperref[UC1.18]{UC1.18} \\
+	\hline R16 & Obbligatorio & Il \glossario{Framework} mette a disposizione funzionalità di visualizzazione per le notifiche per le bubble & \hyperref[UC1.17]{UC1.17} \\
+	\hline R33 & Obbligatorio & L’utilizzatore del \glossario{Framework} può inserire all'interno della bubble un TextView & \hyperref[UC1.26]{UC1.26} \\
+	\hline R34 & Obbligatorio & L’utilizzatore del \glossario{Framework} può inserire all'interno della bubble un TextView editabile & \hyperref[UC1.33]{UC1.33} \\
+	\hline R35 & Opzionale & Il \glossario{Framework} mette a disposizione metodi per la lettura di file \glossario{JSON} e il loro controllo rispetto ad uno schema specificato. & \hyperref[UC1.12]{UC1.12} \\
+	\hline R36 & Opzionale & Il \glossario{Framework} offre la possibilità di monitorare gli utenti di Rocket.Chat utilizzatori della bubble. & \hyperref[UC1.14]{UC1.14} \\
+	\hline R37 & Opzionale & Funzionalità per consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble. & \hyperref[UC1.15.1]{UC1.15.1} \\
+	\hline R38 & Opzionale & Il \glossario{Framework} offre la possibilità di stabilire una funzionalità di richiesta di file in input per la bubble & \hyperref[UC1.34]{UC1.34} \\
+	\hline R39 & Opzionale & Il \glossario{Framework} offre la possibilità di stabilire una funzionalità di output per la bubble & \hyperref[UC1.24.1]{UC1.24.1} \\
+	\hline R40 & Opzionale & Il \glossario{Framework} offre la possibilità di stabilire una funzionalità di output pdf per la bubble & \hyperref[UC1.20.1]{UC1.20.1} \\	
+	\hline R41 & Opzionale & Il \glossario{Framework} offre la possibilità di inserire bottoni quali radio buttons e checkbox nella bubble & \hyperref[UC1.30]{UC1.30} \linebreak \hyperref[UC1.31]{UC1.31} \linebreak \hyperref[UC1.32]{UC1.32} \\
+	\hline R42 & Opzionale & Il \glossario{Framework} offre metodi per fare matching con espressioni regolari
+	 & \hyperref[UC1.10]{UC1.10} \\
+	\hline R43 & Opzionale & Il \glossario{Framework} offre la possibilità di stabilire una funzionalità di  esecuzione ad un orario prestabilito & \hyperref[UC1.16]{UC1.16} \\
+	\hline R44 & Opzionale & Il \glossario{Framework} offre la possibilità di chiamata di metodi di \glossario{API} esterne per riceverne file json & \hyperref[UC1.07.1]{UC1.07.1} \\
+	\hline R45 & Opzionale & Il \glossario{Framework} mette a disposizione metodi per l’inserimento di immagini nelle bubble
+	 & \hyperref[UC1.25]{UC1.25} \\
+	\hline R46 & Opzionale & Il \glossario{Framework} offre metodi per la creazione di grafici a torta ed istogrammi
+	 & \hyperref[UC1.28]{UC1.28} \linebreak \hyperref[UC1.29]{UC1.29}  \\	 
+	 \hline R47 & Opzionale & Possibilità'di impostare un numero massimo di interazioni per ogni singolo utente di Rocket.Chat con la bubble. & \hyperref[UC1.08]{UC1.08} \\
+	 \hline R48 & Opzionale & Possibilità di inserire un numero massimo di interazioni totali con la bubble & \hyperref[UC1.09]{UC1.09} \\
+	 \hline R49 & Opzionale & Il \glossario{Framework} offre la funzionalità di specificare una dimensione massima per i file di input & \hyperref[UC1.11]{UC1.11} \\
 	\hline
 \end{longtable}
+
 
 \subsection{Tabella dei requisiti per la bubble To-do list}
 
@@ -74,11 +95,15 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline R27 & Obbligatorio & L’utente responsabile degli acquisti può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.7]{UC3.7} \\
 	\hline R28 & Obbligatorio & L’utente responsabile degli acquisti ha la capacità di spuntare i prodotti che ha acquistato dalla lista acquisti.
 	 & \hyperref[UC3.8]{UC3.8} \\
-	\hline R29 & Obbligatorio & L’utente direttore ha la possibilità di modificare aggiungere e rimuovere le voci del menu con relativi prezzi & \hyperref[UC]{UC} \\
+	\hline R29 & Obbligatorio & L’utente direttore ha la possibilità di modificare aggiungere e rimuovere le voci del menu con relativi prezzi & \hyperref[UC3.13]{UC3.13} \\
 	\hline R30 & Obbligatorio & L’utente direttore può visualizzare la lista dei piatti da preparare & \hyperref[UC3.12.2]{UC3.12.2} \\
 	\hline R31 & Obbligatorio & L’utente direttore può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.14.2]{UC3.14.2} \hyperref[UC3.15.2]{UC3.15.2} \\
 	\hline R32 & Obbligatorio & L’utente direttore può eliminare voci dalla lista dei piatti da preparare. & \hyperref[UC3.12]{UC3.12} \\
-	\hline R32 & Obbligatorio & L’utente direttore può modificare la lista degli acquisti da effettuare aggiungendo ingredienti da aqcuistare oppure cancellandoli.
-	 & \hyperref[UC3.14]{UC3.14} \hyperref[UC3.15]{UC3.15} \\
+	\hline R53 & Obbligatorio & L’utente direttore può modificare la lista degli acquisti da effettuare aggiungendo ingredienti da aqcuistare oppure cancellandoli.
+	 & \hyperref[UC3.14]{UC3.14} \linebreak \hyperref[UC3.15]{UC3.15} \\
+	 
+	\hline R50 & Opzionale & L’utente fattorino può visualizzare la lista delle consegne da effettuare & \hyperref[UC3.9]{UC3.9} \\
+	\hline R51 & Opzionale & L’utente fattorino ha la capacità di selezionare la consegna che intende effettuare & \hyperref[UC3.10]{UC3.10} \\
+	\hline R52 & Opzionale & L’utente fattorino ha la capacità di confermare la consegna che ha effettuato & \hyperref[UC3.11]{UC3.11} \\
 	\hline
 \end{longtable}
