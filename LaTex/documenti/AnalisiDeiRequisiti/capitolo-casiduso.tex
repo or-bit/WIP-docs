@@ -912,3 +912,1838 @@
 	\item \textbf{Post-condizione:}
 	\\Nella conversazione è presente una bubble todo list con il titolo indicato. 
 \end{itemize}
+
+\subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Un utente inserisce un nuovo elemento alla to-do list.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item L’elemento non è già stato completato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item L’utente seleziona l’opzione aggiungi elemento \hyperref[UC2.2.1]{(UC2.2.1)};
+		\item Mostrare il form di aggiunta \hyperref[UC2.2.2]{(UC2.2.2)};
+		\item L’utente inserisce le informazioni \hyperref[UC2.2.3]{(UC2.2.3)};
+		\item L’utente conferma l’aggiunta \hyperref[UC2.2.4]{(UC2.2.4)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\La to-do list avrà il nuovo elemento aggiunto.
+\end{itemize}
+
+\subsubsection{UC2.2.1 Selezionare l’opzione aggiungi elemento} \label{UC2.2.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utente seleziona l’opzione per inserire un nuovo elemento alla to-do list.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo seleziona l’opzione apposita.
+	\item \textbf{Post-condizione:}
+	\\È possibile inserire il testo per il nuovo elemento. 
+\end{itemize}
+
+\subsubsection{UC2.2.2 Mostrare il form di aggiunta} \label{UC2.2.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo elemento della to-do list.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item Avere selezionato l'opzione aggiungi elemento come da \hyperref[UC2.2.1]{UC2.2.1}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo scrive il testo da inserire nel nuovo elemento e lo aggiunge alla to-do list.
+	\item \textbf{Post-condizione:}
+	\\Il nuovo elemento è aggiunto alla bubble to-do list.
+\end{itemize}
+
+\subsubsection{UC2.2.3  Inserire le informazioni} \label{UC2.2.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utente inserisce le informazioni necessarie ad aggiungere un elemento alla to-do list.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.2.2]{UC2.2.2};
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo completa il form di inserimento di un nuovo elemento in tutte le sue parti.
+	\item \textbf{Post-condizione:}
+	\\La to-do list ha tutte le informazioni necessarie ad aggiungere il nuovo elemento.
+\end{itemize}
+
+\subsubsection{UC2.2.4 Confermare l’aggiunta} \label{UC2.2.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Un utente conferma l’inserimento del nuovo elemento alla to-do list.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item Aver inserito le informazioni per il nuovo elemento secondo lo \hyperref[UC2.2.3]{UC2.2.3}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo conferma l’aggiunta alla to-do list.
+	\item \textbf{Post-condizione:}
+	\\L’elemento è stato aggiunto alla to-do list.
+\end{itemize}
+
+\subsubsection{UC2.3 Indicare come completati gli elementi della to-do list} \label{UC2.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith che abbia ricevuto come messaggio una bubble to-do list.
+	\item \textbf{Scopo e descrizione:} 
+	\\L’utente con questo metodo può indicare come completato uno degli elementi della lista.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item L’elemento non è già stato completato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo seleziona un elemento della to-do list e lo indica come completato. 
+	\item \textbf{Post-condizione:}
+	\\L’elemento della to-do list è settato come completato.
+\end{itemize}
+
+\subsubsection{UC2.4 Possibilità di mettere un reminder come notifica statica} \label{UC2.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith che ha creato la to-do list.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il creatore della lista imposta una notifica statica da visualizzare ai membri del canale ad un orario specificato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item L’utente seleziona l’opzione aggiungi notifica \hyperref[UC2.4.1]{(UC2.4.1)};
+		\item Mostrare il form di aggiunta \hyperref[UC2.4.2]{(UC2.4.2)};
+		\item L’utente inserisce tutte le informazioni necessarie \hyperref[UC2.4.3]{(UC2.4.3)};
+		\item L’utente conferma l’aggiunta della notifica \hyperref[UC2.4.4]{(UC2.4.4)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\I partecipanti al gruppo nel quale è presente la bubble verranno notificati della lista all'ora specificata.
+\end{itemize}
+
+\subsubsection{UC2.4.1 Selezionare l’opzione aggiungi notifica} \label{UC2.4.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il creatore della lista seleziona l’opzione “aggiungi notifica”per la to-do list che ha creato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere creato una bubble di to-do list.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo seleziona l’opzione “aggiungi notifica” sulla bubble.
+	\item \textbf{Post-condizione:}
+	\\L’utente ha selezionato l’opzione di aggiungere una notifica alla to-do list che ha creato.
+\end{itemize}
+
+\subsubsection{UC2.4.2 Mostrare il form di aggiunta} \label{UC2.4.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Questa funzionalità permette alla bubble di caricare il form necessario ad inserire i dati per aggiungere una notifica alla bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item Essere entrati nell’opzione “aggiungi modifica” della propria bubble secondo lo \hyperref[UC2.4.1]{UC2.4.1}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\La bubble to-do list carica il form di inserimento dati per le notifiche.
+	\item \textbf{Post-condizione:}
+	\\La bubble ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
+\end{itemize}
+
+\subsubsection{UC2.4.3 Inserire tutte le informazioni necessarie} \label{UC2.4.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il creatore della lista completa il form di aggiunta notifica.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item La bubble ha caricato il form di inserimento dati secondo lo \hyperref[UC2.4.2]{UC2.4.2}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo inserirà tutte le informazioni necessarie a completare il form di aggiunta di una notifica.
+	\item \textbf{Post-condizione:}
+	\\La bubble possiede tutte le informazioni necessarie ad aggiungere una notifica alla to-do list.
+\end{itemize}
+
+\subsubsection{UC2.4.4 Confermare l’aggiunta della notifica} \label{UC2.4.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utente di Rocket.Chat in possesso di monolith.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il creatore della lista conferma l’aggiunta della notifica.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere ricevuto una bubble di to-do list;
+		\item Aver completato il form di aggiunta di una notifica secondo lo \hyperref[UC2.4.3]{UC2.4.3}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utilizzatore del metodo seleziona l’opzione “conferma aggiunta” e la bubble aggiunge la notifica alla lista.
+	\item \textbf{Post-condizione:}
+	\\La bubble ha aggiunto la notifica alla to-do list.
+\end{itemize}
+
+\subsection{Demo}
+
+\subsubsection{Breve descrizione di cosa andiamo a portare alla demo:}
+Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto una bubble interattiva legata alla gestione di un'attività di ristorazione per asporto.
+\\Questa bubble apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà i servizi.
+\\L’utente generico della bubble potrà visualizzare il menu del ristorante e fare un ordine, previo inserimento dei propri dati, inclusivi di indirizzo in cui consegnare il cibo ordinato.
+\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble “todo list”, sotto forma di casella aggiunta automaticamente in fondo alla lista, il cuoco una volta completato l'ordine avrà facoltà di segnare completata l’ordinazione dalla lista.
+\\Contemporaneamente alla notifica alla cucina dell’ordine verrà registrato automaticamente sul database dell’attività il consumo di ingredienti.
+\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all’addetto agli acquisti dell’azienda tramite todo list, il quale provvederà a recuperare gli ingredienti mancanti.
+\\È prevista anche la figura del direttore dell'attività il quale avrà facoltà di inserire nuove pietanze nel menù e deciderne il prezzo.
+
+\subsubsection{Attori:}
+\begin{itemize}
+	\item Utente: colui che ha facoltà di creare un ordine previa consultazione del menu e registrazione dei propri dati;
+	\item Cuoco: addetto alla preparazione della pietanza selezionata in precedenza dall’utente, ha facoltà di eliminare dalla propria to do list le pietanze che ha già preparato;
+	\item Responsabile Acquisti: addetto a rifornire il magazzino sulla base degli ingredienti consumati dal cuoco in base a quanto gli è notificato dalla sua todo list nella bubble;
+	\item Direttore: può modificare il menù e il prezzo di ciascuna pietanza riportata in esso.
+\end{itemize}
+
+\subsection{Bolla ristorazione per asporto - Cliente}
+
+\subsubsection{UC3.1 Registrazione dei propri dati personali } \label{UC3.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Registrare il proprio indirizzo e il proprio nome e cognome in modo tale da segnalarli all’azienda in maniera tale da avere una destinazione per la spedizione del cibo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Viene caricato il form di inserimento dati dell’utente \hyperref[UC3.1.1]{(UC3.1.1)};
+		\item L’utente inserisce i dati \hyperref[UC3.1.2]{(UC3.1.2)};
+		\item L’utente conferma l’inserimento \hyperref[UC3.1.3]{(UC3.1.3)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\I dati dell’utente sono stati registrati nella bubble memory.
+\end{itemize}
+
+\subsubsection{UC3.1.1 Caricare form inserimento dati utente} \label{UC3.1.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Dare la possibilità di inserire i propri dati con lo scopo di segnalarli al locale per il corretto funzionamento del servizio.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il form per l’inserimento dei dati utente viene caricato.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble è presente il form per l'inserimento dei dati.
+\end{itemize}
+
+\subsubsection{UC3.1.2 Inserire i dati} \label{UC3.1.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Questo metodo permette all’utente di inserire il proprio indirizzo e il proprio nome e cognome con il fine di segnalarlo all’azienda in maniera tale da avere una destinazione per la spedizione del cibo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utente seleziona i campi del form di inserimento e digita le informazioni.
+	\item \textbf{Post-condizione:}
+	\\I dati dell’utente sono stati inseriti.
+\end{itemize}
+
+\subsubsection{UC3.1.3 Conferma inserimento} \label{UC3.1.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Questo metodo permette all’utente di confermare l’inserimento dei dati inseriti nel form di registrazione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Con l’apposito comando il cliente conferma che i dati precedentemente immessi al caso d’uso \hyperref[UC3.1.2]{UC3.1.2} siano corretti.
+	\item \textbf{Post-condizione:}
+	\\I dati confermati sono presenti nella memoria della bubble.
+\end{itemize}
+
+\subsubsection{UC3.2 Guardare il menù} \label{UC3.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il cliente consulta il menu.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Viene recuperato il menù del ristorante dal database \hyperref[UC3.2.1]{(UC3.2.1)};
+		\item Il menù caricato viene mostrato all’utente \hyperref[UC3.2.2]{(UC3.2.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il menu è visualizzato sulla bubble.
+\end{itemize}
+
+\subsubsection{UC3.2.1 Recuperare il menù del ristorante dal database} \label{UC3.2.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Recuperare dal database le voci del menù del ristorante.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utente invia la richiesta di visualizzazione del menù e la bubble lo carica dal database.
+	\item \textbf{Post-condizione:}
+	\\Le informazioni sul menù sono state recuperate dalla bubble.
+\end{itemize}
+
+\subsubsection{UC3.2.2 Mostrare il menù all’utente} \label{UC3.2.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Visualizzare il menu nella bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il menù viene mostrato all’utente.
+	\item \textbf{Post-condizione:}
+	\\Il menù è visualizzato sulla bubble.
+\end{itemize}
+
+\subsubsection{UC3.3 Fare le ordinazioni} \label{UC3.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Selezionare il/i piatto/i e le quantità relative ad ogni pietanza.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Visualizzare menù \hyperref[UC3.2]{(UC3.2)};
+		\item Selezionare cibi dal menù \hyperref[UC3.3.1]{(UC3.3.1)};
+		\item Aggiungere/Rimuovere il cibo selezionato all’ordine \hyperref[UC3.3.2]{(UC3.3.2)};
+		\item Selezionare ordina \hyperref[UC3.3.3]{(UC3.3.3)};
+		\item Mostrare all’utente un resoconto dell’ordine \hyperref[UC3.3.4]{(UC3.3.4)};
+		\item Confermare l’ordine \hyperref[UC3.3.5]{(UC3.3.5)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione viene aggiornata.
+\end{itemize}
+
+\subsubsection{UC3.3.1 Selezionare cibo dal menù} \label{UC3.3.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Selezionare voce di menù e relativa quantità.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Aver caricato il menù del ristorante \hyperref[UC3.2]{(UC3.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item L'utente scorre la lista dei cibi ne seleziona voci e relative quantità.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\L’utente ha selezionato almeno un piatto dal menù.
+\end{itemize}
+
+\subsubsection{UC3.3.2 Aggiungere/Rimuovere il piatto desiderato dall'ordinazione} \label{UC3.3.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Aggiungere oppure rimuovere alla propria ordinazione una unità del piatto selezionato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utente invoca l'apposito comando sulla bubble per poter rimuovere o aggiungere il piatto selezionato al proprio ordine.
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione viene aggiornata correttamente con il piatto selezionato.
+\end{itemize}
+
+\subsubsection{UC3.3.3 Selezionare ordina} \label{UC3.3.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il cliente effettua l’ordine selezionando l’apposita funzione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Aver selezionato cibi e quantità dal menu \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utente invoca l'apposito comando di ordine sulla bubble.
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione è registrata ed è in attesa di conferma.
+\end{itemize}
+
+\subsubsection{UC3.3.4 Mostrare all’utente un resoconto dell’ordine} \label{UC3.3.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Mostrare all’utente un resoconto dell’ordine che sta per effettuare prima della conferma.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Aver selezionato cibi e quantità dal menu \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L’utente seleziona “Mostra resoconto” e riceve dunque una lista completa di tutto e solo quello che sta per ordinare, insieme al prezzo totale dell’ordine.
+	\item \textbf{Post-condizione:}
+	\\L’utente visualizza un resoconto dell’ordine prima di effettuarlo.
+\end{itemize}
+
+\subsubsection{UC3.3.5 Confermare l’ordine} \label{UC3.3.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Confermare che quanto mostrato nel caso d’uso \hyperref[UC3.3.4]{UC3.3.4} è corretto e salvare l'ordinazione nella memoria della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Aver effettuato l’ordinazione \hyperref[UC3.3.4]{(UC3.3.4)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utente invoca l'apposito comando sulla bubble.
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione viene salvata nella memoria della bubble.
+\end{itemize}
+
+\subsubsection{UC3.4 Inviare l’ordinazione} \label{UC3.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Selezionare il comando di invio dell’ordinazione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Avere un ordinazione non vuota.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Vengono recuperate dalla memoria della bolla le informazioni sull’ordine \hyperref[UC3.4.1]{(UC3.4.1)};
+		\item Vengono recuperate le informazioni sui dati personali del cliente dalla memoria della bolla \hyperref[UC3.4.2]{(UC3.4.2)};
+		\item Vengono inviate le informazioni sull’ordine al database \hyperref[UC3.4.3]{(UC3.4.3)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione viene inviata.
+\end{itemize}
+
+\subsubsection{UC3.4.1 Recuperare le informazioni dell’ordine} \label{UC3.4.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Prelevare dalla memoria della bubble i dati relativi all'ordinazione confermata nell’\hyperref[UC3.3.5]{UC3.3.5}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item \hyperref[UC3.3.5]{(UC3.3.5)};
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utente invoca con l'apposito comando l’\hyperref[UC3.4]{UC3.4}.
+	\item \textbf{Post-condizione:}
+	\\I dati desiderati, relativi all'ordinazione effettuata nell’\hyperref[UC3.3]{UC3.3}, sono stati recuperati. 
+\end{itemize}
+
+\subsubsection{UC3.4.2 Recuperare informazioni dei dati personali dalla memoria della bubble} \label{UC3.4.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Ottenere informazioni riguardanti il cliente dalla memoria della bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Avere un'ordinazione da inviare non vuota.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Vengono recuperate le informazioni sui dati personali del cliente dalla memoria della bubble.
+	\item \textbf{Post-condizione:}
+	\\I dati personali del cliente sono stati letti dalla memoria della bubble.
+\end{itemize}
+
+\subsubsection{UC3.4.3 Mandare informazioni sull’ordine al databese} \label{UC3.4.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cliente.
+	\item \textbf{Scopo e descrizione:} 
+	\\Invio delle informazioni al database.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
+		\item Avere un ordinazione non vuota.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Le informazioni sull’ordinazione vengono mandate al database.
+	\item \textbf{Post-condizione:}
+	\\L’ordinazione è salvata nel database.
+\end{itemize}
+
+\subsection{Bolla ristorazione per asporto - Cuoco}
+
+\subsubsection{UC3.5 Leggere la lista dei piatti da preparare} \label{UC3.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al cuoco di consultare la lista dei piatti da preparare ottenuta tramite le ordinazioni effettuate dai clienti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il cuoco seleziona la parte corrispondente della bubble;
+		\item Viene recuperata dal database la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)};
+		\item Viene mostrata la lista all’utente \hyperref[UC3.5.2]{(UC3.5.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il cuoco è a conoscenza dei piatti ordinati.
+\end{itemize}
+
+\subsubsection{UC3.5.1 Recuperare dal database la lista dei piatti} \label{UC3.5.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è quello di caricare dal database la lista dei piatti da preparare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il cuoco richiede di visualizzare la lista dei piatti da preparare, la bubble carica la lista dal database.
+	\item \textbf{Post-condizione:}
+	\\La bubble ha recuperato la lista dei piatti da preparare dal database.
+\end{itemize}
+
+\subsubsection{UC3.5.2 Mostrare la lista} \label{UC3.5.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di far visualizzare al cuoco la lista dei piatti precedentemente caricata dal database sulla bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco;
+		\item Aver caricato la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\La bubble mostra la lista dei piatti precedentemente memorizzata al cuoco.
+	\item \textbf{Post-condizione:}
+	\\Il cuoco visualizza la lista dei piatti.
+\end{itemize}
+
+\subsubsection{UC3.6 Spunta piatti pronti} \label{UC3.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\I piatti presenti nella lista possono essere spuntati quando il cuoco ha finito la loro preparazione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco;
+		\item Avere la lista dei piatti da preparare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il cuoco indica che ha terminato la preparazione di un piatto \hyperref[UC3.6.1]{(UC3.6.1)};
+		\item Il database viene aggiornato con le nuove informazioni \hyperref[UC3.6.2]{(UC3.6.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il piatto è stato spuntato.
+\end{itemize}
+
+\subsubsection{UC3.6.1 Indicare che la preparazione del piatto è stata completata} \label{UC3.6.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di permettere al cuoco di indicare che ha completato la preparazione di un piatto.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco;
+		\item Avere la lista dei piatti da preparare;
+		\item Aver precedentemente indicato che si stava preparando un determinato piatto.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il cuoco indica sulla sua lista che ha completato la preparazione del piatto.
+	\item \textbf{Post-condizione:}
+	\\Il cuoco ha indicato che ha completato un piatto.
+\end{itemize}
+
+\subsubsection{UC3.6.2 Aggiornare il database indicando che il piatto è stato preparato} \label{UC3.6.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Cuoco.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è quello di aggiornare il database in base ai piatti preparati dal cuoco.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di cuoco;
+		\item Avere preparato dei piatti dalla lista di piatti da preparare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\I dati sui piatti preparati dal cuoco vengono aggiornati nel database.
+	\item \textbf{Post-condizione:}
+	\\I dati nel database sono aggiornati.
+\end{itemize}
+
+\subsection{Bolla ristorazione per asporto - Responsabile Acquisti}
+
+\subsubsection{UC3.7 Leggere la lista degli acquisti da effettuare} \label{UC3.7}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al responsabile acquisti di consulatare la lista degli acquisti da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il responsabile acquisti seleziona la parte corrispondente della bubble;
+		\item Viene recuperata dal database la lista degli ingredienti \hyperref[UC3.7.1]{(UC3.7.1)};
+		\item La lista viene mostrata all’utente \hyperref[UC3.7.2]{(UC3.7.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il responsabile acquisti è a conoscenza dei prodotti da acquistare.
+\end{itemize}
+
+\subsubsection{UC3.7.1 Recuperare dal database la lista degli ingredienti da acquistare con le rispettive quantità} \label{UC3.7.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di caricare all’interno della bubble la lista degli ingredienti da acquistare con le rispettive quantità.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il responsabile acquisti richiede di visualizzare la lista e la bubble la carica dal database.
+	\item \textbf{Post-condizione:}
+	\\La lista degli ingredienti è stata caricata all’interno della bubble.
+\end{itemize}
+
+\subsubsection{UC3.7.2 Mostrare la lista al responsabile acquisti} \label{UC3.7.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è rendere il responsabile degli acquisti conscio delle quantità e di cosa è incaricato di comprare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il responsabile acquisti guarda la bubble interattiva.
+	\item \textbf{Post-condizione:}
+	\\Il responsabile acquisti è a conoscenza dei prodotti da acquistare.
+\end{itemize}
+
+\subsubsection{UC3.8 Spunta Acquisti effettuati} \label{UC3.8}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Gli acquisti da effettuare presenti nella lista possono essere spuntati quando il responsabile acquisti ha acquisito un prodotto nella lista acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti;
+		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il responsabile acquisti spunta una voce della lista.
+	\item \textbf{Post-condizione:}
+	\\La voce della lista acquisti è stata spuntata.
+\end{itemize}
+
+\subsubsection{UC3.8.1 Spunta degli ingredienti acquistati} \label{UC3.8.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Questa funzionalità permette al responsabile acquisti di segnalare i prodotti acquistati.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti;
+		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\I dati vengono inseriti dal responsabile acquisti.
+	\item \textbf{Post-condizione:}
+	\\I dati sono pronti per essere aggiornati nel database.
+\end{itemize}
+
+\subsubsection{UC3.8.2 Aggiornare il database con le nuove informazioni} \label{UC3.8.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Responsabile Acquisti.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è quello di registrare all’interno del database i cambiamenti che sono avvenuti nelle quantità degli ingredienti come conseguenza degli acquisti del Responsabile degli acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di responsabile degli acquisti;
+		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)};
+		\item Il Responsabile ha inserito i dati degli ingredienti acquistati.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il Responsabile degli acquisti ha inserito i dati degli ingredienti acquistati all’interno della bubble, la quale aggiorna il database.
+	\item \textbf{Post-condizione:}
+	\\Il database possiede le informazioni aggiornate sulla quantità degli ingredienti.
+\end{itemize}
+
+\subsection{Bolla ristorazione per asporto - Fattorino}
+
+\subsubsection{UC3.9 Leggere la lista delle consegne da effettuare} \label{UC3.9}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al fattorino di consultare la lista delle consegne da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il fattorino seleziona la parte corrispondente della bubble;
+		\item Viene recuperata dal database la lista delle consegne \hyperref[UC3.9.1]{(UC3.9.1)};
+		\item Viene mostrata la lista all’utente \hyperref[UC3.9.2]{(UC3.9.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il fattorino è a conoscenza delle consegne da effettuare.
+\end{itemize}
+
+\subsubsection{UC3.9.1 Recuperare dal database la lista delle consegne} \label{UC3.9.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è avere a disposizione nella memoria della bubble la lista delle consegne da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\La bubble salva nella propria memoria la lista delle consegne.
+	\item \textbf{Post-condizione:}
+	\\Nella memoria della bubble è presente la lista delle consegne da effettuare.
+\end{itemize}
+
+\subsubsection{UC3.9.2 Mostrare all’utente la lista} \label{UC3.9.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al fattorino di accedere e leggere la lista delle consegne da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\La lista viene visualizzata.
+	\item \textbf{Post-condizione:}
+	\\La lista è visualizzata, Il fattorino è a conoscenza delle consegne da effettuare.
+\end{itemize}
+
+\subsubsection{UC3.10 Selezionare la consegna da effettuare} \label{UC3.10}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al fattorino di selezionare dalla lista delle consegne una da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Visualizzare la lista delle consegne da effettuare \hyperref[UC3.9.2]{(UC3.9.2)};
+		\item Devono esistere consegne da effettuare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il fattorino visualizza la lista delle consegne \hyperref[UC3.9]{(UC3.9)};
+		\item Il fattorino seleziona dalla lista quale consegna desidera effettuare \hyperref[UC3.10.1]{(UC3.10.1)};
+		\item Il database viene aggiornato per indicare che l’ordine è in consegna \hyperref[UC3.10.2]{(UC3.10.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\La lista delle consegne viene aggiornata e viene selezionata la consegna scelta.
+\end{itemize}
+
+\subsubsection{UC3.10.1 Selezionare dalla lista la consegna che si vuole effettuare} \label{UC3.10.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al fattorino di selezionare dalla lista delle consegne una da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Devono esistere consegne da effettuare;
+		\item La lista delle consegne da effettuare è visualizzata.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il fattorino seleziona dalla lista quale consegna desidera effettuare.
+	\item \textbf{Post-condizione:}
+	\\La consegna che il fattorino vuole effettuare è selezionata.
+\end{itemize}
+
+\subsubsection{UC3.10.2 Aggiornare il database per indicare che l’ordine è in consegna} \label{UC3.10.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di aggiornare lo stato dell'ordine una volta che il fattorino l'abbia preso in consegna.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Devono esistere consegne da effettuare;
+		\item È stata selezionata una consegna da effettuare come indicato nell’\hyperref[UC3.10.1]{(UC3.10.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il fattorino seleziona dalla lista quale consegna desidera effettuare.
+	\item \textbf{Post-condizione:}
+	\\L'ordine selezionato nell’\hyperref[UC3.10.1]{(UC3.10.1)} è stato aggiornato nel database cambiandone lo stato in “in consegna”.
+\end{itemize}
+
+\subsubsection{UC3.11 Consegna effettuata} \label{UC3.11}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è permettere al fattorino di confermare l’effettuazione della consegna.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Deve essere stata selezionata una consegna dalla lista.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il fattorino indica che la consegna è stata effettuata \hyperref[UC3.11.1]{(UC3.11.1)};
+		\item Il database viene aggiornato \hyperref[UC3.11.2]{(UC3.11.2)};
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\La lista delle consegne viene aggiornata e viene eliminata la consegna effettuata.
+\end{itemize}
+
+\subsubsection{UC3.11.1 Selezionare nella bubble l’opzione per indicare che la consegna è stata effettuata} \label{UC3.11.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di notificare l'avvenuta consegna della pietanza all'indirizzo inviato dall'utente.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Deve essere stata selezionata una consegna dalla lista;
+		\item La consegna deve essere stata effettuata.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il fattorino indica quando la consegna viene portata a termine.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble del fattorino è salvato lo stato che la consegna è stata effettuata con successo.
+\end{itemize}
+
+\subsubsection{UC3.11.2 Aggiornare il database per mostrare che l’ordine è stato completato} \label{UC3.11.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Fattorino.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è aggiornare il database quando un fattorino conferma l’effettuazione della consegna.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo fattorino;
+		\item Deve essere stata selezionata una consegna dalla lista per essere segnata come completata.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Vengono aggiornati i dati nel database quando una consegna viene confermata.
+	\item \textbf{Post-condizione:}
+	\\I dati nel database sono aggiornati.
+\end{itemize}
+
+\subsection{Bolla ristorazione per asporto - Direttore}
+
+\subsubsection{UC3.12 Cancellare ordini al cuoco} \label{UC3.12}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla to-do list del cuoco.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Recuperare dal database la lista degli ordini \hyperref[UC3.12.1]{(UC3.12.1)};
+		\item Visualizzare lista ordini \hyperref[UC3.12.2]{(UC3.12.2)};
+		\item L’utente direttore seleziona dalla lista gli ordini che desidera rimuovere \hyperref[UC3.12.3]{(UC3.12.3)};
+		\item L’utente direttore seleziona l’opzione per rimuovere gli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)};
+		\item L’utente direttore seleziona l’opzione per confermare \hyperref[UC3.12.5]{(UC3.12.5)};
+		\item Aggiornare il database \hyperref[UC3.12.6]{(UC3.12.6)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+\end{itemize}
+
+\subsubsection{UC3.12.1 Recuperare dal database la lista degli ordini(direttore)} \label{UC3.12.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere alla bubble del direttore di avere nella propria memoria la lista delle ordinazioni effettuate.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore consulta la bubble in modalità di cancellazione dell’ordinazione del cuoco.
+	\item \textbf{Post-condizione:}
+	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+\end{itemize}
+
+\subsubsection{UC3.12.2 Visualizzare lista ordini(direttore)} \label{UC3.12.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di cancellare ordini dalla to-do list del cuoco.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore visualizza la lista degli ordini per poterne rimuovere.
+	\item \textbf{Post-condizione:}
+	\\La lista degli ordini è visualizzata.
+\end{itemize}
+
+\subsubsection{UC3.12.3 Selezionare dalla lista gli ordini che si desidera rimuovere} \label{UC3.12.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare ordini da cancellare dalla to-do list del cuoco.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item La lista degli ordini da eliminare è visualizzata.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\item \textbf{Post-condizione:}
+	\\Sono stati selezionati degli ordini dalla lista.
+\end{itemize}
+
+\subsubsection{UC3.12.4 Selezionare l’opzione per rimuovere gli ordini selezionati} \label{UC3.12.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di eliminare gli ordini selezionati per l’eliminazione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Sono stati selezionati ordini da eliminare \hyperref[UC3.12.3]{(UC3.12.3)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\item \textbf{Post-condizione:}
+	\\L’ordine da cancellare è selezionato.
+\end{itemize}
+
+\subsubsection{UC3.12.5 Selezionare l’opzione per confermare la rimozione degli ordini selezionati} \label{UC3.12.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di confermare la selezione degli ordini da eliminare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item La lista degli ordini da eliminare è visualizzata;
+		\item E stata selezionata l’eliminazione di ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore sceglie l’ordine da eliminare dalla to-do list del cuoco.
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha confermato quale ordine cancellare.
+\end{itemize}
+
+\subsubsection{UC3.12.6 Aggiornare il database} \label{UC3.12.6}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione aggiornare il database in base agli ordini cancellati dal direttore.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Avere confermato quali ordini eliminare \hyperref[UC3.12.5]{(UC3.12.5)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Vengono aggiornati nel database i dati relativi agli ordini da eliminare.
+	\item \textbf{Post-condizione:}
+	\\L’ordine è stato cancellato dalla to-do list del cuoco.
+\end{itemize}
+
+\subsubsection{UC3.13 Cambiare il menù} \label{UC3.13}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Permettere all’utente direttore di modificare il menu del ristorante.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il direttore visualizza il menù \hyperref[UC3.13.1]{(UC3.13.1)};
+		\item Il direttore elimina degli elementi dal menù \hyperref[UC3.13.2]{(UC3.13.2)};
+		\item Il direttore modifica degli elementi del menù \hyperref[UC3.13.3]{(UC3.13.3)};
+		\item Il direttore aggiunge elementi al menù \hyperref[UC3.13.4]{(UC3.13.4)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il menù è modificato.
+\end{itemize}
+
+\subsubsection{UC3.13.1 Visualizzare il menù del ristorante(direttore)} \label{UC3.13.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di mostrare al direttore il menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Viene recuperato dal database il menù del ristorante \hyperref[UC3.13.1.1]{(UC3.13.1.1)};
+		\item Viene mostrato all’utente il menù \hyperref[UC3.13.1.2]{(UC3.13.1.2)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Nella bubble memory è presente il menù.
+\end{itemize}
+
+\subsubsection{UC3.13.1.1 Recuperare dal database il menù del ristorante (direttore)} \label{UC3.13.1.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Recuperare il menu del ristorante dal database.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore accede alla sezione di modifica del menù della sua bubble.
+	\item \textbf{Post-condizione:}
+	\\Nella bubble memory è presente il menu.
+\end{itemize}
+
+\subsubsection{UC3.13.1.2 Visualizzare il menu (direttore)} \label{UC3.13.1.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Il direttore deve poter visualizzare il menu per poterlo modificare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver recuperato le informazioni dal database \hyperref[UC3.13.1.1]{(UC3.13.1.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore si trova nel menù.
+	\item \textbf{Post-condizione:}
+	\\Il menu è visualizzato.
+\end{itemize}
+
+\subsubsection{UC3.13.2 Eliminare elementi dal menù} \label{UC3.13.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di eliminare elementi dal menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il direttore seleziona dal menù i cibi che desidera togliere \hyperref[UC3.13.2.1]{(UC3.13.2.1)};
+		\item Il direttore conferma l’operazione \hyperref[UC3.13.2.2]{(UC3.13.2.2)};
+		\item Il database viene aggiornato \hyperref[UC3.13.2.3]{(UC3.13.2.3)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Gli elementi desiderati sono stati eliminati dal menù.
+\end{itemize}
+
+\subsubsection{UC3.13.2.1 Selezionare dal menù i cibi che si desidera rimuovere} \label{UC3.13.2.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Avere una selezione di voci da rimuovere dal menu.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore seleziona dalla lista visualizzata nell'\hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menu che desidera rimuovere da esso.
+	\item \textbf{Post-condizione:}
+	\\Gli elementi sono stati selezionati.
+\end{itemize}
+
+\subsubsection{UC3.13.2.2 Selezionare l’opzione per rimuovere gli elementi selezionati} \label{UC3.13.2.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Rimuovere gli elementi selezionati con l’apposita opzione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore si trova nel menù, ha selezionato gli elementi da eliminare, e ne conferma l’eliminazione.
+	\item \textbf{Post-condizione:}
+	\\Gli elementi sono eliminati dal menu.
+\end{itemize}
+
+\subsubsection{UC3.13.2.3 Aggiornare il database} \label{UC3.13.2.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Notificare al sistema l'aggiornamento del menu effettuato allo \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver selezionato l’opzione per rimuovere gli elementi selezionati dal menu \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore ha confermato l’eliminazione dal menu degli elementi selezionati in precedenza.
+	\item \textbf{Post-condizione:}
+	\\La modifica del menù è stata propagata al database.
+\end{itemize}
+
+\subsubsection{UC3.13.3 Modificare elementi del menù} \label{UC3.13.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di permettere al direttore di modificare elementi del menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il direttore seleziona dal menù l’elemento che desidera modificare \hyperref[UC3.13.3.1]{(UC3.13.3.1)};
+		\item Viene confermata la selezione \hyperref[UC3.13.3.2]{(UC3.13.3.2)};
+		\item Il direttore inserisce le nuove informazioni \hyperref[UC3.13.3.3]{(UC3.13.3.3)};
+		\item Vengono confermati i cambiamenti \hyperref[UC3.13.3.4]{(UC3.13.3.4)};
+		\item Il database viene aggiornato \hyperref[UC3.13.3.5]{(UC3.13.3.5)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Sono state applicate le modifiche desiderate agli elementi del menù.
+\end{itemize}
+
+\subsubsection{UC3.13.3.1  Selezionare dal menù il cibo che si desidera modificare} \label{UC3.13.3.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Permettere all’utente direttore di modificare voci del menu.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore si trova nel menù, può selezionare la voce del menu da modificare.
+	\item \textbf{Post-condizione:}
+	\\Le voci sono selezionate.
+\end{itemize}
+
+\subsubsection{UC3.13.3.2 Selezionare l’opzione per modificare il la voce del menu selezionata} \label{UC3.13.3.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Abilitare il cambiamento della voce del menu selezionata.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore utilizza l'apposito comando per modificare la voce del menu selezionata al caso d’uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
+	\item \textbf{Post-condizione:}
+	\\La modifica alla voce del menu selezionata è ora disponibile.
+\end{itemize}
+
+\subsubsection{UC3.13.3.3 Aggiornare le informazioni} \label{UC3.13.3.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Modificare le informazioni della voce di menu appena selezionata.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver selezionato una voce da modificare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore può modificare i dati della voce appena selezionata.
+	\item \textbf{Post-condizione:}
+	\\I dati della voce di menu sono modificati.
+\end{itemize}
+
+\subsubsection{UC3.13.3.4 Selezionare “applica cambiamenti”} \label{UC3.13.3.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Applicare i cambiamenti effetuati.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver effettuato delle modifiche sul menù.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore dopo aver finito di applicare tutti i cambiamenti desiderati al menù seleziona l’opzione “Applica cambiamenti”, i cambiamenti vengono dunque memorizzati all’interno della bubble.
+	\item \textbf{Post-condizione:}
+	\\I cambiamenti sono stati applicati e memorizzati all’interno della bubble.
+\end{itemize}
+
+\subsubsection{UC3.13.3.5 Aggiornare il database con le nuove informazioni} \label{UC3.13.3.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.3]{(UC3.13.3)}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver selezionato “applica cambiamenti” \hyperref[UC3.13.4]{(UC3.13.4)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Le modifiche confermate dal direttore vengono salvate sul database.
+	\item \textbf{Post-condizione:}
+	\\Il menù è modificato.
+\end{itemize}
+
+\subsubsection{UC3.13.4 Aggiungere elementi al menù} \label{UC3.13.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è di permettere al direttore di aggiungere elementi al menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il direttore seleziona l’opzione di aggiungere un elemento \hyperref[UC3.13.4.1]{(UC3.13.4.1)};
+		\item Vengono inserite le informazioni necessarie alla creazione del nuovo elemento \hyperref[UC3.13.4.2]{(UC3.13.4.2)};
+		\item Il direttore conferma l’aggiunta del nuovo elemento \hyperref[UC3.13.4.3]{(UC3.13.4.3)};
+		\item Il database viene aggiornato \hyperref[UC3.13.4.4]{(UC3.13.4.4)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\È stato aggiunto un elemento al menù.
+\end{itemize}
+
+\subsubsection{UC3.13.4.1 Selezionare l’opzione “aggiungi elemento”} \label{UC3.13.4.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Permettere al direttore di aggiungere una voce al menu.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Il menù deve essere visualizzato.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore si trova nel menu, seleziona l’apposita opzione “aggiungi elemento”.
+	\item \textbf{Post-condizione:}
+	\\È possibile aggiungere i dati per la nuova voce.
+\end{itemize}
+
+\subsubsection{UC3.13.4.2 Inserire le informazioni necessarie} \label{UC3.13.4.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è quello di permettere al direttore di inserire le informazioni necessarie all’aggiunta di un elemento al menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver iniziato la procedura di aggiunta di un elemento come da \hyperref[UC3.13.4.1]{(UC3.13.4.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore compila il form caricato dalla bubble in tutte le sue parti.
+	\item \textbf{Post-condizione:}
+	\\Il Direttore ha inserito all’interno del form tutte le informazioni necessarie ad aggiungere un elemento al menù.
+\end{itemize}
+
+\subsubsection{UC3.13.4.3 Selezionare l’opzione “conferma”} \label{UC3.13.4.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzionalità è quello di permettere al direttore di inserire le informazioni necessarie all’aggiunta di un elemento al menù.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver inserito le informazioni necessarie \hyperref[UC3.13.4.2]{(UC3.13.4.2)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore conferma le modifiche al menu.
+	\item \textbf{Post-condizione:}
+	\\Le modifiche sono state confermate e sono pronte per l'invio dei dati al database.
+\end{itemize}
+
+\subsubsection{UC3.13.4.4 Aggiornare il database con le nuove informazioni} \label{UC3.13.4.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.4]{(UC3.13.4)}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver confermato l’aggiunta \hyperref[UC3.13.4.3]{(UC3.13.4.3)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Le modifiche confermate dal direttore vengono propagate al database.
+	\item \textbf{Post-condizione:}
+	\\Il menù è modificato e la modifica è presente anche nel database.
+\end{itemize}
+
+\subsubsection{UC3.14 Aggiungere ordini al responsabile acquisti} \label{UC3.14}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di aggiungere ordini alla to-do list del responsabile acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Recuperare la lista degli ordini da effettuare dal database \hyperref[UC3.14.1]{(UC3.14.1)};
+		\item Mostrare la lista all’utente \hyperref[UC3.14.2]{(UC3.14.2)};
+		\item L’utente direttore seleziona “aggiungi ordine” \hyperref[UC3.14.3]{(UC3.14.3)};
+		\item L’utente direttore inserisce le informazioni sull’ordine da aggiungere \hyperref[UC3.14.4]{(UC3.14.4)};
+		\item L’utente direttore seleziona “conferma” \hyperref[UC3.14.5]{(UC3.14.5)};
+		\item Aggiornare il database \hyperref[UC3.14.6]{(UC3.14.6)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha aggiunto gli elementi desiderati alla to-do list del responsabile acquisti.
+\end{itemize}
+
+\subsubsection{UC3.14.1 Recuperare la lista degli ordini da effettuare dal database(direttore)} \label{UC3.14.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è recuperare le informazioni sulla lista di ordini da effettuare dal database.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\I dati sugli ordini da effettuare devono essere prelevati dal database.
+	\item \textbf{Post-condizione:}
+	\\I dati sono prelevati dal database.
+\end{itemize}
+
+\subsubsection{UC3.14.2 Mostrare la lista all’utente(direttore)} \label{UC3.14.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di visualizzare la lista degli ordini da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver recuperato dal database le informazioni \hyperref[UC3.14.1]{(UC3.14.1)}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore deve visualizzare la lista degli ordini da effettuare.
+	\item \textbf{Post-condizione:}
+	\\La lista è visualizzata.
+\end{itemize}
+
+\subsubsection{UC3.14.3 Selezionare l’opzione “aggiungi ordine”} \label{UC3.14.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per aggiungere ordini alla to-do list del responsabile acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item La lista degli ordini da effettuare è visualizzata \hyperref[UC3.14.2]{UC3.14.2}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore seleziona l’opzione per aggiungere un ordine.
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha selezionato “aggiungi ordine”.
+\end{itemize}
+
+\subsubsection{UC3.14.4 Inserire le informazioni sull’ordine da aggiungere} \label{UC3.14.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di aggiungere informazioni all’ordine da aggiungere alla to-do list del responsabile acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver selezionato l’opzione “aggiungi ordine” \hyperref[UC3.14.3]{UC3.14.3}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore aggiunge gli elementi desiderati all’ordine per la to-do list del responsabile acquisti.
+	\item \textbf{Post-condizione:}
+	\\Le informazioni sull’ordine possono essere aggiunte.
+\end{itemize}
+
+\subsubsection{UC3.14.5 Selezionare “conferma”} \label{UC3.14.5}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di confermare le informazioni aggiunte.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver inserito informazioni per l’ordine \hyperref[UC3.14.4]{UC3.14.4}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore ha aggiunto informazioni per l’ordine e lo ha confermato selezionando l’apposita opzione.
+	\item \textbf{Post-condizione:}
+	\\L’ordine è stato confermato.
+\end{itemize}
+
+\subsubsection{UC3.14.6 Aggiornare il database} \label{UC3.14.6}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è quello di aggiornare il database con l’ordine aggiunto dal direttore.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver confermato l’ordine \hyperref[UC3.14.5]{UC3.14.5}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il database deve essere aggiornato con gli elementi aggiunti dal direttore alla to-do list del responsabile acquisti.
+	\item \textbf{Post-condizione:}
+	\\Il database è aggiornato con i nuovi dati.
+\end{itemize}
+
+\subsubsection{UC3.15 Cancellare ordini al responsabile acquisti} \label{UC3.15}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di eliminare ordini dalla to-do list del responsabile acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\begin{itemize}
+		\item Il direttore seleziona la parte corrispondente della bubble;
+		\item I dati vengono recuperati dal database \hyperref[UC3.15.1]{(UC3.15.1)};
+		\item Viene mostrata la lista degli ordini all’utente \hyperref[UC3.15.2]{(UC3.15.2)};
+		\item Il direttore seleziona dalla lista gli ordini che si desidera rimuovere \hyperref[UC3.15.3]{(UC3.15.3)};
+		\item Il direttore seleziona l’opzione per rimuovere gli ordini selezionati \hyperref[UC3.15.4]{(UC3.15.4)};
+		\item Viene aggiornato il database \hyperref[UC3.15.5]{(UC3.15.5)}.
+	\end{itemize}
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha eliminato gli elementi desiderati dalla to-do list del responsabile acquisti.
+\end{itemize}
+
+\subsubsection{UC3.15.1 Recuperare la lista degli ordini da effettuare dal database(direttore)} \label{UC3.15.1}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è recuperare le informazioni sulla lista di ordini da effettuare dal database.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\I dati sugli ordini da effettuare devono essere prelevati dal database.
+	\item \textbf{Post-condizione:}
+	\\I dati sono prelevati dal database.
+\end{itemize}
+
+\subsubsection{UC3.15.2 Mostrare la lista all’utente(direttore)} \label{UC3.15.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di visualizzare la lista degli ordini da effettuare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore deve visualizzare la lista degli ordini da effettuare.
+	\item \textbf{Post-condizione:}
+	\\La lista è visualizzata.
+\end{itemize}
+
+\subsubsection{UC3.15.3 Selezionare ordini da eliminare} \label{UC3.15.3}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare che ordini eliminare.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item La lista degli ordini da effettuare è visualizzata.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore seleziona l’opzione per rimuovere un ordine.
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha selezionato gli ordini che desidera eliminare.
+\end{itemize}
+
+\subsubsection{UC3.15.4 Selezionare l’opzione “rimuovi ordine”} \label{UC3.15.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è permettere al direttore di selezionare l’opzione per rimuovere ordini dalla to-do list del responsabile acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item La lista degli ordini da effettuare è visualizzata;
+		\item Sono selezionati ordini per la rimozione.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il direttore seleziona l’opzione per rimuovere un ordine.
+	\item \textbf{Post-condizione:}
+	\\Il direttore ha confermato l'eliminazione degli elementi selezionati.
+\end{itemize}
+
+\subsubsection{UC3.15.4 Selezionare l’opzione “rimuovi ordine”} \label{UC3.15.4}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Direttore.
+	\item \textbf{Scopo e descrizione:} 
+	\\Lo scopo di questa funzione è quello di aggiornare il database con gli ordini rimossi dal direttore dalla lista degli acquisti.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere \glossario{Rocket.Chat};
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver eliminato degli ordini.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\Il database deve essere aggiornato con gli elementi rimossi dal direttore alla to-do list del responsabile acquisti.
+	\item \textbf{Post-condizione:}
+	\\Il database è aggiornato.
+\end{itemize}
