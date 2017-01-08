@@ -7,49 +7,119 @@ Questo documento ha lo scopo di identificare e dettagliare la pianificazione del
 \ScopoDelProdotto
 
 \subsection{Glossario}
-Per evitare tutte le possibili ambiguità sul linguaggio utilizzato e per massimizzare la comprensione da parte di tutti dei documenti, della terminologia specifica e di quella di dominio, degli acronimi e di tutte quelle parole che necessitano chiarimento (contraddistinte da una G pedice), viene redatto un \textit{Glossario}, consultabile nel documento \Glossario.
+\GlossarioIntroduzione
 
 \subsection{Riferimenti}
 \subsubsection{Normativi}
 \begin{itemize}
-\item \textbf{\NormeDiProgetto}
-\item\textbf{ Capitolato d'appalto C3:} UMAP: un motore per l'analisi predittiva in ambiente Internet of Things: \url{http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/C3.pdf}
-\item \textbf{Vincoli sull'organigramma del gruppo e sull'offerta tecnico-economica:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/PD01b.html}
+\item \textbf{Norme di progetto:} \NormeDiProgetto{}
+\item\textbf{ Capitolato d'appalto C5:} Monolith: an interactive bubble provider \\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/C5.pdf}
+\item \textbf{Regolamento del progetto didattico:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/L09.pdf}
+\item \textbf{Regolamento organigramma e offerta tecnico-economica:} \\ \url{http://www.math.unipd.it/~tullio/IS-1/2016/Progetto/PD01b.html}
 \end{itemize}
 
 \subsubsection{Informativi}
 \begin{itemize}
-\item \textbf{Slide dell'insegnamento Ingegneria del Software monulo A:}
+\item \textbf{Slide Ingegneria del Software monulo A:}
 \begin{itemize}
 \item Ciclo di vita del Software
 \item Gestione di Progetto
 \end{itemize}
-\url{http://www.math.unipd.it/~tullio/IS-1/2015/}
-\item \textbf{\textit{Software Engineering} - Ian Sommerville - 9th Edition (2011):}
+\url{http://www.math.unipd.it/~tullio/IS-1/2016/}
+\item \textbf{\textit{Software Engineering} - Ian Sommerville - 9th Edition (2011):} METTIAMO IL LIBRO?
 \begin{itemize}
 \item Part 4: Software Management
 \end{itemize} 
 \end{itemize}
 
-\subsection{Ciclo di vita}
-Come modello di ciclo di vita si è scelto di adottare il \textbf{modello incrementale} il quale permette di:
-\begin{itemize}
-\item Soddisfare immediatamente i requisiti principali, e di potersi dedicare successivamente a quelli desiderabili, in modo tale da consegnare subito al cliente un sistema funzionante;
-\item Fornire rilasci multipli e successivi ognuno dei quali realizza un incremento di funzionalità;
-\item Ridurre il rischio di fallimento del progetto: sebbene possano esserci problemi in alcuni incrementi, è probabile che altri saranno consegnati con successo al cliente;
-\item Testare più intensamente i servizi di sistema più importanti in quanto consegnati prima.
-\end{itemize}
-
 \subsection{Scadenze}
-Di seguito è riportato l'elenco delle scadenze che il gruppo \GroupName{} ha deciso di rispettare e, sulle stesse, si basa la pianificazione presentata in questo documento.
+Le scadenze individuate dal gruppo \GroupName{} per il progetto \ProjectName{} sono:
 \begin{itemize}
-\item \textbf{Revisione dei Requisiti (RR):} 2016-02-16
-\item \textbf{Revisione di Progettazione (RP):} 2016-04-18
-\item \textbf{Revisione di Qualifica (RQ):} 2016-05-23
-\item \textbf{Revisione di Accettazione (RA):} 2016-06-17
+	\item \textbf{Revisione dei Requisiti (RR):}
+	\begin{itemize}
+		\item Consegna materiale: 11-01-2017
+		\item Revisione: 24-01-2017
+	\end{itemize}
+	\item \textbf{Revisione di Progettazione (RP):} 13-03-2017
+	\begin{itemize}
+		\item Consegna materiale: 06-03-2017
+		\item Revisione: 13-03-2017
+	\end{itemize}
+	\item \textbf{Revisione di Qualifica (RQ):} 14-04-2017
+	\begin{itemize}
+		\item Consegna materiale: 11-04-2017
+		\item Revisione: 14-04-2017
+	\end{itemize}
+	\item \textbf{Revisione di Accettazione (RA):} 15-05-2017
+	\begin{itemize}
+		\item Consegna materiale: 08-05-2017
+		\item Revisione: 15-05-2017
+	\end{itemize}
 \end{itemize}
 
 \subsection{Ruoli}
-Durante l'intera attività di progetto i membri del gruppo \GroupName{} sono tenuti a ricoprire, a rotazione, diversi \glossario{ruoli} le cui responsabilità sono descritte nelle \NormeDiProgetto{}. Ogni singolo componente potrà ricoprire più ruoli all'interno della stessa fase del progetto purché sia garantita l'assenza di conflitto di interessi. Si osserva in particolare che una persona non può essere \textit{Verificatore} di se stessa. All'interno della stessa fase è inoltre possibile la duplicazione di ruoli ma devono essere ricoperti da persone distinte. 
+Il gruppo \GroupName si impegna a organizzare una rotazione dei ruoli per permettere a tutti i membri del gruppo di aver svolto almeno una volta ogni ruolo, durante la durata del progetto. Durante una fase un singolo componente potrà ricoprire più ruoli, purché non entrino in conflitto, non sarà permesso per esempio che qualcuno sia il verificatore del lavoro da lui svolto. Alcuni ruoli potranno essere ricoperti da più persone contemporaneamente.
+\subsubsection{Definizione dei ruoli}
+Tali ruoli sono:
+\begin{itemize}
+	\item \Responsabile: è il responsabile dei risultati del progetto. I suoi compiti principali sono:
+	\begin{itemize}
+		\item elaborare piani e scadenze;
+		\item approvare l'emissione dei docuemnti;
+		\item coordinare le attività di gruppo;
+		\item relazionarsi con il controllo qualità.
+	\end{itemize}
+	Redige \textit{Piano di Progetto} e \textit{Piano di Qualifica}.
+	\item \Amministratore: è il responsabile dell'efficienza e dell'ambiente di sviluppo. I suoi compiti principali sono:
+	\begin{itemize}
+		\item redigere e attuare piani e procedure per la gestione della qualità;
+		\item controllare versioni e configurazioni di prodotto;
+		\item gestire l'archivio della documentazione.
+	\end{itemize}
+	Redige \textit{Norme di progetto} e \textit{Piano di Qualifica}.
+	\item \Analista: è il responsabile dell'analisi preventiva del capitolato su cui si basano le scelte architetturali future.
+	Redige \textit{Studio di fattibilità}, \textit{Analisi dei Requisiti} e \textit{Piano di Qualifica}.
+	\item \Progettista: è il responsabile dell'attività di progettazione, producendo una soluzione attuabile.
+	Redige \textit{Specifica Tecnica}, \textit{Definizione di Prodotto} e \textit{Piano di Qualifica}.
+	\item \Programmatore: è il responsabile dell'attività di codifica e alla realizzazione delle componenti di verifica.
+	Redige \textit{Manuale utente} e documenta il codice implementato.
+	\item \Verificatore: è il responsabile dell'attività di verifica, controllando che il lavoro svolto rispetti le norme.
+	Redige \textit{Piano di Qualifica}.
+\end{itemize}
+Ciascun ruolo ha un diverso costo, riportato nella tabella sottostante.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Ruolo} &
+		\textbf{Costo}\\
+		\hline
+		Responsabile & 30€  \\
+		\hline
+		Amministratore &  20€ \\
+		\hline
+		Analista & 25€  \\
+		\hline
+		Progettista & 22€  \\
+		\hline 
+		Programmatore & 15€  \\
+		\hline
+		Verificatore &  15€ \\
+		\hline
+	\end{tabular}
+	\caption{Costi per ruolo}
+\end{table}
+
+\subsection{Modello di sviluppo}
+Il modello di sviluppo scelto è il \textit{Modello Incrementale}. Questa scelta è stata fatta in base ai vantaggi che il modello propone, anche rispetto all’organizzazione delle scadenze e del lavoro.
+Il \textit{Modello Incrementale} prevede:
+\begin{itemize}
+	\item rilasci multipli e successivi, detti anche incrementi, in quanto estendono le funzionalità;
+	\item i rilasci sono organizzati sulla base dell’importanza strategica; i primi rilasci saranno i fondamentali, che soddisfano i requisiti più importanti;
+	\item i requisiti più importanti saranno stabiliti all’inizio, mentre quelli meno importanti potranno subire variazioni di stabilizzamento in corso d’opera;
+	\item l’\AR e la \PA saranno svolte all’inizio e non verranno ripetute, in modo tale da permettere una pianificazione concreta dei cicli di incremento;
+	\item la \PD, la \Cod e la \VV saranno svolti ciclicamente, producendo ad ogni ciclo una parte di prodotto sufficiente e necessaria per gli incrementi successivi.
+\end{itemize}
+Il \textit{Modello Incrementale} permette quindi rilasci multipli, i quali costituiranno dei prototipi. Grazie a questi sarà possibile ottenere un feedback su parti di prodotto da parte del proponente durante la fase di codifica.
 
 
