@@ -834,7 +834,7 @@
 		\item L’utente seleziona “Crea lista” \hyperref[UC2.1.4]{(UC2.1.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una bubble todo list con il titolo indicato.
+	\\Nella conversazione è presente una bubble to-do list con il titolo indicato.
 \end{itemize}
 
 \subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
@@ -843,7 +843,7 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un todo-list all'interno della chat.
+	\\Creare un to-do list all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di Rocket.Chat;
@@ -862,7 +862,7 @@
 	\item \textbf{Attori:}
 	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un todo-list all'interno della chat.
+	\\Creare un to-do list all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di Rocket.Chat;
@@ -886,7 +886,7 @@
 	\begin{itemize}
 		\item Essere utenti di Rocket.Chat;
 		\item Avere monolith installato;
-		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.1.2]{UC2.1.2}.
+		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.1.2]{(UC2.1.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore della bubble inserisce i dati necessari nel form visualizzato al caso d’uso \hyperref[UC2.1.2]{UC2.1.2}.
@@ -910,7 +910,7 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della bubble.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una bubble todo list con il titolo indicato. 
+	\\Nella conversazione è presente una bubble to-do list con il titolo indicato. 
 \end{itemize}
 
 \subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
@@ -1123,17 +1123,17 @@
 \subsubsection{Breve descrizione di cosa andiamo a portare alla demo:}
 Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto una bubble interattiva legata alla gestione di un'attività di ristorazione per asporto.
 \\Questa bubble apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà i servizi.
-\\L’utente generico della bubble potrà visualizzare il menu del ristorante e fare un ordine, previo inserimento dei propri dati, inclusivi di indirizzo in cui consegnare il cibo ordinato.
-\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble “todo list”, sotto forma di casella aggiunta automaticamente in fondo alla lista, il cuoco una volta completato l'ordine avrà facoltà di segnare completata l’ordinazione dalla lista.
+\\L’utente generico della bubble potrà visualizzare il menù del ristorante e fare un ordine, previo inserimento dei propri dati, inclusivi di indirizzo in cui consegnare il cibo ordinato.
+\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble “to-do list”, sotto forma di casella aggiunta automaticamente in fondo alla lista, il cuoco una volta completato l'ordine avrà facoltà di segnare completata l’ordinazione dalla lista.
 \\Contemporaneamente alla notifica alla cucina dell’ordine verrà registrato automaticamente sul database dell’attività il consumo di ingredienti.
-\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all’addetto agli acquisti dell’azienda tramite todo list, il quale provvederà a recuperare gli ingredienti mancanti.
+\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all’addetto agli acquisti dell’azienda tramite to-do list, il quale provvederà a recuperare gli ingredienti mancanti.
 \\È prevista anche la figura del direttore dell'attività il quale avrà facoltà di inserire nuove pietanze nel menù e deciderne il prezzo.
 
 \subsubsection{Attori:}
 \begin{itemize}
-	\item Utente: colui che ha facoltà di creare un ordine previa consultazione del menu e registrazione dei propri dati;
+	\item Utente: colui che ha facoltà di creare un ordine previa consultazione del menù e registrazione dei propri dati;
 	\item Cuoco: addetto alla preparazione della pietanza selezionata in precedenza dall’utente, ha facoltà di eliminare dalla propria to do list le pietanze che ha già preparato;
-	\item Responsabile Acquisti: addetto a rifornire il magazzino sulla base degli ingredienti consumati dal cuoco in base a quanto gli è notificato dalla sua todo list nella bubble;
+	\item Responsabile Acquisti: addetto a rifornire il magazzino sulla base degli ingredienti consumati dal cuoco in base a quanto gli è notificato dalla sua to-do list nella bubble;
 	\item Direttore: può modificare il menù e il prezzo di ciascuna pietanza riportata in esso.
 \end{itemize}
 
@@ -1221,7 +1221,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il cliente consulta il menu.
+	\\Il cliente consulta il menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -1234,7 +1234,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Il menù caricato viene mostrato all’utente \hyperref[UC3.2.2]{(UC3.2.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il menu è visualizzato sulla bubble.
+	\\Il menù è visualizzato sulla bubble.
 \end{itemize}
 
 \subsubsection{UC3.2.1 Recuperare il menù del ristorante dal database} \label{UC3.2.1}
@@ -1262,7 +1262,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Visualizzare il menu nella bubble.
+	\\Visualizzare il menù nella bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -1354,7 +1354,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver selezionato cibi e quantità dal menu \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente invoca l'apposito comando di ordine sulla bubble.
@@ -1374,7 +1374,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver selezionato cibi e quantità dal menu \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L’utente seleziona “Mostra resoconto” e riceve dunque una lista completa di tutto e solo quello che sta per ordinare, insieme al prezzo totale dell’ordine.
@@ -1435,15 +1435,15 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\\Prelevare dalla memoria della bubble i dati relativi all'ordinazione confermata nell’\hyperref[UC3.3.5]{UC3.3.5}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item \hyperref[UC3.3.5]{(UC3.3.5)};
+		\item \hyperref[UC3.3.5]{UC3.3.5};
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invoca con l'apposito comando l’\hyperref[UC3.4]{UC3.4}.
+	\\L'utente invoca con l'apposito comando lo \hyperref[UC3.4]{UC3.4}.
 	\item \textbf{Post-condizione:}
-	\\I dati desiderati, relativi all'ordinazione effettuata nell’\hyperref[UC3.3]{UC3.3}, sono stati recuperati. 
+	\\I dati desiderati, relativi all'ordinazione effettuata nello \hyperref[UC3.3]{UC3.3}, sono stati recuperati. 
 \end{itemize}
 
 \subsubsection{UC3.4.2 Recuperare informazioni dei dati personali dalla memoria della bubble} \label{UC3.4.2}
@@ -1860,12 +1860,12 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo fattorino;
 		\item Devono esistere consegne da effettuare;
-		\item È stata selezionata una consegna da effettuare come indicato nell’\hyperref[UC3.10.1]{(UC3.10.1)}.
+		\item È stata selezionata una consegna da effettuare come indicato nello \hyperref[UC3.10.1]{UC3.10.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il fattorino seleziona dalla lista quale consegna desidera effettuare.
 	\item \textbf{Post-condizione:}
-	\\L'ordine selezionato nell’\hyperref[UC3.10.1]{(UC3.10.1)} è stato aggiornato nel database cambiandone lo stato in “in consegna”.
+	\\L'ordine selezionato nello \hyperref[UC3.10.1]{UC3.10.1} è stato aggiornato nel database cambiandone lo stato in “in consegna”.
 \end{itemize}
 
 \subsubsection{UC3.11 Consegna effettuata} \label{UC3.11}
@@ -2085,7 +2085,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere all’utente direttore di modificare il menu del ristorante.
+	\\Permettere all’utente direttore di modificare il menù del ristorante.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2131,7 +2131,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Recuperare il menu del ristorante dal database.
+	\\Recuperare il menù del ristorante dal database.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2141,16 +2141,16 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore accede alla sezione di modifica del menù della sua bubble.
 	\item \textbf{Post-condizione:}
-	\\Nella bubble memory è presente il menu.
+	\\Nella bubble memory è presente il menù.
 \end{itemize}
 
-\subsubsection{UC3.13.1.2 Visualizzare il menu (direttore)} \label{UC3.13.1.2}
+\subsubsection{UC3.13.1.2 Visualizzare il menù (direttore)} \label{UC3.13.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il direttore deve poter visualizzare il menu per poterlo modificare.
+	\\Il direttore deve poter visualizzare il menù per poterlo modificare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2161,7 +2161,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore si trova nel menù.
 	\item \textbf{Post-condizione:}
-	\\Il menu è visualizzato.
+	\\Il menù è visualizzato.
 \end{itemize}
 
 \subsubsection{UC3.13.2 Eliminare elementi dal menù} \label{UC3.13.2}
@@ -2194,7 +2194,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Avere una selezione di voci da rimuovere dal menu.
+	\\Avere una selezione di voci da rimuovere dal menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2203,7 +2203,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore seleziona dalla lista visualizzata nell'\hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menu che desidera rimuovere da esso.
+	\\Il direttore seleziona dalla lista visualizzata nell'\hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menù che desidera rimuovere da esso.
 	\item \textbf{Post-condizione:}
 	\\Gli elementi sono stati selezionati.
 \end{itemize}
@@ -2225,7 +2225,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore si trova nel menù, ha selezionato gli elementi da eliminare, e ne conferma l’eliminazione.
 	\item \textbf{Post-condizione:}
-	\\Gli elementi sono eliminati dal menu.
+	\\Gli elementi sono eliminati dal menù.
 \end{itemize}
 
 \subsubsection{UC3.13.2.3 Aggiornare il database} \label{UC3.13.2.3}
@@ -2234,16 +2234,16 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Notificare al sistema l'aggiornamento del menu effettuato allo \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+	\\Notificare al sistema l'aggiornamento del menù effettuato allo \hyperref[UC3.13.2.2]{UC3.13.2.2}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver selezionato l’opzione per rimuovere gli elementi selezionati dal menu \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+		\item Aver selezionato l’opzione per rimuovere gli elementi selezionati dal menù \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore ha confermato l’eliminazione dal menu degli elementi selezionati in precedenza.
+	\\Il direttore ha confermato l’eliminazione dal menù degli elementi selezionati in precedenza.
 	\item \textbf{Post-condizione:}
 	\\La modifica del menù è stata propagata al database.
 \end{itemize}
@@ -2280,7 +2280,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere all’utente direttore di modificare voci del menu.
+	\\Permettere all’utente direttore di modificare voci del menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2288,18 +2288,18 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore si trova nel menù, può selezionare la voce del menu da modificare.
+	\\Il direttore si trova nel menù, può selezionare la voce del menù da modificare.
 	\item \textbf{Post-condizione:}
 	\\Le voci sono selezionate.
 \end{itemize}
 
-\subsubsection{UC3.13.3.2 Selezionare l’opzione per modificare il la voce del menu selezionata} \label{UC3.13.3.2}
+\subsubsection{UC3.13.3.2 Selezionare l’opzione per modificare il la voce del menù selezionata} \label{UC3.13.3.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Abilitare il cambiamento della voce del menu selezionata.
+	\\Abilitare il cambiamento della voce del menù selezionata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2308,9 +2308,9 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore utilizza l'apposito comando per modificare la voce del menu selezionata al caso d’uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
+	\\Il direttore utilizza l'apposito comando per modificare la voce del menù selezionata al caso d’uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
 	\item \textbf{Post-condizione:}
-	\\La modifica alla voce del menu selezionata è ora disponibile.
+	\\La modifica alla voce del menù selezionata è ora disponibile.
 \end{itemize}
 
 \subsubsection{UC3.13.3.3 Aggiornare le informazioni} \label{UC3.13.3.3}
@@ -2319,7 +2319,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Modificare le informazioni della voce di menu appena selezionata.
+	\\Modificare le informazioni della voce di menù appena selezionata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2330,7 +2330,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore può modificare i dati della voce appena selezionata.
 	\item \textbf{Post-condizione:}
-	\\I dati della voce di menu sono modificati.
+	\\I dati della voce di menù sono modificati.
 \end{itemize}
 
 \subsubsection{UC3.13.3.4 Selezionare “applica cambiamenti”} \label{UC3.13.3.4}
@@ -2404,7 +2404,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere al direttore di aggiungere una voce al menu.
+	\\Permettere al direttore di aggiungere una voce al menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2413,7 +2413,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Il menù deve essere visualizzato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore si trova nel menu, seleziona l’apposita opzione “aggiungi elemento”.
+	\\Il direttore si trova nel menù, seleziona l’apposita opzione “aggiungi elemento”.
 	\item \textbf{Post-condizione:}
 	\\È possibile aggiungere i dati per la nuova voce.
 \end{itemize}
@@ -2430,7 +2430,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver iniziato la procedura di aggiunta di un elemento come da \hyperref[UC3.13.4.1]{(UC3.13.4.1)}.
+		\item Aver iniziato la procedura di aggiunta di un elemento come da \hyperref[UC3.13.4.1]{UC3.13.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore compila il form caricato dalla bubble in tutte le sue parti.
@@ -2453,7 +2453,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Aver inserito le informazioni necessarie \hyperref[UC3.13.4.2]{(UC3.13.4.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il direttore conferma le modifiche al menu.
+	\\Il direttore conferma le modifiche al menù.
 	\item \textbf{Post-condizione:}
 	\\Le modifiche sono state confermate e sono pronte per l'invio dei dati al database.
 \end{itemize}
@@ -2464,7 +2464,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.4]{(UC3.13.4)}.
+	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.4]{UC3.13.4}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere \glossario{Rocket.Chat};
@@ -2555,7 +2555,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item La lista degli ordini da effettuare è visualizzata \hyperref[UC3.14.2]{UC3.14.2}.
+		\item La lista degli ordini da effettuare è visualizzata \hyperref[UC3.14.2]{(UC3.14.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore seleziona l’opzione per aggiungere un ordine.
@@ -2575,7 +2575,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver selezionato l’opzione “aggiungi ordine” \hyperref[UC3.14.3]{UC3.14.3}.
+		\item Aver selezionato l’opzione “aggiungi ordine” \hyperref[UC3.14.3]{(UC3.14.3)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore aggiunge gli elementi desiderati all’ordine per la to-do list del responsabile acquisti.
@@ -2595,7 +2595,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver inserito informazioni per l’ordine \hyperref[UC3.14.4]{UC3.14.4}.
+		\item Aver inserito informazioni per l’ordine \hyperref[UC3.14.4]{(UC3.14.4)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il direttore ha aggiunto informazioni per l’ordine e lo ha confermato selezionando l’apposita opzione.
@@ -2615,7 +2615,7 @@ Per la demo del progetto il gruppo orbit presenterà ai proponenti del progetto 
 		\item Avere \glossario{Rocket.Chat};
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver confermato l’ordine \hyperref[UC3.14.5]{UC3.14.5}.
+		\item Aver confermato l’ordine \hyperref[UC3.14.5]{(UC3.14.5)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il database deve essere aggiornato con gli elementi aggiunti dal direttore alla to-do list del responsabile acquisti.

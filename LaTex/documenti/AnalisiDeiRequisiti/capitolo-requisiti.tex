@@ -14,10 +14,71 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\item le fonti dal quale il requisito ha avuto origine, sia essa l’analisi diretta del capitolato oppure il dialogo con i Proponenti e/o in base alle necessità architetturali ed implementative del progetto individuate tramite casi d'uso;	
 \end{itemize}
 
-\subsection{Tabella dei requisiti}
+\subsection{Tabella dei requisiti per il Framework Monolith}
 
+\subsubsection{Requisiti di Vincolo}
 
 \begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline 0.0.0 & Obbligatorio & Il framework è sviluppato in javascript. & Capitolato \\
+	\hline R1 & Obbligatorio & Il framework è sviluppato in javascript. & Capitolato \\
+	\hline R2 & Obbligatorio & Il framework è sviluppato come pachetto per \glossario{RocketChat} & Capitolato \\
+	\hline R3 & Obbligatorio & Viene sviluppata una bubble di tipo to-do list. & Capitolato \\
+	\hline R4 & Obbligatorio & Viene sviluppata una bubble per la gestione di un esercizio commerciale di ristorazione che permetta la gestione da parte del ristorante delle attività da svolgere che comprendono consegne da effettuare,  piatti da preparare, aqcuisti di merce, e permetta ai clienti l’ordinazione dei pasti. & Capitolato \\
+	\hline R5 & Obbligatorio & Il framework offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & verbale x.x.x \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
+	\hline
+\end{longtable}
+
+\subsubsection{Requisiti Funzionali}
+
+\begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
+	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
+	\hline R6 & Obbligatorio & L’utilizzatore del framework può istanziare una bubble generica. & \hyperref[UC1.35]{UC1.35} \\
+	\hline R7 & Obbligatorio & L’utilizzatore del framework può rendere visibile una bubble generica precedentemente istanziata. & \hyperref[UC1.36]{UC1.36} \\
+	\hline R8 & Obbligatorio & Il framework offre la funzionalità di interfacciarsi con un database mongo fornito dall’utente. & verbale x.x.x \linebreak \hyperref[UC1.00]{UC1.00} \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
+	\hline R9 & Obbligatorio & Il framework offre funzionalità di settaggio di durata delle bubble. & \hyperref[UC1.13]{UC1.13} \\
+	\hline R10 & Obbligatorio & Il framework offre funzionalità di terminazione bubble. & \hyperref[UC1.19]{UC1.19} \\
+	\hline R11 & Obbligatorio & Il framework offre la possibilità di aggiungere rimuovere o modificare elementi dalla bubble. & \hyperref[UC1.03]{UC1.03} \hyperref[UC]{UC} \hyperref[UC]{UC} \\
+	\hline R12 & Obbligatorio & Il framework offre la possibilità di inserire label nella bubble & \hyperref[UC1.27]{UC1.27} \\
+	\hline R13 & Obbligatorio & Il framework fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.23]{UC1.23} \\
+	\hline R14 & Obbligatorio & Il framework fornisce le funzionalità per mostrare e nascondere la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.21]{UC1.21} \hyperref[UC1.22]{UC1.22} \\
+	\hline R15 & Obbligatorio & Il framework mette a disposizione funzionalità di creazione di notifica per le bubble & \hyperref[UC1.18]{UC1.18} \\
+	\hline R16 & Obbligatorio & Il framework mette a disposizione funzionalità di visualizzazione per le notifiche per le bubble & \hyperref[UC1.17]{UC1.17} \\
+	\hline
+\end{longtable}
+
+\subsection{Tabella dei requisiti per la bubble To-do list}
+
+\subsubsection{Requisiti Funzionali}
+
+\begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
+	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
+	\hline R17 & Obbligatorio & La bubble to-do list permette all’utente la creazione di liste & \hyperref[UC2.1]{UC2.1} \\
+	\hline R18 & Obbligatorio & La bubble to-do list offre la funzionalità di inserimento di nuovi elementi nella lista & \hyperref[UC2.2]{UC2.2} \\
+	\hline R19 & Obbligatorio & La bubble to-do list offre la funzionalità di segnare come completati elementi della lista & \hyperref[UC2.3]{UC2.3} \\
+	\hline R20 & Obbligatorio & La to-do list permette di settare un  remind come notifica statica & \hyperref[UC2.4]{UC2.4} \\
+	\hline
+\end{longtable}
+
+\subsection{Tabella dei requisiti per la bubble Ristorazione}
+
+\subsubsection{Requisiti Funzionali}
+
+\begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
+	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
+	\hline R21 & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database. In questo modo è possibile salvare informazioni riguardati i clienti e i dati riguardanti l’impresa, come merci e attività da svolgere. Grazie a questa funzione sarà possibile l’inserimento, la modifica e la cancellazione dei dati in base ai metodi utilizzati nella bubble. & \hyperref[UC3.2.1]{UC3.2.1} \hyperref[UC3.4.3]{UC3.4.3} \hyperref[UC3.5.1]{UC3.5.1} \hyperref[UC3.6.2]{UC3.6.2} \hyperref[UC3.7.1]{UC3.7.1} \hyperref[UC3.8.2]{UC3.8.2} \hyperref[UC3.9.1]{UC3.9.1} \hyperref[UC3.10.2]{UC3.10.2} \hyperref[UC3.11.2]{UC3.11.2} \hyperref[UC3.12.1]{UC3.12.1} \hyperref[UC3.12.6]{UC3.12.6} \hyperref[UC3.13.1.1]{UC3.13.1.1} \hyperref[UC3.13.2.3]{UC3.13.2.3} \hyperref[UC3.13.3.5]{UC3.13.3.5} \hyperref[UC3.13.4.4]{UC3.13.4.4} \hyperref[UC3.14.1]{UC3.14.1} \hyperref[UC3.14.6]{UC3.14.6} \hyperref[UC3.15.1]{UC3.15.1} \hyperref[UC3.15.5]{UC3.15.5} \\
+	\hline R22 & Obbligatorio & Per permettere ai clienti l’utilizzo della bubble per la ristorazione sono incluse funzionalità di registrazione con il fine di raccogliere i dati per la consegna dei prodotti e permettere le ordinazioni. & \hyperref[UC3.1]{UC3.1} \\
+	\hline R23 & Obbligatorio & I clienti possono consultare il menu del ristorante, in questo modo potranno informarsi sui cibi e sui prezzi per poi effettuare le scelte per l’ordine. & \hyperref[UC3.2]{UC3.2} \\
+	\hline R24 & Obbligatorio & I clienti possono selezionare cibi e relative quantità per effettuare un ordine. & \hyperref[UC3.3]{UC3.3} \\
+	\hline R25 & Obbligatorio & L’utente cuoco può visualizzare la lista di piatti da preparare. & \hyperref[UC3.5]{UC3.5} \\
+	\hline R26 & Obbligatorio & L’utente cuoco può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \hyperref[UC3.6]{UC3.6} \\
+	\hline R27 & Obbligatorio & L’utente responsabile degli acquisti può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.7]{UC3.7} \\
+	\hline R28 & Obbligatorio & L’utente responsabile degli acquisti ha la capacità di spuntare i prodotti che ha acquistato dalla lista acquisti.
+	 & \hyperref[UC3.8]{UC3.8} \\
+	\hline R29 & Obbligatorio & L’utente direttore ha la possibilità di modificare aggiungere e rimuovere le voci del menu con relativi prezzi & \hyperref[UC]{UC} \\
+	\hline R30 & Obbligatorio & L’utente direttore può visualizzare la lista dei piatti da preparare & \hyperref[UC3.12.2]{UC3.12.2} \\
+	\hline R31 & Obbligatorio & L’utente direttore può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.14.2]{UC3.14.2} \hyperref[UC3.15.2]{UC3.15.2} \\
+	\hline R32 & Obbligatorio & L’utente direttore può eliminare voci dalla lista dei piatti da preparare. & \hyperref[UC3.12]{UC3.12} \\
+	\hline R32 & Obbligatorio & L’utente direttore può modificare la lista degli acquisti da effettuare aggiungendo ingredienti da aqcuistare oppure cancellandoli.
+	 & \hyperref[UC3.14]{UC3.14} \hyperref[UC3.15]{UC3.15} \\
+	\hline
 \end{longtable}
