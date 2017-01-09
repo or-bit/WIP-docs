@@ -6,12 +6,12 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\item codice;
 	\item categoria di appartenenza fra:
 	\begin{itemize}
-		\item Obbligatori per i requisiti irrinunciabili per un qualsiasi stakeholder;
+		\item Obbligatori per i requisiti irrinunciabili per un qualsiasi \glossario{stakeholder};
 		\item Desiderabili per i requisiti non strettamente necessari, ma che offrono un valore aggiunto riconoscibile
 		\item Opzionali per i requisiti relativamente utili o contrattabili in seguito
 	\end{itemize}
 	\item una descrizione esaustiva del requisito;
-	\item le fonti dal quale il requisito ha avuto origine, sia essa l’analisi diretta del capitolato oppure il dialogo con i Proponenti e/o in base alle necessità architetturali ed implementative del progetto individuate tramite casi d'uso;	
+	\item le fonti dal quale il requisito ha avuto origine, sia essa l’analisi diretta del capitolato oppure il dialogo con i Proponenti e/o in base alle necessità architetturali ed implementative del progetto individuate tramite \glossario{casi d'uso};	
 \end{itemize}
 
 \subsection{Tabella dei requisiti per il Framework Monolith}
@@ -20,11 +20,12 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{3cm}|P{6cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline R1 & Obbligatorio & Il \glossario{Framework} è sviluppato in \glossario{Javascript}. & Capitolato \\
+	\hline R1 & Obbligatorio & Il \glossario{Framework} e la demo sono sviluppati in \glossario{Javascript}. & Capitolato \\
 	\hline R2 & Obbligatorio & Il \glossario{Framework} è sviluppato come pachetto per \glossario{RocketChat} & Capitolato \\
 	\hline R3 & Obbligatorio & Viene sviluppata una bubble di tipo to-do list. & Capitolato \\
 	\hline R4 & Obbligatorio & Viene sviluppata una bubble per la gestione di un esercizio commerciale di ristorazione che permetta la gestione da parte del ristorante delle attività da svolgere che comprendono consegne da effettuare,  piatti da preparare, aqcuisti di merce, e permetta ai clienti l’ordinazione dei pasti. & Capitolato \\
-	\hline R5 & Obbligatorio & Il \glossario{Framework} offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & verbale x.x.x \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
+	\hline R5 & Obbligatorio & Il \glossario{Framework} offre metodi con la funzionalità di modificare la \glossario{bubble memory}, quindi per gestire lo stato della bubble & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
+	\hline R54 & Obbligatorio & La demo è caricata in \glossario{Heroku}. & Capitolato \\
 	\hline
 \end{longtable}
 
@@ -34,11 +35,11 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
 	\hline R6 & Obbligatorio & L’utilizzatore del \glossario{Framework} può istanziare una bubble generica. & \hyperref[UC1.35]{UC1.35} \\
 	\hline R7 & Obbligatorio & L’utilizzatore del \glossario{Framework} può rendere visibile una bubble generica precedentemente istanziata. & \hyperref[UC1.36]{UC1.36} \\
-	\hline R8 & Obbligatorio & Il \glossario{Framework} offre la funzionalità di interfacciarsi con un database \glossario{MongoDB} fornito dall’utente. & verbale x.x.x \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
+	\hline R8 & Obbligatorio & Il \glossario{Framework} offre la funzionalità di interfacciarsi con un database \glossario{MongoDB} fornito dall’utente. & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
 	\hline R9 & Obbligatorio & Il \glossario{Framework} offre funzionalità di settaggio di durata delle bubble. & \hyperref[UC1.13]{UC1.13} \\
 	\hline R10 & Obbligatorio & Il \glossario{Framework} offre funzionalità di terminazione bubble. & \hyperref[UC1.19]{UC1.19} \\
 	\hline R11 & Obbligatorio & Il \glossario{Framework} offre la possibilità di aggiungere rimuovere o modificare elementi dalla bubble. & \hyperref[UC1.03.1]{UC1.03.1} \hyperref[UC1.04]{UC1.04} \hyperref[UC1.05.1]{UC1.05.1} \\
-	\hline R12 & Obbligatorio & Il \glossario{Framework} offre la possibilità di inserire label nella bubble & \hyperref[UC1.27]{UC1.27} \\
+	\hline R12 & Obbligatorio & Il \glossario{Framework} offre la possibilità di inserire \glossario{label} nella bubble & \hyperref[UC1.27]{UC1.27} \\
 	\hline R13 & Obbligatorio & Il \glossario{Framework} fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.23]{UC1.23} \\
 	\hline R14 & Obbligatorio & Il \glossario{Framework} fornisce le funzionalità per mostrare e nascondere la posizione degli elementi grafici all'interno di una bubble generica. & \hyperref[UC1.21]{UC1.21} \linebreak \hyperref[UC1.22]{UC1.22} \\
 	\hline R15 & Obbligatorio & Il \glossario{Framework} mette a disposizione funzionalità di creazione di notifica per le bubble & \hyperref[UC1.18]{UC1.18} \\
@@ -55,7 +56,7 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline R42 & Opzionale & Il \glossario{Framework} offre metodi per fare matching con espressioni regolari
 	 & \hyperref[UC1.10]{UC1.10} \\
 	\hline R43 & Opzionale & Il \glossario{Framework} offre la possibilità di stabilire una funzionalità di  esecuzione ad un orario prestabilito & \hyperref[UC1.16]{UC1.16} \\
-	\hline R44 & Opzionale & Il \glossario{Framework} offre la possibilità di chiamata di metodi di \glossario{API} esterne per riceverne file json & \hyperref[UC1.07.1]{UC1.07.1} \\
+	\hline R44 & Opzionale & Il \glossario{Framework} offre la possibilità di chiamata di metodi di \glossario{API} esterne per riceverne file \glossario{JSON} & \hyperref[UC1.07.1]{UC1.07.1} \\
 	\hline R45 & Opzionale & Il \glossario{Framework} mette a disposizione metodi per l’inserimento di immagini nelle bubble
 	 & \hyperref[UC1.25]{UC1.25} \\
 	\hline R46 & Opzionale & Il \glossario{Framework} offre metodi per la creazione di grafici a torta ed istogrammi
@@ -90,24 +91,108 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline R22 & Obbligatorio & Per permettere ai clienti l’utilizzo della bubble per la ristorazione sono incluse funzionalità di registrazione con il fine di raccogliere i dati per la consegna dei prodotti e permettere le ordinazioni. & \hyperref[UC3.1]{UC3.1} \\
 	\hline R23 & Obbligatorio & I clienti possono consultare il menu del ristorante, in questo modo potranno informarsi sui cibi e sui prezzi per poi effettuare le scelte per l’ordine. & \hyperref[UC3.2]{UC3.2} \\
 	\hline R24 & Obbligatorio & I clienti possono selezionare cibi e relative quantità per effettuare un ordine. & \hyperref[UC3.3]{UC3.3} \\
-	\hline R25 & Obbligatorio & L’utente cuoco può visualizzare la lista di piatti da preparare. & \hyperref[UC3.5]{UC3.5} \\
-	\hline R26 & Obbligatorio & L’utente cuoco può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \hyperref[UC3.6]{UC3.6} \\
+	\hline R25 & Obbligatorio & L’utente \glossario{Cuoco} può visualizzare la lista di piatti da preparare. & \hyperref[UC3.5]{UC3.5} \\
+	\hline R26 & Obbligatorio & L’utente \glossario{Cuoco} può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \hyperref[UC3.6]{UC3.6} \\
 	\hline R27 & Obbligatorio & L’utente responsabile degli acquisti può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.7]{UC3.7} \\
 	\hline R28 & Obbligatorio & L’utente responsabile degli acquisti ha la capacità di spuntare i prodotti che ha acquistato dalla lista acquisti.
 	 & \hyperref[UC3.8]{UC3.8} \\
-	\hline R29 & Obbligatorio & L’utente direttore ha la possibilità di modificare aggiungere e rimuovere le voci del menu con relativi prezzi & \hyperref[UC3.13]{UC3.13} \\
-	\hline R30 & Obbligatorio & L’utente direttore può visualizzare la lista dei piatti da preparare & \hyperref[UC3.12.2]{UC3.12.2} \\
-	\hline R31 & Obbligatorio & L’utente direttore può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.14.2]{UC3.14.2} \hyperref[UC3.15.2]{UC3.15.2} \\
-	\hline R32 & Obbligatorio & L’utente direttore può eliminare voci dalla lista dei piatti da preparare. & \hyperref[UC3.12]{UC3.12} \\
-	\hline R53 & Obbligatorio & L’utente direttore può modificare la lista degli acquisti da effettuare aggiungendo ingredienti da aqcuistare oppure cancellandoli.
+	\hline R29 & Obbligatorio & L’utente \glossario{direttore} ha la possibilità di modificare aggiungere e rimuovere le voci del menu con relativi prezzi & \hyperref[UC3.13]{UC3.13} \\
+	\hline R30 & Obbligatorio & L’utente \glossario{direttore} può visualizzare la lista dei piatti da preparare & \hyperref[UC3.12.2]{UC3.12.2} \\
+	\hline R31 & Obbligatorio & L’utente \glossario{direttore} può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.14.2]{UC3.14.2} \hyperref[UC3.15.2]{UC3.15.2} \\
+	\hline R32 & Obbligatorio & L’utente \glossario{direttore} può eliminare voci dalla lista dei piatti da preparare. & \hyperref[UC3.12]{UC3.12} \\
+	\hline R53 & Obbligatorio & L’utente \glossario{direttore} può modificare la lista degli acquisti da effettuare aggiungendo ingredienti da aqcuistare oppure cancellandoli.
 	 & \hyperref[UC3.14]{UC3.14} \linebreak \hyperref[UC3.15]{UC3.15} \\	 
-	\hline R50 & Opzionale & L’utente fattorino può visualizzare la lista delle consegne da effettuare & \hyperref[UC3.9]{UC3.9} \\
-	\hline R51 & Opzionale & L’utente fattorino ha la capacità di selezionare la consegna che intende effettuare & \hyperref[UC3.10]{UC3.10} \\
-	\hline R52 & Opzionale & L’utente fattorino ha la capacità di confermare la consegna che ha effettuato & \hyperref[UC3.11]{UC3.11} \\
+	\hline R50 & Opzionale & L’utente \glossario{fattorino} può visualizzare la lista delle consegne da effettuare & \hyperref[UC3.9]{UC3.9} \\
+	\hline R51 & Opzionale & L’utente \glossario{fattorino} ha la capacità di selezionare la consegna che intende effettuare & \hyperref[UC3.10]{UC3.10} \\
+	\hline R52 & Opzionale & L’utente \glossario{fattorino} ha la capacità di confermare la consegna che ha effettuato & \hyperref[UC3.11]{UC3.11} \\
 	\hline
 \end{longtable}
 
 \subsection{Tracciamento Fonti-Requisiti}
+
+\begin{longtable}{|P{6cm}|P{6cm}|}
+	\hline \textbf{Fonte} & \textbf{Requisiti}\\
+	\hline Capitolato & R1 \linebreak R2 \linebreak R3 \linebreak R4 \linebreak R54 \\
+	\hline VerbaleEsterno23\_12\_2016 & R5 \linebreak R8 \\
+	\hline \hyperref[UC1.00]{UC1.00} & R8 \\
+	\hline \hyperref[UC1.01]{UC1.01} & R8 \\
+	\hline \hyperref[UC1.02]{UC1.02} & R8 \\
+	\hline \hyperref[UC1.03.1]{UC1.03.1} & R11 \\
+	\hline \hyperref[UC1.04]{UC1.04} & R11 \\
+	\hline \hyperref[UC1.05.1]{UC1.05.1} & R11 \\
+	\hline \hyperref[UC1.06.1]{UC1.06.1} & R5 \\
+	\hline \hyperref[UC1.07.1]{UC1.07.1} & R44 \\
+	\hline \hyperref[UC1.08]{UC1.08} & R47 \\
+	\hline \hyperref[UC1.09]{UC1.09} & R48 \\
+	\hline \hyperref[UC1.10]{UC1.10} & R42 \\
+	\hline \hyperref[UC1.11]{UC1.11} & R49 \\	
+	\hline \hyperref[UC1.12]{UC1.12} & R35 \\
+	\hline \hyperref[UC1.13]{UC1.13} & R9 \\	
+	\hline \hyperref[UC1.14]{UC1.14} & R36 \\
+	\hline \hyperref[UC1.15.1]{UC1.15.1} & R37 \\
+	\hline \hyperref[UC1.16]{UC1.16} & R43 \\
+	\hline \hyperref[UC1.17]{UC1.17} & R16 \\
+	\hline \hyperref[UC1.18]{UC1.18} & R15 \\
+	\hline \hyperref[UC1.19]{UC1.19} & R10 \\
+	\hline \hyperref[UC1.20.1]{UC1.20.1} & R40 \\
+	\hline \hyperref[UC1.21]{UC1.21} & R14 \\
+	\hline \hyperref[UC1.22]{UC1.22} & R14 \\
+	\hline \hyperref[UC1.23]{UC1.23} & R13 \\
+	\hline \hyperref[UC1.24.1]{UC1.24.1} & R39 \\
+	\hline \hyperref[UC1.25]{UC1.25} & R45 \\
+	\hline \hyperref[UC1.26]{UC1.26} & R33 \\
+	\hline \hyperref[UC1.27]{UC1.27} & R12 \\
+	\hline \hyperref[UC1.28]{UC1.28} & R46 \\
+	\hline \hyperref[UC1.29]{UC1.29} & R46 \\
+	\hline \hyperref[UC1.30]{UC1.30} & R41 \\
+	\hline \hyperref[UC1.31]{UC1.31} & R41 \\
+	\hline \hyperref[UC1.32]{UC1.32} & R41 \\
+	\hline \hyperref[UC1.33]{UC1.33} & R34 \\
+	\hline \hyperref[UC1.34]{UC1.34} & R38 \\
+	\hline \hyperref[UC1.35]{UC1.35} & R6 \\
+	\hline \hyperref[UC1.36]{UC1.36} & R7 \\	
+	\hline \hyperref[UC2.1]{UC2.1} & R17 \\
+	\hline \hyperref[UC2.2]{UC2.2} & R18 \\
+	\hline \hyperref[UC2.3]{UC2.3} & R19 \\
+	\hline \hyperref[UC2.4]{UC2.4} & R20 \\	
+	\hline \hyperref[UC3.1]{UC3.1} & R22 \\
+	\hline \hyperref[UC3.2]{UC3.2} & R23 \\
+	\hline \hyperref[UC3.2.1]{UC3.2.1} & R21 \\
+	\hline \hyperref[UC3.3]{UC3.3} & R24 \\
+	\hline \hyperref[UC3.4.3]{UC3.4.3} & R21 \\
+	\hline \hyperref[UC3.5]{UC3.5} & R25 \\
+	\hline \hyperref[UC3.5.1]{UC3.5.1} & R21 \\
+	\hline \hyperref[UC3.6]{UC3.6} & R26 \\
+	\hline \hyperref[UC3.6.2]{UC3.6.2} & R21 \\
+	\hline \hyperref[UC3.7]{UC3.7} & R27 \\
+	\hline \hyperref[UC3.7.1]{UC3.7.1} & R21 \\
+	\hline \hyperref[UC3.8]{UC3.8} & R28 \\
+	\hline \hyperref[UC3.8.2]{UC3.8.2} & R21 \\
+	\hline \hyperref[UC3.9]{UC3.9} & R50 \\
+	\hline \hyperref[UC3.9.1]{UC3.9.1} & R21 \\
+	\hline \hyperref[UC3.10]{UC3.10} & R51 \\
+	\hline \hyperref[UC3.10.2]{UC3.3.10.2} & R21 \\
+	\hline \hyperref[UC3.11]{UC3.11} & R52 \\
+	\hline \hyperref[UC3.11.2]{UC3.11.2} & R21 \\
+	\hline \hyperref[UC3.12]{UC3.12} & R32 \\
+	\hline \hyperref[UC3.12.1]{UC3.12.1} & R21 \\
+	\hline \hyperref[UC3.12.2]{UC3.12.2} & R30 \\
+	\hline \hyperref[UC3.12.6]{UC3.12.6} & R21 \\
+	\hline \hyperref[UC3.13]{UC3.13} & R29 \\
+	\hline \hyperref[UC3.13.1.1]{UC3.13.1.1} & R21 \\
+	\hline \hyperref[UC3.13.2.3]{UC3.13.2.3} & R21 \\
+	\hline \hyperref[UC3.13.3.5]{UC3.13.3.5} & R21 \\
+	\hline \hyperref[UC3.13.4.4]{UC3.13.4.4} & R21 \\
+	\hline \hyperref[UC3.14]{UC3.14} & R53 \\
+	\hline \hyperref[UC3.14.1]{UC3.14.1} & R21 \\
+	\hline \hyperref[UC3.14.2]{UC3.14.2} & R31 \\
+	\hline \hyperref[UC3.14.6]{UC3.14.6} & R21 \\
+	\hline \hyperref[UC3.15]{UC3.15} & R53 \\
+	\hline \hyperref[UC3.15.1]{UC3.15.1} & R21 \\
+	\hline \hyperref[UC3.15.2]{UC3.15.2} & R31 \\
+	\hline \hyperref[UC3.15.5]{UC3.15.5} & R21 \\
+	\hline
+\end{longtable}
 
 \subsection{Tracciamento Requisiti-Fonti}
 
@@ -117,10 +202,11 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline R2 & Capitolato \\
 	\hline R3 & Capitolato \\
 	\hline R4 & Capitolato \\
-	\hline R5 & Verbale x.x.x \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\	
+	\hline R54 & Capitolato \\
+	\hline R5 & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\	
 	\hline R6 & \hyperref[UC1.35]{UC1.35} \\
 	\hline R7 & \hyperref[UC1.36]{UC1.36} \\
-	\hline R8 & verbale x.x.x \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \linebreak \hyperref[UC1.02]{UC1.02} \\
+	\hline R8 & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \linebreak \hyperref[UC1.02]{UC1.02} \\
 	\hline R9 & \hyperref[UC1.13]{UC1.13} \\
 	\hline R10 & \hyperref[UC1.19]{UC1.19} \\
 	\hline R11 & \hyperref[UC1.03.1]{UC1.03.1} \linebreak \hyperref[UC1.04]{UC1.04} \linebreak \hyperref[UC1.05.1]{UC1.05.1} \\
@@ -166,5 +252,16 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline R50 & \hyperref[UC3.9]{UC3.9} \\
 	\hline R51 & \hyperref[UC3.10]{UC3.10} \\
 	\hline R52 & \hyperref[UC3.11]{UC3.11} \\	
+	\hline
+\end{longtable}
+
+\subsection{Riepilogo}
+
+\begin{longtable}{|P{3cm}|P{3cm}|P{3cm}|P{3cm}|}
+	\hline \textbf{Categoria} & \textbf{Obbligatorio} & \textbf{Opzionale} & \textbf{Desiderabile} \\
+	\hline Funzionale & 30 & 18 & 0 \\
+	\hline Prestazionale & 0 & 0 & 0 \\
+	\hline Qualitativo & 0 & 0 & 0 \\
+	\hline di Vincolo & 6 & 0 & 0 \\
 	\hline
 \end{longtable}

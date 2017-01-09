@@ -29,6 +29,7 @@ La piattaforma di versionamento scelta è \glossario{\textbf{Git}} in tandem al 
 
 \subsubsection{Procedure di utilizzo del repository}
 
+
 \subsection{Software di integrazione continua}
 Come software di integrazione continua viene utilizzato \textbf{\glossario{Travis}}.
 \glossario{Travis} è un servizio open source sotto licenza \glossario{MIT}, quindi disponibile in versione gratuita, \glossario{hosted} ed integrabile con vari altri servizi, tra cui \glossario{GitHub} e \glossario{Heroku}.\\ \glossario{Travis} permette di produrre e testare progetti ospitati su \glossario{GitHub}. Ad ogni nuovo commit o pull request in \glossario{GitHub}, vengono quindi eseguiti specifici test e ne viene segnalato l'esito agli sviluppatori interessati. \glossario{Travis} è inoltre integrabile con strumenti e servizi esterni, per esempio per l'analisi statica.
@@ -74,7 +75,7 @@ La scelta di usare \glossario{\LaTeX{}} è stata determinata dalla possibilità 
 Questo strumento è stato scelto per emulare la funzionalità di collaborazione offerta da \glossario{Overleaf}. In particolare viene utilizzato per la stesura del contenuto dei documenti in maniera collaborativa, sfruttando gli strumenti di comunicazione vocale e testuale. \glossario{Google Documents} permette inoltre di tenere traccia delle modifiche fatte da ogni componente, tramite cronologia delle modifiche, e di commentare parti di testo. 
 
 \subsubsection{Diagrammi UML}
-Per la modellazione \glossario{UML} è stato scelto di utilizzare \textbf{\glossario{Visual Paradigm}}, disponibile in versione gratuita per \glossario{Windows}, MacOs e \glossario{Linux}. \`{E} uno strumento completo e già conosciuto da alcuni componenti del gruppo. Permette di creare in modo intuitivo diagrammi \glossario{UML} e di esportarli in file immagini, condivisibili e visualizzabili rapidamente attraverso gli strumenti di comunicazione, oltre che integrabili direttamente nei documenti di testo.
+Per la modellazione \glossario{UML} è stato scelto di utilizzare \textbf{\glossario{Visual Paradigm}}, disponibile in versione gratuita per \glossario{Windows}, \glossario{MacOs} e \glossario{Linux}. \`{E} uno strumento completo e già conosciuto da alcuni componenti del gruppo. Permette di creare in modo intuitivo diagrammi \glossario{UML} e di esportarli in file immagini, condivisibili e visualizzabili rapidamente attraverso gli strumenti di comunicazione, oltre che integrabili direttamente nei documenti di testo.
 
 \subsection{Fogli di calcolo} \label{sec:fogli_di_calcolo}
 \paragraph{Google Sheets}\mbox{}\\
@@ -89,7 +90,7 @@ Viene usato per creare grafici personalizzati ed esportarli nei formati immagine
 
 \subsection{Tecnologie utilizzate}
 \subsubsection{JavaScript}
-JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi. Viene comunemente utilizzato nella programmazione web lato client, per la creazione di effetti dinamici interattivi, tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso.\\
+JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi. Viene comunemente utilizzato nella programmazione web lato client per aggiungere interattività a pagine web.\\
 Le caratteristiche principali di JavaScript sono:
 \begin{itemize}
 	\item è un linguaggio interpretato: il codice non viene compilato, ma interpretato;
@@ -97,13 +98,13 @@ Le caratteristiche principali di JavaScript sono:
 	\item è un linguaggio debolmente tipizzato;
 	\item il codice viene eseguito direttamente sul client e non sul server: il vantaggio di questo approccio è che, anche con la presenza di script particolarmente complessi, il web server non viene sovraccaricato a causa delle richieste dei client.
 \end{itemize}
-La versione utilizzata per questo progetto è \glossario{ECMAScript} 6 con un approccio \glossario{promise}.
-Tramite \glossario{JavaScript} verranno creati il \glossario{framework} e la demo del prodotto finale.
+Lo standard utilizzato per questo progetto è \glossario{ECMAScript} 6 con un approccio \glossario{promise}.
+Il \glossario{framework} e la demo del prodotto finale sono scritti in \glossario{JavaScript}.
 
 \paragraph{Meteor}\mbox{}\\
 \glossario{Meteor} è una piattaforma \glossario{JavaScript} \glossario{full-stack} per lo sviluppo di applicazioni web e mobile moderne. Include un set di tecnologie chiave per costruire applicazioni \glossario{reactive}, uno \glossario{strumento di build} e un set di pacchetti offerti dalla community \glossario{Node.js} e \glossario{JavaScript}.\\
 \glossario{Meteor} permette di sviluppare in un solo linguaggio, \glossario{JavaScript}, in tutti gli ambienti: applicazioni server, browser web e dispositivi mobile.\\
-In \glossario{Meteor} è il server a inviare i dati, e non \glossario{HTML}, mentre il client li renderizza.
+In \glossario{Meteor} il server invia dati e non \glossario{HTML}, mentre il client li renderizza.
 Alcune caratteristiche di \glossario{Meteor} sono:
 \begin{itemize}
 	\item isomorfismo: il codice viene eseguito sia lato server che lato client;
@@ -138,12 +139,12 @@ Il linguaggio \glossario{Sass} si basa sul concetto di preprocessore \glossario{
 \subsection{Strumenti per la documentazione}
 Come strumento di generazione per la documentazione del codice è stato scelto \textbf{\glossario{Meteor-JSDoc}}.\\
 \glossario{Meteor-JSDoc} fa uso della versione in sviluppo di \textbf{\glossario{JSDoc}} per fornire maggior supporto alla nuova sintassi \glossario{JavaScript}.
-\glossario{JSDoc} è un generatore di documentazione \glossario{API} per \glossario{JavaScript}. Aggiungendo commenti che documentino il codice direttamente all'interno dei sorgenti, questo strumento analizza il codice e genera una documentazione completa in formato \glossario{HTML}.
+\glossario{JSDoc} è un generatore di documentazione delle \glossario{API} per \glossario{JavaScript}. Aggiungendo commenti che documentino il codice direttamente all'interno dei sorgenti, questo strumento analizza il codice e genera una documentazione completa in formato \glossario{HTML}.
 Alcune caratteristiche di \glossario{Meteor-JSDoc} sono:
 \begin{itemize}
 	\item è basato sui template della documentazione stessa di \glossario{Meteor};
 	\item la documentazione prodotta è usata anche dall'applicazione \glossario{Meteor}, che la mostra ben formattata per l'applicazione creata;
-	\item supporta il collegamento dal \glossario{repository} \glossario{GitHub}.
+	\item supporta il collegamento al \glossario{repository} \glossario{GitHub}.
 \end{itemize}
 
 \subsection{Strumenti per la codifica}
@@ -166,12 +167,12 @@ Vengono utilizzati degli script per il calcolo degli indici di leggibilità dei 
 
 \subsubsection{Test di integrazione}
 \paragraph{Mocha}\mbox{}\\
-\glossario{Mocha} è un \glossario{framework} per il test di \glossario{JavaScript}, eseguibile su \glossario{Node.js} e nel browser. I test di \glossario{Mocha} vengono eseguiti in modo seriale, permettendo un controllo flessibile e accurato, mentre vengono mappate le eccezioni non rilevate al corretto test.\\
-Tra le varie funzionalità offerte da questo \glossario{framework} ci sono il supporto dell'asincronia, incluse le \glossario{promise}.
+\glossario{Mocha} è un \glossario{framework} per il testing di codice \glossario{JavaScript}, eseguibile su \glossario{Node.js} e nel browser. I test di \glossario{Mocha} vengono eseguiti in modo seriale, permettendo un controllo flessibile e accurato, mentre vengono mappate le eccezioni non rilevate al corretto test.\\
+Una funzionalità chiave offerta da questo \glossario{framework} è il supporto all’elaborazione asincrona, incluse le \glossario{promise}.
 
 \paragraph{\glossario{Chai}}\mbox{}\\
 \glossario{Chai} è una libreria \glossario{BDD/TDD} per \glossario{Node.js} ed il browser che può essere accoppiata con qualunque \glossario{framework} di testing per \glossario{JavaScript}.\\
-Il vantaggio che questa libreria offre è la possibilità di costruire test facilmente leggibili, in quanto molto simili al linguaggio parlato. Questo avviene grazie alla concatenazione di costrutti quali \textit{to}, \textit{be}, \textit{is}, insieme ai costrutti base \textit{expect} e \textit{should}. La concatenazione può terminare quindi con funzioni quali \textit{include} o \textit{equals}, che richiedono dei parametri in input, oppure \textit{not}, \textit{true} o \textit{false}.\\
+Il vantaggio che questa libreria offre è la possibilità di scrivere test facilmente leggibili, in quanto molto simili al linguaggio naturale. Questo avviene grazie alla concatenazione di costrutti quali \textit{to}, \textit{be}, \textit{is}, insieme ai costrutti base \textit{expect} e \textit{should}. La concatenazione può terminare quindi con funzioni quali \textit{include} o \textit{equals}, che richiedono dei parametri in input, oppure \textit{not}, \textit{true} o \textit{false}.\\
 In questo modo è possibile definire in modo chiaro il comportamento che ci si aspetta il codice abbia, o il risultato atteso dalle operazioni contenute in esso.
 
 \subsubsection{ESLint} \label{sec:eslint}
