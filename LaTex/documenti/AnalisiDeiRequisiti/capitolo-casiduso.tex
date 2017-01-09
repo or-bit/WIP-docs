@@ -2,28 +2,28 @@
 
 \subsection{Framework}
 
-\subsubsection{UC1.00 Connessione a database mongo} \label{UC1.00}
+\subsubsection{UC1.00 Connessione a database \glossario{MongoDB}} \label{UC1.00}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_00.png}
-	\caption{UC1.00 Connessione a database mongo}
+	\caption{UC1.00 Connessione a database \glossario{MongoDB}}
 \end{figure}
 
 \begin{itemize}
 \item \textbf{Attori:}
 \\Utilizzatore del \glossario{framework}.
 \item \textbf{Scopo e descrizione:} 
-\\Connettersi ad un database mongo esterno all'applicazione.
+\\Connettersi ad un database \glossario{MongoDB} esterno all'applicazione.
 \item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere l’indirizzo del database \glossario{MongoDB} a cui si desidera connettersi.
+		\item avere già istanziato una \glossario{bubble generica};
+		\item avere l'indirizzo del database \glossario{MongoDB} a cui si desidera connettersi.
 	\end{itemize}
 \item \textbf{Flusso principale degli eventi:}
-\\L’utilizzatore passa l’indirizzo del database a cui connettersi al metodo che genera una connessione con il database \glossario{MongoDB}.
+\\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che genera una connessione con il database \glossario{MongoDB}.
 \item \textbf{Post-condizione:}
-\\La bubble generica da cui è invocato il metodo è connessa al database.
+\\La \glossario{bubble} generica da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
 \subsubsection{UC1.01 Lettura da database mongo} \label{UC1.01}
