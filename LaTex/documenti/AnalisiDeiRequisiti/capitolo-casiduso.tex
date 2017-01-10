@@ -23,7 +23,7 @@
 \item \textbf{Flusso principale degli eventi:}
 \\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che genera una connessione con il database \glossario{MongoDB}.
 \item \textbf{Post-condizione:}
-\\La \glossario{bubble} generica da cui è invocato il metodo è connessa al database.
+\\La \glossario{bubble generica} da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
 \subsubsection{UC1.01 Lettura da database MongoDB} \label{UC1.01}
@@ -119,7 +119,7 @@
 	\item \textbf{Scenari alternativi:}
 	\\L'elemento è presente nella \glossario{bubble} \hyperref[UC1.03.1]{(UC1.03.1)}.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} non contiene l'elemento indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
+	\\La \glossario{bubble} non contiene l'\glossario{elemento} indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
 \end{itemize}
 
 \subsubsection{UC1.04 Aggiunta di un elemento} \label{UC1.04}
@@ -138,7 +138,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una \glossario{bubble generica};
-		\item Aver istanziato un elemento.
+		\item Aver istanziato un \glossario{elemento}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo lo aggiunge alla \glossario{bubble}.
@@ -182,7 +182,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una \glossario{bubble generica};
-		\item All'interno della \glossario{bubble} sono presenti degli elementi.
+		\item All'interno della \glossario{bubble} sono presenti degli \glossario{elementi}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo, non trovando l'\glossario{elemento} da modificare, lancia un messaggio di errore.
@@ -1052,7 +1052,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere \ProjectName installato.
+		\item Avere \ProjectName{} installato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1362,26 +1362,6 @@
 	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{conferma aggiunta} e la \glossario{bubble} aggiunge la notifica alla lista.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} ha aggiunto la notifica alla \glossario{to-do list}.
-\end{itemize}
-
-\subsection{Demo}
-
-\subsubsection{Descrizione}
-Per la demo del progetto il gruppo \GroupName presenterà ai proponenti del progetto una \glossario{bubble} interattiva legata alla gestione di un'attività di ristorazione per asporto. Questa \glossario{bubble} viene chiamata \textit{Bubble \& eat}.
-\\Questa \glossario{bubble} apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà dei servizi.
-\\L'utente generico della \glossario{bubble} potrà visualizzare il menù del ristorante e fare un ordine, previo inserimento dei propri dati, incluso l'indirizzo in cui consegnare il cibo ordinato.
-\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite \glossario{bubble} \virgolette{\glossario{To-do list}}, sotto forma di casella aggiunta automaticamente in fondo alla lista. Il \glossario{Cuoco} una volta completato l'ordine avrà facoltà di segnare completata l'ordinazione dalla lista.
-\\Contemporaneamente alla notifica alla cucina dell'ordine verrà registrato automaticamente sul database dell'attività il consumo di ingredienti.
-\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all'addetto agli acquisti dell'azienda tramite \glossario{to-do list}, il quale provvederà a recuperare gli ingredienti mancanti.
-\\È prevista anche la figura del \glossario{Direttore} dell'attività il quale avrà facoltà di inserire nuove pietanze nel menù e deciderne il prezzo.
-
-\subsubsection{Attori}
-\begin{itemize}
-	\item \glossario{Cliente}: colui che ha facoltà di creare un ordine previa consultazione del menù e registrazione dei propri dati;
-	\item \glossario{Cuoco}: addetto alla preparazione della pietanza selezionata in precedenza dall'utente, ha facoltà di eliminare dalla propria \glossario{to do list} le pietanze che ha già preparato;
-	\item \glossario{Responsabile Acquisti}: addetto a rifornire il magazzino, sulla base degli ingredienti consumati dal \glossario{Cuoco}, in base a quanto gli è notificato dalla sua \glossario{to-do list} nella \glossario{bubble};
-	\item \glossario{Fattorino}: addetto alla consegna delle ordinazioni, ha la facoltà di selezionare le consegne ed eliminarle quando completate;
-	\item \glossario{Direttore}: può modificare il menù e il prezzo di ciascuna pietanza riportata in esso.
 \end{itemize}
 
 \subsection{Bubble \& eat - Cliente}
@@ -2033,7 +2013,7 @@ Per la demo del progetto il gruppo \GroupName presenterà ai proponenti del prog
 	\\Il database possiede le informazioni aggiornate sulla quantità degli ingredienti.
 \end{itemize}
 
-\subsection{Bolla ristorazione per asporto - Fattorino}
+\subsection{Bubble \& eat - Fattorino}
 
 \subsubsection{UC3.9 Leggere la lista delle consegne da effettuare} \label{UC3.9}
 
