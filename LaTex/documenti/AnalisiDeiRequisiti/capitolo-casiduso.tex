@@ -997,18 +997,18 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_35.png}
-	\caption{UC1.35 Istanziazione della \glossario{bubble} generica}
+	\caption{UC1.35 Istanziazione della bubble generica}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del \glossario{framework}.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può istanziare il contenitore \glossario{bubble generica}, la quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
+	\\L'utilizzatore del \glossario{framework} può istanziare il contenitore \glossario{bubble generica}, il quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo istanziare la \glossario{bubble generica} e la memoria ad essa associata.
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per istanziare la \glossario{bubble generica} e la memoria ad essa associata.
 	\item \textbf{Post-condizione:}
-	\\É presente la \glossario{bubble generica}, e la sua memoria.
+	\\È presente la \glossario{bubble generica}, compresa la sua memoria.
 \end{itemize}
 
 \subsubsection{UC1.36 Mostrare bubble generica} \label{UC1.36}
@@ -1016,14 +1016,14 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_36.png}
-	\caption{UC1.36 Mostrare \glossario{bubble generica}}
+	\caption{UC1.36 Mostrare bubble generica}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del \glossario{framework}.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} utilizzando questo metodo rende la \glossario{bubble} visibile all'interno della chat.
+	\\L'utilizzatore del \glossario{framework}, utilizzando questo metodo, rende la \glossario{bubble} visibile all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una \glossario{bubble generica}.
@@ -1046,40 +1046,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Creare una lista di cose da fare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere monolith installato.
+		\item Avere \ProjectName installato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente invoca il comando di creazione della \glossario{bubble} \glossario{to-do list} \hyperref[UC2.1.1]{(UC2.1.1)};
-		\item Caricare il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
+		\item L'utente invoca il comando di creazione della \glossario{bubble} \glossario{To-do list} \hyperref[UC2.1.1]{(UC2.1.1)};
+		\item L'utente carica il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
 		\item L'utente inserisce tutte le informazioni necessarie \hyperref[UC2.1.3]{(UC2.1.3)};
-		\item L'utente seleziona “Crea lista” \hyperref[UC2.1.4]{(UC2.1.4)}.
+		\item L'utente seleziona \virgolette{Crea lista} \hyperref[UC2.1.4]{(UC2.1.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{to-do list} con il titolo indicato.
+	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato.
 \end{itemize}
 
 \subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un \glossario{to-do list} all'interno della chat.
+	\\Creare una \glossario{to-do list} all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere monolith installato;
-		\item Avere accesso alla \glossario{bubble} \glossario{to-do list}.
+		\item Avere \ProjectName{} installato;
+		\item Avere accesso alla \glossario{bubble} \glossario{To-do list}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore di monolith utilizzando l'apposito comando inizia la creazione della \glossario{bubble} \glossario{to-do list}.
+	\\L'utilizzatore di \ProjectName{} utilizzando l'apposito comando inizia la creazione della \glossario{bubble} \glossario{To-do list}.
 	\item \textbf{Post-condizione:}
 	\\Viene istanziata la \glossario{bubble}.
 \end{itemize}
@@ -1088,19 +1088,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare un \glossario{to-do list} all'interno della chat.
+	\\Creare una \glossario{to-do list} all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere monolith installato;
-		\item Aver invocato il comando di creazione di \glossario{to-do list} \hyperref[UC2.1.1]{UC2.1.1}.
+		\item Avere \ProjectName{} installato;
+		\item Aver invocato il comando di creazione della \glossario{to-do list} \hyperref[UC2.1.1]{UC2.1.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene caricato il form per l'inserimento delle informazioni.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{to-do list} con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della \glossario{to-do list}.
+	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della \glossario{to-do list}.
 \end{itemize}
 
 \subsubsection{UC2.1.3 Inserire tutte le informazioni necessarie} \label{UC2.1.3}
