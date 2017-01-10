@@ -1107,38 +1107,38 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Specificare le informazioni necessarie alla creazione della lista.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere monolith installato;
-		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.1.2]{UC2.1.2}.
+		\item Avere \ProjectName{} installato;
+		\item Aver caricato il form di inserimento secondo \hyperref[UC2.1.2]{UC2.1.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore della \glossario{bubble} inserisce i dati necessari nel form visualizzato al \glossario{caso d'uso} \hyperref[UC2.1.2]{UC2.1.2}.
+	\\L'utilizzatore della \glossario{bubble} inserisce i dati necessari nel form visualizzato al caso d'uso \hyperref[UC2.1.2]{UC2.1.2}.
 	\item \textbf{Post-condizione:}
-	\\Nella memoria della \glossario{bubble} sono salvati i dati richiesti nel \glossario{caso d'uso} \hyperref[UC2.1.4]{UC2.1.4}. 
+	\\Nella memoria della \glossario{bubble} sono salvati i dati richiesti nel caso d'uso \hyperref[UC2.1.4]{UC2.1.4}. 
 \end{itemize}
 
 \subsubsection{UC2.1.4 Selezionare “Crea lista”} \label{UC2.1.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creazione una lista di cose da fare.
+	\\Creazione di una lista di cose da fare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
-		\item Avere monolith installato;
+		\item Avere \ProjectName{} installato;
 		\item Sono stati inseriti i dati come da \hyperref[UC2.1.3]{UC2.1.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della \glossario{bubble}.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{to-do list} con il titolo indicato. 
+	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato. 
 \end{itemize}
 
 \subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
@@ -1151,13 +1151,13 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Un utente inserisce un nuovo \glossario{elemento} alla \glossario{to-do list}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item L’\glossario{elemento} non è già stato completato.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item L'\glossario{elemento} non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1174,12 +1174,12 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utente seleziona l'opzione per inserire un nuovo \glossario{elemento} alla \glossario{to-do list}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list}.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo seleziona l'opzione apposita.
@@ -1191,54 +1191,54 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo \glossario{elemento} della \glossario{to-do list}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
 		\item Avere selezionato l'opzione aggiungi \glossario{elemento} come da \hyperref[UC2.2.1]{UC2.2.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo scrive il testo da inserire nel nuovo \glossario{elemento} e lo aggiunge alla \glossario{to-do list}.
 	\item \textbf{Post-condizione:}
-	\\Il nuovo \glossario{elemento} è aggiunto alla \glossario{bubble} \glossario{to-do list}.
+	\\Il nuovo \glossario{elemento} è aggiunto alla \glossario{bubble} \glossario{To-do list}.
 \end{itemize}
 
 \subsubsection{UC2.2.3  Inserire le informazioni} \label{UC2.2.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utente inserisce le informazioni necessarie ad aggiungere un \glossario{elemento} alla \glossario{to-do list}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item Aver caricato il form di inserimento secondo lo \hyperref[UC2.2.2]{UC2.2.2};
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item Aver caricato il form di inserimento secondo \hyperref[UC2.2.2]{UC2.2.2};
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo completa il form di inserimento di un nuovo \glossario{elemento} in tutte le sue parti.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{to-do list} ha tutte le informazioni necessarie ad aggiungere il nuovo \glossario{elemento}.
+	\\La \glossario{to-do list} ha tutte le informazioni necessarie per aggiungere il nuovo \glossario{elemento}.
 \end{itemize}
 
 \subsubsection{UC2.2.4 Confermare l'aggiunta} \label{UC2.2.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Un utente conferma l'inserimento del nuovo \glossario{elemento} alla \glossario{to-do list}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item Aver inserito le informazioni per il nuovo \glossario{elemento} secondo lo \hyperref[UC2.2.3]{UC2.2.3}.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item Aver inserito le informazioni per il nuovo \glossario{elemento} secondo \hyperref[UC2.2.3]{UC2.2.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo conferma l'aggiunta alla \glossario{to-do list}.
 	\item \textbf{Post-condizione:}
-	\\L’\glossario{elemento} è stato aggiunto alla \glossario{to-do list}.
+	\\L'\glossario{elemento} è stato aggiunto alla \glossario{to-do list}.
 \end{itemize}
 
 \subsubsection{UC2.3 Indicare come completati gli elementi della to-do list} \label{UC2.3}
@@ -1251,18 +1251,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith che abbia ricevuto come messaggio una \glossario{bubble} \glossario{to-do list}.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{} che abbia ricevuto come messaggio una \glossario{bubble} \glossario{To-do list}.
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utente con questo metodo può indicare come completato uno degli elementi della lista.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item L’\glossario{elemento} non è già stato completato.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item L'\glossario{elemento} non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo seleziona un \glossario{elemento} della \glossario{to-do list} e lo indica come completato. 
 	\item \textbf{Post-condizione:}
-	\\L’\glossario{elemento} della \glossario{to-do list} viene aggiornato come completato.
+	\\L'\glossario{elemento} della \glossario{to-do list} viene aggiornato come completato.
 \end{itemize}
 
 \subsubsection{UC2.4 Possibilità di mettere un reminder come notifica statica} \label{UC2.4}
@@ -1275,12 +1275,12 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith che ha creato la \glossario{to-do list}.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{} che ha creato la \glossario{to-do list}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista imposta una notifica statica da visualizzare ai membri del canale ad un orario specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list}.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1297,15 +1297,15 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il creatore della lista seleziona l'opzione “aggiungi notifica”per la \glossario{to-do list} che ha creato.
+	\\Il creatore della lista seleziona l'opzione \virgolette{aggiungi notifica} per la \glossario{to-do list} che ha creato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere creato una \glossario{bubble} di \glossario{to-do list}.
+		\item Avere creato una \glossario{bubble} \glossario{To-do list}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo seleziona l'opzione “aggiungi notifica” sulla \glossario{bubble}.
+	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{aggiungi notifica} sulla \glossario{bubble}.
 	\item \textbf{Post-condizione:}
 	\\L'utente ha selezionato l'opzione di aggiungere una notifica alla \glossario{to-do list} che ha creato.
 \end{itemize}
@@ -1314,16 +1314,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Questa funzionalità permette alla \glossario{bubble} di caricare il form necessario ad inserire i dati per aggiungere una notifica alla \glossario{bubble}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item Essere entrati nell'opzione “aggiungi modifica” della propria \glossario{bubble} secondo lo \hyperref[UC2.4.1]{UC2.4.1}.
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item Essere entrati nell'opzione \virgolette{aggiungi modifica} della propria \glossario{bubble} secondo \hyperref[UC2.4.1]{UC2.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\La \glossario{bubble} \glossario{to-do list} carica il form di inserimento dati per le notifiche.
+	\\La \glossario{bubble} \glossario{To-do list} carica il form di inserimento dati per le notifiche.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
 \end{itemize}
@@ -1350,16 +1350,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista conferma l'aggiunta della notifica.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
+		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
 		\item Aver completato il form di aggiunta di una notifica secondo lo \hyperref[UC2.4.3]{UC2.4.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo seleziona l'opzione “conferma aggiunta” e la \glossario{bubble} aggiunge la notifica alla lista.
+	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{conferma aggiunta} e la \glossario{bubble} aggiunge la notifica alla lista.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} ha aggiunto la notifica alla \glossario{to-do list}.
 \end{itemize}
