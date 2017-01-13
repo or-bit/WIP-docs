@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get -qq install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+script:
+- chmod +x build-glossario.sh
+- mkdir _travis-build
+- ./build-glossario.sh _travis-build
+deploy:
+  provider: releases
+  api_key:
+    secure: [YOUR KEY]
+  file:
+  - _travis-build/Glossario.pdf
+  skip_cleanup: true
+  on:
+    tags: true
