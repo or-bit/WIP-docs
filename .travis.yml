@@ -6,7 +6,7 @@ before_install:
 script:
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
-- "./travis-build-latex.sh LaTex/documenti/Glossario/Glossario.tex _travis-build"
+- "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
 deploy:
   provider: releases
   api_key:

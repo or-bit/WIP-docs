@@ -5,10 +5,14 @@
 set -ev
 
 # salvataggio percorso in cui si trova lo script
-parent=$(pwd);
+parent=$(pwd)
 
-build_output_directory=$parent/$2;
-input_tex=$1;
+input_path=$1
+document_name=$2
+build_output_directory=$parent/$3
+
+
+cd $input_path
 
 # comando di build latex, parametri specificati
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory $build_output_directory $input_tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory $build_output_directory $input_path/$document_name
