@@ -4,6 +4,8 @@ before_install:
 - chmod +x install-deps.sh
 - "./install-deps.sh"
 script:
+- pwd
+- export TEXINPUTS=$(pwd)/LaTex/modello//:${TEXINPUTS}
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
 - "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
