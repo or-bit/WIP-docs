@@ -14,4 +14,4 @@ build_output_directory=$parent/$3
 cd $input_path
 
 # comando di build latex http://stackoverflow.com/questions/3863630/latex-tableofcontents-command-always-shows-blank-contents-on-first-build
-latexmk -diagnostics -halt-on-error -outdir=$build_output_directory -pdf $document_name
+latexmk -halt-on-error -outdir=$build_output_directory -pdf $document_name
