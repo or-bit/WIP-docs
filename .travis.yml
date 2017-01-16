@@ -10,7 +10,7 @@ script:
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
 - "./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build"
-- "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
+# - "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
 
 deploy:
   provider: releases
@@ -18,7 +18,7 @@ deploy:
     secure: nhf8/LCG923pTYnBEP7sjOZk/8aS+gVS57JZGMpvWKDgIoWudPA3+6KdDBEbDBZlAfW5UtQh2oTSpl6S7OoIUSe556mpABpjSr8ZeJHtaNRYSsL/Rj2wv+IPlUa249KcQuMhSu9RwOe4O09xmSAxdDFqm248BhEaosbc6H2bS9C3LvRxqrhZ9oEKv3SpB0b+MS4NHEFkEqWwGrM9F0hDXMt4mV7tcWHhmmZJnTC2c9glZmzkaV3FYznf/Q0xMRrUP/EBf6ywQYLPClDT7xhlscrq4FwX/VzrE4UMQxzsOo57xSGiqF1O1dDznCWkctQW5tdsCMybiS59XhtV1jKAM1W98sqtNrK3NDqbKuwoeD0tmeyMJt6pcCLN7OuB5XmhckaTT2R/wdyEWmoR31xMY7sYzu89oZo3Ry395kXg8JI6pUEuI88vEc9YTuvtcQv7SGBqN9+3s7voxI5vgMC6jNQHOdMojKp97XwOSOqCPtYth14+96jIMnHcpCA6Q9G+yGgkVmiyRueRl6hlxINlVNw/6yN8C/427fKSW8XeuIh7+pteR/XCGP9M81HCkq+qxUYVROidKOj3BMyRL387c/4liwjX0ujSUzWuud9ji+iKu1dxdgArHe39Ugic2JY1AUj4HuKNwse0uFNRN2J3VVO2hk4FNnqjNyQ2Im5/X9I=
   file: 
   - _travis-build/AnalisiDeiRequisiti.pdf
-  - _travis-build/Glossario.pdf
+ # - _travis-build/Glossario.pdf
   skip_cleanup: true
   overwrite: true
   on:
