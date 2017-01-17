@@ -4,15 +4,14 @@ dist: trusty
 before_install:
 - chmod +x install-deps.sh
 - "./install-deps.sh"
-- chmod +x setup-envvar.sh
-- "./setup-envvar.sh"
 
 script:
+- export TEXINPUTS=$(pwd)/LaTex/modello//:${TEXINPUTS}
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
 #- "./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build"
-#- "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
-- "./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build"
+#- ./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build
+- ./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build "Lettera di Presentazione"
 
 deploy:
   provider: releases
@@ -21,8 +20,10 @@ deploy:
   file: 
   #- _travis-build/AnalisiDeiRequisiti.pdf
   #- _travis-build/Glossario.pdf
-  - _travis-build/LetteraDiPresentazione.pdf
+  - "_travis-build/Lettera di Presentazione.pdf"
   skip_cleanup: true
   overwrite: true
   on:
     repo: niktekusho/WIP-docs
+
+    
