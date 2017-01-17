@@ -4,9 +4,10 @@ dist: trusty
 before_install:
 - chmod +x install-deps.sh
 - "./install-deps.sh"
+- chmod +x setup-envvar.sh
+- "./setup-envvar.sh"
 
 script:
-- export TEXINPUTS=$(pwd)/LaTex/modello//:${TEXINPUTS}
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
 #- "./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build"
