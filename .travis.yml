@@ -11,7 +11,7 @@ script:
 - mkdir _travis-build
 #- "./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build"
 #- "./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build"
-- "./travis-build-latex.sh LaTex/documenti/Lettera di Presentazione LetteraDiPresentazione.tex _travis-build"
+- "./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build"
 
 deploy:
   provider: releases
