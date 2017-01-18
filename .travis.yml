@@ -15,26 +15,28 @@ script:
 - export TEXINPUTS=$(pwd)/LaTex/modello//:${TEXINPUTS}
 - chmod +x travis-build-latex.sh
 - mkdir _travis-build
-#- ./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build "Analisi dei Requisiti"
-#- ./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build
-#- ./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build "Lettera di Presentazione"
-#- ./travis-build-latex.sh LaTex/documenti/NormeDiProgetto NormeDiProgetto.tex _travis-build "Norme di Progetto"
-#- ./travis-build-latex.sh LaTex/documenti/PianoDiProgetto PianoDiProgetto.tex _travis-build "Piano di Progetto"
-#- ./travis-build-latex.sh LaTex/documenti/PianoDiQualifica PianoDiQualifica.tex _travis-build "Piano di Qualifica"
+- ./travis-build-latex.sh LaTex/documenti/AnalisiDeiRequisiti AnalisiDeiRequisiti.tex _travis-build "Analisi dei Requisiti"
+- ./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build
+- ./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build "Lettera di Presentazione"
+- ./travis-build-latex.sh LaTex/documenti/NormeDiProgetto NormeDiProgetto.tex _travis-build "Norme di Progetto"
+- ./travis-build-latex.sh LaTex/documenti/PianoDiProgetto PianoDiProgetto.tex _travis-build "Piano di Progetto"
+- ./travis-build-latex.sh LaTex/documenti/PianoDiQualifica PianoDiQualifica.tex _travis-build "Piano di Qualifica"
 - ./travis-build-latex.sh LaTex/documenti/StudioDiFattibilità StudioDiFattibilità.tex _travis-build "Studio di Fattibilità"
+- ./travis-build-latex.sh LaTex/documenti/VerbaleEsterno23_12_2016 VerbaleEsterno23_12_2016.tex _travis-build "Verbale Esterno 23-12-2016"
 
 deploy:
   provider: releases
   api_key:
     secure: nhf8/LCG923pTYnBEP7sjOZk/8aS+gVS57JZGMpvWKDgIoWudPA3+6KdDBEbDBZlAfW5UtQh2oTSpl6S7OoIUSe556mpABpjSr8ZeJHtaNRYSsL/Rj2wv+IPlUa249KcQuMhSu9RwOe4O09xmSAxdDFqm248BhEaosbc6H2bS9C3LvRxqrhZ9oEKv3SpB0b+MS4NHEFkEqWwGrM9F0hDXMt4mV7tcWHhmmZJnTC2c9glZmzkaV3FYznf/Q0xMRrUP/EBf6ywQYLPClDT7xhlscrq4FwX/VzrE4UMQxzsOo57xSGiqF1O1dDznCWkctQW5tdsCMybiS59XhtV1jKAM1W98sqtNrK3NDqbKuwoeD0tmeyMJt6pcCLN7OuB5XmhckaTT2R/wdyEWmoR31xMY7sYzu89oZo3Ry395kXg8JI6pUEuI88vEc9YTuvtcQv7SGBqN9+3s7voxI5vgMC6jNQHOdMojKp97XwOSOqCPtYth14+96jIMnHcpCA6Q9G+yGgkVmiyRueRl6hlxINlVNw/6yN8C/427fKSW8XeuIh7+pteR/XCGP9M81HCkq+qxUYVROidKOj3BMyRL387c/4liwjX0ujSUzWuud9ji+iKu1dxdgArHe39Ugic2JY1AUj4HuKNwse0uFNRN2J3VVO2hk4FNnqjNyQ2Im5/X9I=
   file: 
-  #- "_travis-build/Analisi dei Requisiti.pdf"
-  #- _travis-build/Glossario.pdf
-  #- "_travis-build/Lettera di Presentazione.pdf"
-  #- "_travis-build/Norme di Progetto.pdf"
-  #- "_travis-build/Piano di Progetto.pdf"
-  #- "_travis-build/Piano di Qualifica.pdf"
+  - "_travis-build/Analisi dei Requisiti.pdf"
+  - _travis-build/Glossario.pdf
+  - "_travis-build/Lettera di Presentazione.pdf"
+  - "_travis-build/Norme di Progetto.pdf"
+  - "_travis-build/Piano di Progetto.pdf"
+  - "_travis-build/Piano di Qualifica.pdf"
   - "_travis-build/Studio di Fattibilità.pdf"
+  - "_travis-build/Verbale Esterno 23-12-2016.pdf"
   skip_cleanup: true
   overwrite: true
   on:
