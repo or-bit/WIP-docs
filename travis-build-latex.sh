@@ -41,5 +41,4 @@ latexmk -halt-on-error -outdir=$build_output_directory -pdf $document_name
 if [ $# -eq 4 ] ; then
     doc_name_no_ext=${document_name%%.*}
     mv "$build_output_directory/$doc_name_no_ext.pdf" "$build_output_directory/$pdf_name.pdf"
-		ls -la $build_output_directory
 fi
