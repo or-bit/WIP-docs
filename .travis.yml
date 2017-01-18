@@ -13,7 +13,8 @@ script:
 #- ./travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build
 #- ./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build "Lettera di Presentazione"
 #- ./travis-build-latex.sh LaTex/documenti/NormeDiProgetto NormeDiProgetto.tex _travis-build "Norme di Progetto"
-- ./travis-build-latex.sh LaTex/documenti/PianoDiProgetto PianoDiProgetto.tex _travis-build "Piano di Progetto"
+#- ./travis-build-latex.sh LaTex/documenti/PianoDiProgetto PianoDiProgetto.tex _travis-build "Piano di Progetto"
+- ./travis-build-latex.sh LaTex/documenti/PianoDiQualifica PianoDiQualifica.tex _travis-build "Piano di Qualifica"
 
 deploy:
   provider: releases
@@ -24,7 +25,8 @@ deploy:
   #- _travis-build/Glossario.pdf
   #- "_travis-build/Lettera di Presentazione.pdf"
   #- "_travis-build/Norme di Progetto.pdf"
-  - "_travis-build/Piano di Progetto.pdf"
+  #- "_travis-build/Piano di Progetto.pdf"
+  - "_travis-build/Piano di Qualifica.pdf"
   skip_cleanup: true
   overwrite: true
   on:
