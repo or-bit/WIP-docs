@@ -1,6 +1,12 @@
 sudo: required
 dist: trusty
 
+# dichiarazione dipendenza mancante solamente in Travis
+addons:
+  apt:
+    packages:
+    - zip
+
 before_install:
 - chmod +x install-deps.sh
 - "./install-deps.sh"
@@ -14,7 +20,8 @@ script:
 #- ./travis-build-latex.sh LaTex/documenti/LetteraDiPresentazione LetteraDiPresentazione.tex _travis-build "Lettera di Presentazione"
 #- ./travis-build-latex.sh LaTex/documenti/NormeDiProgetto NormeDiProgetto.tex _travis-build "Norme di Progetto"
 #- ./travis-build-latex.sh LaTex/documenti/PianoDiProgetto PianoDiProgetto.tex _travis-build "Piano di Progetto"
-- ./travis-build-latex.sh LaTex/documenti/PianoDiQualifica PianoDiQualifica.tex _travis-build "Piano di Qualifica"
+#- ./travis-build-latex.sh LaTex/documenti/PianoDiQualifica PianoDiQualifica.tex _travis-build "Piano di Qualifica"
+- ./travis-build-latex.sh LaTex/documenti/StudioDiFattibilità StudioDiFattibilità.tex _travis-build "Studio di Fattibilità"
 
 deploy:
   provider: releases
@@ -26,7 +33,8 @@ deploy:
   #- "_travis-build/Lettera di Presentazione.pdf"
   #- "_travis-build/Norme di Progetto.pdf"
   #- "_travis-build/Piano di Progetto.pdf"
-  - "_travis-build/Piano di Qualifica.pdf"
+  #- "_travis-build/Piano di Qualifica.pdf"
+  - "_travis-build/Studio di Fattibilità.pdf"
   skip_cleanup: true
   overwrite: true
   on:
