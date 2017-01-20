@@ -6,7 +6,7 @@ if [ "$1" = "--help" ] ; then
     travis-build-latex.sh ARG1 ARG2 ARG3 [ARG4]
 
     DESCRIPTION
-    This script allows Travis to build a generic PDF using pdflatex based on the arguments specified.
+    This script allows you (and Travis) to build a generic PDF using pdflatex based on the arguments specified.
 
     ARGUMENTS
     ARG1) Input folder: Folder that contains all files used to build the LaTeX document
@@ -24,21 +24,21 @@ fi
 # v => print script line before executing it
 set -ev
 
-# salvataggio percorso in cui si trova lo script
+# store current path + args rename
 parent=$(pwd)
-
 input_path=$1
 document_name=$2
 build_output_directory=$parent/$3
 pdf_name=$4
 
-cd $input_path
+# entering the folder with LaTeX document
+cd "$input_path"
 
-# comando di build latex http://stackoverflow.com/questions/3863630/latex-tableofcontents-command-always-shows-blank-contents-on-first-build
-latexmk -halt-on-error -outdir=$build_output_directory -pdf $document_name
+# build latex http://stackoverflow.com/questions/3863630/latex-tableofcontents-command-always-shows-blank-contents-on-first-build
+latexmk -halt-on-error -outdir="$build_output_directory" -pdf "$document_name"
 
-# ora rinomino l'output se è stato specificato l'ultimo parametro
+# rename output if last argument exists
 if [ $# -eq 4 ] ; then
     doc_name_no_ext=${document_name%%.*}
-    mv "$build_output_directory/$doc_name_no_ext.pdf" "$build_output_directory/$pdf_name.pdf"
+    mv "$build_output_directory"/"$doc_name_no_ext.pdf" "$build_output_directory"/"$pdf_name.pdf"
 fi
