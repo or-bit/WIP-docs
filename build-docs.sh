@@ -20,7 +20,7 @@ if [ "$1" = "--help" ] ; then
 
     OPTION
     -c \"path/to/other/index/file\" : Specify a custom index file.
-	
+
     EXAMPLES
     build-internal-docs.sh i -> PDF: ./_travis-build/Interni/NormeDiProgetto.pdf, ./_travis-build/Interni/Verbale***.pdf
 	build-internal-docs.sh i -c \"only-verbale.config\" -> PDF: ./_travis-build/Interni/Verbale***.pdf"
