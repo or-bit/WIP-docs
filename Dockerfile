@@ -3,10 +3,8 @@ FROM ubuntu:14.04
 # filenames may contain accented letters
 ENV LANG it_IT.UTF-8
 
-ADD . /
-
 RUN apt-get update && apt-get install -y nano libgmp10 zip
 
-RUN dpkg -i shellcheck.deb
+ADD install-deps.sh /
 
-RUN ./install-deps.sh
+RUN chmod +x install-deps.sh && ./install-deps.sh
