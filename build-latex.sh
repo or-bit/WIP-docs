@@ -3,7 +3,7 @@
 if [ "$1" = "--help" ] ; then
   echo "
     SYNOPSIS
-    travis-build-latex.sh ARG1 ARG2 ARG3 [ARG4]
+    build-latex.sh ARG1 ARG2 ARG3 [ARG4]
 
     DESCRIPTION
     This script allows you (and Travis) to build a generic PDF using pdflatex based on the arguments specified.
@@ -15,8 +15,8 @@ if [ "$1" = "--help" ] ; then
     ARG4) Output PDF name (**optional**). If not set, PDF name is named as the source LaTeX document name.
 
     EXAMPLES
-    travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build -> PDF: ./_travis-build/Glossario.pdf
-    travis-build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build \"G O\" -> PDF: ./_travis-build/G O.pdf"
+    build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build -> PDF: ./_travis-build/Glossario.pdf
+    build-latex.sh LaTex/documenti/Glossario Glossario.tex _travis-build \"G O\" -> PDF: ./_travis-build/G O.pdf"
   exit 0
 fi
 
