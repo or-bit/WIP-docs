@@ -2,4 +2,15 @@
 
 sudo apt-get -qq update
 
-sudo apt-get -qq install -y --no-install-recommends texlive texlive-latex-recommended texlive-latex-extra texlive-lang-english texlive-lang-italian latex-xcolor pgf lmodern latexmk
+sudo apt-get -qq install -y --no-install-recommends \
+	aspell \
+	aspell-it \
+	latexmk \
+	latex-xcolor \
+	lmodern \
+	pgf \
+	texlive \
+	texlive-lang-english \
+	texlive-lang-italian \
+	texlive-latex-extra \
+	texlive-latex-recommended 
