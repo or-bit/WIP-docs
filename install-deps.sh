@@ -4,6 +4,7 @@ sudo apt-get -qq update
 
 sudo apt-get -qq install -y --no-install-recommends \
 	aspell \
+	aspell-en \
 	aspell-it \
 	latexmk \
 	latex-xcolor \
