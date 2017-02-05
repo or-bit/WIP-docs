@@ -27,14 +27,14 @@ Make sure your Docker installation is configured for volume mounting.
     *The ending `.` will tell Docker to search the Dockerfile in the current directory.*
 4.  Run a container based on the Docker image we built in the previous step:  
     `docker run -it --name <Container name> -v .:/data <Image name>`  
-    
+
     Brief explanation:  
     -   `-it`: will create and start the container and open a shell into it
     -   `--name`: will create the container with the `<Container name>` name.  
     This option is useful since without it Docker will give the container a random name.
     -   `-v`: will mount the specified directory into the specified container directory. For more info check [above](#mandatoryconf).  
 
-    Example: 
+    Example:
     -   **Docker for Windows**  
     *Repository cloned in user's Document folder: `C:\Users\<user>\Documents\WIP-docs`*  
     `docker run -it --name PDF -v C:\Users\<user>\Documents\WIP-docs:/data texpdfbuilder`
@@ -59,6 +59,9 @@ Once inside the container, you can run all the [scripts](#scripts) written origi
 
     `OPTION` is an optional argument and can be any of the following flags:
     -   `-c <custom path>` : specify the path to a custom index file.
+
+    **Example**  
+    `./build-docs.sh e`
 
 -   <a name="blatex">`build-latex.sh`</a>: builds a generic PDF using `pdflatex` and `latexmk` based on the arguments specified.  
     **Syntax**  
