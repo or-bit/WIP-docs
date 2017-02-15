@@ -187,3 +187,6 @@ Or-Bit
 
 # Zip containing PDFs
 **/Documentazione.zip
+
+# Temporary folder containing spellcheck reports
+spell-check-temp/**
