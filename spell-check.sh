@@ -37,8 +37,3 @@ mkdir -p "$SPELLCHECK_DIR"/"$directoryName"
 output="$SPELLCHECK_DIR"/"$directoryName"/"$texName".spellchecked
 
 cat "$1" | aspell --lang=en --personal=./.aspell.en.pws -t list | aspell --lang=it --personal=./.aspell.it.pws -t list | sort -u > "$output"
-
-# echo "Cleaning empty file"
-if [ ! -s "$output" ] ; then 
-	rm "$output"
-fi
