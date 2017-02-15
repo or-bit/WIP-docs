@@ -11,7 +11,9 @@ sudo apt-get -qq install -y --no-install-recommends \
 	lmodern \
 	pgf \
 	texlive \
+	texlive-extra-utils \
 	texlive-lang-english \
 	texlive-lang-italian \
 	texlive-latex-extra \
-	texlive-latex-recommended 
+	texlive-latex-recommended \
+	xpdf
