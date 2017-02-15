@@ -23,15 +23,18 @@ if [ -z "$1" ] ; then
 	exit 11
 fi
 
-texFileName="$(basename "$1")"
+# import general info
+source common.config
+
+texFileName="$(getFileName "$1")"
 # strip extensions
-texName="${texFileName%.*}"
+texName="$(getFileNameWithoutExtension "$1")"
 # last directory name
-directoryName="$(basename $(dirname $1))"
+directoryName="$(getLastDirectoryName "$1")"
 
-mkdir -p spell-check-temp/"$directoryName"
+mkdir -p "$SPELLCHECK_DIR"/"$directoryName"
 
-output=spell-check-temp/"$directoryName"/"$texName".spellchecked
+output="$SPELLCHECK_DIR"/"$directoryName"/"$texName".spellchecked
 
 cat "$1" | aspell --lang=en --personal=./.aspell.en.pws -t list | aspell --lang=it --personal=./.aspell.it.pws -t list | sort -u > "$output"
 
