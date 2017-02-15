@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 if [ "$1" = "--help" ] ; then
   echo "
@@ -29,3 +29,34 @@ docName="${pdfFileName%.*}"
 echo "$pdfFileName"
 echo "$docName"
 pdftotext "$1" > "$2"/"$docName".report
+
+##### CONSTS
+TITLE="Report documentazione: $docName"
+RIGHT_NOW=$(date +"%x %r %Z")
+TIME_STAMP="Updated on $RIGHT_NOW by $USER"
+
+
+##### FUNCTIONS
+function add_style {
+	echo ""
+}
+
+function create_page {
+	cat <<- _EOF_ 
+	<!doctype html>
+	<html>
+		<head>
+			<title>$TITLE</title>
+			<style>$(add_style)</style>
+		</head>
+		<body>
+			<h1>$TITLE</h1>
+			<p>$TIME_STAMP</p>
+			
+		</body>
+	</html>
+_EOF_
+
+}
+
+$(create_page) > test.html
