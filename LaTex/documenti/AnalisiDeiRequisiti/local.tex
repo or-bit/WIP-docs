@@ -5,7 +5,7 @@
 % In questa prima parte vanno definite le 'costanti' utilizzate soltanto da questo documento.
 % Devono iniziare con una lettera maiuscola per distinguersi dalle funzioni.
 
-\newcommand{\DocTitle}{Analisi dei Requisiti}
+\newcommand{\DocTitle}{Analisi dei Requisiti \VersioneAR{}}
 \newcommand{\DocVersion}{\VersioneAR{}}
 
 \newcommand{\DocRedazione}{Tommaso Rosso\\Alice V. Sasso\\Lorenzo Ferrarin\\Marco Ponchia}
@@ -28,6 +28,14 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 %%%%%%%%%%%%%%
 
 % In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
+
+%Counter per casi d'uso
+\newcounter{usecase}
+\newcounter{usecasefiglio}[usecase]
+
+\newcommand*{\UC}{\stepcounter{usecase} UC\theusecase}
+\newcommand{\UCFiglio}{\stepcouter{usecasefiglio} UC\theusecase.\thecasofiglio}
+
 
 %Counter per requisiti
 \newcounter{requisito}

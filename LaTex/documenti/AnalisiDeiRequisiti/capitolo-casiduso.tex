@@ -2,7 +2,26 @@
 
 \subsection{Framework}
 
-\subsubsection{UC1.00 Connessione a database MongoDB} \label{UC1.00}
+\subsubsection[Istanziazione della bubble generica]{\UC{} Istanziazione della bubble generica} \label{UC1.35}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_35.png}
+	\caption{UC1.35 Istanziazione della bubble generica}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può istanziare il contenitore \glossario{bubble generica}, il quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per istanziare la \glossario{bubble generica} e la memoria ad essa associata.
+	\item \textbf{Post-condizione:}
+	\\È presente la \glossario{bubble generica}, compresa la sua memoria.
+\end{itemize}
+
+\subsubsection[Connessione a database MongoDB]{\UC{} Connessione a database MongoDB} \label{UC1.00}
 
 \begin{figure}[H]
 	\centering
@@ -26,7 +45,7 @@
 \\La \glossario{bubble generica} da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
-\subsubsection{UC1.01 Lettura da database MongoDB} \label{UC1.01}
+\subsubsection[Lettura da database MongoDB]{\UC{} Lettura da database MongoDB} \label{UC1.01}
 
 \begin{figure}[H]
 	\centering
@@ -42,7 +61,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una \glossario{bubble generica};
-		\item La \glossario{bubble} è connessa al database \glossario{MongoDB} \hyperref[UC1.00]{(UC1.00)};
+		\item La \glossario{bubble} è connessa al database \glossario{MongoDB} \ref{UC1.00};
 		\item L'utilizzatore deve conoscere il nome della \glossario{collection} da cui prelevare i dati.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -51,7 +70,7 @@
 	\\I dati sono prelevati dal database e sono pronti all'uso nella \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC1.02 Scrittura su database MongoDB} \label{UC1.02}
+\subsubsection[Scrittura su database MongoDB]{\UC{} Scrittura su database MongoDB} \label{UC1.02}
 
 \begin{figure}[H]
 	\centering
@@ -76,7 +95,7 @@
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\subsubsection{UC1.03.1 Rimozione di un elemento} \label{UC1.03.1}
+\subsubsection[Rimozione di un elemento]{\UCFiglio{} Rimozione di un elemento} \label{UC1.03.1}
 
 \begin{figure}[H]
 	\centering
@@ -990,25 +1009,6 @@
 	\\L'utilizzatore del \glossario{framework} chiama il metodo che restituisce il file in input.
 	\item \textbf{Post-condizione:}
 	\\Il file è stato caricato e passato alla \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.35 Istanziazione della bubble generica} \label{UC1.35}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_35.png}
-	\caption{UC1.35 Istanziazione della bubble generica}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può istanziare il contenitore \glossario{bubble generica}, il quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per istanziare la \glossario{bubble generica} e la memoria ad essa associata.
-	\item \textbf{Post-condizione:}
-	\\È presente la \glossario{bubble generica}, compresa la sua memoria.
 \end{itemize}
 
 \subsubsection{UC1.36 Mostrare bubble generica} \label{UC1.36}
