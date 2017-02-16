@@ -1,30 +1,21 @@
 sudo: required
 dist: trusty
-
-# dichiarazione dipendenza mancante solamente in Travis
 addons:
   apt:
     packages:
     - zip
-
 before_install:
 - chmod +x build-docs.sh build-latex.sh install-deps.sh zip-docs.sh
-- "./install-deps.sh"
-
+- ./install-deps.sh
 script:
 - ./build-docs.sh a
-
 after_success:
 - ./zip-docs.sh
-
 deploy:
   provider: releases
   api_key:
-    secure: a7c460e68ae4485fa43b33c4c589fb32717fc556
-  file: 
-  - "Documentazione.zip"
-  skip_cleanup: true
-  overwrite: true
+    secure: btz52tYmcsBUGzXoidNLVZtC1KNNtkRCsU4MYzc7xbt6C8vikCrNecZN9g9Pr2PNpEcFhMiASCATE4G0QpnyWSFeNDU+6cn5W7KgfypoQfkoLW5c1pe362QffRj8lGJH7G3tHjGyqsag+/QWJ3V+NyfTyVlIBwf7Ohowt2LTXr9WE2KhwScJ6OEsvBnf/hDsDUbP2+l9hJz7Ic9kaxp/y79sQ7SJabGzG08U0e1dIQomdhr2sqlUw/vtwIUAEDGuz0a2Hpz/bEgnCxP78DDSQxKRd59P3TWXXx/EssnCPbPtJRz8DjGuBTUho+sAoYz27ESwG2Ln7odUp1+Mgo8VoUUuYqjXJ6eXqp/vz3tEB5W7k/Z09ZNsrsoGvj2NmL1FCOyngXlEZPOpqG1sA8kRJrTSfTHimJWnOSyec68Sc14hkRyY604RrSPVkTrO+B6Pkfhhx6Ls41iP0oLxAYYlT4QoFSX3h6ExBsul1O+Z7L9b9lXr/QiT8xGv7kuUObiiOg26NOeyRfRI3DBlXXCgrd+Jq5fjU8V5uOkfnaeJHE1RfMUYdcg0IfSzqanpzHvfa6vydGn6M91ip0JVOUMRgyGOpzzvi9zcF0NEnrfD3tA9g+Ijo/rdMBL4m0G6eL8WbmqVg+m9awTl9JEizKf/XWCBegJjInjxROvVgLuAU8w=
+  file: Documentazione.zip
   on:
     repo: or-bit/WIP-docs
-  
+    branch: heads/test
