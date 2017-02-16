@@ -27,5 +27,4 @@ deploy:
   overwrite: true
   on:
     repo: or-bit/WIP-docs
-
-    
+  
