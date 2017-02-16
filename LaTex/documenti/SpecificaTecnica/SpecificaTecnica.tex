@@ -1,0 +1,31 @@
+\input{../../modello/layout}
+\input{../../modello/global}
+\input{local}
+\usepackage{hyperref}
+
+\begin{document}
+
+\makeFrontPage
+
+\input{diario_modifiche}
+\clearpage
+\tableofcontents
+
+\input{introduzione}
+\input{tecnologie}
+
+% Monolith (Framework)
+\input{descrizione_arc_framework}
+\input{componenti_sw_framework}
+\input{design_pattern_framework}
+\input{diagrammi_attivita_framework}
+
+% Bubble & Eat (Demo)
+\input{descrizione_arc_demo}
+\input{componenti_sw_demo}
+\input{design_pattern_demo}
+\input{diagrammi_attivita_demo}
+% Altro?
+
+
+\end{document}
