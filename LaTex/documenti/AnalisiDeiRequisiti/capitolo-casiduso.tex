@@ -1,13 +1,23 @@
 \section{Casi d'uso}
+I casi d'uso sono catalogati come:
+\begin{center}
+	UC[numero][caso]
+\end{center}
+dove:
+\begin{itemize}
+	\item \textit{UC} specifica che si sta parlando di un caso d'uso;
+	\item \textit{numero} è assoluto e rappresenta un riferimento univoco al caso d'uso in questione;
+	\item \textit{caso} individua eventuali diramazioni all'interno dello stesso caso d'uso.
+\end{itemize}
 
 \subsection{Framework}
 
-\subsubsection[Istanziazione della bubble generica]{\UC{} Istanziazione della bubble generica} \label{UC1.35}
+\UC{Istanziazione della bubble generica}{UC1.35}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_35.png}
-	\caption{UC1.35 Istanziazione della bubble generica}
+	\caption{\UCCaption{} Istanziazione della bubble generica}
 \end{figure}
 
 \begin{itemize}
@@ -21,12 +31,12 @@
 	\\È presente la \glossario{bubble generica}, compresa la sua memoria.
 \end{itemize}
 
-\subsubsection[Connessione a database MongoDB]{\UC{} Connessione a database MongoDB} \label{UC1.00}
+\UC{Connessione a database MongoDB}{UC1.00}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_00.png}
-	\caption{UC1.00 Connessione a database MongoDB}
+	\caption{\UCCaption{} Connessione a database MongoDB}
 \end{figure}
 
 \begin{itemize}
@@ -45,12 +55,12 @@
 \\La \glossario{bubble generica} da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
-\subsubsection[Lettura da database MongoDB]{\UC{} Lettura da database MongoDB} \label{UC1.01}
+\UC{Lettura da database MongoDB}{UC1.01}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_01.png}
-	\caption{UC1.01 Lettura da database MongoDB}
+	\caption{\UCCaption{} Lettura da database MongoDB}
 \end{figure}
 
 \begin{itemize}
@@ -70,12 +80,12 @@
 	\\I dati sono prelevati dal database e sono pronti all'uso nella \glossario{bubble}.
 \end{itemize}
 
-\subsubsection[Scrittura su database MongoDB]{\UC{} Scrittura su database MongoDB} \label{UC1.02}
+\UC{Scrittura su database MongoDB}{UC1.02}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
-	\caption{UC1.02 Scrittura su database MongoDB}
+	\caption{\UCCaption{} Scrittura su database MongoDB}
 \end{figure}
 
 \begin{itemize}
@@ -95,12 +105,12 @@
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\subsubsection[Rimozione di un elemento]{\UCFiglio{} Rimozione di un elemento} \label{UC1.03.1}
+\UCC{Rimozione di un elemento presente}{UC1.03.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_03.png}
-	\caption{UC1.03.1 Rimozione di un elemento}
+	\caption{\UCCCaption{} Rimozione di un elemento}
 \end{figure}
 
 \begin{itemize}
@@ -116,12 +126,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore chiama il metodo, il quale rimuove l'\glossario{elemento} dalla \glossario{bubble}.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento non è presente nella \glossario{bubble} \hyperref[UC1.03.2]{(UC1.03.2)}.
+	\\L'elemento non è presente nella \glossario{bubble} \ref{UC1.03.2}.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} non contiene l'elemento indicato da rimuovere.
 \end{itemize}
 
-\subsubsection{UC1.03.2 Rimozione di un elemento} \label{UC1.03.2}
+\UCC{Rimozione di un elemento non presente}{UC1.03.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -136,17 +146,17 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore chiama il metodo, il quale, non trovando l'\glossario{elemento}, restituisce un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento è presente nella \glossario{bubble} \hyperref[UC1.03.1]{(UC1.03.1)}.
+	\\L'elemento è presente nella \glossario{bubble} \ref{UC1.03.1}.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} non contiene l'\glossario{elemento} indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
 \end{itemize}
 
-\subsubsection{UC1.04 Aggiunta di un elemento} \label{UC1.04}
+\UC{Aggiunta di un elemento}{UC1.04}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_04.png}
-	\caption{UC1.04 Aggiunta di un elemento}
+	\caption{\UCCaption{} Aggiunta di un elemento}
 \end{figure}
 
 \begin{itemize}
@@ -165,12 +175,225 @@
 	\\La \glossario{bubble} avrà al suo interno l'\glossario{elemento} passato al metodo.
 \end{itemize}
 
-\subsubsection{UC1.05.1 Modifica di un elemento} \label{UC1.05.1}
+\UCF{Immagine}{UC1.25}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_25.png}
+	\caption{\UCFCaption{} Immagine}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un file immagine.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere un'immagine di cui fare la preview.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il file immagine da includere nella \glossario{bubble}.
+	\item \textbf{Post-condizione:}
+	\\Il file immagine è stato incluso nella \glossario{bubble}.
+\end{itemize}
+
+\UCF{TextView}{UC1.26}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_26.png}
+	\caption{\UCFCaption{} TextView}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{TextView}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere un testo da visualizzare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{bubble}.
+	\item \textbf{Post-condizione:}
+	\\Il testo è stato incluso nella \glossario{bubble}.
+\end{itemize}
+
+\UCF{Label}{UC1.27}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_27.png}
+	\caption{\UCFCaption{} Label}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{label}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere un testo da visualizzare.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{label}.
+	\item \textbf{Post-condizione:}
+	\\Il testo è stato incluso nella \glossario{bubble}.
+\end{itemize}
+
+\UCF{Grafico a torta}{UC1.28}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_28.png}
+	\caption{\UCFCaption{} Grafico a torta}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico a torta.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a torta.
+	\item \textbf{Post-condizione:}
+	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella \glossario{bubble}.
+\end{itemize}
+
+\UCF{Grafico a istogramma}{UC1.29}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_29.png}
+	\caption{\UCFCaption{} Grafico a istogramma}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico istogramma.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a istogramma.
+	\item \textbf{Post-condizione:}
+	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella \glossario{bubble}.
+\end{itemize}
+
+\UCF{Checkbox}{UC1.30}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_30.png}
+	\caption{\UCFCaption{} Checkbox}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{checkbox} all'interno della \glossario{bubble} specificando la variabile della \glossario{bubble memory} a cui l'\glossario{elemento} è assegnato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} una \glossario{checkbox} relativa ad un \glossario{elemento} della \glossario{bubble memory} specificato.
+	\item \textbf{Post-condizione:}
+	\\Nella \glossario{bubble} è presente la \glossario{checkbox}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
+\end{itemize}
+
+\UCF{Bottone Radio}{UC1.31}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_31.png}
+	\caption{\UCFCaption{} Bottone Radio}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone radio} di scelta di un \glossario{elemento} tra molti all'interno della \glossario{bubble}, specificando la variabile della \glossario{bubble memory} a cui la scelta è assegnata.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} un \glossario{bottone radio} relativo ad un \glossario{elemento} della \glossario{bubble memory} specificato.
+	\item \textbf{Post-condizione:}
+	\\Nella \glossario{bubble} è presente il \glossario{bottone radio}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
+\end{itemize}
+
+\UCF{Bottone}{UC1.32}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_32.png}
+	\caption{\UCFCaption{} Bottone}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone} all'interno della \glossario{bubble} specificando la funzione che verrà eseguita alla pressione del \glossario{bottone} da parte dell'utente.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere la funzione da eseguire.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il \glossario{bottone} specificando la funzione da assegnare ad esso.
+	\item \textbf{Post-condizione:}
+	\\Nella \glossario{bubble} è presente il \glossario{bottone}. Alla pressione da parte dell'utente del \glossario{bottone} della \glossario{bubble} la funzione di \glossario{callback} specificata verrà eseguita.
+\end{itemize}
+
+\UCF{TextEdit}{UC1.33}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_33.png}
+	\caption{\UCFCaption{} TextEdit}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del \glossario{framework}.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del \glossario{framework} può richiedere un input testuale \glossario{TextEdit}.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una \glossario{bubble generica}.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il testo ricevuto nella \glossario{bubble memory}.
+	\item \textbf{Post-condizione:}
+	\\Nella \glossario{bubble} è presente il campo di compilazione \glossario{TextEdit}. Nella \glossario{bubble memory} è presente il valore attuale del testo presente nell'\glossario{elemento} della \glossario{bubble}.
+\end{itemize}
+
+\UCC{Modifica di un elemento presente}{UC1.05.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_05.png}
-	\caption{UC1.05.1 Modifica di un elemento}
+	\caption{\UCCCaption{} Modifica di un elemento}
 \end{figure}
 
 \begin{itemize}
@@ -186,12 +409,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo modifica l'\glossario{elemento}.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento non è presente nella \glossario{bubble} \hyperref[UC1.05.2]{(UC1.05.2)}.
+	\\L'elemento che si vuole modificare non è presente nella \glossario{bubble} \ref{UC1.05.2}.
 	\item \textbf{Post-condizione:}
 	\\La \glossario{bubble} contiene l'\glossario{elemento} modificato.
 \end{itemize}
 
-\subsubsection{UC1.05.2 Modifica di un elemento} \label{UC1.05.2}
+\UCC{Modifica di un elemento non presente}{UC1.05.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -206,17 +429,18 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo, non trovando l'\glossario{elemento} da modificare, lancia un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\L'\glossario{elemento} è presente nella \glossario{bubble} \hyperref[UC1.05.1]{(UC1.05.1)}.
+	\\L'\glossario{elemento} è presente nella \glossario{bubble} \ref{UC1.05.1}.
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l'\glossario{elemento} da modificare.
 \end{itemize}
 
-\subsubsection{UC1.06.1 Cambiamento di stato della bubble} \label{UC1.06.1}
+\isfirsttrue
+\UCC{Cambiamento di stato della bubble su proprietà esistente}{UC1.06.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_06.png}
-	\caption{UC1.06.1 Cambiamento di stato della bubble}
+	\caption{\UCCCaption{} Cambiamento di stato della bubble}
 \end{figure}
 
 \begin{itemize}
@@ -231,12 +455,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} indicando il nuovo stato e il metodo esegue la modifica.
 	\item \textbf{Scenari alternativi:}
-	\\L'oggetto che si sta cercando di modificare non ha la proprietà cercata \hyperref[UC1.06.2]{(UC1.06.2)}.
+	\\L'oggetto che si sta cercando di modificare non ha la proprietà cercata \ref{UC1.06.2}.
 	\item \textbf{Post-condizione:}
 	\\L'oggetto è stato modificato.
 \end{itemize}
 
-\subsubsection{UC1.06.2 Cambiamento di stato della bubble} \label{UC1.06.2}
+\UCC{Cambiamento di stato della bubble su proprietà non esistente}{UC1.06.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -250,17 +474,18 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} indicando il nuovo stato e il metodo, non trovando la proprietà cercata, restituisce un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\L'oggetto che si sta cercando di modificare ha la proprietà cercata \hyperref[UC1.06.1]{(UC1.06.1)}.
+	\\L'oggetto che si sta cercando di modificare ha la proprietà cercata \ref{UC1.06.1}.
 	\item \textbf{Post-condizione:}
 	\\L'oggetto non è stato modificato.
 \end{itemize}
 
-\subsubsection{UC1.07.1 Chiamata API esterne} \label{UC1.07.1}
+\isfirsttrue
+\UCC{Chiamata API esterne disponibili}{UC1.07.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_07.png}
-	\caption{UC1.07.1 Chiamata API esterne}
+	\caption{\UCCCaption{} Chiamata API esterne}
 \end{figure}
 
 \begin{itemize}
@@ -276,12 +501,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il metodo prende l'indirizzo del servizio e ritorna in formato \glossario{JSON} il risultato della chiamata.
 	\item \textbf{Scenari alternativi:}
-	\\Il servizio che si sta cercando di contattare non è disponibile \hyperref[UC1.07.2]{(UC1.07.2)}.
+	\\Il servizio che si sta cercando di contattare non è disponibile \ref{UC1.07.2}.
 	\item \textbf{Post-condizione:}
 	\\All'interno della logica della \glossario{bubble} è utilizzabile il risultato della consultazione del servizio.
 \end{itemize}
 
-\subsubsection{UC1.07.2 Chiamata api esterne} \label{UC1.07.2}
+\UCC{Chiamata API esterne non disponibili}{UC1.07.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -296,17 +521,17 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il metodo prende l'indirizzo del servizio e, non trovandolo disponibile, ritorna un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\Il servizio che si sta cercando di contattare è disponibile \hyperref[UC1.07.1]{(UC1.07.1)}.
+	\\Il servizio che si sta cercando di contattare è disponibile \ref{UC1.07.1}.
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo è stato avvisato della non disponibilità del servizio.
 \end{itemize}
 
-\subsubsection{UC1.08 Limite interazioni per persona} \label{UC1.08}
+\UC{Limite interazioni per persona}{UC1.08}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_08.png}
-	\caption{UC1.08 Limite interazioni per persona}
+	\caption{\UCCaption{} Limite interazioni per persona}
 \end{figure}
 
 \begin{itemize}
@@ -325,12 +550,12 @@
 	\\Il singolo utilizzatore della \glossario{bubble} come utente di \glossario{Rocket.Chat} non potrà interagire con la stessa istanza della \glossario{bubble} più volte di quelle specificate.
 \end{itemize}
 
-\subsubsection{UC1.09 Limite interazioni totali} \label{UC1.09}
+\UC{Limite interazioni totali}{UC1.09}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_09.png}
-	\caption{UC1.09 Limite interazioni totali}
+	\caption{\UCCaption{} Limite interazioni totali}
 \end{figure}
 
 \begin{itemize}
@@ -349,12 +574,12 @@
 	\\La singola istanza della \glossario{bubble} ha un numero massimo di interazioni possibili condiviso tra tutti i suoi utenti. 
 \end{itemize}
 
-\subsubsection{UC1.10 Match con espressione regolare} \label{UC1.10}
+\UC{Match con espressione regolare}{UC1.10}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_10.png}
-	\caption{UC1.10 Match con espressione regolare}
+	\caption{\UCCaption{} Match con espressione regolare}
 \end{figure}
 
 \begin{itemize}
@@ -373,12 +598,12 @@
 	\\È noto se l'input della \glossario{bubble} è corretto secondo l'espressione regolare.
 \end{itemize}
 
-\subsubsection{UC1.11 Dimensione massima del file} \label{UC1.11}
+\UC{Dimensione massima del file}{UC1.11}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_11.png}
-	\caption{UC1.11 Dimensione massima del file}
+	\caption{\UCCaption{} Dimensione massima del file}
 \end{figure}
 
 \begin{itemize}
@@ -397,12 +622,12 @@
 	\\È stata impostata una dimensione massima per i file allegabili.
 \end{itemize}
 
-\subsubsection{UC1.12 Controllo sul JSON} \label{UC1.12}
+\UC{Controllo sul JSON}{UC1.12}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_12.png}
-	\caption{UC1.12 Controllo sul JSON}
+	\caption{\UCCaption{} Controllo sul JSON}
 \end{figure}
 
 \begin{itemize}
@@ -422,12 +647,12 @@
 	\\È noto se l'oggetto \glossario{JSON} è compatibile con la struttura indicata.
 \end{itemize}
 
-\subsubsection{UC1.13 Durata della bubble} \label{UC1.13}
+\UC{Durata della bubble}{UC1.13}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_13.png}
-	\caption{UC1.13 Durata della bubble}
+	\caption{\UCCaption{} Durata della bubble}
 \end{figure}
 
 \begin{itemize}
@@ -442,15 +667,15 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato il tempo per il quale la \glossario{bubble} sarà attiva.
 	\item \textbf{Post-condizione:}
-	\\Al termine del periodo di tempo specificato dal metodo verrà invocata la sua terminazione secondo quanto specificato nel caso d'uso \hyperref[UC1.19]{UC1.19} termina \glossario{bubble}.
+	\\Al termine del periodo di tempo specificato dal metodo verrà invocata la sua terminazione secondo quanto specificato nel caso d'uso \ref{UC1.19} termina \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC1.14 Lista utenti partecipanti} \label{UC1.14}
+\UC{Lista utenti partecipanti}{UC1.14}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_14.png}
-	\caption{UC1.14 Lista utenti partecipanti}
+	\caption{\UCCaption{} Lista utenti partecipanti}
 \end{figure}
 
 \begin{itemize}
@@ -468,12 +693,12 @@
 	\\Viene restituita una lista di utilizzatori della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC1.15.1 Storico interazioni con la bubble per utente} \label{UC1.15.1}
+\UCC{Storico interazioni con la bubble per utente presente}{UC1.15.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_15.png}
-	\caption{UC1.15.1 Storico interazioni con la bubble per utente}
+	\caption{\UCCCaption{} Storico interazioni con la bubble per utente}
 \end{figure}
 
 \begin{itemize}
@@ -489,12 +714,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni.
 	\item \textbf{Scenari alternativi:}
-	\\Non è presente l'utente specificato all'interno della conversazione \hyperref[UC1.15.2]{(UC1.15.2)}.
+	\\Non è presente l'utente specificato all'interno della conversazione \ref{UC1.15.2}.
 	\item \textbf{Post-condizione:}
 	\\L'informazione relativa allo storico delle interazioni di un singolo utente con la \glossario{bubble} è noto all'interno della \glossario{bubble} stessa.
 \end{itemize}
 
-\subsubsection{UC1.15.2 Storico interazioni con la bubble per utente} \label{UC1.15.2}
+\UCC{Storico interazioni con la bubble per utente non presente}{UC1.15.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -509,17 +734,17 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni e il metodo, non trovando l'utente, restituisce un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\È presente l'utente specificato all'interno della conversazione \hyperref[UC1.15.1]{(UC1.15.1)}.
+	\\È presente l'utente specificato all'interno della conversazione \ref{UC1.15.1}.
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa dell'assenza all'interno della conversazione dell'utente di cui aveva richiesto lo storico.
 \end{itemize}
 
-\subsubsection{UC1.16 Esecuzione in orario specificato} \label{UC1.16}
+\UC{Esecuzione in orario specificato}{UC1.16}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_16.png}
-	\caption{UC1.16 Esecuzione in orario specificato}
+	\caption{\UCCaption{} Esecuzione in orario specificato}
 \end{figure}
 
 \begin{itemize}
@@ -538,12 +763,12 @@
 	\\Nell'orario stabilito viene eseguita la funzionalità della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC1.17 Creazione notifica statica} \label{UC1.17}
+\UC{Creazione notifica statica}{UC1.17}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_17.png}
-	\caption{UC1.17 Creazione notifica statica}
+	\caption{\UCCaption{} Creazione notifica statica}
 \end{figure}
 
 \begin{itemize}
@@ -562,12 +787,12 @@
 	\\Sul dispositivo sul quale si sta utilizzando \glossario{Rocket.Chat} sarà notificato il testo specificato nel metodo.
 \end{itemize}
 
-\subsubsection{UC1.18 Visualizza notifica statica} \label{UC1.18}
+\UC{Visualizza notifica statica}{UC1.18}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_18.png}
-	\caption{UC1.18 Visualizza notifica statica}
+	\caption{\UCCaption{} Visualizza notifica statica}
 \end{figure}
 
 \begin{itemize}
@@ -586,12 +811,12 @@
 	\\La notifica contiene il valore del testo specificato.
 \end{itemize}
 
-\subsubsection{UC1.19 Termina bubble} \label{UC1.19}
+\UC{Termina bubble}{UC1.19}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_19.png}
-	\caption{UC1.19 Termina \glossario{bubble}}
+	\caption{\UCCaption{} Termina \glossario{bubble}}
 \end{figure}
 
 \begin{itemize}
@@ -609,12 +834,12 @@
 	\\La \glossario{bubble} è stata terminata e quindi non sarà più possibile interagire con la stessa. L'interfaccia verrà aggiornata, disabilitando la possibilità di dare input e avere output dinamico ma mantenendo un'istantanea del suo ultimo stato.
 \end{itemize}
 
-\subsubsection{UC1.20.1 Converti in PDF} \label{UC1.20.1}
+\UCC{Converti in PDF}{UC1.20.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_20.png}
-	\caption{UC1.20.1 Converti in PDF}
+	\caption{\UCCCaption{} Converti in PDF}
 \end{figure}
 
 \begin{itemize}
@@ -631,12 +856,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando il testo da convertire in \glossario{PDF} e il percorso in cui si desidera salvare il file.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file \glossario{PDF} non ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\\Il salvataggio del file \glossario{PDF} non ha successo \ref{UC1.20.2}.
 	\item \textbf{Post-condizione:}
 	\\Un file \glossario{PDF} è stato creato nella posizione corretta e contiene il testo specificato.
 \end{itemize}
 
-\subsubsection{UC1.20.2 Conversione in PDF fallita} \label{UC1.20.2}
+\UCC{Conversione in PDF fallita}{UC1.20.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -652,17 +877,17 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando il testo da convertire in \glossario{PDF} e il percorso in cui si desidera salvare il file, ma il salvataggio non avviene e l'utilizzatore del \glossario{framework} visualizza un messaggio d'errore.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file \glossario{PDF} ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\\Il salvataggio del file \glossario{PDF} ha successo \ref{UC1.20.2}.
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa che il file \glossario{PDF} non è stato salvato.
 \end{itemize}
 
-\subsubsection{UC1.21 Mostra elemento grafico} \label{UC1.21}
+\UC{Mostra elemento grafico}{UC1.21}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_21.png}
-	\caption{UC1.21 Mostra elemento grafico}
+	\caption{\UCCaption{} Mostra elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -681,12 +906,12 @@
 	\\L'\glossario{elemento grafico} specificato è visibile.
 \end{itemize}
 
-\subsubsection{UC1.22 Nascondi elemento grafico} \label{UC1.22}
+\UC{Nascondi elemento grafico}{UC1.22}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_22.png}
-	\caption{UC1.22 Nascondi elemento grafico}
+	\caption{\UCCaption{} Nascondi elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -705,12 +930,12 @@
 	\\L'\glossario{elemento grafico} specificato non è più visibile.
 \end{itemize}
 
-\subsubsection{UC1.23 Imposta posizione elemento grafico} \label{UC1.23}
+\UC{Imposta posizione elemento grafico}{UC1.23}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_23.png}
-	\caption{UC1.23 Imposta posizione elemento grafico}
+	\caption{\UCCaption{} Imposta posizione elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -729,12 +954,12 @@
 	\\L'\glossario{elemento grafico} specificato si trova nella posizione specificata.
 \end{itemize}
 
-\subsubsection{UC1.24.1 File output} \label{UC1.24.1}
+\UCC{File output}{UC1.24.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_24.png}
-	\caption{UC1.24.1 File output}
+	\caption{\UCCCaption{} File output}
 \end{figure}
 
 \begin{itemize}
@@ -750,12 +975,12 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica che l'output della \glossario{bubble} sia un file e le informazioni da salvare in esso.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file non ha successo, in tale caso verrà notificata la condizione anomala con un messaggio d'errore \hyperref[UC1.24.2]{(UC1.24.2)}.
+	\\Il salvataggio del file non ha successo, in tale caso verrà notificata la condizione anomala con un messaggio d'errore \ref{UC1.24.2}.
 	\item \textbf{Post-condizione:}
 	\\Verrà generato un file contenente l'informazione desiderata.
 \end{itemize}
 
-\subsubsection{UC1.24.2 Errore File output} \label{UC1.24.2}
+\UCC{Errore File output}{UC1.24.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -770,230 +995,17 @@
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica che l'output della \glossario{bubble} sia un file e le informazioni da salvare in esso, il salvataggio non va a buon fine e viene generato un messaggio d'errore.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file ha successo \hyperref[UC1.24.1]{(UC1.24.1)}.
+	\\Il salvataggio del file ha successo \ref{UC1.24.1}.
 	\item \textbf{Post-condizione:}
 	\\Viene generato un messaggio d'errore.
 \end{itemize}
 
-\subsubsection{UC1.25 Immagine} \label{UC1.25}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_25.png}
-	\caption{UC1.25 Immagine}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un file immagine.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere un'immagine di cui fare la preview.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il file immagine da includere nella \glossario{bubble}.
-	\item \textbf{Post-condizione:}
-	\\Il file immagine è stato incluso nella \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.26 TextView} \label{UC1.26}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_26.png}
-	\caption{UC1.26 TextView}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{TextView}.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere un testo da visualizzare.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{bubble}.
-	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.27 Label} \label{UC1.27}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_27.png}
-	\caption{UC1.27 Label}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{label}.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere un testo da visualizzare.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{label}.
-	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.28 Grafico a torta} \label{UC1.28}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_28.png}
-	\caption{UC1.28 Grafico a torta}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico a torta.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a torta.
-	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.29 Grafico a istogramma} \label{UC1.29}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_29.png}
-	\caption{UC1.29 Grafico a istogramma}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico istogramma.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a istogramma.
-	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.30 Checkbox} \label{UC1.30}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_30.png}
-	\caption{UC1.30 Checkbox}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{checkbox} all'interno della \glossario{bubble} specificando la variabile della \glossario{bubble memory} a cui l'\glossario{elemento} è assegnato.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} una \glossario{checkbox} relativa ad un \glossario{elemento} della \glossario{bubble memory} specificato.
-	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente la \glossario{checkbox}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
-\end{itemize}
-
-\subsubsection{UC1.31 Bottone Radio} \label{UC1.31}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_31.png}
-	\caption{UC1.31 Bottone Radio}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone radio} di scelta di un \glossario{elemento} tra molti all'interno della \glossario{bubble}, specificando la variabile della \glossario{bubble memory} a cui la scelta è assegnata.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} un \glossario{bottone radio} relativo ad un \glossario{elemento} della \glossario{bubble memory} specificato.
-	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il \glossario{bottone radio}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
-\end{itemize}
-
-\subsubsection{UC1.32 Bottone} \label{UC1.32}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_32.png}
-	\caption{UC1.32 Bottone}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone} all'interno della \glossario{bubble} specificando la funzione che verrà eseguita alla pressione del \glossario{bottone} da parte dell'utente.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere la funzione da eseguire.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il \glossario{bottone} specificando la funzione da assegnare ad esso.
-	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il \glossario{bottone}. Alla pressione da parte dell'utente del \glossario{bottone} della \glossario{bubble} la funzione di \glossario{callback} specificata verrà eseguita.
-\end{itemize}
-
-\subsubsection{UC1.33 TextEdit} \label{UC1.33}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_33.png}
-	\caption{UC1.33 TextEdit}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può richiedere un input testuale \glossario{TextEdit}.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il testo ricevuto nella \glossario{bubble memory}.
-	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il campo di compilazione \glossario{TextEdit}. Nella \glossario{bubble memory} è presente il valore attuale del testo presente nell'\glossario{elemento} della \glossario{bubble}.
-\end{itemize}
-
-\subsubsection{UC1.34 File input} \label{UC1.34}
+\UC{File input}{UC1.34}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_34.png}
-	\caption{UC1.34 File input}
+	\caption{\UCCaption{} File input}
 \end{figure}
 
 \begin{itemize}
@@ -1011,7 +1023,7 @@
 	\\Il file è stato caricato e passato alla \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC1.36 Mostrare bubble generica} \label{UC1.36}
+\UC{Mostra bubble generica}{UC1.36}
 
 \begin{figure}[H]
 	\centering
@@ -1036,12 +1048,12 @@
 
 \subsection{To-do list}
 
-\subsubsection{UC2.1 Creare una lista} \label{UC2.1}
+\UC{Creare una lista}{UC2.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc2_1.png}
-	\caption{UC2.1 Creare una lista}
+	\caption{\UCCaption{} Creare una lista}
 \end{figure}
 
 \begin{itemize}
@@ -1056,16 +1068,16 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente invoca il comando di creazione della \glossario{bubble} \glossario{To-do list} \hyperref[UC2.1.1]{(UC2.1.1)};
-		\item L'utente carica il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
-		\item L'utente inserisce tutte le informazioni necessarie \hyperref[UC2.1.3]{(UC2.1.3)};
-		\item L'utente seleziona \virgolette{Crea lista} \hyperref[UC2.1.4]{(UC2.1.4)}.
+		\item L'utente invoca il comando di creazione della \glossario{bubble} \glossario{To-do list} \ref{UC2.1.1};
+		\item L'utente carica il form in cui inserire le informazioni \ref{UC2.1.2};
+		\item L'utente inserisce tutte le informazioni necessarie \ref{UC2.1.3};
+		\item L'utente seleziona \virgolette{Crea lista} \ref{UC2.1.4}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato.
 \end{itemize}
 
-\subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
+\UCF{Invocare il comando della bubble di creazione della to-do list}{UC2.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1084,7 +1096,7 @@
 	\\Viene istanziata la \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC2.1.2 Caricare il form in cui inserire le informazioni} \label{UC2.1.2}
+\UCF{Caricare il form in cui inserire le informazioni}{UC2.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1095,7 +1107,7 @@
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
 		\item Avere \ProjectName{} installato;
-		\item Aver invocato il comando di creazione della \glossario{to-do list} \hyperref[UC2.1.1]{UC2.1.1}.
+		\item Aver invocato il comando di creazione della \glossario{to-do list} \ref{UC2.1.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene caricato il form per l'inserimento delle informazioni.
@@ -1103,7 +1115,7 @@
 	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della \glossario{to-do list}.
 \end{itemize}
 
-\subsubsection{UC2.1.3 Inserire tutte le informazioni necessarie} \label{UC2.1.3}
+\UCF{Inserire tutte le informazioni necessarie}{UC2.1.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1114,15 +1126,15 @@
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
 		\item Avere \ProjectName{} installato;
-		\item Aver caricato il form di inserimento secondo \hyperref[UC2.1.2]{UC2.1.2}.
+		\item Aver caricato il form di inserimento secondo \ref{UC2.1.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore della \glossario{bubble} inserisce i dati necessari nel form visualizzato al caso d'uso \hyperref[UC2.1.2]{UC2.1.2}.
+	\\L'utilizzatore della \glossario{bubble} inserisce i dati necessari nel form visualizzato al caso d'uso \ref{UC2.1.2}.
 	\item \textbf{Post-condizione:}
-	\\Nella memoria della \glossario{bubble} sono salvati i dati richiesti nel caso d'uso \hyperref[UC2.1.4]{UC2.1.4}. 
+	\\Nella memoria della \glossario{bubble} sono salvati i dati richiesti nel caso d'uso \ref{UC2.1.4}. 
 \end{itemize}
 
-\subsubsection{UC2.1.4 Selezionare “Crea lista”} \label{UC2.1.4}
+\UCF{Selezionare \virgolette{Crea lista}}{UC2.1.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1133,7 +1145,7 @@
 	\begin{itemize}
 		\item Essere utenti di \glossario{Rocket.Chat};
 		\item Avere \ProjectName{} installato;
-		\item Sono stati inseriti i dati come da \hyperref[UC2.1.3]{UC2.1.3}.
+		\item Sono stati inseriti i dati come da \ref{UC2.1.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della \glossario{bubble}.
@@ -1141,12 +1153,12 @@
 	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato. 
 \end{itemize}
 
-\subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
+\UC{Aggiungere elemento alla to-do list}{UC2.2}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc2_2.png}
-	\caption{UC2.2 Aggiungere elemento alla to-do list}
+	\caption{\UCCaption{} Aggiungere elemento alla to-do list}
 \end{figure}
 
 \begin{itemize}
@@ -1161,16 +1173,16 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente seleziona l'opzione aggiungi \glossario{elemento} \hyperref[UC2.2.1]{(UC2.2.1)};
-		\item Mostrare il form di aggiunta \hyperref[UC2.2.2]{(UC2.2.2)};
-		\item L'utente inserisce le informazioni \hyperref[UC2.2.3]{(UC2.2.3)};
-		\item L'utente conferma l'aggiunta \hyperref[UC2.2.4]{(UC2.2.4)}.
+		\item L'utente seleziona l'opzione aggiungi \glossario{elemento} \ref{(UC2.2.1)};
+		\item Mostrare il form di aggiunta \ref{(UC2.2.2)};
+		\item L'utente inserisce le informazioni \ref{(UC2.2.3)};
+		\item L'utente conferma l'aggiunta \ref{(UC2.2.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\La \glossario{to-do list} avrà il nuovo \glossario{elemento} aggiunto.
 \end{itemize}
 
-\subsubsection{UC2.2.1 Selezionare l'opzione aggiungi elemento} \label{UC2.2.1}
+\UCF{Selezionare l'opzione aggiungi elemento}{UC2.2.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1187,7 +1199,7 @@
 	\\È possibile inserire il testo per il nuovo \glossario{elemento}. 
 \end{itemize}
 
-\subsubsection{UC2.2.2 Mostrare il form di aggiunta} \label{UC2.2.2}
+\UCF{Mostrare il form di aggiunta}{UC2.2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1197,7 +1209,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Avere selezionato l'opzione aggiungi \glossario{elemento} come da \hyperref[UC2.2.1]{UC2.2.1}.
+		\item Avere selezionato l'opzione aggiungi \glossario{elemento} come da \ref{UC2.2.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo scrive il testo da inserire nel nuovo \glossario{elemento} e lo aggiunge alla \glossario{to-do list}.
@@ -1205,7 +1217,7 @@
 	\\Il nuovo \glossario{elemento} è aggiunto alla \glossario{bubble} \glossario{To-do list}.
 \end{itemize}
 
-\subsubsection{UC2.2.3  Inserire le informazioni} \label{UC2.2.3}
+\UCF{Inserire le informazioni}{UC2.2.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1215,7 +1227,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Aver caricato il form di inserimento secondo \hyperref[UC2.2.2]{UC2.2.2};
+		\item Aver caricato il form di inserimento secondo \ref{UC2.2.2};
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo completa il form di inserimento di un nuovo \glossario{elemento} in tutte le sue parti.
@@ -1223,7 +1235,7 @@
 	\\La \glossario{to-do list} ha tutte le informazioni necessarie per aggiungere il nuovo \glossario{elemento}.
 \end{itemize}
 
-\subsubsection{UC2.2.4 Confermare l'aggiunta} \label{UC2.2.4}
+\UCF{Confermare l'aggiunta}{UC2.2.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1233,7 +1245,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Aver inserito le informazioni per il nuovo \glossario{elemento} secondo \hyperref[UC2.2.3]{UC2.2.3}.
+		\item Aver inserito le informazioni per il nuovo \glossario{elemento} secondo \ref{UC2.2.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo conferma l'aggiunta alla \glossario{to-do list}.
@@ -1241,12 +1253,12 @@
 	\\L'\glossario{elemento} è stato aggiunto alla \glossario{to-do list}.
 \end{itemize}
 
-\subsubsection{UC2.3 Indicare come completati gli elementi della to-do list} \label{UC2.3}
+\UC{Indicare come completati gli elementi della to-do list}{UC2.3}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc2_3.png}
-	\caption{UC2.3 Indicare come completati gli elementi della to-do list}
+	\caption{\UCCaption{} Indicare come completati gli elementi della to-do list}
 \end{figure}
 
 \begin{itemize}
@@ -1265,12 +1277,12 @@
 	\\L'\glossario{elemento} della \glossario{to-do list} viene aggiornato come completato.
 \end{itemize}
 
-\subsubsection{UC2.4 Possibilità di mettere un reminder come notifica statica} \label{UC2.4}
+\UC{Possibilità di mettere un reminder come notifica statica}{UC2.4}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc2_4.png}
-	\caption{UC2.4 Possibilità di mettere un reminder come notifica statica}
+	\caption{\UCCaption{} Possibilità di mettere un reminder come notifica statica}
 \end{figure}
 
 \begin{itemize}
@@ -1284,16 +1296,16 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente seleziona l'opzione aggiungi notifica \hyperref[UC2.4.1]{(UC2.4.1)};
-		\item Mostrare il form di aggiunta \hyperref[UC2.4.2]{(UC2.4.2)};
-		\item L'utente inserisce tutte le informazioni necessarie \hyperref[UC2.4.3]{(UC2.4.3)};
-		\item L'utente conferma l'aggiunta della notifica \hyperref[UC2.4.4]{(UC2.4.4)}.
+		\item L'utente seleziona l'opzione aggiungi notifica \ref{(UC2.4.1)};
+		\item Mostrare il form di aggiunta \ref{(UC2.4.2)};
+		\item L'utente inserisce tutte le informazioni necessarie \ref{(UC2.4.3)};
+		\item L'utente conferma l'aggiunta della notifica \ref{(UC2.4.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\I partecipanti al gruppo nel quale è presente la \glossario{bubble} verranno notificati della lista all'ora specificata.
 \end{itemize}
 
-\subsubsection{UC2.4.1 Selezionare l'opzione aggiungi notifica} \label{UC2.4.1}
+\UCF{Selezionare l'opzione aggiungi notifica}{UC2.4.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1310,7 +1322,7 @@
 	\\L'utente ha selezionato l'opzione di aggiungere una notifica alla \glossario{to-do list} che ha creato.
 \end{itemize}
 
-\subsubsection{UC2.4.2 Mostrare il form di aggiunta} \label{UC2.4.2}
+\UCF{Mostrare il form di aggiunta}{UC2.4.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1320,7 +1332,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Essere entrati nell'opzione \virgolette{aggiungi modifica} della propria \glossario{bubble} secondo \hyperref[UC2.4.1]{UC2.4.1}.
+		\item Essere entrati nell'opzione \virgolette{aggiungi modifica} della propria \glossario{bubble} secondo \ref{UC2.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\La \glossario{bubble} \glossario{To-do list} carica il form di inserimento dati per le notifiche.
@@ -1328,7 +1340,7 @@
 	\\La \glossario{bubble} ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
 \end{itemize}
 
-\subsubsection{UC2.4.3 Inserire tutte le informazioni necessarie} \label{UC2.4.3}
+\UCF{Inserire tutte le informazioni necessarie}{UC2.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1338,7 +1350,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item La \glossario{bubble} ha caricato il form di inserimento dati secondo lo \hyperref[UC2.4.2]{UC2.4.2}.
+		\item La \glossario{bubble} ha caricato il form di inserimento dati secondo lo \ref{UC2.4.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo inserirà tutte le informazioni necessarie a completare il form di aggiunta di una notifica.
@@ -1346,7 +1358,7 @@
 	\\La \glossario{bubble} possiede tutte le informazioni necessarie ad aggiungere una notifica alla \glossario{to-do list}.
 \end{itemize}
 
-\subsubsection{UC2.4.4 Confermare l'aggiunta della notifica} \label{UC2.4.4}
+\UCF{Confermare l'aggiunta della notifica}{UC2.4.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1356,7 +1368,7 @@
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Aver completato il form di aggiunta di una notifica secondo lo \hyperref[UC2.4.3]{UC2.4.3}.
+		\item Aver completato il form di aggiunta di una notifica secondo lo \ref{UC2.4.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{conferma aggiunta} e la \glossario{bubble} aggiunge la notifica alla lista.
@@ -1366,12 +1378,12 @@
 
 \subsection{Bubble \& eat - Cliente}
 
-\subsubsection{UC3.1 Registrazione dei propri dati personali} \label{UC3.1}
+\UC{Registrazione dei propri dati personali}{UC3.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_1.png}
-	\caption{UC3.1 Registrazione dei propri dati personali}
+	\caption{\UCCaption{} Registrazione dei propri dati personali}
 \end{figure}
 
 \begin{itemize}
@@ -1386,15 +1398,15 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Viene caricato il form di inserimento dati dell'utente \hyperref[UC3.1.1]{(UC3.1.1)};
-		\item L'utente inserisce i dati \hyperref[UC3.1.2]{(UC3.1.2)};
-		\item L'utente conferma l'inserimento \hyperref[UC3.1.3]{(UC3.1.3)}.
+		\item Viene caricato il form di inserimento dati dell'utente \ref{(UC3.1.1)};
+		\item L'utente inserisce i dati \ref{(UC3.1.2)};
+		\item L'utente conferma l'inserimento \ref{(UC3.1.3)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\I dati dell'utente sono stati registrati nella \glossario{bubble memory}.
 \end{itemize}
 
-\subsubsection{UC3.1.1 Caricare form inserimento dati utente} \label{UC3.1.1}
+\UCF{Caricare form inserimento dati utente}{UC3.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1412,7 +1424,7 @@
 	\\Nella \glossario{bubble} è presente il form per l'inserimento dei dati.
 \end{itemize}
 
-\subsubsection{UC3.1.2 Inserire i dati} \label{UC3.1.2}
+\UCF{Inserire i dati}{UC3.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1430,7 +1442,7 @@
 	\\I dati dell'utente sono stati inseriti.
 \end{itemize}
 
-\subsubsection{UC3.1.3 Conferma inserimento} \label{UC3.1.3}
+\UCF{Conferma inserimento}{UC3.1.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1443,17 +1455,17 @@
 		\item Avere la \glossario{bubble} del ristorante selezionato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Con l'apposito comando il \glossario{Cliente} conferma che i dati precedentemente immessi al caso d'uso \hyperref[UC3.1.2]{UC3.1.2} siano corretti.
+	\\Con l'apposito comando il \glossario{Cliente} conferma che i dati precedentemente immessi al caso d'uso \ref{UC3.1.2} siano corretti.
 	\item \textbf{Post-condizione:}
 	\\I dati confermati sono presenti nella memoria della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.2 Guardare il menù} \label{UC3.2}
+\UC{Guardare il menù}{UC3.2}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_2.png}
-	\caption{UC3.2 Guardare il menù}
+	\caption{\UCCaption{} Guardare il menù}
 \end{figure}
 
 \begin{itemize}
@@ -1469,14 +1481,14 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Viene recuperato il menù del ristorante dal database \hyperref[UC3.2.1]{(UC3.2.1)};
-		\item Il menù caricato viene mostrato all'utente \hyperref[UC3.2.2]{(UC3.2.2)}.
+		\item Viene recuperato il menù del ristorante dal database \ref{UC3.2.1};
+		\item Il menù caricato viene mostrato all'utente \ref{UC3.2.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il menù è visualizzato sulla \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.2.1 Recuperare il menù del ristorante dal database} \label{UC3.2.1}
+\UCF{Recuperare il menù del ristorante dal database}{UC3.2.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1495,7 +1507,7 @@
 	\\Le informazioni sul menù sono state recuperate dalla \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.2.2 Mostrare il menù all'utente} \label{UC3.2.2}
+\UCF{Mostrare il menù all'utente}{UC3.2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1514,7 +1526,7 @@
 	\\Il menù è visualizzato sulla \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.3 Fare le ordinazioni} \label{UC3.3}
+\UC{Fare le ordinazioni}{UC3.3}
 
 \begin{figure}[H]
 	\centering
@@ -1535,18 +1547,18 @@
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Visualizzare menù \hyperref[UC3.2]{(UC3.2)};
-		\item Selezionare cibi dal menù \hyperref[UC3.3.1]{(UC3.3.1)};
-		\item Aggiungere/Rimuovere il cibo selezionato all'ordine \hyperref[UC3.3.2]{(UC3.3.2)};
-		\item Selezionare \virgolette{Ordina} \hyperref[UC3.3.3]{(UC3.3.3)};
-		\item Mostrare all'utente un resoconto dell'ordine \hyperref[UC3.3.4]{(UC3.3.4)};
-		\item Confermare l'ordine \hyperref[UC3.3.5]{(UC3.3.5)}.
+		\item Visualizzare menù \ref{UC3.2};
+		\item Selezionare cibi dal menù \ref{UC3.3.1};
+		\item Aggiungere/Rimuovere il cibo selezionato all'ordine \ref{UC3.3.2};
+		\item Selezionare \virgolette{Ordina} \ref{UC3.3.3};
+		\item Mostrare all'utente un resoconto dell'ordine \ref{UC3.3.4};
+		\item Confermare l'ordine \ref{UC3.3.5}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\L'ordinazione viene aggiornata.
 \end{itemize}
 
-\subsubsection{UC3.3.1 Selezionare cibo dal menù} \label{UC3.3.1}
+\UCF{Selezionare cibo dal menù}{UC3.3.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1568,7 +1580,7 @@
 	\\L'utente ha selezionato almeno un piatto dal menù.
 \end{itemize}
 
-\subsubsection{UC3.3.2 Aggiungere/Rimuovere il piatto desiderato dall'ordinazione} \label{UC3.3.2}
+\UCF{Aggiungere/Rimuovere il piatto desiderato dall'ordinazione}{UC3.3.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1587,7 +1599,7 @@
 	\\L'ordinazione viene aggiornata correttamente con il piatto selezionato.
 \end{itemize}
 
-\subsubsection{UC3.3.3 Selezionare \virgolette{Ordina}} \label{UC3.3.3}
+\UCF{Selezionare \virgolette{Ordina}}{UC3.3.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1607,7 +1619,7 @@
 	\\L'ordinazione è registrata ed è in attesa di conferma.
 \end{itemize}
 
-\subsubsection{UC3.3.4 Mostrare all'utente un resoconto dell'ordine} \label{UC3.3.4}
+\UCF{Mostrare all'utente un resoconto dell'ordine}{UC3.3.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1627,7 +1639,7 @@
 	\\L'utente visualizza un resoconto dell'ordine prima di confermarlo.
 \end{itemize}
 
-\subsubsection{UC3.3.5 Confermare l'ordine} \label{UC3.3.5}
+\UCF{Confermare l'ordine}{UC3.3.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1647,7 +1659,7 @@
 	\\L'ordinazione viene salvata nella memoria della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.4 Inviare l'ordinazione} \label{UC3.4}
+\UC{Inviare l'ordinazione}{UC3.4}
 
 \begin{figure}[H]
 	\centering
@@ -1677,7 +1689,7 @@
 	\\L'ordinazione viene inviata.
 \end{itemize}
 
-\subsubsection{UC3.4.1 Recuperare le informazioni dell'ordine} \label{UC3.4.1}
+\UCF{Recuperare le informazioni dell'ordine}{UC3.4.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1697,7 +1709,7 @@
 	\\I dati desiderati, relativi all'ordinazione effettuata nell'\hyperref[UC3.3]{UC3.3}, sono stati recuperati. 
 \end{itemize}
 
-\subsubsection{UC3.4.2 Recuperare informazioni dei dati personali dalla memoria della bubble} \label{UC3.4.2}
+\UCF{Recuperare informazioni dei dati personali dalla memoria della bubble}{UC3.4.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1717,7 +1729,7 @@
 	\\I dati personali del \glossario{Cliente} sono stati letti dalla memoria della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.4.3 Mandare informazioni sull'ordine al database} \label{UC3.4.3}
+\UCF{Mandare informazioni sull'ordine al database}{UC3.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1739,12 +1751,12 @@
 
 \subsection{Bubble \& eat - Cuoco}
 
-\subsubsection{UC3.5 Leggere la lista dei piatti da preparare} \label{UC3.5}
+\UC{Leggere la lista dei piatti da preparare}{UC3.5}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_5.png}
-	\caption{UC3.5 Leggere la lista dei piatti da preparare}
+	\caption{\UCCaption{} Leggere la lista dei piatti da preparare}
 \end{figure}
 
 \begin{itemize}
@@ -1768,7 +1780,7 @@
 	\\Il \glossario{Cuoco} è a conoscenza dei piatti ordinati.
 \end{itemize}
 
-\subsubsection{UC3.5.1 Recuperare dal database la lista dei piatti} \label{UC3.5.1}
+\UCF{Recuperare dal database la lista dei piatti}{UC3.5.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1787,7 +1799,7 @@
 	\\La \glossario{bubble} ha recuperato la lista dei piatti da preparare dal database.
 \end{itemize}
 
-\subsubsection{UC3.5.2 Mostrare la lista} \label{UC3.5.2}
+\UCF{Mostrare la lista}{UC3.5.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1807,12 +1819,12 @@
 	\\Il \glossario{Cuoco} visualizza la lista dei piatti.
 \end{itemize}
 
-\subsubsection{UC3.6 Spunta piatti pronti} \label{UC3.6}
+\UC{Spunta piatti pronti}{UC3.6}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_6.png}
-	\caption{UC3.6 Spunta piatti pronti}
+	\caption{\UCCaption{} Spunta piatti pronti}
 \end{figure}
 
 \begin{itemize}
@@ -1836,7 +1848,7 @@
 	\\Il piatto è stato spuntato.
 \end{itemize}
 
-\subsubsection{UC3.6.1 Indicare che la preparazione del piatto è stata completata} \label{UC3.6.1}
+\UCF{Indicare che la preparazione del piatto è stata completata}{UC3.6.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1857,7 +1869,7 @@
 	\\Il \glossario{Cuoco} ha indicato che ha completato un piatto.
 \end{itemize}
 
-\subsubsection{UC3.6.2 Aggiornare il database indicando che il piatto è stato preparato} \label{UC3.6.2}
+\UCF{Aggiornare il database indicando che il piatto è stato preparato}{UC3.6.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1879,12 +1891,12 @@
 
 \subsection{Bubble \& eat - Responsabile Acquisti}
 
-\subsubsection{UC3.7 Leggere la lista degli acquisti da effettuare} \label{UC3.7}
+\UC{Leggere la lista degli acquisti da effettuare}{UC3.7}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_7.png}
-	\caption{UC3.7 Leggere la lista degli acquisti da effettuare}
+	\caption{\UCCaption{} Leggere la lista degli acquisti da effettuare}
 \end{figure}
 
 \begin{itemize}
@@ -1908,7 +1920,7 @@
 	\\Il \glossario{Responsabile Acquisti} è a conoscenza dei prodotti da acquistare.
 \end{itemize}
 
-\subsubsection{UC3.7.1 Recuperare dal database la lista degli ingredienti da acquistare con le rispettive quantità} \label{UC3.7.1}
+\UCF{Recuperare dal database la lista degli ingredienti da acquistare con le rispettive quantità}{UC3.7.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1927,7 +1939,7 @@
 	\\La lista degli ingredienti è stata caricata all'interno della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.7.2 Mostrare la lista al Responsabile Acquisti} \label{UC3.7.2}
+\UCF{Mostrare la lista al Responsabile Acquisti}{UC3.7.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1946,12 +1958,12 @@
 	\\Il \glossario{Responsabile Acquisti} è a conoscenza dei prodotti da acquistare.
 \end{itemize}
 
-\subsubsection{UC3.8 Spunta acquisti effettuati} \label{UC3.8}
+\UC{Spunta acquisti effettuati}{UC3.8}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_8.png}
-	\caption{UC3.8 Spunta acquisti effettuati}
+	\caption{\UCCaption{} Spunta acquisti effettuati}
 \end{figure}
 
 \begin{itemize}
@@ -1972,7 +1984,7 @@
 	\\La voce della lista acquisti è stata spuntata.
 \end{itemize}
 
-\subsubsection{UC3.8.1 Spunta degli ingredienti acquistati} \label{UC3.8.1}
+\UCF{Spunta degli ingredienti acquistati}{UC3.8.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -1992,7 +2004,7 @@
 	\\I dati sono pronti per essere aggiornati nel database.
 \end{itemize}
 
-\subsubsection{UC3.8.2 Aggiornare il database con le nuove informazioni} \label{UC3.8.2}
+\UCF{Aggiornare il database con le nuove informazioni}{UC3.8.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2015,12 +2027,12 @@
 
 \subsection{Bubble \& eat - Fattorino}
 
-\subsubsection{UC3.9 Leggere la lista delle consegne da effettuare} \label{UC3.9}
+\UC{Leggere la lista delle consegne da effettuare}{UC3.9}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_9.png}
-	\caption{UC3.9 Leggere la lista delle consegne da effettuare}
+	\caption{\UCCaption{} Leggere la lista delle consegne da effettuare}
 \end{figure}
 
 \begin{itemize}
@@ -2044,7 +2056,7 @@
 	\\Il \glossario{Fattorino} è a conoscenza delle consegne da effettuare.
 \end{itemize}
 
-\subsubsection{UC3.9.1 Recuperare dal database la lista delle consegne} \label{UC3.9.1}
+\UCF{Recuperare dal database la lista delle consegne}{UC3.9.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2063,7 +2075,7 @@
 	\\Nella memoria della \glossario{bubble} è presente la lista delle consegne da effettuare.
 \end{itemize}
 
-\subsubsection{UC3.9.2 Mostrare al fattorino la lista} \label{UC3.9.2}
+\UCF{Mostrare al fattorino la lista}{UC3.9.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2082,12 +2094,12 @@
 	\\La lista è visualizzata e il \glossario{Fattorino} è a conoscenza delle consegne da effettuare.
 \end{itemize}
 
-\subsubsection{UC3.10 Selezionare la consegna da effettuare} \label{UC3.10}
+\UC{Selezionare la consegna da effettuare}{UC3.10}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_10.png}
-	\caption{UC3.10 Selezionare la consegna da effettuare}
+	\caption{\UCCaption{} Selezionare la consegna da effettuare}
 \end{figure}
 
 \begin{itemize}
@@ -2113,7 +2125,7 @@
 	\\La lista delle consegne viene aggiornata e viene selezionata la consegna scelta.
 \end{itemize}
 
-\subsubsection{UC3.10.1 Selezionare dalla lista la consegna che si vuole effettuare} \label{UC3.10.1}
+\UCF{Selezionare dalla lista la consegna che si vuole effettuare}{UC3.10.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2134,7 +2146,7 @@
 	\\La consegna che il \glossario{Fattorino} vuole effettuare è selezionata.
 \end{itemize}
 
-\subsubsection{UC3.10.2 Aggiornare il database per indicare che l'ordine è in consegna} \label{UC3.10.2}
+\UCF{Aggiornare il database per indicare che l'ordine è in consegna}{UC3.10.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2155,12 +2167,12 @@
 	\\L'ordine selezionato in \hyperref[UC3.10.1]{(UC3.10.1)} è stato aggiornato nel database cambiandone lo stato in \virgolette{in consegna}.
 \end{itemize}
 
-\subsubsection{UC3.11 Consegna effettuata} \label{UC3.11}
+\UC{Consegna effettuata}{UC3.11}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_11.png}
-	\caption{UC3.11 Consegna effettuata}
+	\caption{\UCCaption{} Consegna effettuata}
 \end{figure}
 
 \begin{itemize}
@@ -2184,7 +2196,7 @@
 	\\La lista delle consegne viene aggiornata e viene eliminata la consegna effettuata.
 \end{itemize}
 
-\subsubsection{UC3.11.1 Selezionare nella bubble l'opzione per indicare che la consegna è stata effettuata} \label{UC3.11.1}
+\UCF{Selezionare nella bubble l'opzione per indicare che la consegna è stata effettuata}{UC3.11.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2205,7 +2217,7 @@
 	\\Nella \glossario{bubble} del \glossario{Fattorino} è salvato lo stato che la consegna è stata effettuata con successo.
 \end{itemize}
 
-\subsubsection{UC3.11.2 Aggiornare il database per mostrare che l'ordine è stato completato} \label{UC3.11.2}
+\UCF{Aggiornare il database per mostrare che l'ordine è stato completato}{UC3.11.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2227,12 +2239,12 @@
 
 \subsection{Bubble \& eat - Direttore}
 
-\subsubsection{UC3.12 Cancellare ordini al Cuoco} \label{UC3.12}
+\UC{Cancellare ordini al Cuoco}{UC3.12}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_12.png}
-	\caption{UC3.12 Cancellare ordini al Cuoco}
+	\caption{\UCCaption{} Cancellare ordini al Cuoco}
 \end{figure}
 
 \begin{itemize}
@@ -2259,7 +2271,7 @@
 	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
 \end{itemize}
 
-\subsubsection{UC3.12.1 Recuperare dal database la lista degli ordini (Direttore)} \label{UC3.12.1}
+\UCF{Recuperare dal database la lista degli ordini (Direttore)}{UC3.12.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2278,7 +2290,7 @@
 	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
 \end{itemize}
 
-\subsubsection{UC3.12.2 Visualizzare lista ordini(Direttore)} \label{UC3.12.2}
+\UCF{Visualizzare lista ordini(Direttore)}{UC3.12.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2297,7 +2309,7 @@
 	\\La lista degli ordini è visualizzata.
 \end{itemize}
 
-\subsubsection{UC3.12.3 Selezionare dalla lista gli ordini che si desidera rimuovere} \label{UC3.12.3}
+\UCF{Selezionare dalla lista gli ordini che si desidera rimuovere}{UC3.12.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2317,7 +2329,7 @@
 	\\Sono stati selezionati degli ordini dalla lista.
 \end{itemize}
 
-\subsubsection{UC3.12.4 Selezionare l'opzione per rimuovere gli ordini selezionati} \label{UC3.12.4}
+\UCF{Selezionare l'opzione per rimuovere gli ordini selezionati}{UC3.12.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2337,7 +2349,7 @@
 	\\L'ordine da cancellare è selezionato.
 \end{itemize}
 
-\subsubsection{UC3.12.5 Selezionare l'opzione per confermare la rimozione degli ordini selezionati} \label{UC3.12.5}
+\UCF{Selezionare l'opzione per confermare la rimozione degli ordini selezionati}{UC3.12.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2358,7 +2370,7 @@
 	\\Il \glossario{Direttore} ha confermato quale ordine cancellare.
 \end{itemize}
 
-\subsubsection{UC3.12.6 Aggiornare il database} \label{UC3.12.6}
+\UCF{Aggiornare il database}{UC3.12.6}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2378,12 +2390,12 @@
 	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
 \end{itemize}
 
-\subsubsection{UC3.13 Cambiare il menù} \label{UC3.13}
+\UC{Cambiare il menù}{UC3.13}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_13.png}
-	\caption{UC3.13 Cambiare il menù}
+	\caption{\UCCaption{} Cambiare il menù}
 \end{figure}
 
 \begin{itemize}
@@ -2408,12 +2420,12 @@
 	\\Il menù è modificato.
 \end{itemize}
 
-\subsubsection{UC3.13.1 Visualizzare il menù del ristorante (Direttore)} \label{UC3.13.1}
+\UCF{Visualizzare il menù del ristorante (Direttore)}{UC3.13.1}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_13_1.png}
-	\caption{UC3.13.1 Visualizzare il menù del ristorante (Direttore)}
+	\caption{\UCFCaption{} Visualizzare il menù del ristorante (Direttore)}
 \end{figure}
 
 \begin{itemize}
@@ -2436,7 +2448,7 @@
 	\\Nella \glossario{bubble memory} è presente il menù.
 \end{itemize}
 
-\subsubsection{UC3.13.1.1 Recuperare dal database il menù del ristorante (Direttore)} \label{UC3.13.1.1}
+\UCFF{Recuperare dal database il menù del ristorante (Direttore)}{UC3.13.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2455,7 +2467,7 @@
 	\\Nella \glossario{bubble memory} è presente il menù.
 \end{itemize}
 
-\subsubsection{UC3.13.1.2 Visualizzare il menù (Direttore)} \label{UC3.13.1.2}
+\UCFF{Visualizzare il menù (Direttore)}{UC3.13.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2475,7 +2487,7 @@
 	\\Il menù è visualizzato.
 \end{itemize}
 
-\subsubsection{UC3.13.2 Eliminare elementi dal menù} \label{UC3.13.2}
+\UCF{Eliminare elementi dal menù}{UC3.13.2}
 
 \begin{figure}[H]
 	\centering
@@ -2505,7 +2517,7 @@
 	\\Gli elementi desiderati sono stati eliminati dal menù.
 \end{itemize}
 
-\subsubsection{UC3.13.2.1 Selezionare dal menù i cibi che si desidera rimuovere} \label{UC3.13.2.1}
+\UCFF{Selezionare dal menù i cibi che si desidera rimuovere}{UC3.13.2.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2525,7 +2537,7 @@
 	\\Gli elementi sono stati selezionati.
 \end{itemize}
 
-\subsubsection{UC3.13.2.2 Selezionare l'opzione per rimuovere gli elementi selezionati} \label{UC3.13.2.2}
+\UCFF{Selezionare l'opzione per rimuovere gli elementi selezionati}{UC3.13.2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2545,7 +2557,7 @@
 	\\Gli elementi sono eliminati dal menù.
 \end{itemize}
 
-\subsubsection{UC3.13.2.3 Aggiornare il database} \label{UC3.13.2.3}
+\UCFF{Aggiornare il database}{UC3.13.2.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2565,12 +2577,12 @@
 	\\La modifica del menù è stata propagata al database.
 \end{itemize}
 
-\subsubsection{UC3.13.3 Modificare elementi del menù} \label{UC3.13.3}
+\UCF{Modificare elementi del menù}{UC3.13.3}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_13_3.png}
-	\caption{UC3.13.3 Modificare elementi del menù}
+	\caption{\UCFCaption{} Modificare elementi del menù}
 \end{figure}
 
 \begin{itemize}
@@ -2597,7 +2609,7 @@
 	\\Sono state applicate le modifiche desiderate agli elementi del menù.
 \end{itemize}
 
-\subsubsection{UC3.13.3.1  Selezionare dal menù il cibo che si desidera modificare} \label{UC3.13.3.1}
+\UCFF{Selezionare dal menù il cibo che si desidera modificare}{UC3.13.3.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2616,7 +2628,7 @@
 	\\Le voci sono selezionate.
 \end{itemize}
 
-\subsubsection{UC3.13.3.2 Selezionare l'opzione per modificare la voce del menù selezionata} \label{UC3.13.3.2}
+\UCFF{Selezionare l'opzione per modificare la voce del menù selezionata}{UC3.13.3.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2636,7 +2648,7 @@
 	\\La modifica alla voce del menù selezionata è ora disponibile.
 \end{itemize}
 
-\subsubsection{UC3.13.3.3 Aggiornare le informazioni} \label{UC3.13.3.3}
+\UCFF{Aggiornare le informazioni}{UC3.13.3.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2656,7 +2668,7 @@
 	\\I dati della voce di menù sono modificati.
 \end{itemize}
 
-\subsubsection{UC3.13.3.4 Selezionare \virgolette{Applica cambiamenti}} \label{UC3.13.3.4}
+\UCFF{Selezionare \virgolette{Applica cambiamenti}}{UC3.13.3.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2676,7 +2688,7 @@
 	\\I cambiamenti sono stati applicati e memorizzati all'interno della \glossario{bubble}.
 \end{itemize}
 
-\subsubsection{UC3.13.3.5 Aggiornare il database con le nuove informazioni} \label{UC3.13.3.5}
+\UCFF{Aggiornare il database con le nuove informazioni}{UC3.13.3.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2696,12 +2708,12 @@
 	\\Il menù è modificato.
 \end{itemize}
 
-\subsubsection{UC3.13.4 Aggiungere elementi al menù} \label{UC3.13.4}
+\UCF{Aggiungere elementi al menù}{UC3.13.4}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_13_4.png}
-	\caption{UC3.13.4 Aggiungere elementi al menù}
+	\caption{\UCFCaption{} Aggiungere elementi al menù}
 \end{figure}
 
 \begin{itemize}
@@ -2727,7 +2739,7 @@
 	\\È stato aggiunto un \glossario{elemento} al menù.
 \end{itemize}
 
-\subsubsection{UC3.13.4.1 Selezionare l'opzione \virgolette{Aggiungi elemento}} \label{UC3.13.4.1}
+\UCFF{Selezionare l'opzione \virgolette{Aggiungi elemento}}{UC3.13.4.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2747,7 +2759,7 @@
 	\\È possibile aggiungere i dati per la nuova voce.
 \end{itemize}
 
-\subsubsection{UC3.13.4.2 Inserire le informazioni necessarie} \label{UC3.13.4.2}
+\UCFF{Inserire le informazioni necessarie}{UC3.13.4.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2767,7 +2779,7 @@
 	\\Il \glossario{Direttore} ha inserito all'interno del form tutte le informazioni necessarie ad aggiungere un \glossario{elemento} al menù.
 \end{itemize}
 
-\subsubsection{UC3.13.4.3 Selezionare l'opzione \virgolette{Conferma}} \label{UC3.13.4.3}
+\UCFF{Selezionare l'opzione \virgolette{Conferma}}{UC3.13.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2787,7 +2799,7 @@
 	\\Le modifiche sono state confermate e sono pronte per l'invio al database.
 \end{itemize}
 
-\subsubsection{UC3.13.4.4 Aggiornare il database con le nuove informazioni} \label{UC3.13.4.4}
+\UCFF{Aggiornare il database con le nuove informazioni}{UC3.13.4.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2807,12 +2819,12 @@
 	\\Il menù è modificato e la modifica è presente anche nel database.
 \end{itemize}
 
-\subsubsection{UC3.14 Aggiungere ordini al Responsabile Acquisti} \label{UC3.14}
+\UC{Aggiungere ordini al Responsabile Acquisti}{UC3.14}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_14.png}
-	\caption{UC3.14 Aggiungere ordini al Responsabile Acquisti}
+	\caption{\UCCaption{} Aggiungere ordini al Responsabile Acquisti}
 \end{figure}
 
 \begin{itemize}
@@ -2839,7 +2851,7 @@
 	\\Il \glossario{Direttore} ha aggiunto gli elementi desiderati alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
 \end{itemize}
 
-\subsubsection{UC3.14.1 Recuperare la lista degli ordini da effettuare dal database(Direttore)} \label{UC3.14.1}
+\UCF{Recuperare la lista degli ordini da effettuare dal database(Direttore)}{UC3.14.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2858,7 +2870,7 @@
 	\\I dati sono prelevati dal database.
 \end{itemize}
 
-\subsubsection{UC3.14.2 Mostrare la lista all'utente (Direttore)} \label{UC3.14.2}
+\UCF{Mostrare la lista all'utente (Direttore)}{UC3.14.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2878,7 +2890,7 @@
 	\\La lista è visualizzata.
 \end{itemize}
 
-\subsubsection{UC3.14.3 Selezionare l'opzione \virgolette{Aggiungi ordine}} \label{UC3.14.3}
+\UCF{Selezionare l'opzione \virgolette{Aggiungi ordine}}{UC3.14.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2898,7 +2910,7 @@
 	\\Il \glossario{Direttore} ha selezionato \virgolette{Aggiungi ordine}.
 \end{itemize}
 
-\subsubsection{UC3.14.4 Inserire le informazioni sull'ordine da aggiungere} \label{UC3.14.4}
+\UCF{Inserire le informazioni sull'ordine da aggiungere}{UC3.14.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2918,7 +2930,7 @@
 	\\Le informazioni sull'ordine possono essere aggiunte.
 \end{itemize}
 
-\subsubsection{UC3.14.5 Selezionare \virgolette{Conferma}} \label{UC3.14.5}
+\UCF{Selezionare \virgolette{Conferma}}{UC3.14.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2938,7 +2950,7 @@
 	\\L'ordine è stato confermato.
 \end{itemize}
 
-\subsubsection{UC3.14.6 Aggiornare il database} \label{UC3.14.6}
+\UCF{Aggiornare il database}{UC3.14.6}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -2958,12 +2970,12 @@
 	\\Il database è aggiornato con i nuovi dati.
 \end{itemize}
 
-\subsubsection{UC3.15 Cancellare ordini al Responsabile Acquisti} \label{UC3.15}
+\UC{Cancellare ordini al Responsabile Acquisti}{UC3.15}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc3_15.png}
-	\caption{UC3.15 Cancellare ordini al Responsabile Acquisti}
+	\caption{\UCCaption{} Cancellare ordini al Responsabile Acquisti}
 \end{figure}
 
 \begin{itemize}
@@ -2990,7 +3002,7 @@
 	\\Il \glossario{Direttore} ha eliminato gli elementi desiderati dalla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
 \end{itemize}
 
-\subsubsection{UC3.15.1 Recuperare la lista degli ordini da effettuare dal database (Direttore)} \label{UC3.15.1}
+\UCF{Recuperare la lista degli ordini da effettuare dal database (Direttore)}{UC3.15.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -3009,7 +3021,7 @@
 	\\I dati sono prelevati dal database.
 \end{itemize}
 
-\subsubsection{UC3.15.2 Mostrare la lista all'utente (Direttore)} \label{UC3.15.2}
+\UCF{Mostrare la lista all'utente (Direttore)}{UC3.15.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -3028,7 +3040,7 @@
 	\\La lista è visualizzata.
 \end{itemize}
 
-\subsubsection{UC3.15.3 Selezionare ordini da eliminare} \label{UC3.15.3}
+\UCF{Selezionare ordini da eliminare}{UC3.15.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -3048,7 +3060,7 @@
 	\\Il \glossario{Direttore} ha selezionato gli ordini che desidera eliminare.
 \end{itemize}
 
-\subsubsection{UC3.15.4 Selezionare l'opzione \virgolette{Rimuovi ordine}} \label{UC3.15.4}
+\UCF{Selezionare l'opzione \virgolette{Rimuovi ordine}}{UC3.15.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -3069,7 +3081,7 @@
 	\\Il \glossario{Direttore} ha confermato l'eliminazione degli elementi selezionati.
 \end{itemize}
 
-\subsubsection{UC3.15.5 Aggiornare il database} \label{UC3.15.5}
+\UCF{Aggiornare il database}{UC3.15.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}

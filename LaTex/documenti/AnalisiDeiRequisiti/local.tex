@@ -5,7 +5,7 @@
 % In questa prima parte vanno definite le 'costanti' utilizzate soltanto da questo documento.
 % Devono iniziare con una lettera maiuscola per distinguersi dalle funzioni.
 
-\newcommand{\DocTitle}{Analisi dei Requisiti \VersioneAR{}}
+\newcommand{\DocTitle}{Analisi dei Requisiti}
 \newcommand{\DocVersion}{\VersioneAR{}}
 
 \newcommand{\DocRedazione}{Tommaso Rosso\\Alice V. Sasso\\Lorenzo Ferrarin\\Marco Ponchia}
@@ -32,9 +32,84 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 %Counter per casi d'uso
 \newcounter{usecase}
 \newcounter{usecasefiglio}[usecase]
+\newcounter{ucff}[usecasefiglio]
+\newcounter{alternativi}
 
-\newcommand*{\UC}{\stepcounter{usecase} UC\theusecase}
-\newcommand{\UCFiglio}{\stepcounter{usecasefiglio} UC\theusecase.\thecasofiglio}
+%\newcommand*{\UC}{\stepcounter{usecase} UC\theusecase}
+%\newcommand{\UCF}{\stepcounter{usecasefiglio} UC\theusecase.\theusecasefiglio}
+\newcommand{\UCCaption}{UC\theusecase{}}
+\newcommand{\UCFCaption}{UC\theusecase.\theusecasefiglio{}}
+\newcommand{\UCCCaption}{
+	\ifisfiglio
+		UC\theusecase.\theusecasefiglio.\thealternativi{}
+	\else
+		UC\theusecase.\thealternativi{}
+	\fi
+}
+
+%Comandi per creare sezioni per i casi d'uso, evitando gli errori di compilazione
+\newif\ifisfirst
+\newif\ifisfiglio
+
+\makeatletter
+\newcommand*{\textlabel}[2]{%
+	\edef\@currentlabel{#1}% Set target label
+	\phantomsection% Correct hyper reference link
+	\label{#2}% store label
+}
+\makeatother
+
+\newcommand{\UC}[2]{
+	\refstepcounter{usecase}
+	\isfirsttrue 
+	\textlabel{UC\theusecase{}}{#2}
+	\subsubsection{UC\theusecase{} #1} 
+}
+\newcommand{\UCF}[2]{
+	\refstepcounter{usecasefiglio} 
+	\isfirsttrue 
+	\textlabel{UC\theusecase.\theusecasefiglio{}}{#2}
+	\paragraph{UC\theusecase.\theusecasefiglio{} #1} 
+	\mbox{}\\
+}
+\newcommand{\UCFF}[2]{
+	\refstepcounter{ucff} 
+	\isfirsttrue 
+	\textlabel{UC\theusecase.\theusecasefiglio.\theucff{}}{#2}
+	\subparagraph{UC\theusecase.\theusecasefiglio.\theucff{} #1}
+	\mbox{}\\
+}
+\newcommand{\UCC}[3][1]{
+	\ifnum#1=1
+		\ifisfirst
+			\setcounter{alternativi}{1}
+			\isfirstfalse
+			\isfigliofalse
+			\refstepcounter{usecase}
+			\textlabel{UC\theusecase.\thealternativi{}}{#3}
+			\subsubsection{UC\theusecase.\thealternativi{} #2}
+		\else
+			\refstepcounter{alternativi}
+			\textlabel{UC\theusecase.\thealternativi{}}{#3}
+			\subsubsection{UC\theusecase.\thealternativi{} #2}
+		\fi
+	\else
+		\ifnum#1=2
+			\ifisfirst
+				\setcounter{alternativi}{1}
+				\isfirstfalse
+				\isfigliotrue
+				\refstepcounter{usecasefiglio}
+				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
+				\subsection{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+			\else
+				\refstepcounter{alternativi}
+				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
+				\subsection{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+			\fi
+		\fi
+	\fi
+}
 
 
 %Counter per requisiti
@@ -73,3 +148,5 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 \newcommand*{\RequisitoOpQ}{\refstepcounter{requisito} R3Q\therequisito}
 \newcommand*{\RequisitoOpV}{\refstepcounter{requisito} R3V\therequisito}
 \newcommand*{\RequisitoOpP}{\refstepcounter{requisito} R3P\therequisito}
+
+\renewcommand{\ref}{def}
