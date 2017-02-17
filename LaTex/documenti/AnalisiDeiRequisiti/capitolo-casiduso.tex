@@ -12,16 +12,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può istanziare il contenitore \glossario{bubble generica}, il quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del \glossario{framework}.
+	\\L'utilizzatore del framework può istanziare il contenitore \glossario{bubble generica}, il quale funge da contenitore dei vari elementi di input, output e di logica specificati all'interno del framework.
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per istanziare la \glossario{bubble generica} e la memoria ad essa associata.
+	\\L'utilizzatore del framework chiama il metodo per istanziare la bubble generica e la memoria ad essa associata.
 	\item \textbf{Post-condizione:}
-	\\È presente la \glossario{bubble generica}, compresa la sua memoria.
+	\\È presente la bubble generica, compresa la sua memoria.
 \end{itemize}
 
-\subsubsection[Connessione a database MongoDB]{\UC{} Connessione a database MongoDB} \label{UC1.00}
+\subsubsection[Connessione a database \glossario{MongoDB}]{\UC{} Connessione a database MongoDB} \label{UC1.00}
 
 \begin{figure}[H]
 	\centering
@@ -31,18 +31,18 @@
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del \glossario{framework}.
+\\Utilizzatore del framework.
 \item \textbf{Scopo e descrizione:} 
-\\Connettersi ad un database \glossario{MongoDB} esterno all'applicazione.
+\\Connettersi ad un database MongoDB esterno all'applicazione.
 \item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere l'indirizzo del database \glossario{MongoDB} a cui si desidera connettersi.
+		\item Avere già istanziato una bubble generica;
+		\item Avere l'indirizzo del database MongoDB a cui si desidera connettersi.
 	\end{itemize}
 \item \textbf{Flusso principale degli eventi:}
-\\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che genera una connessione con il database \glossario{MongoDB}.
+\\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che genera una connessione con il database MongoDB.
 \item \textbf{Post-condizione:}
-\\La \glossario{bubble generica} da cui è invocato il metodo è connessa al database.
+\\La bubble generica da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
 \subsubsection[Lettura da database MongoDB]{\UC{} Lettura da database MongoDB} \label{UC1.01}
@@ -55,19 +55,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Prelevare dati dal database connesso alla \glossario{bubble}.
+	\\Prelevare dati dal database connesso alla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item La \glossario{bubble} è connessa al database \glossario{MongoDB} \ref{UC1.00};
+		\item Avere già istanziato una bubble generica;
+		\item La bubble è connessa al database MongoDB \ref{UC1.00};
 		\item L'utilizzatore deve conoscere il nome della \glossario{collection} da cui prelevare i dati.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo su una \glossario{bubble}, il quale gli ritorna un oggetto \glossario{JSON} letto dal database, eventualmente assegnabile ad un campo della \glossario{bubble memory}.
+	\\L'utilizzatore chiama il metodo su una bubble, il quale gli ritorna un oggetto \glossario{JSON} letto dal database, eventualmente assegnabile ad un campo della \glossario{bubble memory}.
 	\item \textbf{Post-condizione:}
-	\\I dati sono prelevati dal database e sono pronti all'uso nella \glossario{bubble}.
+	\\I dati sono prelevati dal database e sono pronti all'uso nella bubble.
 \end{itemize}
 
 \subsubsection[Scrittura su database MongoDB]{\UC{} Scrittura su database MongoDB} \label{UC1.02}
@@ -80,17 +80,17 @@
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del \glossario{framework}.
+\\Utilizzatore del framework.
 \item \textbf{Scopo e descrizione:} 
-\\Scrittura dati nel database connesso alla \glossario{bubble}.
+\\Scrittura dati nel database connesso alla bubble.
 \item \textbf{Precondizioni:}
 \begin{itemize}
-	\item Avere già istanziato una \glossario{bubble generica};
-	\item La \glossario{bubble} è connessa al database \glossario{MongoDB};
-	\item L'utilizzatore deve conoscere il nome della \glossario{collection} da cui prelevare i dati.
+	\item Avere già istanziato una bubble generica;
+	\item La bubble è connessa al database MongoDB;
+	\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
 \end{itemize}
 \item \textbf{Flusso principale degli eventi:}
-\\L'utilizzatore chiama il metodo su una \glossario{bubble} passandogli un oggetto \glossario{JavaScript}, serializzabile in \glossario{JSON}, e il metodo lo salva nel database.
+\\L'utilizzatore chiama il metodo su una bubble passandogli un oggetto \glossario{JavaScript}, serializzabile in JSON, e il metodo lo salva nel database.
 \item \textbf{Post-condizione:}
 \\I dati sono scritti nel database collegato.
 \end{itemize}
@@ -105,40 +105,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Rimuovere dalla \glossario{bubble} un \glossario{elemento} specificato.
+	\\Rimuovere dalla bubble un \glossario{elemento} specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item La \glossario{bubble} possiede degli elementi.
+		\item Avere già istanziato una bubble generica;
+		\item La bubble possiede degli elementi.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo, il quale rimuove l'\glossario{elemento} dalla \glossario{bubble}.
+	\\L'utilizzatore chiama il metodo, il quale rimuove l'elemento dalla bubble.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento non è presente nella \glossario{bubble} \hyperref[UC1.03.2]{(UC1.03.2)}.
+	\\L'elemento non è presente nella bubble \hyperref[UC1.03.2]{(UC1.03.2)}.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} non contiene l'elemento indicato da rimuovere.
+	\\La bubble non contiene l'elemento indicato da rimuovere.
 \end{itemize}
 
 \subsubsection{UC1.03.2 Rimozione di un elemento} \label{UC1.03.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Rimuovere dalla \glossario{bubble} un \glossario{elemento} specificato.
+	\\Rimuovere dalla bubble un elemento specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item La \glossario{bubble} possiede degli \glossario{elementi}.
+		\item Avere già istanziato una bubble generica;
+		\item La bubble possiede degli \glossario{elementi}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo, il quale, non trovando l'\glossario{elemento}, restituisce un messaggio di errore.
+	\\L'utilizzatore chiama il metodo, il quale, non trovando l'elemento, restituisce un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento è presente nella \glossario{bubble} \hyperref[UC1.03.1]{(UC1.03.1)}.
+	\\L'elemento è presente nella bubble \hyperref[UC1.03.1]{(UC1.03.1)}.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} non contiene l'\glossario{elemento} indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
+	\\La bubble non contiene l'elemento indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
 \end{itemize}
 
 \subsubsection{UC1.04 Aggiunta di un elemento} \label{UC1.04}
@@ -151,18 +151,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Inserire nella \glossario{bubble} un \glossario{elemento}.
+	\\Inserire nella bubble un elemento.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Aver istanziato un \glossario{elemento}.
+		\item Avere già istanziato una bubble generica;
+		\item Aver istanziato un elemento.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo lo aggiunge alla \glossario{bubble}.
+	\\L'utilizzatore invoca il metodo sulla bubble e il metodo lo aggiunge alla bubble.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} avrà al suo interno l'\glossario{elemento} passato al metodo.
+	\\La bubble avrà al suo interno l'elemento passato al metodo.
 \end{itemize}
 
 \subsubsection{UC1.05.1 Modifica di un elemento} \label{UC1.05.1}
@@ -175,40 +175,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Modificare un \glossario{elemento} di una \glossario{bubble}.
+	\\Modificare un elemento di una bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item All'interno della \glossario{bubble} sono presenti degli elementi.
+		\item Avere già istanziato una bubble generica;
+		\item All'interno della bubble sono presenti degli elementi.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo modifica l'\glossario{elemento}.
+	\\L'utilizzatore invoca il metodo sulla bubble e il metodo modifica l'elemento.
 	\item \textbf{Scenari alternativi:}
-	\\L'elemento non è presente nella \glossario{bubble} \hyperref[UC1.05.2]{(UC1.05.2)}.
+	\\L'elemento non è presente nella bubble \hyperref[UC1.05.2]{(UC1.05.2)}.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} contiene l'\glossario{elemento} modificato.
+	\\La bubble contiene l'elemento modificato.
 \end{itemize}
 
 \subsubsection{UC1.05.2 Modifica di un elemento} \label{UC1.05.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Modificare un \glossario{elemento} di una \glossario{bubble}.
+	\\Modificare un elemento di una bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item All'interno della \glossario{bubble} sono presenti degli \glossario{elementi}.
+		\item Avere già istanziato una bubble generica;
+		\item All'interno della bubble sono presenti degli \glossario{elementi}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} e il metodo, non trovando l'\glossario{elemento} da modificare, lancia un messaggio di errore.
+	\\L'utilizzatore invoca il metodo sulla bubble e il metodo, non trovando l'elemento da modificare, lancia un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
-	\\L'\glossario{elemento} è presente nella \glossario{bubble} \hyperref[UC1.05.1]{(UC1.05.1)}.
+	\\L'elemento è presente nella bubble \hyperref[UC1.05.1]{(UC1.05.1)}.
 	\item \textbf{Post-condizione:}
-	\\L'utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l'\glossario{elemento} da modificare.
+	\\L'utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l'elemento da modificare.
 \end{itemize}
 
 \subsubsection{UC1.06.1 Cambiamento di stato della bubble} \label{UC1.06.1}
@@ -221,15 +221,15 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Modificare lo specifico stato della \glossario{bubble}.
+	\\Modificare lo specifico stato della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} indicando il nuovo stato e il metodo esegue la modifica.
+	\\L'utilizzatore invoca il metodo sulla bubble indicando il nuovo stato e il metodo esegue la modifica.
 	\item \textbf{Scenari alternativi:}
 	\\L'oggetto che si sta cercando di modificare non ha la proprietà cercata \hyperref[UC1.06.2]{(UC1.06.2)}.
 	\item \textbf{Post-condizione:}
@@ -240,15 +240,15 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Modificare lo specifico stato della \glossario{bubble}.
+	\\Modificare lo specifico stato della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla \glossario{bubble} indicando il nuovo stato e il metodo, non trovando la proprietà cercata, restituisce un messaggio di errore.
+	\\L'utilizzatore invoca il metodo sulla bubble indicando il nuovo stato e il metodo, non trovando la proprietà cercata, restituisce un messaggio di errore.
 	\item \textbf{Scenari alternativi:}
 	\\L'oggetto che si sta cercando di modificare ha la proprietà cercata \hyperref[UC1.06.1]{(UC1.06.1)}.
 	\item \textbf{Post-condizione:}
@@ -265,32 +265,32 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Ottenere il risultato dell'interrogazione di un servizio esterno al \glossario{framework} tramite chiamata di \glossario{API}.
+	\\Ottenere il risultato dell'interrogazione di un servizio esterno al framework tramite chiamata di \glossario{API}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Conoscere l'URL del servizio desiderato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il metodo prende l'indirizzo del servizio e ritorna in formato \glossario{JSON} il risultato della chiamata.
+	\\Il metodo prende l'indirizzo del servizio e ritorna in formato JSON il risultato della chiamata.
 	\item \textbf{Scenari alternativi:}
 	\\Il servizio che si sta cercando di contattare non è disponibile \hyperref[UC1.07.2]{(UC1.07.2)}.
 	\item \textbf{Post-condizione:}
-	\\All'interno della logica della \glossario{bubble} è utilizzabile il risultato della consultazione del servizio.
+	\\All'interno della logica della bubble è utilizzabile il risultato della consultazione del servizio.
 \end{itemize}
 
 \subsubsection{UC1.07.2 Chiamata api esterne} \label{UC1.07.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Ottenere il risultato dell'interrogazione di un servizio esterno al \glossario{framework} tramite chiamata di \glossario{API}.
+	\\Ottenere il risultato dell'interrogazione di un servizio esterno al framework tramite chiamata di API.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Conoscere l'URL del servizio desiderato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -311,18 +311,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Porre un limite superiore al numero delle interazioni che un utente di \glossario{Rocket.Chat} può avere con una stessa \glossario{bubble}.
+	\\Porre un limite superiore al numero delle interazioni che un utente di Rocket.Chat può avere con una stessa bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento di input} all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un \glossario{elemento di input} all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per una persona con una singola istanza della \glossario{bubble}.
+	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per una persona con una singola istanza della bubble.
 	\item \textbf{Post-condizione:}
-	\\Il singolo utilizzatore della \glossario{bubble} come utente di \glossario{Rocket.Chat} non potrà interagire con la stessa istanza della \glossario{bubble} più volte di quelle specificate.
+	\\Il singolo utilizzatore della bubble come utente di Rocket.Chat non potrà interagire con la stessa istanza della bubble più volte di quelle specificate.
 \end{itemize}
 
 \subsubsection{UC1.09 Limite interazioni totali} \label{UC1.09}
@@ -335,18 +335,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Porre un limite superiore al numero delle interazioni che tutti gli utenti possono avere con una stessa istanza della \glossario{bubble}.
+	\\Porre un limite superiore al numero delle interazioni che tutti gli utenti possono avere con una stessa istanza della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento} di input all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per l'istanza della \glossario{bubble}.
+	\\Alla chiamata del metodo viene specificato il numero massimo di interazioni possibili per l'istanza della bubble.
 	\item \textbf{Post-condizione:}
-	\\La singola istanza della \glossario{bubble} ha un numero massimo di interazioni possibili condiviso tra tutti i suoi utenti. 
+	\\La singola istanza della bubble ha un numero massimo di interazioni possibili condiviso tra tutti i suoi utenti. 
 \end{itemize}
 
 \subsubsection{UC1.10 Match con espressione regolare} \label{UC1.10}
@@ -359,18 +359,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Verificare che l'input testuale di una \glossario{bubble} sia compatibile con un'espressione regolare data.
+	\\Verificare che l'input testuale di una bubble sia compatibile con un'espressione regolare data.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento di input} all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato l'\glossario{elemento} da verificare e l'espressione regolare in base a cui controllarlo.
+	\\Alla chiamata del metodo viene specificato l'elemento da verificare e l'espressione regolare in base a cui controllarlo.
 	\item \textbf{Post-condizione:}
-	\\È noto se l'input della \glossario{bubble} è corretto secondo l'espressione regolare.
+	\\È noto se l'input della bubble è corretto secondo l'espressione regolare.
 \end{itemize}
 
 \subsubsection{UC1.11 Dimensione massima del file} \label{UC1.11}
@@ -383,13 +383,13 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
 	\\Verificare che la dimensione dei file caricati in input sia minore o uguale a quella specificata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento di input} all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento di input all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificata la dimensione massima accettata per i file di input.
@@ -407,19 +407,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Verificare che la struttura di un oggetto \glossario{JSON} sia compatibile con lo schema fornito.
+	\\Verificare che la struttura di un oggetto JSON sia compatibile con lo schema fornito.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere un oggetto \glossario{JSON} da validare;
-		\item Avere lo schema attraverso cui validare l'oggetto \glossario{JSON}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere un oggetto JSON da validare;
+		\item Avere lo schema attraverso cui validare l'oggetto JSON.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato il \glossario{JSON} da verificare e lo schema di dati rispetto al quale validare tale oggetto. Il metodo poi si occupa della validazione.
+	\\Alla chiamata del metodo viene specificato il JSON da verificare e lo schema di dati rispetto al quale validare tale oggetto. Il metodo poi si occupa della validazione.
 	\item \textbf{Post-condizione:}
-	\\È noto se l'oggetto \glossario{JSON} è compatibile con la struttura indicata.
+	\\È noto se l'oggetto JSON è compatibile con la struttura indicata.
 \end{itemize}
 
 \subsubsection{UC1.13 Durata della bubble} \label{UC1.13}
@@ -432,17 +432,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Dare la possibilità all'utilizzatore del \glossario{framework} di impostare un limite temporale entro il quale la \glossario{bubble} smetterà di essere attiva.
+	\\Dare la possibilità all'utilizzatore del framework di impostare un limite temporale entro il quale la bubble smetterà di essere attiva.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato il tempo per il quale la \glossario{bubble} sarà attiva.
+	\\Alla chiamata del metodo viene specificato il tempo per il quale la bubble sarà attiva.
 	\item \textbf{Post-condizione:}
-	\\Al termine del periodo di tempo specificato dal metodo verrà invocata la sua terminazione secondo quanto specificato nel caso d'uso \hyperref[UC1.19]{UC1.19} termina \glossario{bubble}.
+	\\Al termine del periodo di tempo specificato dal metodo verrà invocata la sua terminazione secondo quanto specificato nel caso d'uso \hyperref[UC1.19]{UC1.19} termina bubble.
 \end{itemize}
 
 \subsubsection{UC1.14 Lista utenti partecipanti} \label{UC1.14}
@@ -455,17 +455,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Possibilità di visualizzare gli utilizzatori correnti della \glossario{bubble}.
+	\\Possibilità di visualizzare gli utilizzatori correnti della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato l'elenco degli utilizzatori correnti della \glossario{bubble}.
+	\\Alla chiamata del metodo viene specificato l'elenco degli utilizzatori correnti della bubble.
 	\item \textbf{Post-condizione:}
-	\\Viene restituita una lista di utilizzatori della \glossario{bubble}.
+	\\Viene restituita una lista di utilizzatori della bubble.
 \end{itemize}
 
 \subsubsection{UC1.15.1 Storico interazioni con la bubble per utente} \label{UC1.15.1}
@@ -478,33 +478,33 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Dare la possibilità all'utilizzatore del \glossario{framework} di consultare lo storico delle interazioni che un singolo utente ha avuto con la \glossario{bubble}.
+	\\Dare la possibilità all'utilizzatore del framework di consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere elementi di input all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere elementi di input all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni.
 	\item \textbf{Scenari alternativi:}
 	\\Non è presente l'utente specificato all'interno della conversazione \hyperref[UC1.15.2]{(UC1.15.2)}.
 	\item \textbf{Post-condizione:}
-	\\L'informazione relativa allo storico delle interazioni di un singolo utente con la \glossario{bubble} è noto all'interno della \glossario{bubble} stessa.
+	\\L'informazione relativa allo storico delle interazioni di un singolo utente con la bubble è noto all'interno della bubble stessa.
 \end{itemize}
 
 \subsubsection{UC1.15.2 Storico interazioni con la bubble per utente} \label{UC1.15.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Dare la possibilità all'utilizzatore del \glossario{framework} di consultare lo storico delle interazioni che un singolo utente ha avuto con la \glossario{bubble}.
+	\\Dare la possibilità all'utilizzatore del framework di consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere elementi di input all'interno della \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere elementi di input all'interno della bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato l'utente di cui si è interessati a conoscere lo storico delle interazioni e il metodo, non trovando l'utente, restituisce un messaggio di errore.
@@ -524,18 +524,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può fornire un orario per l'esecuzione della funzionalità della \glossario{bubble}.
+	\\L'utilizzatore del framework può fornire un orario per l'esecuzione della funzionalità della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere la funzione di \glossario{callback} che si desidera eseguire all'orario specificato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Alla chiamata del metodo viene specificato l'orario di esecuzione della specifica funzionalità della \glossario{bubble}.
+	\\Alla chiamata del metodo viene specificato l'orario di esecuzione della specifica funzionalità della bubble.
 	\item \textbf{Post-condizione:}
-	\\Nell'orario stabilito viene eseguita la funzionalità della \glossario{bubble}.
+	\\Nell'orario stabilito viene eseguita la funzionalità della bubble.
 \end{itemize}
 
 \subsubsection{UC1.17 Creazione notifica statica} \label{UC1.17}
@@ -548,18 +548,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} potrà creare una notifica statica specificandone il testo.
+	\\L'utilizzatore del framework potrà creare una notifica statica specificandone il testo.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Essere in possesso del messaggio che si desidera notificare sotto forma di testo.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando il testo da visualizzare nella notifica statica.
+	\\L'utilizzatore del framework chiama il metodo specificando il testo da visualizzare nella notifica statica.
 	\item \textbf{Post-condizione:}
-	\\Sul dispositivo sul quale si sta utilizzando \glossario{Rocket.Chat} sarà notificato il testo specificato nel metodo.
+	\\Sul dispositivo sul quale si sta utilizzando Rocket.Chat sarà notificato il testo specificato nel metodo.
 \end{itemize}
 
 \subsubsection{UC1.18 Visualizza notifica statica} \label{UC1.18}
@@ -572,16 +572,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può far visualizzare all'utente una notifica statica che visualizzi del testo.
+	\\L'utilizzatore del framework può far visualizzare all'utente una notifica statica che visualizzi del testo.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Aver creato una notifica statica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} fa visualizzare una certa notifica da lui creata.
+	\\L'utilizzatore del framework fa visualizzare una certa notifica da lui creata.
 	\item \textbf{Post-condizione:}
 	\\La notifica contiene il valore del testo specificato.
 \end{itemize}
@@ -591,22 +591,22 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_19.png}
-	\caption{UC1.19 Termina \glossario{bubble}}
+	\caption{UC1.19 Termina bubble}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework potrà terminare la \glossario{bubble}.
+	\\L'utilizzatore del framework potrà terminare la bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo.
+	\\L'utilizzatore del framework chiama il metodo.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} è stata terminata e quindi non sarà più possibile interagire con la stessa. L'interfaccia verrà aggiornata, disabilitando la possibilità di dare input e avere output dinamico ma mantenendo un'istantanea del suo ultimo stato.
+	\\La bubble è stata terminata e quindi non sarà più possibile interagire con la stessa. L'interfaccia verrà aggiornata, disabilitando la possibilità di dare input e avere output dinamico ma mantenendo un'istantanea del suo ultimo stato.
 \end{itemize}
 
 \subsubsection{UC1.20.1 Converti in PDF} \label{UC1.20.1}
@@ -619,42 +619,42 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} potrà convertire il testo specificato in un \glossario{PDF}.
+	\\L'utilizzatore del framework potrà convertire il testo specificato in un \glossario{PDF}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Possedere il testo da convertire in formato \glossario{PDF};
+		\item Avere già istanziato una bubble generica;
+		\item Possedere il testo da convertire in formato PDF;
 		\item Conoscere il percorso in cui si desidera che il file sia salvato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando il testo da convertire in \glossario{PDF} e il percorso in cui si desidera salvare il file.
+	\\L'utilizzatore del framework chiama il metodo specificando il testo da convertire in PDF e il percorso in cui si desidera salvare il file.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file \glossario{PDF} non ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\\Il salvataggio del file PDF non ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
 	\item \textbf{Post-condizione:}
-	\\Un file \glossario{PDF} è stato creato nella posizione corretta e contiene il testo specificato.
+	\\Un file PDF è stato creato nella posizione corretta e contiene il testo specificato.
 \end{itemize}
 
 \subsubsection{UC1.20.2 Conversione in PDF fallita} \label{UC1.20.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} potrà convertire il testo specificato in un \glossario{PDF}.
+	\\L'utilizzatore del framework potrà convertire il testo specificato in un PDF.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Possedere il testo da convertire in formato \glossario{PDF};
+		\item Avere già istanziato una bubble generica;
+		\item Possedere il testo da convertire in formato PDF;
 		\item Conoscere il percorso in cui si desidera che il file sia salvato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando il testo da convertire in \glossario{PDF} e il percorso in cui si desidera salvare il file, ma il salvataggio non avviene e l'utilizzatore del \glossario{framework} visualizza un messaggio d'errore.
+	\\L'utilizzatore del framework chiama il metodo specificando il testo da convertire in PDF e il percorso in cui si desidera salvare il file, ma il salvataggio non avviene e l'utilizzatore del framework visualizza un messaggio d'errore.
 	\item \textbf{Scenari alternativi:}
-	\\Il salvataggio del file \glossario{PDF} ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
+	\\Il salvataggio del file PDF ha successo \hyperref[UC1.20.2]{(UC1.20.2)}.
 	\item \textbf{Post-condizione:}
-	\\L'utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa che il file \glossario{PDF} non è stato salvato.
+	\\L'utilizzatore del metodo ha ricevuto un messaggio di errore che lo avvisa che il file PDF non è stato salvato.
 \end{itemize}
 
 \subsubsection{UC1.21 Mostra elemento grafico} \label{UC1.21}
@@ -667,18 +667,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} potrà mostrare un \glossario{elemento grafico}.
+	\\L'utilizzatore del framework potrà mostrare un \glossario{elemento grafico}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento grafico} nella \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento grafico nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando quale \glossario{elemento grafico} della \glossario{bubble} vuole mostrare.
+	\\L'utilizzatore del framework chiama il metodo specificando quale elemento grafico della bubble vuole mostrare.
 	\item \textbf{Post-condizione:}
-	\\L'\glossario{elemento grafico} specificato è visibile.
+	\\L'elemento grafico specificato è visibile.
 \end{itemize}
 
 \subsubsection{UC1.22 Nascondi elemento grafico} \label{UC1.22}
@@ -691,18 +691,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} potrà nascondere un \glossario{elemento grafico}.
+	\\L'utilizzatore del framework potrà nascondere un elemento grafico.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento} nella \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando quale \glossario{elemento grafico} della \glossario{bubble} vuole nascondere.
+	\\L'utilizzatore del framework chiama il metodo specificando quale elemento grafico della bubble vuole nascondere.
 	\item \textbf{Post-condizione:}
-	\\L'\glossario{elemento grafico} specificato non è più visibile.
+	\\L'elemento grafico specificato non è più visibile.
 \end{itemize}
 
 \subsubsection{UC1.23 Imposta posizione elemento grafico} \label{UC1.23}
@@ -715,18 +715,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può specificare una posizione per un \glossario{elemento grafico} della \glossario{bubble}.
+	\\L'utilizzatore del framework può specificare una posizione per un elemento grafico della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un componente nella \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un componente nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando la posizione e l'\glossario{elemento grafico} di cui vuole fissare la posizione.
+	\\L'utilizzatore del framework chiama il metodo specificando la posizione e l'elemento grafico di cui vuole fissare la posizione.
 	\item \textbf{Post-condizione:}
-	\\L'\glossario{elemento grafico} specificato si trova nella posizione specificata.
+	\\L'elemento grafico specificato si trova nella posizione specificata.
 \end{itemize}
 
 \subsubsection{UC1.24.1 File output} \label{UC1.24.1}
@@ -739,16 +739,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può salvare l'output della \glossario{bubble} in un file.
+	\\L'utilizzatore del framework può salvare l'output della bubble in un file.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
-		\item Avere almeno un \glossario{elemento} nella \glossario{bubble}.
+		\item Avere già istanziato una bubble generica;
+		\item Avere almeno un elemento nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica che l'output della \glossario{bubble} sia un file e le informazioni da salvare in esso.
+	\\L'utilizzatore del framework chiama il metodo che specifica che l'output della bubble sia un file e le informazioni da salvare in esso.
 	\item \textbf{Scenari alternativi:}
 	\\Il salvataggio del file non ha successo, in tale caso verrà notificata la condizione anomala con un messaggio d'errore \hyperref[UC1.24.2]{(UC1.24.2)}.
 	\item \textbf{Post-condizione:}
@@ -759,16 +759,16 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può salvare l'output della \glossario{bubble} in un file, il salvataggio non va a buon fine e viene generato un messaggio d'errore.
+	\\L'utilizzatore del framework può salvare l'output della bubble in un file, il salvataggio non va a buon fine e viene generato un messaggio d'errore.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere delle informazioni da esportare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica che l'output della \glossario{bubble} sia un file e le informazioni da salvare in esso, il salvataggio non va a buon fine e viene generato un messaggio d'errore.
+	\\L'utilizzatore del framework chiama il metodo che specifica che l'output della bubble sia un file e le informazioni da salvare in esso, il salvataggio non va a buon fine e viene generato un messaggio d'errore.
 	\item \textbf{Scenari alternativi:}
 	\\Il salvataggio del file ha successo \hyperref[UC1.24.1]{(UC1.24.1)}.
 	\item \textbf{Post-condizione:}
@@ -785,18 +785,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un file immagine.
+	\\L'utilizzatore del framework può inserire all'interno della bubble un file immagine.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere un'immagine di cui fare la preview.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il file immagine da includere nella \glossario{bubble}.
+	\\L'utilizzatore del framework chiama il metodo che specifica il file immagine da includere nella bubble.
 	\item \textbf{Post-condizione:}
-	\\Il file immagine è stato incluso nella \glossario{bubble}.
+	\\Il file immagine è stato incluso nella bubble.
 \end{itemize}
 
 \subsubsection{UC1.26 TextView} \label{UC1.26}
@@ -809,18 +809,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{TextView}.
+	\\L'utilizzatore del framework può inserire all'interno della bubble una \glossario{TextView}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere un testo da visualizzare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{bubble}.
+	\\L'utilizzatore del framework chiama il metodo che specifica il testo da includere nella bubble.
 	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella \glossario{bubble}.
+	\\Il testo è stato incluso nella bubble.
 \end{itemize}
 
 \subsubsection{UC1.27 Label} \label{UC1.27}
@@ -833,18 +833,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} una \glossario{label}.
+	\\L'utilizzatore del framework può inserire all'interno della bubble una \glossario{label}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere un testo da visualizzare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che specifica il testo da includere nella \glossario{label}.
+	\\L'utilizzatore del framework chiama il metodo che specifica il testo da includere nella label.
 	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella \glossario{bubble}.
+	\\Il testo è stato incluso nella bubble.
 \end{itemize}
 
 \subsubsection{UC1.28 Grafico a torta} \label{UC1.28}
@@ -857,18 +857,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico a torta.
+	\\L'utilizzatore del framework può inserire all'interno della bubble un grafico a torta.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a torta.
+	\\L'utilizzatore del framework chiama il metodo specificando i dati da rappresentare nel grafico a torta.
 	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella \glossario{bubble}.
+	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella bubble.
 \end{itemize}
 
 \subsubsection{UC1.29 Grafico a istogramma} \label{UC1.29}
@@ -881,18 +881,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un grafico istogramma.
+	\\L'utilizzatore del framework può inserire all'interno della bubble un grafico istogramma.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo specificando i dati da rappresentare nel grafico a istogramma.
+	\\L'utilizzatore del framework chiama il metodo specificando i dati da rappresentare nel grafico a istogramma.
 	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella \glossario{bubble}.
+	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella bubble.
 \end{itemize}
 
 \subsubsection{UC1.30 Checkbox} \label{UC1.30}
@@ -905,17 +905,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{checkbox} all'interno della \glossario{bubble} specificando la variabile della \glossario{bubble memory} a cui l'\glossario{elemento} è assegnato.
+	\\L'utilizzatore del framework può inserire un elemento \glossario{checkbox} all'interno della bubble specificando la variabile della bubble memory a cui l'elemento è assegnato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} una \glossario{checkbox} relativa ad un \glossario{elemento} della \glossario{bubble memory} specificato.
+	\\L'utilizzatore del framework chiama il metodo per aggiungere alla bubble una checkbox relativa ad un elemento della bubble memory specificato.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente la \glossario{checkbox}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
+	\\Nella bubble è presente la checkbox, nella bubble memory è presente la variabile a cui è assegnata.
 \end{itemize}
 
 \subsubsection{UC1.31 Bottone Radio} \label{UC1.31}
@@ -928,17 +928,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone radio} di scelta di un \glossario{elemento} tra molti all'interno della \glossario{bubble}, specificando la variabile della \glossario{bubble memory} a cui la scelta è assegnata.
+	\\L'utilizzatore del framework può inserire un elemento \glossario{bottone radio} di scelta di un elemento tra molti all'interno della bubble, specificando la variabile della bubble memory a cui la scelta è assegnata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere alla \glossario{bubble} un \glossario{bottone radio} relativo ad un \glossario{elemento} della \glossario{bubble memory} specificato.
+	\\L'utilizzatore del framework chiama il metodo per aggiungere alla bubble un bottone radio relativo ad un elemento della bubble memory specificato.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il \glossario{bottone radio}, nella \glossario{bubble memory} è presente la variabile a cui è assegnata.
+	\\Nella bubble è presente il bottone radio, nella bubble memory è presente la variabile a cui è assegnata.
 \end{itemize}
 
 \subsubsection{UC1.32 Bottone} \label{UC1.32}
@@ -951,18 +951,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può inserire un \glossario{elemento} \glossario{bottone} all'interno della \glossario{bubble} specificando la funzione che verrà eseguita alla pressione del \glossario{bottone} da parte dell'utente.
+	\\L'utilizzatore del framework può inserire un elemento \glossario{bottone} all'interno della bubble specificando la funzione che verrà eseguita alla pressione del bottone da parte dell'utente.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica};
+		\item Avere già istanziato una bubble generica;
 		\item Avere la funzione da eseguire.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il \glossario{bottone} specificando la funzione da assegnare ad esso.
+	\\L'utilizzatore del framework chiama il metodo per aggiungere il bottone specificando la funzione da assegnare ad esso.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il \glossario{bottone}. Alla pressione da parte dell'utente del \glossario{bottone} della \glossario{bubble} la funzione di \glossario{callback} specificata verrà eseguita.
+	\\Nella bubble è presente il bottone. Alla pressione da parte dell'utente del bottone della bubble la funzione di callback specificata verrà eseguita.
 \end{itemize}
 
 \subsubsection{UC1.33 TextEdit} \label{UC1.33}
@@ -975,17 +975,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può richiedere un input testuale \glossario{TextEdit}.
+	\\L'utilizzatore del framework può richiedere un input testuale \glossario{TextEdit}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo per aggiungere il testo ricevuto nella \glossario{bubble memory}.
+	\\L'utilizzatore del framework chiama il metodo per aggiungere il testo ricevuto nella bubble memory.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il campo di compilazione \glossario{TextEdit}. Nella \glossario{bubble memory} è presente il valore attuale del testo presente nell'\glossario{elemento} della \glossario{bubble}.
+	\\Nella bubble è presente il campo di compilazione TextEdit. Nella bubble memory è presente il valore attuale del testo presente nell'elemento della bubble.
 \end{itemize}
 
 \subsubsection{UC1.34 File input} \label{UC1.34}
@@ -998,17 +998,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework} può richiedere l'input di un file.
+	\\L'utilizzatore del framework può richiedere l'input di un file.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo che restituisce il file in input.
+	\\L'utilizzatore del framework chiama il metodo che restituisce il file in input.
 	\item \textbf{Post-condizione:}
-	\\Il file è stato caricato e passato alla \glossario{bubble}.
+	\\Il file è stato caricato e passato alla bubble.
 \end{itemize}
 
 \subsubsection{UC1.36 Mostrare bubble generica} \label{UC1.36}
@@ -1021,17 +1021,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del \glossario{framework}.
+	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del \glossario{framework}, utilizzando questo metodo, rende la \glossario{bubble} visibile all'interno della chat.
+	\\L'utilizzatore del framework, utilizzando questo metodo, rende la bubble visibile all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una \glossario{bubble generica}.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del \glossario{framework} chiama il metodo.
+	\\L'utilizzatore del framework chiama il metodo.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} specificata viene mostrata all'interno della chat.
+	\\La bubble specificata viene mostrata all'interno della chat.
 \end{itemize}
 
 \subsection{To-do list}
@@ -1046,99 +1046,99 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Creare una lista di cose da fare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Essere utenti di \glossario{Rocket.Chat};
+		\item Essere utenti di Rocket.Chat;
 		\item Avere \ProjectName{} installato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente invoca il comando di creazione della \glossario{bubble} \glossario{To-do list} \hyperref[UC2.1.1]{(UC2.1.1)};
+		\item L'utente invoca il comando di creazione della bubble To-do list \hyperref[UC2.1.1]{(UC2.1.1)};
 		\item L'utente carica il form in cui inserire le informazioni \hyperref[UC2.1.2]{(UC2.1.2)};
 		\item L'utente inserisce tutte le informazioni necessarie \hyperref[UC2.1.3]{(UC2.1.3)};
 		\item L'utente seleziona \virgolette{Crea lista} \hyperref[UC2.1.4]{(UC2.1.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato.
+	\\Nella conversazione è presente una bubble To-do list con il titolo indicato.
 \end{itemize}
 
 \subsubsection{UC2.1.1 Invocare il comando della bubble di creazione della to-do list} \label{UC2.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare una \glossario{to-do list} all'interno della chat.
+	\\Creare una to-do list all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Essere utenti di \glossario{Rocket.Chat};
+		\item Essere utenti di Rocket.Chat;
 		\item Avere \ProjectName{} installato;
-		\item Avere accesso alla \glossario{bubble} \glossario{To-do list}.
+		\item Avere accesso alla bubble To-do list.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore di \ProjectName{} utilizzando l'apposito comando inizia la creazione della \glossario{bubble} \glossario{To-do list}.
+	\\L'utilizzatore di \ProjectName{} utilizzando l'apposito comando inizia la creazione della bubble To-do list.
 	\item \textbf{Post-condizione:}
-	\\Viene istanziata la \glossario{bubble}.
+	\\Viene istanziata la bubble.
 \end{itemize}
 
 \subsubsection{UC2.1.2 Caricare il form in cui inserire le informazioni} \label{UC2.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Creare una \glossario{to-do list} all'interno della chat.
+	\\Creare una to-do list all'interno della chat.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Essere utenti di \glossario{Rocket.Chat};
+		\item Essere utenti di Rocket.Chat;
 		\item Avere \ProjectName{} installato;
-		\item Aver invocato il comando di creazione della \glossario{to-do list} \hyperref[UC2.1.1]{UC2.1.1}.
+		\item Aver invocato il comando di creazione della to-do list \hyperref[UC2.1.1]{UC2.1.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Viene caricato il form per l'inserimento delle informazioni.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della \glossario{to-do list}.
+	\\Nella conversazione è presente una bubble To-do list con al suo interno un form per l'inserimento delle informazioni necessarie al completamento della creazione della to-do list.
 \end{itemize}
 
 \subsubsection{UC2.1.3 Inserire tutte le informazioni necessarie} \label{UC2.1.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Specificare le informazioni necessarie alla creazione della lista.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Essere utenti di \glossario{Rocket.Chat};
+		\item Essere utenti di Rocket.Chat;
 		\item Avere \ProjectName{} installato;
 		\item Aver caricato il form di inserimento secondo \hyperref[UC2.1.2]{UC2.1.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore della \glossario{bubble} inserisce i dati necessari nel form visualizzato al caso d'uso \hyperref[UC2.1.2]{UC2.1.2}.
+	\\L'utilizzatore della bubble inserisce i dati necessari nel form visualizzato al caso d'uso \hyperref[UC2.1.2]{UC2.1.2}.
 	\item \textbf{Post-condizione:}
-	\\Nella memoria della \glossario{bubble} sono salvati i dati richiesti nel caso d'uso \hyperref[UC2.1.4]{UC2.1.4}. 
+	\\Nella memoria della bubble sono salvati i dati richiesti nel caso d'uso \hyperref[UC2.1.4]{UC2.1.4}. 
 \end{itemize}
 
 \subsubsection{UC2.1.4 Selezionare “Crea lista”} \label{UC2.1.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Creazione di una lista di cose da fare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Essere utenti di \glossario{Rocket.Chat};
+		\item Essere utenti di Rocket.Chat;
 		\item Avere \ProjectName{} installato;
 		\item Sono stati inseriti i dati come da \hyperref[UC2.1.3]{UC2.1.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della \glossario{bubble}.
+	\\Viene utilizzato l'apposito comando per la creazione effettiva della lista all'interno della bubble.
 	\item \textbf{Post-condizione:}
-	\\Nella conversazione è presente una \glossario{bubble} \glossario{To-do list} con il titolo indicato. 
+	\\Nella conversazione è presente una bubble To-do list con il titolo indicato. 
 \end{itemize}
 
 \subsubsection{UC2.2 Aggiungere elemento alla to-do list} \label{UC2.2}
@@ -1151,94 +1151,94 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Un utente inserisce un nuovo \glossario{elemento} alla \glossario{to-do list}.
+	\\Un utente inserisce un nuovo elemento alla to-do list.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item L'\glossario{elemento} non è già stato completato.
+		\item Avere ricevuto una bubble To-do list;
+		\item L'elemento non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente seleziona l'opzione aggiungi \glossario{elemento} \hyperref[UC2.2.1]{(UC2.2.1)};
+		\item L'utente seleziona l'opzione aggiungi elemento \hyperref[UC2.2.1]{(UC2.2.1)};
 		\item Mostrare il form di aggiunta \hyperref[UC2.2.2]{(UC2.2.2)};
 		\item L'utente inserisce le informazioni \hyperref[UC2.2.3]{(UC2.2.3)};
 		\item L'utente conferma l'aggiunta \hyperref[UC2.2.4]{(UC2.2.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\La \glossario{to-do list} avrà il nuovo \glossario{elemento} aggiunto.
+	\\La to-do list avrà il nuovo elemento aggiunto.
 \end{itemize}
 
 \subsubsection{UC2.2.1 Selezionare l'opzione aggiungi elemento} \label{UC2.2.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utente seleziona l'opzione per inserire un nuovo \glossario{elemento} alla \glossario{to-do list}.
+	\\L'utente seleziona l'opzione per inserire un nuovo elemento alla to-do list.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list}.
+		\item Avere ricevuto una bubble To-do list.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo seleziona l'opzione apposita.
 	\item \textbf{Post-condizione:}
-	\\È possibile inserire il testo per il nuovo \glossario{elemento}. 
+	\\È possibile inserire il testo per il nuovo elemento. 
 \end{itemize}
 
 \subsubsection{UC2.2.2 Mostrare il form di aggiunta} \label{UC2.2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo \glossario{elemento} della \glossario{to-do list}.
+	\\Visualizzazione del form di aggiunta delle informazioni relative al nuovo elemento della to-do list.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Avere selezionato l'opzione aggiungi \glossario{elemento} come da \hyperref[UC2.2.1]{UC2.2.1}.
+		\item Avere ricevuto una bubble To-do list;
+		\item Avere selezionato l'opzione aggiungi elemento come da \hyperref[UC2.2.1]{UC2.2.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo scrive il testo da inserire nel nuovo \glossario{elemento} e lo aggiunge alla \glossario{to-do list}.
+	\\L'utilizzatore del metodo scrive il testo da inserire nel nuovo elemento e lo aggiunge alla to-do list.
 	\item \textbf{Post-condizione:}
-	\\Il nuovo \glossario{elemento} è aggiunto alla \glossario{bubble} \glossario{To-do list}.
+	\\Il nuovo elemento è aggiunto alla bubble To-do list.
 \end{itemize}
 
 \subsubsection{UC2.2.3  Inserire le informazioni} \label{UC2.2.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utente inserisce le informazioni necessarie ad aggiungere un \glossario{elemento} alla \glossario{to-do list}.
+	\\L'utente inserisce le informazioni necessarie ad aggiungere un elemento alla to-do list.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item Avere ricevuto una bubble To-do list;
 		\item Aver caricato il form di inserimento secondo \hyperref[UC2.2.2]{UC2.2.2};
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo completa il form di inserimento di un nuovo \glossario{elemento} in tutte le sue parti.
+	\\L'utilizzatore del metodo completa il form di inserimento di un nuovo elemento in tutte le sue parti.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{to-do list} ha tutte le informazioni necessarie per aggiungere il nuovo \glossario{elemento}.
+	\\La to-do list ha tutte le informazioni necessarie per aggiungere il nuovo elemento.
 \end{itemize}
 
 \subsubsection{UC2.2.4 Confermare l'aggiunta} \label{UC2.2.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Un utente conferma l'inserimento del nuovo \glossario{elemento} alla \glossario{to-do list}.
+	\\Un utente conferma l'inserimento del nuovo elemento alla to-do list.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Aver inserito le informazioni per il nuovo \glossario{elemento} secondo \hyperref[UC2.2.3]{UC2.2.3}.
+		\item Avere ricevuto una bubble To-do list;
+		\item Aver inserito le informazioni per il nuovo elemento secondo \hyperref[UC2.2.3]{UC2.2.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo conferma l'aggiunta alla \glossario{to-do list}.
+	\\L'utilizzatore del metodo conferma l'aggiunta alla to-do list.
 	\item \textbf{Post-condizione:}
-	\\L'\glossario{elemento} è stato aggiunto alla \glossario{to-do list}.
+	\\L'elemento è stato aggiunto alla to-do list.
 \end{itemize}
 
 \subsubsection{UC2.3 Indicare come completati gli elementi della to-do list} \label{UC2.3}
@@ -1251,18 +1251,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{} che abbia ricevuto come messaggio una \glossario{bubble} \glossario{To-do list}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{} che abbia ricevuto come messaggio una bubble To-do list.
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utente con questo metodo può indicare come completato uno degli elementi della lista.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item L'\glossario{elemento} non è già stato completato.
+		\item Avere ricevuto una bubble To-do list;
+		\item L'elemento non è già stato completato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo seleziona un \glossario{elemento} della \glossario{to-do list} e lo indica come completato. 
+	\\L'utilizzatore del metodo seleziona un elemento della to-do list e lo indica come completato. 
 	\item \textbf{Post-condizione:}
-	\\L'\glossario{elemento} della \glossario{to-do list} viene aggiornato come completato.
+	\\L'elemento della to-do list viene aggiornato come completato.
 \end{itemize}
 
 \subsubsection{UC2.4 Possibilità di mettere un reminder come notifica statica} \label{UC2.4}
@@ -1275,12 +1275,12 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{} che ha creato la \glossario{to-do list}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{} che ha creato la to-do list.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista imposta una notifica statica da visualizzare ai membri del canale ad un orario specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list}.
+		\item Avere ricevuto una bubble To-do list.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1290,78 +1290,78 @@
 		\item L'utente conferma l'aggiunta della notifica \hyperref[UC2.4.4]{(UC2.4.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\I partecipanti al gruppo nel quale è presente la \glossario{bubble} verranno notificati della lista all'ora specificata.
+	\\I partecipanti al gruppo nel quale è presente la bubble verranno notificati della lista all'ora specificata.
 \end{itemize}
 
 \subsubsection{UC2.4.1 Selezionare l'opzione aggiungi notifica} \label{UC2.4.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il creatore della lista seleziona l'opzione \virgolette{aggiungi notifica} per la \glossario{to-do list} che ha creato.
+	\\Il creatore della lista seleziona l'opzione \virgolette{aggiungi notifica} per la to-do list che ha creato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere creato una \glossario{bubble} \glossario{To-do list}.
+		\item Avere creato una bubble To-do list.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{aggiungi notifica} sulla \glossario{bubble}.
+	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{aggiungi notifica} sulla bubble.
 	\item \textbf{Post-condizione:}
-	\\L'utente ha selezionato l'opzione di aggiungere una notifica alla \glossario{to-do list} che ha creato.
+	\\L'utente ha selezionato l'opzione di aggiungere una notifica alla to-do list che ha creato.
 \end{itemize}
 
 \subsubsection{UC2.4.2 Mostrare il form di aggiunta} \label{UC2.4.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
-	\\Questa funzionalità permette alla \glossario{bubble} di caricare il form necessario ad inserire i dati per aggiungere una notifica alla \glossario{bubble}.
+	\\Questa funzionalità permette alla bubble di caricare il form necessario ad inserire i dati per aggiungere una notifica alla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
-		\item Essere entrati nell'opzione \virgolette{aggiungi modifica} della propria \glossario{bubble} secondo \hyperref[UC2.4.1]{UC2.4.1}.
+		\item Avere ricevuto una bubble To-do list;
+		\item Essere entrati nell'opzione \virgolette{aggiungi modifica} della propria bubble secondo \hyperref[UC2.4.1]{UC2.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\La \glossario{bubble} \glossario{To-do list} carica il form di inserimento dati per le notifiche.
+	\\La bubble To-do list carica il form di inserimento dati per le notifiche.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
+	\\La bubble ha caricato il form ed è pronta a ricevere in input le informazioni sulla notifica.
 \end{itemize}
 
 \subsubsection{UC2.4.3 Inserire tutte le informazioni necessarie} \label{UC2.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di monolith.
+	\\Utente di Rocket.Chat in possesso di monolith.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista completa il form di aggiunta notifica.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} di \glossario{to-do list};
-		\item La \glossario{bubble} ha caricato il form di inserimento dati secondo lo \hyperref[UC2.4.2]{UC2.4.2}.
+		\item Avere ricevuto una bubble di to-do list;
+		\item La bubble ha caricato il form di inserimento dati secondo lo \hyperref[UC2.4.2]{UC2.4.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del metodo inserirà tutte le informazioni necessarie a completare il form di aggiunta di una notifica.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} possiede tutte le informazioni necessarie ad aggiungere una notifica alla \glossario{to-do list}.
+	\\La bubble possiede tutte le informazioni necessarie ad aggiungere una notifica alla to-do list.
 \end{itemize}
 
 \subsubsection{UC2.4.4 Confermare l'aggiunta della notifica} \label{UC2.4.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utente di \glossario{Rocket.Chat} in possesso di \ProjectName{}.
+	\\Utente di Rocket.Chat in possesso di \ProjectName{}.
 	\item \textbf{Scopo e descrizione:} 
 	\\Il creatore della lista conferma l'aggiunta della notifica.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere ricevuto una \glossario{bubble} \glossario{To-do list};
+		\item Avere ricevuto una bubble To-do list;
 		\item Aver completato il form di aggiunta di una notifica secondo lo \hyperref[UC2.4.3]{UC2.4.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{conferma aggiunta} e la \glossario{bubble} aggiunge la notifica alla lista.
+	\\L'utilizzatore del metodo seleziona l'opzione \virgolette{conferma aggiunta} e la bubble aggiunge la notifica alla lista.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} ha aggiunto la notifica alla \glossario{to-do list}.
+	\\La bubble ha aggiunto la notifica alla to-do list.
 \end{itemize}
 
 \subsection{Bubble \& eat - Cliente}
@@ -1376,13 +1376,13 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Registrare il proprio indirizzo e il proprio nome e cognome in modo tale da segnalarli all'azienda come destinazione per la spedizione del cibo.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1391,38 +1391,38 @@
 		\item L'utente conferma l'inserimento \hyperref[UC3.1.3]{(UC3.1.3)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\I dati dell'utente sono stati registrati nella \glossario{bubble memory}.
+	\\I dati dell'utente sono stati registrati nella bubble memory.
 \end{itemize}
 
 \subsubsection{UC3.1.1 Caricare form inserimento dati utente} \label{UC3.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Dare la possibilità di inserire i propri dati con lo scopo di segnalarli al locale per il corretto funzionamento del servizio.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il form per l'inserimento dei dati utente viene caricato.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} è presente il form per l'inserimento dei dati.
+	\\Nella bubble è presente il form per l'inserimento dei dati.
 \end{itemize}
 
 \subsubsection{UC3.1.2 Inserire i dati} \label{UC3.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Questo metodo permette all'utente di inserire il proprio indirizzo e il proprio nome e cognome con il fine di segnalarlo all'azienda, in modo tale da avere una destinazione per la spedizione del cibo.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente seleziona i campi del form di inserimento e digita le informazioni.
@@ -1434,18 +1434,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Questo metodo permette all'utente di confermare l'inserimento dei dati inseriti nel form di registrazione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Con l'apposito comando il \glossario{Cliente} conferma che i dati precedentemente immessi al caso d'uso \hyperref[UC3.1.2]{UC3.1.2} siano corretti.
+	\\Con l'apposito comando il Cliente conferma che i dati precedentemente immessi al caso d'uso \hyperref[UC3.1.2]{UC3.1.2} siano corretti.
 	\item \textbf{Post-condizione:}
-	\\I dati confermati sono presenti nella memoria della \glossario{bubble}.
+	\\I dati confermati sono presenti nella memoria della bubble.
 \end{itemize}
 
 \subsubsection{UC3.2 Guardare il menù} \label{UC3.2}
@@ -1458,14 +1458,14 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il \glossario{Cliente} consulta il menù.
+	\\Il Cliente consulta il menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1473,45 +1473,45 @@
 		\item Il menù caricato viene mostrato all'utente \hyperref[UC3.2.2]{(UC3.2.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il menù è visualizzato sulla \glossario{bubble}.
+	\\Il menù è visualizzato sulla bubble.
 \end{itemize}
 
 \subsubsection{UC3.2.1 Recuperare il menù del ristorante dal database} \label{UC3.2.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Recuperare dal database le voci del menù del ristorante.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invia la richiesta di visualizzazione del menù e la \glossario{bubble} lo carica dal database.
+	\\L'utente invia la richiesta di visualizzazione del menù e la bubble lo carica dal database.
 	\item \textbf{Post-condizione:}
-	\\Le informazioni sul menù sono state recuperate dalla \glossario{bubble}.
+	\\Le informazioni sul menù sono state recuperate dalla bubble.
 \end{itemize}
 
 \subsubsection{UC3.2.2 Mostrare il menù all'utente} \label{UC3.2.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Visualizzare il menù nella \glossario{bubble}.
+	\\Visualizzare il menù nella bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il menù viene mostrato all'utente.
 	\item \textbf{Post-condizione:}
-	\\Il menù è visualizzato sulla \glossario{bubble}.
+	\\Il menù è visualizzato sulla bubble.
 \end{itemize}
 
 \subsubsection{UC3.3 Fare le ordinazioni} \label{UC3.3}
@@ -1524,14 +1524,14 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Selezionare i piatti e le quantità relative ad ogni pietanza.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1550,14 +1550,14 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Selezionare voce di menù e relativa quantità.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Aver caricato il menù del ristorante \hyperref[UC3.2]{(UC3.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -1572,17 +1572,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Aggiungere oppure rimuovere alla propria ordinazione un'unità del piatto selezionato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invoca l'apposito comando sulla \glossario{bubble} per poter rimuovere o aggiungere il piatto selezionato al proprio ordine.
+	\\L'utente invoca l'apposito comando sulla bubble per poter rimuovere o aggiungere il piatto selezionato al proprio ordine.
 	\item \textbf{Post-condizione:}
 	\\L'ordinazione viene aggiornata correttamente con il piatto selezionato.
 \end{itemize}
@@ -1591,18 +1591,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il \glossario{Cliente} effettua l'ordine selezionando l'apposita funzione.
+	\\Il Cliente effettua l'ordine selezionando l'apposita funzione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invoca l'apposito comando di ordine sulla \glossario{bubble}.
+	\\L'utente invoca l'apposito comando di ordine sulla bubble.
 	\item \textbf{Post-condizione:}
 	\\L'ordinazione è registrata ed è in attesa di conferma.
 \end{itemize}
@@ -1611,14 +1611,14 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Mostrare all'utente un resoconto dell'ordine che sta per effettuare prima della conferma.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -1631,20 +1631,20 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Confermare che quanto mostrato nel caso d'uso \hyperref[UC3.3.4]{UC3.3.4} è corretto e salvare l'ordinazione nella memoria della \glossario{bubble}.
+	\\Confermare che quanto mostrato nel caso d'uso \hyperref[UC3.3.4]{UC3.3.4} è corretto e salvare l'ordinazione nella memoria della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Aver effettuato l'ordinazione \hyperref[UC3.3.4]{(UC3.3.4)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invoca l'apposito comando sulla \glossario{bubble}.
+	\\L'utente invoca l'apposito comando sulla bubble.
 	\item \textbf{Post-condizione:}
-	\\L'ordinazione viene salvata nella memoria della \glossario{bubble}.
+	\\L'ordinazione viene salvata nella memoria della bubble.
 \end{itemize}
 
 \subsubsection{UC3.4 Inviare l'ordinazione} \label{UC3.4}
@@ -1657,20 +1657,20 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Selezionare il comando di invio dell'ordinazione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Avere un'ordinazione non vuota.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Vengono recuperate dalla memoria della \glossario{bubble} le informazioni sull'ordine \hyperref[UC3.4.1]{(UC3.4.1)};
-		\item Vengono recuperate le informazioni sui dati personali del \glossario{Cliente} dalla memoria della \glossario{bubble} \hyperref[UC3.4.2]{(UC3.4.2)};
+		\item Vengono recuperate dalla memoria della bubble le informazioni sull'ordine \hyperref[UC3.4.1]{(UC3.4.1)};
+		\item Vengono recuperate le informazioni sui dati personali del Cliente dalla memoria della bubble \hyperref[UC3.4.2]{(UC3.4.2)};
 		\item Vengono inviate le informazioni sull'ordine al database \hyperref[UC3.4.3]{(UC3.4.3)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -1681,15 +1681,15 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Prelevare dalla memoria della \glossario{bubble} i dati relativi all'ordinazione confermata nell'\hyperref[UC3.3.5]{UC3.3.5}.
+	\\Prelevare dalla memoria della bubble i dati relativi all'ordinazione confermata nell'\hyperref[UC3.3.5]{UC3.3.5}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item \hyperref[UC3.3.5]{(UC3.3.5)};
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente invoca con l'apposito comando l'\hyperref[UC3.4]{UC3.4}.
@@ -1701,34 +1701,34 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Ottenere informazioni riguardanti il \glossario{Cliente} dalla memoria della \glossario{bubble}.
+	\\Ottenere informazioni riguardanti il Cliente dalla memoria della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Avere un'ordinazione da inviare non vuota.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Vengono recuperate le informazioni sui dati personali del \glossario{Cliente} dalla memoria della \glossario{bubble}.
+	\\Vengono recuperate le informazioni sui dati personali del Cliente dalla memoria della bubble.
 	\item \textbf{Post-condizione:}
-	\\I dati personali del \glossario{Cliente} sono stati letti dalla memoria della \glossario{bubble}.
+	\\I dati personali del Cliente sono stati letti dalla memoria della bubble.
 \end{itemize}
 
 \subsubsection{UC3.4.3 Mandare informazioni sull'ordine al database} \label{UC3.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cliente}.
+	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
 	\\Invio delle informazioni al database.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Essere loggato nella \glossario{bubble};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Essere loggato nella bubble;
 		\item Avere un'ordinazione non vuota.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -1749,62 +1749,62 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Cuoco} di consultare la lista dei piatti da preparare ottenuta tramite le ordinazioni effettuate dai clienti.
+	\\Lo scopo di questa funzionalità è permettere al Cuoco di consultare la lista dei piatti da preparare ottenuta tramite le ordinazioni effettuate dai clienti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Cuoco} seleziona la parte corrispondente della \glossario{bubble};
+		\item Il Cuoco seleziona la parte corrispondente della bubble;
 		\item Viene recuperata dal database la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)};
 		\item Viene mostrata la lista all'utente \hyperref[UC3.5.2]{(UC3.5.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Cuoco} è a conoscenza dei piatti ordinati.
+	\\Il Cuoco è a conoscenza dei piatti ordinati.
 \end{itemize}
 
 \subsubsection{UC3.5.1 Recuperare dal database la lista dei piatti} \label{UC3.5.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
 	\\Lo scopo di questa funzionalità è quello di caricare dal database la lista dei piatti da preparare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Cuoco} richiede di visualizzare la lista dei piatti da preparare, la \glossario{bubble} carica la lista dal database.
+	\\Il Cuoco richiede di visualizzare la lista dei piatti da preparare, la bubble carica la lista dal database.
 	\item \textbf{Post-condizione:}
-	\\La \glossario{bubble} ha recuperato la lista dei piatti da preparare dal database.
+	\\La bubble ha recuperato la lista dei piatti da preparare dal database.
 \end{itemize}
 
 \subsubsection{UC3.5.2 Mostrare la lista} \label{UC3.5.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di far visualizzare al \glossario{Cuoco} la lista dei piatti precedentemente caricata dal database sulla \glossario{bubble}.
+	\\Lo scopo di questa funzionalità è di far visualizzare al Cuoco la lista dei piatti precedentemente caricata dal database sulla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco;
 		\item Aver caricato la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\La \glossario{bubble} mostra la lista dei piatti precedentemente memorizzata al \glossario{Cuoco}.
+	\\La bubble mostra la lista dei piatti precedentemente memorizzata al Cuoco.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Cuoco} visualizza la lista dei piatti.
+	\\Il Cuoco visualizza la lista dei piatti.
 \end{itemize}
 
 \subsubsection{UC3.6 Spunta piatti pronti} \label{UC3.6}
@@ -1817,19 +1817,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
-	\\I piatti presenti nella lista possono essere spuntati quando il \glossario{Cuoco} ha finito la loro preparazione.
+	\\I piatti presenti nella lista possono essere spuntati quando il Cuoco ha finito la loro preparazione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco;
 		\item Avere la lista dei piatti da preparare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Cuoco} indica che ha terminato la preparazione di un piatto \hyperref[UC3.6.1]{(UC3.6.1)};
+		\item Il Cuoco indica che ha terminato la preparazione di un piatto \hyperref[UC3.6.1]{(UC3.6.1)};
 		\item Il database viene aggiornato con le nuove informazioni \hyperref[UC3.6.2]{(UC3.6.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -1840,39 +1840,39 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di permettere al \glossario{Cuoco} di indicare che ha completato la preparazione di un piatto.
+	\\Lo scopo di questa funzionalità è di permettere al Cuoco di indicare che ha completato la preparazione di un piatto.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco;
 		\item Avere la lista dei piatti da preparare;
 		\item Aver precedentemente indicato che si stava preparando un determinato piatto.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Cuoco} indica sulla sua lista che ha completato la preparazione del piatto.
+	\\Il Cuoco indica sulla sua lista che ha completato la preparazione del piatto.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Cuoco} ha indicato che ha completato un piatto.
+	\\Il Cuoco ha indicato che ha completato un piatto.
 \end{itemize}
 
 \subsubsection{UC3.6.2 Aggiornare il database indicando che il piatto è stato preparato} \label{UC3.6.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Cuoco}.
+	\\Cuoco.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è quello di aggiornare il database in base ai piatti preparati dal \glossario{Cuoco}.
+	\\Lo scopo di questa funzionalità è quello di aggiornare il database in base ai piatti preparati dal Cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Cuoco};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Cuoco;
 		\item Avere preparato dei piatti dalla lista di piatti da preparare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\I dati sui piatti preparati dal \glossario{Cuoco} vengono aggiornati nel database.
+	\\I dati sui piatti preparati dal Cuoco vengono aggiornati nel database.
 	\item \textbf{Post-condizione:}
 	\\I dati nel database sono aggiornati.
 \end{itemize}
@@ -1889,61 +1889,61 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Responsabile Acquisti} di consultare la lista degli acquisti da effettuare.
+	\\Lo scopo di questa funzionalità è permettere al Responsabile Acquisti di consultare la lista degli acquisti da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Responsabile Acquisti} seleziona la parte corrispondente della \glossario{bubble};
+		\item Il Responsabile Acquisti seleziona la parte corrispondente della bubble;
 		\item Viene recuperata dal database la lista degli ingredienti \hyperref[UC3.7.1]{(UC3.7.1)};
 		\item La lista viene mostrata all'utente \hyperref[UC3.7.2]{(UC3.7.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Responsabile Acquisti} è a conoscenza dei prodotti da acquistare.
+	\\Il Responsabile Acquisti è a conoscenza dei prodotti da acquistare.
 \end{itemize}
 
 \subsubsection{UC3.7.1 Recuperare dal database la lista degli ingredienti da acquistare con le rispettive quantità} \label{UC3.7.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di caricare all'interno della \glossario{bubble} la lista degli ingredienti da acquistare con le rispettive quantità.
+	\\Lo scopo di questa funzionalità è di caricare all'interno della bubble la lista degli ingredienti da acquistare con le rispettive quantità.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Responsabile Acquisti} richiede di visualizzare la lista e la \glossario{bubble} la carica dal database.
+	\\Il Responsabile Acquisti richiede di visualizzare la lista e la bubble la carica dal database.
 	\item \textbf{Post-condizione:}
-	\\La lista degli ingredienti è stata caricata all'interno della \glossario{bubble}.
+	\\La lista degli ingredienti è stata caricata all'interno della bubble.
 \end{itemize}
 
 \subsubsection{UC3.7.2 Mostrare la lista al Responsabile Acquisti} \label{UC3.7.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è rendere il \glossario{Responsabile Acquisti} conscio delle quantità e di cosa è incaricato di comprare.
+	\\Lo scopo di questa funzionalità è rendere il Responsabile Acquisti conscio delle quantità e di cosa è incaricato di comprare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Responsabile Acquisti} guarda la \glossario{bubble} interattiva.
+	\\Il Responsabile Acquisti guarda la bubble interattiva.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Responsabile Acquisti} è a conoscenza dei prodotti da acquistare.
+	\\Il Responsabile Acquisti è a conoscenza dei prodotti da acquistare.
 \end{itemize}
 
 \subsubsection{UC3.8 Spunta acquisti effettuati} \label{UC3.8}
@@ -1956,18 +1956,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Gli acquisti da effettuare presenti nella lista possono essere spuntati quando il \glossario{Responsabile Acquisti} ha acquisito un prodotto nella lista acquisti.
+	\\Gli acquisti da effettuare presenti nella lista possono essere spuntati quando il Responsabile Acquisti ha acquisito un prodotto nella lista acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
 		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Responsabile Acquisti} spunta una voce della lista.
+	\\Il Responsabile Acquisti spunta una voce della lista.
 	\item \textbf{Post-condizione:}
 	\\La voce della lista acquisti è stata spuntata.
 \end{itemize}
@@ -1976,18 +1976,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Questa funzionalità permette al \glossario{Responsabile Acquisti} di segnalare i prodotti acquistati.
+	\\Questa funzionalità permette al Responsabile Acquisti di segnalare i prodotti acquistati.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
 		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\I dati vengono inseriti dal \glossario{Responsabile Acquisti}.
+	\\I dati vengono inseriti dal Responsabile Acquisti.
 	\item \textbf{Post-condizione:}
 	\\I dati sono pronti per essere aggiornati nel database.
 \end{itemize}
@@ -1996,19 +1996,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Responsabile Acquisti}.
+	\\Responsabile Acquisti.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è quello di registrare all'interno del database i cambiamenti che sono avvenuti nelle quantità degli ingredienti, come conseguenza degli acquisti del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzionalità è quello di registrare all'interno del database i cambiamenti che sono avvenuti nelle quantità degli ingredienti, come conseguenza degli acquisti del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Responsabile Acquisti};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
 		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)};
-		\item Il \glossario{Responsabile Acquisti} ha inserito i dati degli ingredienti acquistati.
+		\item Il Responsabile Acquisti ha inserito i dati degli ingredienti acquistati.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Responsabile Acquisti} ha inserito i dati degli ingredienti acquistati all'interno della \glossario{bubble}, la quale aggiorna il database.
+	\\Il Responsabile Acquisti ha inserito i dati degli ingredienti acquistati all'interno della bubble, la quale aggiorna il database.
 	\item \textbf{Post-condizione:}
 	\\Il database possiede le informazioni aggiornate sulla quantità degli ingredienti.
 \end{itemize}
@@ -2025,61 +2025,61 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Fattorino} di consultare la lista delle consegne da effettuare.
+	\\Lo scopo di questa funzionalità è permettere al Fattorino di consultare la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Fattorino} seleziona la parte corrispondente della \glossario{bubble};
+		\item Il Fattorino seleziona la parte corrispondente della bubble;
 		\item Viene recuperata dal database la lista delle consegne \hyperref[UC3.9.1]{(UC3.9.1)};
 		\item Viene mostrata la lista all'utente \hyperref[UC3.9.2]{(UC3.9.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Fattorino} è a conoscenza delle consegne da effettuare.
+	\\Il Fattorino è a conoscenza delle consegne da effettuare.
 \end{itemize}
 
 \subsubsection{UC3.9.1 Recuperare dal database la lista delle consegne} \label{UC3.9.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è avere a disposizione nella memoria della \glossario{bubble} la lista delle consegne da effettuare.
+	\\Lo scopo di questa funzionalità è avere a disposizione nella memoria della bubble la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\La \glossario{bubble} salva nella propria memoria la lista delle consegne.
+	\\La bubble salva nella propria memoria la lista delle consegne.
 	\item \textbf{Post-condizione:}
-	\\Nella memoria della \glossario{bubble} è presente la lista delle consegne da effettuare.
+	\\Nella memoria della bubble è presente la lista delle consegne da effettuare.
 \end{itemize}
 
 \subsubsection{UC3.9.2 Mostrare al fattorino la lista} \label{UC3.9.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Fattorino} di accedere e leggere la lista delle consegne da effettuare.
+	\\Lo scopo di questa funzionalità è permettere al Fattorino di accedere e leggere la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\La lista viene visualizzata.
 	\item \textbf{Post-condizione:}
-	\\La lista è visualizzata e il \glossario{Fattorino} è a conoscenza delle consegne da effettuare.
+	\\La lista è visualizzata e il Fattorino è a conoscenza delle consegne da effettuare.
 \end{itemize}
 
 \subsubsection{UC3.10 Selezionare la consegna da effettuare} \label{UC3.10}
@@ -2092,21 +2092,21 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Fattorino} di selezionare dalla lista delle consegne una da effettuare.
+	\\Lo scopo di questa funzionalità è permettere al Fattorino di selezionare dalla lista delle consegne una da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Visualizzare la lista delle consegne da effettuare \hyperref[UC3.9.2]{(UC3.9.2)};
 		\item Devono esistere consegne da effettuare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Fattorino} visualizza la lista delle consegne \hyperref[UC3.9]{(UC3.9)};
-		\item Il \glossario{Fattorino} seleziona dalla lista quale consegna desidera effettuare \hyperref[UC3.10.1]{(UC3.10.1)};
+		\item Il Fattorino visualizza la lista delle consegne \hyperref[UC3.9]{(UC3.9)};
+		\item Il Fattorino seleziona dalla lista quale consegna desidera effettuare \hyperref[UC3.10.1]{(UC3.10.1)};
 		\item Il database viene aggiornato per indicare che l'ordine è in consegna \hyperref[UC3.10.2]{(UC3.10.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -2117,40 +2117,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Fattorino} di selezionare dalla lista delle consegne una da effettuare.
+	\\Lo scopo di questa funzionalità è permettere al Fattorino di selezionare dalla lista delle consegne una da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Devono esistere consegne da effettuare;
 		\item La lista delle consegne da effettuare è visualizzata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Fattorino} seleziona dalla lista quale consegna desidera effettuare.
+	\\Il Fattorino seleziona dalla lista quale consegna desidera effettuare.
 	\item \textbf{Post-condizione:}
-	\\La consegna che il \glossario{Fattorino} vuole effettuare è selezionata.
+	\\La consegna che il Fattorino vuole effettuare è selezionata.
 \end{itemize}
 
 \subsubsection{UC3.10.2 Aggiornare il database per indicare che l'ordine è in consegna} \label{UC3.10.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di aggiornare lo stato dell'ordine una volta che il \glossario{Fattorino} l'abbia preso in consegna.
+	\\Lo scopo di questa funzionalità è di aggiornare lo stato dell'ordine una volta che il Fattorino l'abbia preso in consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Devono esistere consegne da effettuare;
 		\item È stata selezionata una consegna da effettuare come indicato in \hyperref[UC3.10.1]{(UC3.10.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Fattorino} seleziona dalla lista quale consegna desidera effettuare.
+	\\Il Fattorino seleziona dalla lista quale consegna desidera effettuare.
 	\item \textbf{Post-condizione:}
 	\\L'ordine selezionato in \hyperref[UC3.10.1]{(UC3.10.1)} è stato aggiornato nel database cambiandone lo stato in \virgolette{in consegna}.
 \end{itemize}
@@ -2165,19 +2165,19 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è permettere al \glossario{Fattorino} di confermare l'effettuazione della consegna.
+	\\Lo scopo di questa funzionalità è permettere al Fattorino di confermare l'effettuazione della consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Deve essere stata selezionata una consegna dalla lista.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Fattorino} indica che la consegna è stata effettuata \hyperref[UC3.11.1]{(UC3.11.1)};
+		\item Il Fattorino indica che la consegna è stata effettuata \hyperref[UC3.11.1]{(UC3.11.1)};
 		\item Il database viene aggiornato \hyperref[UC3.11.2]{(UC3.11.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -2188,35 +2188,35 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
 	\\Lo scopo di questa funzionalità è di notificare l'avvenuta consegna della pietanza all'indirizzo inviato dall'utente.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Deve essere stata selezionata una consegna dalla lista;
 		\item La consegna deve essere stata effettuata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Fattorino} indica quando la consegna viene portata a termine.
+	\\Il Fattorino indica quando la consegna viene portata a termine.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble} del \glossario{Fattorino} è salvato lo stato che la consegna è stata effettuata con successo.
+	\\Nella bubble del Fattorino è salvato lo stato che la consegna è stata effettuata con successo.
 \end{itemize}
 
 \subsubsection{UC3.11.2 Aggiornare il database per mostrare che l'ordine è stato completato} \label{UC3.11.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Fattorino}.
+	\\Fattorino.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è aggiornare il database quando un \glossario{Fattorino} conferma l'effettuazione della consegna.
+	\\Lo scopo di questa funzionalità è aggiornare il database quando un Fattorino conferma l'effettuazione della consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo \glossario{Fattorino};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Deve essere stata selezionata una consegna dalla lista per essere segnata come completata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -2237,62 +2237,62 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di cancellare ordini dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Lo scopo di questa funzione è permettere al Direttore di cancellare ordini dalla to-do list del Cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Recuperare dal database la lista degli ordini \hyperref[UC3.12.1]{(UC3.12.1)};
 		\item Visualizzare lista ordini \hyperref[UC3.12.2]{(UC3.12.2)};
-		\item L'utente \glossario{Direttore} seleziona dalla lista gli ordini che desidera rimuovere \hyperref[UC3.12.3]{(UC3.12.3)};
-		\item L'utente \glossario{Direttore} seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)};
-		\item L'utente \glossario{Direttore} seleziona l'opzione per confermare \hyperref[UC3.12.5]{(UC3.12.5)};
+		\item L'utente Direttore seleziona dalla lista gli ordini che desidera rimuovere \hyperref[UC3.12.3]{(UC3.12.3)};
+		\item L'utente Direttore seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)};
+		\item L'utente Direttore seleziona l'opzione per confermare \hyperref[UC3.12.5]{(UC3.12.5)};
 		\item Aggiornare il database \hyperref[UC3.12.6]{(UC3.12.6)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\L'ordine è stato cancellato dalla to-do list del Cuoco.
 \end{itemize}
 
 \subsubsection{UC3.12.1 Recuperare dal database la lista degli ordini (Direttore)} \label{UC3.12.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere alla \glossario{bubble} del \glossario{Direttore} di avere nella propria memoria la lista delle ordinazioni effettuate.
+	\\Lo scopo di questa funzione è permettere alla bubble del Direttore di avere nella propria memoria la lista delle ordinazioni effettuate.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} consulta la \glossario{bubble} in modalità di cancellazione dell'ordinazione del \glossario{Cuoco}.
+	\\Il Direttore consulta la bubble in modalità di cancellazione dell'ordinazione del Cuoco.
 	\item \textbf{Post-condizione:}
-	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\L'ordine è stato cancellato dalla to-do list del Cuoco.
 \end{itemize}
 
 \subsubsection{UC3.12.2 Visualizzare lista ordini(Direttore)} \label{UC3.12.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di cancellare ordini dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Lo scopo di questa funzione è permettere al Direttore di cancellare ordini dalla to-do list del Cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} visualizza la lista degli ordini per poterne rimuovere.
+	\\Il Direttore visualizza la lista degli ordini per poterne rimuovere.
 	\item \textbf{Post-condizione:}
 	\\La lista degli ordini è visualizzata.
 \end{itemize}
@@ -2301,18 +2301,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di selezionare ordini da cancellare dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Lo scopo di questa funzione è permettere al Direttore di selezionare ordini da cancellare dalla to-do list del Cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da eliminare è visualizzata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} sceglie l'ordine da eliminare dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Il Direttore sceglie l'ordine da eliminare dalla to-do list del Cuoco.
 	\item \textbf{Post-condizione:}
 	\\Sono stati selezionati degli ordini dalla lista.
 \end{itemize}
@@ -2321,18 +2321,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di eliminare gli ordini selezionati per l'eliminazione.
+	\\Lo scopo di questa funzione è permettere al Direttore di eliminare gli ordini selezionati per l'eliminazione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Sono stati selezionati ordini da eliminare \hyperref[UC3.12.3]{(UC3.12.3)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} sceglie l'ordine da eliminare dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Il Direttore sceglie l'ordine da eliminare dalla to-do list del Cuoco.
 	\item \textbf{Post-condizione:}
 	\\L'ordine da cancellare è selezionato.
 \end{itemize}
@@ -2341,41 +2341,41 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di confermare la selezione degli ordini da eliminare.
+	\\Lo scopo di questa funzione è permettere al Direttore di confermare la selezione degli ordini da eliminare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da eliminare è visualizzata;
 		\item È stata selezionata l'eliminazione degli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} sceglie l'ordine da eliminare dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\Il Direttore sceglie l'ordine da eliminare dalla to-do list del Cuoco.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha confermato quale ordine cancellare.
+	\\Il Direttore ha confermato quale ordine cancellare.
 \end{itemize}
 
 \subsubsection{UC3.12.6 Aggiornare il database} \label{UC3.12.6}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è aggiornare il database in base agli ordini cancellati dal \glossario{Direttore}.
+	\\Lo scopo di questa funzione è aggiornare il database in base agli ordini cancellati dal Direttore.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Avere confermato quali ordini eliminare \hyperref[UC3.12.5]{(UC3.12.5)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Vengono aggiornati nel database i dati relativi agli ordini da eliminare.
 	\item \textbf{Post-condizione:}
-	\\L'ordine è stato cancellato dalla \glossario{to-do list} del \glossario{Cuoco}.
+	\\L'ordine è stato cancellato dalla to-do list del Cuoco.
 \end{itemize}
 
 \subsubsection{UC3.13 Cambiare il menù} \label{UC3.13}
@@ -2388,21 +2388,21 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere all'utente \glossario{Direttore} di modificare il menù del ristorante.
+	\\Permettere all'utente Direttore di modificare il menù del ristorante.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Direttore} visualizza il menù \hyperref[UC3.13.1]{(UC3.13.1)};
-		\item Il \glossario{Direttore} elimina degli elementi dal menù \hyperref[UC3.13.2]{(UC3.13.2)};
-		\item Il \glossario{Direttore} modifica degli elementi del menù \hyperref[UC3.13.3]{(UC3.13.3)};
-		\item Il \glossario{Direttore} aggiunge elementi al menù \hyperref[UC3.13.4]{(UC3.13.4)}.
+		\item Il Direttore visualizza il menù \hyperref[UC3.13.1]{(UC3.13.1)};
+		\item Il Direttore elimina degli elementi dal menù \hyperref[UC3.13.2]{(UC3.13.2)};
+		\item Il Direttore modifica degli elementi del menù \hyperref[UC3.13.3]{(UC3.13.3)};
+		\item Il Direttore aggiunge elementi al menù \hyperref[UC3.13.4]{(UC3.13.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il menù è modificato.
@@ -2418,14 +2418,14 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di mostrare al \glossario{Direttore} il menù.
+	\\Lo scopo di questa funzionalità è di mostrare al Direttore il menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -2433,44 +2433,44 @@
 		\item Viene mostrato all'utente il menù \hyperref[UC3.13.1.2]{(UC3.13.1.2)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble memory} è presente il menù.
+	\\Nella bubble memory è presente il menù.
 \end{itemize}
 
 \subsubsection{UC3.13.1.1 Recuperare dal database il menù del ristorante (Direttore)} \label{UC3.13.1.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Recuperare il menù del ristorante dal database.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} accede alla sezione di modifica del menù della sua \glossario{bubble}.
+	\\Il Direttore accede alla sezione di modifica del menù della sua bubble.
 	\item \textbf{Post-condizione:}
-	\\Nella \glossario{bubble memory} è presente il menù.
+	\\Nella bubble memory è presente il menù.
 \end{itemize}
 
 \subsubsection{UC3.13.1.2 Visualizzare il menù (Direttore)} \label{UC3.13.1.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Il \glossario{Direttore} deve poter visualizzare il menù per poterlo modificare.
+	\\Il Direttore deve poter visualizzare il menù per poterlo modificare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver recuperato le informazioni dal database \hyperref[UC3.13.1.1]{(UC3.13.1.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} si trova nel menù.
+	\\Il Direttore si trova nel menù.
 	\item \textbf{Post-condizione:}
 	\\Il menù è visualizzato.
 \end{itemize}
@@ -2485,20 +2485,20 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Lo scopo di questa funzionalità è di eliminare elementi dal menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Direttore} seleziona dal menù i cibi che desidera togliere \hyperref[UC3.13.2.1]{(UC3.13.2.1)};
-		\item Il \glossario{Direttore} conferma l'operazione \hyperref[UC3.13.2.2]{(UC3.13.2.2)};
+		\item Il Direttore seleziona dal menù i cibi che desidera togliere \hyperref[UC3.13.2.1]{(UC3.13.2.1)};
+		\item Il Direttore conferma l'operazione \hyperref[UC3.13.2.2]{(UC3.13.2.2)};
 		\item Il database viene aggiornato \hyperref[UC3.13.2.3]{(UC3.13.2.3)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -2509,18 +2509,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Avere una selezione di voci da rimuovere dal menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} seleziona dalla lista visualizzata in \hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menù che desidera rimuovere da esso.
+	\\Il Direttore seleziona dalla lista visualizzata in \hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menù che desidera rimuovere da esso.
 	\item \textbf{Post-condizione:}
 	\\Gli elementi sono stati selezionati.
 \end{itemize}
@@ -2529,18 +2529,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Rimuovere gli elementi selezionati con l'apposita opzione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} si trova nel menù, ha selezionato gli elementi da eliminare, e ne conferma l'eliminazione.
+	\\Il Direttore si trova nel menù, ha selezionato gli elementi da eliminare, e ne conferma l'eliminazione.
 	\item \textbf{Post-condizione:}
 	\\Gli elementi sono eliminati dal menù.
 \end{itemize}
@@ -2549,18 +2549,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Notificare al sistema l'aggiornamento del menù effettuato allo \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver selezionato l'opzione per rimuovere gli elementi selezionati dal menù \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} ha confermato l'eliminazione dal menù degli elementi selezionati in precedenza.
+	\\Il Direttore ha confermato l'eliminazione dal menù degli elementi selezionati in precedenza.
 	\item \textbf{Post-condizione:}
 	\\La modifica del menù è stata propagata al database.
 \end{itemize}
@@ -2575,21 +2575,21 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di permettere al \glossario{Direttore} di modificare elementi del menù.
+	\\Lo scopo di questa funzionalità è di permettere al Direttore di modificare elementi del menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Direttore} seleziona dal menù l'\glossario{elemento} che desidera modificare \hyperref[UC3.13.3.1]{(UC3.13.3.1)};
+		\item Il Direttore seleziona dal menù l'elemento che desidera modificare \hyperref[UC3.13.3.1]{(UC3.13.3.1)};
 		\item Viene confermata la selezione \hyperref[UC3.13.3.2]{(UC3.13.3.2)};
-		\item Il \glossario{Direttore} inserisce le nuove informazioni \hyperref[UC3.13.3.3]{(UC3.13.3.3)};
+		\item Il Direttore inserisce le nuove informazioni \hyperref[UC3.13.3.3]{(UC3.13.3.3)};
 		\item Vengono confermati i cambiamenti \hyperref[UC3.13.3.4]{(UC3.13.3.4)};
 		\item Il database viene aggiornato \hyperref[UC3.13.3.5]{(UC3.13.3.5)}.
 	\end{itemize}
@@ -2601,17 +2601,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere all'utente \glossario{Direttore} di modificare voci del menù.
+	\\Permettere all'utente Direttore di modificare voci del menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} si trova nel menù, può selezionare la voce del menù da modificare.
+	\\Il Direttore si trova nel menù, può selezionare la voce del menù da modificare.
 	\item \textbf{Post-condizione:}
 	\\Le voci sono selezionate.
 \end{itemize}
@@ -2620,18 +2620,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Abilitare il cambiamento della voce del menù selezionata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} utilizza l'apposito comando per modificare la voce del menù selezionata al caso d'uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
+	\\Il Direttore utilizza l'apposito comando per modificare la voce del menù selezionata al caso d'uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
 	\item \textbf{Post-condizione:}
 	\\La modifica alla voce del menù selezionata è ora disponibile.
 \end{itemize}
@@ -2640,18 +2640,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Modificare le informazioni della voce di menù appena selezionata.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver selezionato una voce da modificare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} può modificare i dati della voce appena selezionata.
+	\\Il Direttore può modificare i dati della voce appena selezionata.
 	\item \textbf{Post-condizione:}
 	\\I dati della voce di menù sono modificati.
 \end{itemize}
@@ -2660,38 +2660,38 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Applicare i cambiamenti effettuati.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver effettuato delle modifiche sul menù.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} dopo aver finito di applicare tutti i cambiamenti desiderati al menù seleziona l'opzione \virgolette{Applica cambiamenti}; i cambiamenti vengono dunque memorizzati all'interno della \glossario{bubble}.
+	\\Il Direttore dopo aver finito di applicare tutti i cambiamenti desiderati al menù seleziona l'opzione \virgolette{Applica cambiamenti}; i cambiamenti vengono dunque memorizzati all'interno della bubble.
 	\item \textbf{Post-condizione:}
-	\\I cambiamenti sono stati applicati e memorizzati all'interno della \glossario{bubble}.
+	\\I cambiamenti sono stati applicati e memorizzati all'interno della bubble.
 \end{itemize}
 
 \subsubsection{UC3.13.3.5 Aggiornare il database con le nuove informazioni} \label{UC3.13.3.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.3]{(UC3.13.3)}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver selezionato \virgolette{Applica cambiamenti} \hyperref[UC3.13.4]{(UC3.13.4)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Le modifiche confermate dal \glossario{Direttore} vengono salvate sul database.
+	\\Le modifiche confermate dal Direttore vengono salvate sul database.
 	\item \textbf{Post-condizione:}
 	\\Il menù è modificato.
 \end{itemize}
@@ -2706,43 +2706,43 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è di permettere al \glossario{Direttore} di aggiungere elementi al menù.
+	\\Lo scopo di questa funzionalità è di permettere al Direttore di aggiungere elementi al menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Direttore} seleziona l'opzione per aggiungere un \glossario{elemento} \hyperref[UC3.13.4.1]{(UC3.13.4.1)};
-		\item Vengono inserite le informazioni necessarie alla creazione del nuovo \glossario{elemento} \hyperref[UC3.13.4.2]{(UC3.13.4.2)};
-		\item Il \glossario{Direttore} conferma l'aggiunta del nuovo \glossario{elemento} \hyperref[UC3.13.4.3]{(UC3.13.4.3)};
+		\item Il Direttore seleziona l'opzione per aggiungere un elemento \hyperref[UC3.13.4.1]{(UC3.13.4.1)};
+		\item Vengono inserite le informazioni necessarie alla creazione del nuovo elemento \hyperref[UC3.13.4.2]{(UC3.13.4.2)};
+		\item Il Direttore conferma l'aggiunta del nuovo elemento \hyperref[UC3.13.4.3]{(UC3.13.4.3)};
 		\item Il database viene aggiornato \hyperref[UC3.13.4.4]{(UC3.13.4.4)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\È stato aggiunto un \glossario{elemento} al menù.
+	\\È stato aggiunto un elemento al menù.
 \end{itemize}
 
 \subsubsection{UC3.13.4.1 Selezionare l'opzione \virgolette{Aggiungi elemento}} \label{UC3.13.4.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Permettere al \glossario{Direttore} di aggiungere una voce al menù.
+	\\Permettere al Direttore di aggiungere una voce al menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Il menù deve essere visualizzato.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} si trova nel menù, seleziona l'apposita opzione \virgolette{Aggiungi elemento}.
+	\\Il Direttore si trova nel menù, seleziona l'apposita opzione \virgolette{Aggiungi elemento}.
 	\item \textbf{Post-condizione:}
 	\\È possibile aggiungere i dati per la nuova voce.
 \end{itemize}
@@ -2751,38 +2751,38 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è quello di permettere al \glossario{Direttore} di inserire le informazioni necessarie all'aggiunta di un \glossario{elemento} al menù.
+	\\Lo scopo di questa funzionalità è quello di permettere al Direttore di inserire le informazioni necessarie all'aggiunta di un elemento al menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
-		\item Aver iniziato la procedura di aggiunta di un \glossario{elemento} come da \hyperref[UC3.13.4.1]{(UC3.13.4.1)}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
+		\item Aver iniziato la procedura di aggiunta di un elemento come da \hyperref[UC3.13.4.1]{(UC3.13.4.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} compila il form caricato dalla \glossario{bubble} in tutte le sue parti.
+	\\Il Direttore compila il form caricato dalla bubble in tutte le sue parti.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha inserito all'interno del form tutte le informazioni necessarie ad aggiungere un \glossario{elemento} al menù.
+	\\Il Direttore ha inserito all'interno del form tutte le informazioni necessarie ad aggiungere un elemento al menù.
 \end{itemize}
 
 \subsubsection{UC3.13.4.3 Selezionare l'opzione \virgolette{Conferma}} \label{UC3.13.4.3}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzionalità è quello di permettere al \glossario{Direttore} di inserire le informazioni necessarie all'aggiunta di un \glossario{elemento} al menù.
+	\\Lo scopo di questa funzionalità è quello di permettere al Direttore di inserire le informazioni necessarie all'aggiunta di un elemento al menù.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver inserito le informazioni necessarie \hyperref[UC3.13.4.2]{(UC3.13.4.2)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} conferma le modifiche al menù.
+	\\Il Direttore conferma le modifiche al menù.
 	\item \textbf{Post-condizione:}
 	\\Le modifiche sono state confermate e sono pronte per l'invio al database.
 \end{itemize}
@@ -2791,18 +2791,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Propagare nel database le modifiche effettuate in \hyperref[UC3.13.4]{(UC3.13.4)}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver confermato l'aggiunta \hyperref[UC3.13.4.3]{(UC3.13.4.3)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Le modifiche confermate dal \glossario{Direttore} vengono propagate al database.
+	\\Le modifiche confermate dal Direttore vengono propagate al database.
 	\item \textbf{Post-condizione:}
 	\\Il menù è modificato e la modifica è presente anche nel database.
 \end{itemize}
@@ -2817,40 +2817,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di aggiungere ordini alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzione è permettere al Direttore di aggiungere ordini alla to-do list del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Recuperare la lista degli ordini da effettuare dal database \hyperref[UC3.14.1]{(UC3.14.1)};
 		\item Mostrare la lista all'utente \hyperref[UC3.14.2]{(UC3.14.2)};
-		\item L'utente \glossario{Direttore} seleziona \virgolette{Aggiungi ordine} \hyperref[UC3.14.3]{(UC3.14.3)};
-		\item L'utente \glossario{Direttore} inserisce le informazioni sull'ordine da aggiungere \hyperref[UC3.14.4]{(UC3.14.4)};
-		\item L'utente \glossario{Direttore} seleziona \virgolette{Conferma} \hyperref[UC3.14.5]{(UC3.14.5)};
+		\item L'utente Direttore seleziona \virgolette{Aggiungi ordine} \hyperref[UC3.14.3]{(UC3.14.3)};
+		\item L'utente Direttore inserisce le informazioni sull'ordine da aggiungere \hyperref[UC3.14.4]{(UC3.14.4)};
+		\item L'utente Direttore seleziona \virgolette{Conferma} \hyperref[UC3.14.5]{(UC3.14.5)};
 		\item Aggiornare il database \hyperref[UC3.14.6]{(UC3.14.6)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha aggiunto gli elementi desiderati alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Il Direttore ha aggiunto gli elementi desiderati alla to-do list del Responsabile Acquisti.
 \end{itemize}
 
 \subsubsection{UC3.14.1 Recuperare la lista degli ordini da effettuare dal database(Direttore)} \label{UC3.14.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Lo scopo di questa funzione è recuperare le informazioni sulla lista di ordini da effettuare dal database.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\I dati sugli ordini da effettuare devono essere prelevati dal database.
@@ -2862,18 +2862,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di visualizzare la lista degli ordini da effettuare.
+	\\Lo scopo di questa funzione è permettere al Direttore di visualizzare la lista degli ordini da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver recuperato dal database le informazioni \hyperref[UC3.14.1]{(UC3.14.1)}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} deve visualizzare la lista degli ordini da effettuare.
+	\\Il Direttore deve visualizzare la lista degli ordini da effettuare.
 	\item \textbf{Post-condizione:}
 	\\La lista è visualizzata.
 \end{itemize}
@@ -2882,38 +2882,38 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di selezionare l'opzione per aggiungere ordini alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzione è permettere al Direttore di selezionare l'opzione per aggiungere ordini alla to-do list del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da effettuare è visualizzata \hyperref[UC3.14.2]{UC3.14.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} seleziona l'opzione per aggiungere un ordine.
+	\\Il Direttore seleziona l'opzione per aggiungere un ordine.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha selezionato \virgolette{Aggiungi ordine}.
+	\\Il Direttore ha selezionato \virgolette{Aggiungi ordine}.
 \end{itemize}
 
 \subsubsection{UC3.14.4 Inserire le informazioni sull'ordine da aggiungere} \label{UC3.14.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di aggiungere informazioni all'ordine da aggiungere alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzione è permettere al Direttore di aggiungere informazioni all'ordine da aggiungere alla to-do list del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver selezionato l'opzione \virgolette{Aggiungi ordine} \hyperref[UC3.14.3]{UC3.14.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} aggiunge informazioni agli elementi da ordinare desiderati per la \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Il Direttore aggiunge informazioni agli elementi da ordinare desiderati per la to-do list del Responsabile Acquisti.
 	\item \textbf{Post-condizione:}
 	\\Le informazioni sull'ordine possono essere aggiunte.
 \end{itemize}
@@ -2922,18 +2922,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di confermare le informazioni aggiunte.
+	\\Lo scopo di questa funzione è permettere al Direttore di confermare le informazioni aggiunte.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver inserito informazioni per l'ordine \hyperref[UC3.14.4]{UC3.14.4}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} ha aggiunto informazioni per l'ordine e lo ha confermato selezionando l'apposita opzione.
+	\\Il Direttore ha aggiunto informazioni per l'ordine e lo ha confermato selezionando l'apposita opzione.
 	\item \textbf{Post-condizione:}
 	\\L'ordine è stato confermato.
 \end{itemize}
@@ -2942,18 +2942,18 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è quello di aggiornare il database con l'ordine aggiunto dal \glossario{Direttore}.
+	\\Lo scopo di questa funzione è quello di aggiornare il database con l'ordine aggiunto dal Direttore.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver confermato l'ordine \hyperref[UC3.14.5]{UC3.14.5}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il database deve essere aggiornato con gli elementi aggiunti dal \glossario{Direttore} alla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Il database deve essere aggiornato con gli elementi aggiunti dal Direttore alla to-do list del Responsabile Acquisti.
 	\item \textbf{Post-condizione:}
 	\\Il database è aggiornato con i nuovi dati.
 \end{itemize}
@@ -2968,40 +2968,40 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di eliminare ordini dalla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzione è permettere al Direttore di eliminare ordini dalla to-do list del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il \glossario{Direttore} seleziona la parte corrispondente della \glossario{bubble};
+		\item Il Direttore seleziona la parte corrispondente della bubble;
 		\item I dati vengono recuperati dal database \hyperref[UC3.15.1]{(UC3.15.1)};
 		\item Viene mostrata la lista degli ordini all'utente \hyperref[UC3.15.2]{(UC3.15.2)};
-		\item Il \glossario{Direttore} seleziona dalla lista gli ordini che si desidera rimuovere \hyperref[UC3.15.3]{(UC3.15.3)};
-		\item Il \glossario{Direttore} seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.15.4]{(UC3.15.4)};
+		\item Il Direttore seleziona dalla lista gli ordini che si desidera rimuovere \hyperref[UC3.15.3]{(UC3.15.3)};
+		\item Il Direttore seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.15.4]{(UC3.15.4)};
 		\item Viene aggiornato il database \hyperref[UC3.15.5]{(UC3.15.5)}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha eliminato gli elementi desiderati dalla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Il Direttore ha eliminato gli elementi desiderati dalla to-do list del Responsabile Acquisti.
 \end{itemize}
 
 \subsubsection{UC3.15.1 Recuperare la lista degli ordini da effettuare dal database (Direttore)} \label{UC3.15.1}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
 	\\Lo scopo di questa funzione è recuperare le informazioni sulla lista di ordini da effettuare dal database.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\I dati sugli ordini da effettuare devono essere prelevati dal database.
@@ -3013,17 +3013,17 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di visualizzare la lista degli ordini da effettuare.
+	\\Lo scopo di questa funzione è permettere al Direttore di visualizzare la lista degli ordini da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore}.
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} deve visualizzare la lista degli ordini da effettuare.
+	\\Il Direttore deve visualizzare la lista degli ordini da effettuare.
 	\item \textbf{Post-condizione:}
 	\\La lista è visualizzata.
 \end{itemize}
@@ -3032,59 +3032,59 @@
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di selezionare che ordini eliminare.
+	\\Lo scopo di questa funzione è permettere al Direttore di selezionare che ordini eliminare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da effettuare è visualizzata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} seleziona l'opzione per rimuovere un ordine.
+	\\Il Direttore seleziona l'opzione per rimuovere un ordine.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha selezionato gli ordini che desidera eliminare.
+	\\Il Direttore ha selezionato gli ordini che desidera eliminare.
 \end{itemize}
 
 \subsubsection{UC3.15.4 Selezionare l'opzione \virgolette{Rimuovi ordine}} \label{UC3.15.4}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è permettere al \glossario{Direttore} di selezionare l'opzione per rimuovere ordini dalla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Lo scopo di questa funzione è permettere al Direttore di selezionare l'opzione per rimuovere ordini dalla to-do list del Responsabile Acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da effettuare è visualizzata;
 		\item Sono selezionati ordini per la rimozione.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il \glossario{Direttore} seleziona l'opzione per rimuovere gli ordini.
+	\\Il Direttore seleziona l'opzione per rimuovere gli ordini.
 	\item \textbf{Post-condizione:}
-	\\Il \glossario{Direttore} ha confermato l'eliminazione degli elementi selezionati.
+	\\Il Direttore ha confermato l'eliminazione degli elementi selezionati.
 \end{itemize}
 
 \subsubsection{UC3.15.5 Aggiornare il database} \label{UC3.15.5}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\\glossario{Direttore}.
+	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Lo scopo di questa funzione è quello di aggiornare il database con gli ordini rimossi dal \glossario{Direttore} dalla lista degli acquisti.
+	\\Lo scopo di questa funzione è quello di aggiornare il database con gli ordini rimossi dal Direttore dalla lista degli acquisti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere \glossario{Rocket.Chat};
-		\item Avere la \glossario{bubble} del ristorante selezionato;
-		\item Avere accesso alla \glossario{bubble} con il ruolo di \glossario{Direttore};
+		\item Avere Rocket.Chat;
+		\item Avere la bubble del ristorante selezionato;
+		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item Aver eliminato degli ordini.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il database deve essere aggiornato con gli elementi rimossi dal \glossario{Direttore} dalla \glossario{to-do list} del \glossario{Responsabile Acquisti}.
+	\\Il database deve essere aggiornato con gli elementi rimossi dal Direttore dalla to-do list del Responsabile Acquisti.
 	\item \textbf{Post-condizione:}
 	\\Il database è aggiornato.
 \end{itemize}
