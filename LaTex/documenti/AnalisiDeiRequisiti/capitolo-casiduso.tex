@@ -1173,10 +1173,10 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente seleziona l'opzione aggiungi elemento \ref{(UC2.2.1)};
-		\item Mostrare il form di aggiunta \ref{(UC2.2.2)};
-		\item L'utente inserisce le informazioni \ref{(UC2.2.3)};
-		\item L'utente conferma l'aggiunta \ref{(UC2.2.4)}.
+		\item L'utente seleziona l'opzione aggiungi elemento \ref{UC2.2.1};
+		\item Mostrare il form di aggiunta \ref{UC2.2.2};
+		\item L'utente inserisce le informazioni \ref{UC2.2.3};
+		\item L'utente conferma l'aggiunta \ref{UC2.2.4}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\La to-do list avrà il nuovo elemento aggiunto.
@@ -1296,10 +1296,10 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item L'utente seleziona l'opzione aggiungi notifica \ref{(UC2.4.1)};
-		\item Mostrare il form di aggiunta \ref{(UC2.4.2)};
-		\item L'utente inserisce tutte le informazioni necessarie \ref{(UC2.4.3)};
-		\item L'utente conferma l'aggiunta della notifica \ref{(UC2.4.4)}.
+		\item L'utente seleziona l'opzione aggiungi notifica \ref{UC2.4.1};
+		\item Mostrare il form di aggiunta \ref{UC2.4.2};
+		\item L'utente inserisce tutte le informazioni necessarie \ref{UC2.4.3};
+		\item L'utente conferma l'aggiunta della notifica \ref{UC2.4.4}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\I partecipanti al gruppo nel quale è presente la bubble verranno notificati della lista all'ora specificata.
@@ -1398,9 +1398,9 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Viene caricato il form di inserimento dati dell'utente \ref{(UC3.1.1)};
-		\item L'utente inserisce i dati \ref{(UC3.1.2)};
-		\item L'utente conferma l'inserimento \ref{(UC3.1.3)}.
+		\item Viene caricato il form di inserimento dati dell'utente \ref{UC3.1.1};
+		\item L'utente inserisce i dati \ref{UC3.1.2};
+		\item L'utente conferma l'inserimento \ref{UC3.1.3}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\I dati dell'utente sono stati registrati nella bubble memory.
@@ -1570,7 +1570,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver caricato il menù del ristorante \hyperref[UC3.2]{(UC3.2)}.
+		\item Aver caricato il menù del ristorante \ref{UC3.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
@@ -1611,7 +1611,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+		\item Aver selezionato cibi e quantità dal menù \ref{UC3.3.1} \ref{UC3.3.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente invoca l'apposito comando di ordine sulla bubble.
@@ -1631,7 +1631,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver selezionato cibi e quantità dal menù \hyperref[UC3.3.1]{(UC3.3.1)} \hyperref[UC3.3.2]{(UC3.3.2)}.
+		\item Aver selezionato cibi e quantità dal menù \ref{UC3.3.1} \ref{UC3.3.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente seleziona \virgolette{Mostra resoconto} e riceve dunque una lista completa di tutto e solo quello che sta per ordinare, insieme al prezzo totale dell'ordine.
@@ -1645,13 +1645,13 @@ dove:
 	\item \textbf{Attori:}
 	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Confermare che quanto mostrato nel caso d'uso \hyperref[UC3.3.4]{UC3.3.4} è corretto e salvare l'ordinazione nella memoria della bubble.
+	\\Confermare che quanto mostrato nel caso d'uso \ref{UC3.3.4} è corretto e salvare l'ordinazione nella memoria della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble;
-		\item Aver effettuato l'ordinazione \hyperref[UC3.3.4]{(UC3.3.4)}.
+		\item Aver effettuato l'ordinazione \ref{UC3.3.4}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utente invoca l'apposito comando sulla bubble.
@@ -1681,9 +1681,9 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Vengono recuperate dalla memoria della bubble le informazioni sull'ordine \hyperref[UC3.4.1]{(UC3.4.1)};
-		\item Vengono recuperate le informazioni sui dati personali del Cliente dalla memoria della bubble \hyperref[UC3.4.2]{(UC3.4.2)};
-		\item Vengono inviate le informazioni sull'ordine al database \hyperref[UC3.4.3]{(UC3.4.3)}.
+		\item Vengono recuperate dalla memoria della bubble le informazioni sull'ordine \ref{UC3.4.1};
+		\item Vengono recuperate le informazioni sui dati personali del Cliente dalla memoria della bubble \ref{UC3.4.2};
+		\item Vengono inviate le informazioni sull'ordine al database \ref{UC3.4.3}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\L'ordinazione viene inviata.
@@ -1695,18 +1695,18 @@ dove:
 	\item \textbf{Attori:}
 	\\Cliente.
 	\item \textbf{Scopo e descrizione:} 
-	\\Prelevare dalla memoria della bubble i dati relativi all'ordinazione confermata nell'\hyperref[UC3.3.5]{UC3.3.5}.
+	\\Prelevare dalla memoria della bubble i dati relativi all'ordinazione confermata nell'\ref{UC3.3.5}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item \hyperref[UC3.3.5]{(UC3.3.5)};
+		\item \ref{UC3.3.5};
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Essere loggato nella bubble.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utente invoca con l'apposito comando l'\hyperref[UC3.4]{UC3.4}.
+	\\L'utente invoca con l'apposito comando l'\ref{UC3.4}.
 	\item \textbf{Post-condizione:}
-	\\I dati desiderati, relativi all'ordinazione effettuata nell'\hyperref[UC3.3]{UC3.3}, sono stati recuperati. 
+	\\I dati desiderati, relativi all'ordinazione effettuata nell'\ref{UC3.3}, sono stati recuperati. 
 \end{itemize}
 
 \UCF{Recuperare informazioni dei dati personali dalla memoria della bubble}{UC3.4.2}
@@ -1773,8 +1773,8 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Il Cuoco seleziona la parte corrispondente della bubble;
-		\item Viene recuperata dal database la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)};
-		\item Viene mostrata la lista all'utente \hyperref[UC3.5.2]{(UC3.5.2)}.
+		\item Viene recuperata dal database la lista dei piatti \ref{UC3.5.1};
+		\item Viene mostrata la lista all'utente \ref{UC3.5.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il Cuoco è a conoscenza dei piatti ordinati.
@@ -1811,7 +1811,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Cuoco;
-		\item Aver caricato la lista dei piatti \hyperref[UC3.5.1]{(UC3.5.1)}.
+		\item Aver caricato la lista dei piatti \ref{UC3.5.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\La bubble mostra la lista dei piatti precedentemente memorizzata al Cuoco.
@@ -1841,8 +1841,8 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Cuoco indica che ha terminato la preparazione di un piatto \hyperref[UC3.6.1]{(UC3.6.1)};
-		\item Il database viene aggiornato con le nuove informazioni \hyperref[UC3.6.2]{(UC3.6.2)}.
+		\item Il Cuoco indica che ha terminato la preparazione di un piatto \ref{UC3.6.1};
+		\item Il database viene aggiornato con le nuove informazioni \ref{UC3.6.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il piatto è stato spuntato.
@@ -1913,8 +1913,8 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Il Responsabile Acquisti seleziona la parte corrispondente della bubble;
-		\item Viene recuperata dal database la lista degli ingredienti \hyperref[UC3.7.1]{(UC3.7.1)};
-		\item La lista viene mostrata all'utente \hyperref[UC3.7.2]{(UC3.7.2)}.
+		\item Viene recuperata dal database la lista degli ingredienti \ref{UC3.7.1};
+		\item La lista viene mostrata all'utente \ref{UC3.7.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il Responsabile Acquisti è a conoscenza dei prodotti da acquistare.
@@ -1976,7 +1976,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
-		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
+		\item Visualizzare la lista degli acquisti da effettuare \ref{UC3.7.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Responsabile Acquisti spunta una voce della lista.
@@ -1996,7 +1996,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
-		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)}.
+		\item Visualizzare la lista degli acquisti da effettuare \ref{UC3.7.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\I dati vengono inseriti dal Responsabile Acquisti.
@@ -2016,7 +2016,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Responsabile Acquisti;
-		\item Visualizzare la lista degli acquisti da effettuare \hyperref[UC3.7.2]{(UC3.7.2)};
+		\item Visualizzare la lista degli acquisti da effettuare \ref{UC3.7.2};
 		\item Il Responsabile Acquisti ha inserito i dati degli ingredienti acquistati.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -2049,8 +2049,8 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Il Fattorino seleziona la parte corrispondente della bubble;
-		\item Viene recuperata dal database la lista delle consegne \hyperref[UC3.9.1]{(UC3.9.1)};
-		\item Viene mostrata la lista all'utente \hyperref[UC3.9.2]{(UC3.9.2)}.
+		\item Viene recuperata dal database la lista delle consegne \ref{UC3.9.1};
+		\item Viene mostrata la lista all'utente \ref{UC3.9.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il Fattorino è a conoscenza delle consegne da effettuare.
@@ -2112,14 +2112,14 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo Fattorino;
-		\item Visualizzare la lista delle consegne da effettuare \hyperref[UC3.9.2]{(UC3.9.2)};
+		\item Visualizzare la lista delle consegne da effettuare \ref{UC3.9.2};
 		\item Devono esistere consegne da effettuare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Fattorino visualizza la lista delle consegne \hyperref[UC3.9]{(UC3.9)};
-		\item Il Fattorino seleziona dalla lista quale consegna desidera effettuare \hyperref[UC3.10.1]{(UC3.10.1)};
-		\item Il database viene aggiornato per indicare che l'ordine è in consegna \hyperref[UC3.10.2]{(UC3.10.2)}.
+		\item Il Fattorino visualizza la lista delle consegne \ref{UC3.9};
+		\item Il Fattorino seleziona dalla lista quale consegna desidera effettuare \ref{UC3.10.1};
+		\item Il database viene aggiornato per indicare che l'ordine è in consegna \ref{UC3.10.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\La lista delle consegne viene aggiornata e viene selezionata la consegna scelta.
@@ -2159,12 +2159,12 @@ dove:
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo Fattorino;
 		\item Devono esistere consegne da effettuare;
-		\item È stata selezionata una consegna da effettuare come indicato in \hyperref[UC3.10.1]{(UC3.10.1)}.
+		\item È stata selezionata una consegna da effettuare come indicato in \ref{UC3.10.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Fattorino seleziona dalla lista quale consegna desidera effettuare.
 	\item \textbf{Post-condizione:}
-	\\L'ordine selezionato in \hyperref[UC3.10.1]{(UC3.10.1)} è stato aggiornato nel database cambiandone lo stato in \virgolette{in consegna}.
+	\\L'ordine selezionato in \ref{UC3.10.1} è stato aggiornato nel database cambiandone lo stato in \virgolette{in consegna}.
 \end{itemize}
 
 \UC{Consegna effettuata}{UC3.11}
@@ -2189,8 +2189,8 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Fattorino indica che la consegna è stata effettuata \hyperref[UC3.11.1]{(UC3.11.1)};
-		\item Il database viene aggiornato \hyperref[UC3.11.2]{(UC3.11.2)}.
+		\item Il Fattorino indica che la consegna è stata effettuata \ref{UC3.11.1};
+		\item Il database viene aggiornato \ref{UC3.11.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\La lista delle consegne viene aggiornata e viene eliminata la consegna effettuata.
@@ -2260,12 +2260,12 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Recuperare dal database la lista degli ordini \hyperref[UC3.12.1]{(UC3.12.1)};
-		\item Visualizzare lista ordini \hyperref[UC3.12.2]{(UC3.12.2)};
-		\item L'utente Direttore seleziona dalla lista gli ordini che desidera rimuovere \hyperref[UC3.12.3]{(UC3.12.3)};
-		\item L'utente Direttore seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)};
-		\item L'utente Direttore seleziona l'opzione per confermare \hyperref[UC3.12.5]{(UC3.12.5)};
-		\item Aggiornare il database \hyperref[UC3.12.6]{(UC3.12.6)}.
+		\item Recuperare dal database la lista degli ordini \ref{UC3.12.1};
+		\item Visualizzare lista ordini \ref{UC3.12.2};
+		\item L'utente Direttore seleziona dalla lista gli ordini che desidera rimuovere \ref{UC3.12.3};
+		\item L'utente Direttore seleziona l'opzione per rimuovere gli ordini selezionati \ref{UC3.12.4};
+		\item L'utente Direttore seleziona l'opzione per confermare \ref{UC3.12.5};
+		\item Aggiornare il database \ref{UC3.12.6}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\L'ordine è stato cancellato dalla to-do list del Cuoco.
@@ -2341,7 +2341,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Sono stati selezionati ordini da eliminare \hyperref[UC3.12.3]{(UC3.12.3)}.
+		\item Sono stati selezionati ordini da eliminare \ref{UC3.12.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore sceglie l'ordine da eliminare dalla to-do list del Cuoco.
@@ -2362,7 +2362,7 @@ dove:
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
 		\item La lista degli ordini da eliminare è visualizzata;
-		\item È stata selezionata l'eliminazione degli ordini selezionati \hyperref[UC3.12.4]{(UC3.12.4)}.
+		\item È stata selezionata l'eliminazione degli ordini selezionati \ref{UC3.12.4}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore sceglie l'ordine da eliminare dalla to-do list del Cuoco.
@@ -2382,7 +2382,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Avere confermato quali ordini eliminare \hyperref[UC3.12.5]{(UC3.12.5)}.
+		\item Avere confermato quali ordini eliminare \ref{UC3.12.5}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Vengono aggiornati nel database i dati relativi agli ordini da eliminare.
@@ -2411,10 +2411,10 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Direttore visualizza il menù \hyperref[UC3.13.1]{(UC3.13.1)};
-		\item Il Direttore elimina degli elementi dal menù \hyperref[UC3.13.2]{(UC3.13.2)};
-		\item Il Direttore modifica degli elementi del menù \hyperref[UC3.13.3]{(UC3.13.3)};
-		\item Il Direttore aggiunge elementi al menù \hyperref[UC3.13.4]{(UC3.13.4)}.
+		\item Il Direttore visualizza il menù \ref{UC3.13.1};
+		\item Il Direttore elimina degli elementi dal menù \ref{UC3.13.2};
+		\item Il Direttore modifica degli elementi del menù \ref{UC3.13.3};
+		\item Il Direttore aggiunge elementi al menù \ref{UC3.13.4}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il menù è modificato.
@@ -2441,8 +2441,8 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Viene recuperato dal database il menù del ristorante \hyperref[UC3.13.1.1]{(UC3.13.1.1)};
-		\item Viene mostrato all'utente il menù \hyperref[UC3.13.1.2]{(UC3.13.1.2)}.
+		\item Viene recuperato dal database il menù del ristorante \ref{UC3.13.1.1};
+		\item Viene mostrato all'utente il menù \ref{UC3.13.1.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Nella bubble memory è presente il menù.
@@ -2479,7 +2479,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver recuperato le informazioni dal database \hyperref[UC3.13.1.1]{(UC3.13.1.1)}.
+		\item Aver recuperato le informazioni dal database \ref{UC3.13.1.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore si trova nel menù.
@@ -2505,13 +2505,13 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Direttore seleziona dal menù i cibi che desidera togliere \hyperref[UC3.13.2.1]{(UC3.13.2.1)};
-		\item Il Direttore conferma l'operazione \hyperref[UC3.13.2.2]{(UC3.13.2.2)};
-		\item Il database viene aggiornato \hyperref[UC3.13.2.3]{(UC3.13.2.3)}.
+		\item Il Direttore seleziona dal menù i cibi che desidera togliere \ref{UC3.13.2.1};
+		\item Il Direttore conferma l'operazione \ref{UC3.13.2.2};
+		\item Il database viene aggiornato \ref{UC3.13.2.3}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Gli elementi desiderati sono stati eliminati dal menù.
@@ -2529,10 +2529,10 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il Direttore seleziona dalla lista visualizzata in \hyperref[UC3.13.1]{(UC3.13.1)} gli elementi del menù che desidera rimuovere da esso.
+	\\Il Direttore seleziona dalla lista visualizzata in \ref{UC3.13.1} gli elementi del menù che desidera rimuovere da esso.
 	\item \textbf{Post-condizione:}
 	\\Gli elementi sono stati selezionati.
 \end{itemize}
@@ -2549,7 +2549,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore si trova nel menù, ha selezionato gli elementi da eliminare, e ne conferma l'eliminazione.
@@ -2563,13 +2563,13 @@ dove:
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Notificare al sistema l'aggiornamento del menù effettuato allo \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+	\\Notificare al sistema l'aggiornamento del menù effettuato allo \ref{UC3.13.2.2}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver selezionato l'opzione per rimuovere gli elementi selezionati dal menù \hyperref[UC3.13.2.2]{(UC3.13.2.2)}.
+		\item Aver selezionato l'opzione per rimuovere gli elementi selezionati dal menù \ref{UC3.13.2.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore ha confermato l'eliminazione dal menù degli elementi selezionati in precedenza.
@@ -2595,15 +2595,15 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Direttore seleziona dal menù l'elemento che desidera modificare \hyperref[UC3.13.3.1]{(UC3.13.3.1)};
-		\item Viene confermata la selezione \hyperref[UC3.13.3.2]{(UC3.13.3.2)};
-		\item Il Direttore inserisce le nuove informazioni \hyperref[UC3.13.3.3]{(UC3.13.3.3)};
-		\item Vengono confermati i cambiamenti \hyperref[UC3.13.3.4]{(UC3.13.3.4)};
-		\item Il database viene aggiornato \hyperref[UC3.13.3.5]{(UC3.13.3.5)}.
+		\item Il Direttore seleziona dal menù l'elemento che desidera modificare \ref{UC3.13.3.1};
+		\item Viene confermata la selezione \ref{UC3.13.3.2};
+		\item Il Direttore inserisce le nuove informazioni \ref{UC3.13.3.3};
+		\item Vengono confermati i cambiamenti \ref{UC3.13.3.4};
+		\item Il database viene aggiornato \ref{UC3.13.3.5}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Sono state applicate le modifiche desiderate agli elementi del menù.
@@ -2640,10 +2640,10 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\Il Direttore utilizza l'apposito comando per modificare la voce del menù selezionata al caso d'uso \hyperref[UC3.13.3.1]{(UC3.13.3.1)}.
+	\\Il Direttore utilizza l'apposito comando per modificare la voce del menù selezionata al caso d'uso \ref{UC3.13.3.1}.
 	\item \textbf{Post-condizione:}
 	\\La modifica alla voce del menù selezionata è ora disponibile.
 \end{itemize}
@@ -2694,13 +2694,13 @@ dove:
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Propagare nel database le modifiche effettuate nello \hyperref[UC3.13.3]{(UC3.13.3)}.
+	\\Propagare nel database le modifiche effettuate nello \ref{UC3.13.3}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver selezionato \virgolette{Applica cambiamenti} \hyperref[UC3.13.4]{(UC3.13.4)}.
+		\item Aver selezionato \virgolette{Applica cambiamenti} \ref{UC3.13.4}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Le modifiche confermate dal Direttore vengono salvate sul database.
@@ -2726,14 +2726,14 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver visualizzato il menù del ristorante \hyperref[UC3.13.1]{(UC3.13.1)}.
+		\item Aver visualizzato il menù del ristorante \ref{UC3.13.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Direttore seleziona l'opzione per aggiungere un elemento \hyperref[UC3.13.4.1]{(UC3.13.4.1)};
-		\item Vengono inserite le informazioni necessarie alla creazione del nuovo elemento \hyperref[UC3.13.4.2]{(UC3.13.4.2)};
-		\item Il Direttore conferma l'aggiunta del nuovo elemento \hyperref[UC3.13.4.3]{(UC3.13.4.3)};
-		\item Il database viene aggiornato \hyperref[UC3.13.4.4]{(UC3.13.4.4)}.
+		\item Il Direttore seleziona l'opzione per aggiungere un elemento \ref{UC3.13.4.1};
+		\item Vengono inserite le informazioni necessarie alla creazione del nuovo elemento \ref{UC3.13.4.2};
+		\item Il Direttore conferma l'aggiunta del nuovo elemento \ref{UC3.13.4.3};
+		\item Il database viene aggiornato \ref{UC3.13.4.4}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\È stato aggiunto un elemento al menù.
@@ -2771,7 +2771,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver iniziato la procedura di aggiunta di un elemento come da \hyperref[UC3.13.4.1]{(UC3.13.4.1)}.
+		\item Aver iniziato la procedura di aggiunta di un elemento come da \ref{UC3.13.4.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore compila il form caricato dalla bubble in tutte le sue parti.
@@ -2791,7 +2791,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver inserito le informazioni necessarie \hyperref[UC3.13.4.2]{(UC3.13.4.2)}.
+		\item Aver inserito le informazioni necessarie \ref{UC3.13.4.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore conferma le modifiche al menù.
@@ -2805,13 +2805,13 @@ dove:
 	\item \textbf{Attori:}
 	\\Direttore.
 	\item \textbf{Scopo e descrizione:} 
-	\\Propagare nel database le modifiche effettuate in \hyperref[UC3.13.4]{(UC3.13.4)}.
+	\\Propagare nel database le modifiche effettuate in \ref{UC3.13.4}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver confermato l'aggiunta \hyperref[UC3.13.4.3]{(UC3.13.4.3)}.
+		\item Aver confermato l'aggiunta \ref{UC3.13.4.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Le modifiche confermate dal Direttore vengono propagate al database.
@@ -2840,12 +2840,12 @@ dove:
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Recuperare la lista degli ordini da effettuare dal database \hyperref[UC3.14.1]{(UC3.14.1)};
-		\item Mostrare la lista all'utente \hyperref[UC3.14.2]{(UC3.14.2)};
-		\item L'utente Direttore seleziona \virgolette{Aggiungi ordine} \hyperref[UC3.14.3]{(UC3.14.3)};
-		\item L'utente Direttore inserisce le informazioni sull'ordine da aggiungere \hyperref[UC3.14.4]{(UC3.14.4)};
-		\item L'utente Direttore seleziona \virgolette{Conferma} \hyperref[UC3.14.5]{(UC3.14.5)};
-		\item Aggiornare il database \hyperref[UC3.14.6]{(UC3.14.6)}.
+		\item Recuperare la lista degli ordini da effettuare dal database \ref{UC3.14.1};
+		\item Mostrare la lista all'utente \ref{UC3.14.2};
+		\item L'utente Direttore seleziona \virgolette{Aggiungi ordine} \ref{UC3.14.3};
+		\item L'utente Direttore inserisce le informazioni sull'ordine da aggiungere \ref{UC3.14.4};
+		\item L'utente Direttore seleziona \virgolette{Conferma} \ref{UC3.14.5};
+		\item Aggiornare il database \ref{UC3.14.6}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il Direttore ha aggiunto gli elementi desiderati alla to-do list del Responsabile Acquisti.
@@ -2882,7 +2882,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver recuperato dal database le informazioni \hyperref[UC3.14.1]{(UC3.14.1)}.
+		\item Aver recuperato dal database le informazioni \ref{UC3.14.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore deve visualizzare la lista degli ordini da effettuare.
@@ -2902,7 +2902,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item La lista degli ordini da effettuare è visualizzata \hyperref[UC3.14.2]{UC3.14.2}.
+		\item La lista degli ordini da effettuare è visualizzata \ref{UC3.14.2}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore seleziona l'opzione per aggiungere un ordine.
@@ -2922,7 +2922,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver selezionato l'opzione \virgolette{Aggiungi ordine} \hyperref[UC3.14.3]{UC3.14.3}.
+		\item Aver selezionato l'opzione \virgolette{Aggiungi ordine} \ref{UC3.14.3}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore aggiunge informazioni agli elementi da ordinare desiderati per la to-do list del Responsabile Acquisti.
@@ -2942,7 +2942,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver inserito informazioni per l'ordine \hyperref[UC3.14.4]{UC3.14.4}.
+		\item Aver inserito informazioni per l'ordine \ref{UC3.14.4}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il Direttore ha aggiunto informazioni per l'ordine e lo ha confermato selezionando l'apposita opzione.
@@ -2962,7 +2962,7 @@ dove:
 		\item Avere Rocket.Chat;
 		\item Avere la bubble del ristorante selezionato;
 		\item Avere accesso alla bubble con il ruolo di Direttore;
-		\item Aver confermato l'ordine \hyperref[UC3.14.5]{UC3.14.5}.
+		\item Aver confermato l'ordine \ref{UC3.14.5}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\\Il database deve essere aggiornato con gli elementi aggiunti dal Direttore alla to-do list del Responsabile Acquisti.
@@ -2992,11 +2992,11 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
 		\item Il Direttore seleziona la parte corrispondente della bubble;
-		\item I dati vengono recuperati dal database \hyperref[UC3.15.1]{(UC3.15.1)};
-		\item Viene mostrata la lista degli ordini all'utente \hyperref[UC3.15.2]{(UC3.15.2)};
-		\item Il Direttore seleziona dalla lista gli ordini che si desidera rimuovere \hyperref[UC3.15.3]{(UC3.15.3)};
-		\item Il Direttore seleziona l'opzione per rimuovere gli ordini selezionati \hyperref[UC3.15.4]{(UC3.15.4)};
-		\item Viene aggiornato il database \hyperref[UC3.15.5]{(UC3.15.5)}.
+		\item I dati vengono recuperati dal database \ref{UC3.15.1};
+		\item Viene mostrata la lista degli ordini all'utente \ref{UC3.15.2};
+		\item Il Direttore seleziona dalla lista gli ordini che si desidera rimuovere \ref{UC3.15.3};
+		\item Il Direttore seleziona l'opzione per rimuovere gli ordini selezionati \ref{UC3.15.4};
+		\item Viene aggiornato il database \ref{UC3.15.5}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Il Direttore ha eliminato gli elementi desiderati dalla to-do list del Responsabile Acquisti.
