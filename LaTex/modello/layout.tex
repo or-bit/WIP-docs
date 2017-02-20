@@ -59,7 +59,6 @@
 }
 
 % permette al comando \url{...} di andare a capo a metà di un link
-% COMMENT: non so se conviene usarlo, non è tanto bello un link spezzato
 \usepackage{breakurl}
 
 % immagini
@@ -202,7 +201,8 @@
 \usepackage{lmodern}
 
 % Permette di resettare il contatore delle note a piè di pagina ad ogni pagina
-\usepackage[perpage, bottom]{footmisc}
+\usepackage[perpage, bottom, stable]{footmisc}
+\patchcmd{\footref}{\ref}{\ref*}{}{}
 
 % Per poter usare il carattere ° (anche nelle formule matematiche)
 \usepackage{gensymb}
