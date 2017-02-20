@@ -31,7 +31,31 @@ dove:
 	\\È presente la bubble generica, compresa la sua memoria.
 \end{itemize}
 
-\UC{Connessione a database \glossario{MongoDB}}{UC1.00}
+\UC{Interazione con database MongoDB}{UC2}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/Database.png}
+	\caption{\UCCaption{} Istanziazione della bubble generica}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del framework interagisce con un database MongoDB esterno.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere l'indirizzo di un database MongoDB con cui si desidera interagire.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del framework interagisce con il database MongoDB di cui possiede l'indirizzo.
+	\item \textbf{Post-condizione:}
+	\\L'utilizzatore del metodo ha interagito con i database.
+\end{itemize}
+
+\UCF{Connessione a database \glossario{MongoDB}}{UC1.00}
 
 \begin{figure}[H]
 	\centering
@@ -55,7 +79,7 @@ dove:
 \\La bubble generica da cui è invocato il metodo è connessa al database.
 \end{itemize}
 
-\UC{Lettura da database MongoDB}{UC1.01}
+\UCF{Lettura da database MongoDB}{UC1.01}
 
 \begin{figure}[H]
 	\centering
@@ -80,7 +104,7 @@ dove:
 	\\I dati sono prelevati dal database e sono pronti all'uso nella bubble.
 \end{itemize}
 
-\UC{Scrittura su database MongoDB}{UC1.02}
+\UCF{Scrittura su database MongoDB}{UC1.02}
 
 \begin{figure}[H]
 	\centering
@@ -96,7 +120,7 @@ dove:
 \item \textbf{Precondizioni:}
 \begin{itemize}
 	\item Avere già istanziato una bubble generica;
-	\item La bubble è connessa al database MongoDB;
+	\item La bubble è connessa al database MongoDB \ref{UC1.00};
 	\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
 \end{itemize}
 \item \textbf{Flusso principale degli eventi:}
