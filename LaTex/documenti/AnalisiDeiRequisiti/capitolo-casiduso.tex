@@ -129,7 +129,7 @@ dove:
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\UC{Creazione di un elemento}{UC1.02}
+\UC{Operazioni sugli elementi}{UC1.02}
 
 \begin{figure}[H]
 	\centering
@@ -154,13 +154,37 @@ dove:
 	\\I dati sono scritti nel database collegato.
 \end{itemize}
 
+\UCF{Creazione di un elemento}{UC1.02}
 
-\UCF{Immagine}{UC1.25}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
+	\caption{\UCFCaption{} Scrittura su database MongoDB}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Scrittura dati nel database connesso alla bubble.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item La bubble è connessa al database MongoDB \ref{UC1.00};
+		\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore chiama il metodo su una bubble passandogli un oggetto \glossario{JavaScript}, serializzabile in JSON, e il metodo lo salva nel database.
+	\item \textbf{Post-condizione:}
+	\\I dati sono scritti nel database collegato.
+\end{itemize}
+
+\UCFF{Immagine}{UC1.25}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_25.png}
-	\caption{\UCFCaption{} Immagine}
+	\caption{\UCFFCaption{} Immagine}
 \end{figure}
 
 \begin{itemize}
@@ -179,12 +203,12 @@ dove:
 	\\Il file immagine è stato incluso nella bubble.
 \end{itemize}
 
-\UCF{TextView}{UC1.26}
+\UCFF{TextView}{UC1.26}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_26.png}
-	\caption{\UCFCaption{} TextView}
+	\caption{\UCFFCaption{} TextView}
 \end{figure}
 
 \begin{itemize}
@@ -203,12 +227,12 @@ dove:
 	\\Il testo è stato incluso nella bubble.
 \end{itemize}
 
-\UCF{Label}{UC1.27}
+\UCFF{Label}{UC1.27}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_27.png}
-	\caption{\UCFCaption{} Label}
+	\caption{\UCFFCaption{} Label}
 \end{figure}
 
 \begin{itemize}
@@ -227,12 +251,12 @@ dove:
 	\\Il testo è stato incluso nella bubble.
 \end{itemize}
 
-\UCF{Grafico a torta}{UC1.28}
+\UCFF{Grafico a torta}{UC1.28}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_28.png}
-	\caption{\UCFCaption{} Grafico a torta}
+	\caption{\UCFFCaption{} Grafico a torta}
 \end{figure}
 
 \begin{itemize}
@@ -251,12 +275,12 @@ dove:
 	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella bubble.
 \end{itemize}
 
-\UCF{Grafico a istogramma}{UC1.29}
+\UCFF{Grafico a istogramma}{UC1.29}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_29.png}
-	\caption{\UCFCaption{} Grafico a istogramma}
+	\caption{\UCFFCaption{} Grafico a istogramma}
 \end{figure}
 
 \begin{itemize}
@@ -275,12 +299,12 @@ dove:
 	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella bubble.
 \end{itemize}
 
-\UCF{Checkbox}{UC1.30}
+\UCFF{Checkbox}{UC1.30}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_30.png}
-	\caption{\UCFCaption{} Checkbox}
+	\caption{\UCFFCaption{} Checkbox}
 \end{figure}
 
 \begin{itemize}
@@ -298,12 +322,12 @@ dove:
 	\\Nella bubble è presente la checkbox, nella bubble memory è presente la variabile a cui è assegnata.
 \end{itemize}
 
-\UCF{Bottone Radio}{UC1.31}
+\UCFF{Bottone Radio}{UC1.31}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_31.png}
-	\caption{\UCFCaption{} Bottone Radio}
+	\caption{\UCFFCaption{} Bottone Radio}
 \end{figure}
 
 \begin{itemize}
@@ -321,12 +345,12 @@ dove:
 	\\Nella bubble è presente il bottone radio, nella bubble memory è presente la variabile a cui è assegnata.
 \end{itemize}
 
-\UCF{Bottone}{UC1.32}
+\UCFF{Bottone}{UC1.32}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_32.png}
-	\caption{\UCFCaption{} Bottone}
+	\caption{\UCFFCaption{} Bottone}
 \end{figure}
 
 \begin{itemize}
@@ -345,12 +369,12 @@ dove:
 	\\Nella bubble è presente il bottone. Alla pressione da parte dell'utente del bottone della bubble la funzione di \glossario{callback} specificata verrà eseguita.
 \end{itemize}
 
-\UCF{TextEdit}{UC1.33}
+\UCFF{TextEdit}{UC1.33}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_33.png}
-	\caption{\UCFCaption{} TextEdit}
+	\caption{\UCFFCaption{} TextEdit}
 \end{figure}
 
 \begin{itemize}
@@ -368,12 +392,12 @@ dove:
 	\\Nella bubble è presente il campo di compilazione TextEdit. Nella bubble memory è presente il valore attuale del testo presente nell'elemento della bubble.
 \end{itemize}
 
-\UC{Aggiunta di un elemento}{UC1.04}
+\UCF{Aggiunta di un elemento}{UC1.04}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_04.png}
-	\caption{\UCCaption{} Aggiunta di un elemento}
+	\caption{\UCFCaption{} Aggiunta di un elemento}
 \end{figure}
 
 \begin{itemize}
@@ -392,7 +416,7 @@ dove:
 	\\La bubble avrà al suo interno l'elemento passato al metodo.
 \end{itemize}
 
-\UCC{Rimozione di un elemento presente}{UC1.03.1}
+\UCC[2]{Rimozione di un elemento presente}{UC1.03.1}
 
 \begin{figure}[H]
 	\centering
@@ -418,7 +442,7 @@ dove:
 	\\La bubble non contiene l'elemento indicato da rimuovere.
 \end{itemize}
 
-\UCC{Rimozione di un elemento non presente}{UC1.03.2}
+\UCC[2]{Rimozione di un elemento non presente}{UC1.03.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -438,7 +462,8 @@ dove:
 	\\La bubble non contiene l'elemento indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
 \end{itemize}
 
-\UCC{Modifica di un elemento presente}{UC1.05.1}
+\isfirsttrue
+\UCC[2]{Modifica di un elemento presente}{UC1.05.1}
 
 \begin{figure}[H]
 	\centering
@@ -464,7 +489,7 @@ dove:
 	\\La bubble contiene l'elemento modificato.
 \end{itemize}
 
-\UCC{Modifica di un elemento non presente}{UC1.05.2}
+\UCC[2]{Modifica di un elemento non presente}{UC1.05.2}
 
 \begin{itemize}
 	\item \textbf{Attori:}
@@ -484,12 +509,12 @@ dove:
 	\\L'utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l'elemento da modificare.
 \end{itemize}
 
-\UC{Creazione notifica statica}{UC1.17}
+\UCF{Creazione notifica statica}{UC1.17}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_17.png}
-	\caption{\UCCaption{} Creazione notifica statica}
+	\caption{\UCFCaption{} Creazione notifica statica}
 \end{figure}
 
 \begin{itemize}
@@ -508,12 +533,12 @@ dove:
 	\\Sul dispositivo sul quale si sta utilizzando Rocket.Chat sarà notificato il testo specificato nel metodo.
 \end{itemize}
 
-\UC{Visualizza notifica statica}{UC1.18}
+\UCF{Visualizza notifica statica}{UC1.18}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_18.png}
-	\caption{\UCCaption{} Visualizza notifica statica}
+	\caption{\UCFCaption{} Visualizza notifica statica}
 \end{figure}
 
 \begin{itemize}
@@ -532,12 +557,12 @@ dove:
 	\\La notifica contiene il valore del testo specificato.
 \end{itemize}
 
-\UC{Mostra elemento grafico}{UC1.21}
+\UCF{Mostra elemento grafico}{UC1.21}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_21.png}
-	\caption{\UCCaption{} Mostra elemento grafico}
+	\caption{\UCFCaption{} Mostra elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -556,12 +581,12 @@ dove:
 	\\L'elemento grafico specificato è visibile.
 \end{itemize}
 
-\UC{Nascondi elemento grafico}{UC1.22}
+\UCF{Nascondi elemento grafico}{UC1.22}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_22.png}
-	\caption{\UCCaption{} Nascondi elemento grafico}
+	\caption{\UCFCaption{} Nascondi elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -580,12 +605,12 @@ dove:
 	\\L'elemento grafico specificato non è più visibile.
 \end{itemize}
 
-\UC{Imposta posizione elemento grafico}{UC1.23}
+\UCF{Imposta posizione elemento grafico}{UC1.23}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_23.png}
-	\caption{\UCCaption{} Imposta posizione elemento grafico}
+	\caption{\UCFCaption{} Imposta posizione elemento grafico}
 \end{figure}
 
 \begin{itemize}
@@ -603,6 +628,8 @@ dove:
 	\item \textbf{Post-condizione:}
 	\\L'elemento grafico specificato si trova nella posizione specificata.
 \end{itemize}
+
+{2, stringa titolo, label}
 
 \isfirsttrue
 \UCC{Cambiamento di stato della bubble su proprietà esistente}{UC1.06.1}

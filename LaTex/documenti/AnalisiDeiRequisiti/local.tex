@@ -39,6 +39,7 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 %\newcommand{\UCF}{\stepcounter{usecasefiglio} UC\theusecase.\theusecasefiglio}
 \newcommand{\UCCaption}{UC\theusecase{}}
 \newcommand{\UCFCaption}{UC\theusecase.\theusecasefiglio{}}
+\newcommand{\UCFFCaption}{UC\theusecase.\theusecasefiglio.\theucff{}}
 \newcommand{\UCCCaption}{
 	\ifisfiglio
 		UC\theusecase.\theusecasefiglio.\thealternativi{}
@@ -101,11 +102,13 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 				\isfigliotrue
 				\refstepcounter{usecasefiglio}
 				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
-				\subsection{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\paragraph{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\mbox{}\\
 			\else
 				\refstepcounter{alternativi}
 				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
-				\subsection{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\paragraph{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\mbox{}\\
 			\fi
 		\fi
 	\fi
