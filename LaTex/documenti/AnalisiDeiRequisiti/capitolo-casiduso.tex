@@ -36,7 +36,7 @@ dove:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/Database.png}
-	\caption{\UCCaption{} Istanziazione della bubble generica}
+	\caption{\UCCaption{} Interazione con database MongoDB}
 \end{figure}
 
 \begin{itemize}
@@ -52,7 +52,7 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\\L'utilizzatore del framework interagisce con il database MongoDB di cui possiede l'indirizzo.
 	\item \textbf{Post-condizione:}
-	\\L'utilizzatore del metodo ha interagito con i database.
+	\\L'utilizzatore del metodo ha interagito con il database.
 \end{itemize}
 
 \UCF{Connessione a database \glossario{MongoDB}}{UC1.00}
@@ -129,29 +129,27 @@ dove:
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\UC{Operazioni sugli elementi}{UC1.02}
+\UC{Effettuare operazioni sugli elementi}{UC1.02}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
-	\caption{\UCCaption{} Scrittura su database MongoDB}
+	\caption{\UCCaption{} Effettuare operazioni sugli elementi}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Scrittura dati nel database connesso alla bubble.
+	\\Effettuare una o più operazioni sugli elementi della bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere già istanziato una bubble generica;
-		\item La bubble è connessa al database MongoDB \ref{UC1.00};
-		\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
+		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo su una bubble passandogli un oggetto \glossario{JavaScript}, serializzabile in JSON, e il metodo lo salva nel database.
+	\\L'utilizzatore effettua delle operazioni sugli elementi della bubble.
 	\item \textbf{Post-condizione:}
-	\\I dati sono scritti nel database collegato.
+	\\Sono state apportate delle modifiche agli elementi della bubble.
 \end{itemize}
 
 \UCF{Creazione di un elemento}{UC1.02}
@@ -159,24 +157,23 @@ dove:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
-	\caption{\UCFCaption{} Scrittura su database MongoDB}
+	\caption{\UCFCaption{} Creazione di un elemento}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Scrittura dati nel database connesso alla bubble.
+	\\Costruzione di un elemento.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
-		\item La bubble è connessa al database MongoDB \ref{UC1.00};
-		\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
+		\item Disporre di tutte le risorse necessarie a creare l'elemento.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo su una bubble passandogli un oggetto \glossario{JavaScript}, serializzabile in JSON, e il metodo lo salva nel database.
+	\\L'utilizzatore crea l'elemento della tipologia desiderata.
 	\item \textbf{Post-condizione:}
-	\\I dati sono scritti nel database collegato.
+	\\È stato creato un elemento.
 \end{itemize}
 
 \UCFF{Immagine}{UC1.25}
@@ -191,16 +188,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire all'interno della bubble un file immagine.
+	\\L'utilizzatore del framework può creare un elemento immagine.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Avere un'immagine di cui fare la preview.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo che specifica il file immagine da includere nella bubble.
+	\\L'utilizzatore del framework crea un elemento immagine.
 	\item \textbf{Post-condizione:}
-	\\Il file immagine è stato incluso nella bubble.
+	\\È stato creato un elemento immagine.
 \end{itemize}
 
 \UCFF{TextView}{UC1.26}
@@ -215,16 +212,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire all'interno della bubble una \glossario{TextView}.
+	\\L'utilizzatore del framework può creare un elemento \glossario{TextView}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Avere un testo da visualizzare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo che specifica il testo da includere nella bubble.
+	\\L'utilizzatore del framework crea l'elemento TextView specificando il testo da includere.
 	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella bubble.
+	\\È stato creato un elemento TextView.
 \end{itemize}
 
 \UCFF{Label}{UC1.27}
@@ -239,16 +236,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire all'interno della bubble una \glossario{label}.
+	\\L'utilizzatore del framework può creare un elemento \glossario{label}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Avere un testo da visualizzare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo che specifica il testo da includere nella label.
+	\\L'utilizzatore del framework crea l'elemento label specificando il testo da includere.
 	\item \textbf{Post-condizione:}
-	\\Il testo è stato incluso nella bubble.
+	\\È stato creato un elemento label.
 \end{itemize}
 
 \UCFF{Grafico a torta}{UC1.28}
@@ -263,16 +260,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire all'interno della bubble un grafico a torta.
+	\\L'utilizzatore del framework può creare un elemento "grafico a torta".
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo specificando i dati da rappresentare nel grafico a torta.
+	\\L'utilizzatore del framework crea l'elemento specificando i dati da rappresentare nel grafico a torta.
 	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a torta. Il grafico è visualizzato nella bubble.
+	\\È stato creato un elemento "grafico a torta".
 \end{itemize}
 
 \UCFF{Grafico a istogramma}{UC1.29}
@@ -287,16 +284,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire all'interno della bubble un grafico istogramma.
+	\\L'utilizzatore del framework può creare un elemento "grafico a istogramma".
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Essere in possesso dei dati che si desidera visualizzare nel grafico.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo specificando i dati da rappresentare nel grafico a istogramma.
+	\\L'utilizzatore del framework crea l'elemento specificando i dati da rappresentare nel grafico a istogramma.
 	\item \textbf{Post-condizione:}
-	\\I dati sono rappresentati nel grafico a istogramma. Il grafico è visualizzato nella bubble.
+	\\È stato creato un elemento "grafico a istogramma".
 \end{itemize}
 
 \UCFF{Checkbox}{UC1.30}
@@ -311,15 +308,15 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire un elemento \glossario{checkbox} all'interno della bubble specificando la variabile della bubble memory a cui l'elemento è assegnato.
+	\\L'utilizzatore del framework può creare un elemento \glossario{checkbox}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo per aggiungere alla bubble una checkbox relativa ad un elemento della bubble memory specificato.
+	\\L'utilizzatore del framework crea l'elemento checkbox.
 	\item \textbf{Post-condizione:}
-	\\Nella bubble è presente la checkbox, nella bubble memory è presente la variabile a cui è assegnata.
+	\\È stato creato l'elemento checkbox.
 \end{itemize}
 
 \UCFF{Bottone Radio}{UC1.31}
@@ -334,15 +331,15 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire un elemento \glossario{bottone radio} di scelta di un elemento tra molti all'interno della bubble, specificando la variabile della bubble memory a cui la scelta è assegnata.
+	\\L'utilizzatore del framework può creare un elemento \glossario{bottone radio}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo per aggiungere alla bubble un bottone radio relativo ad un elemento della bubble memory specificato.
+	\\L'utilizzatore del framework crea un elemento bottone radio.
 	\item \textbf{Post-condizione:}
-	\\Nella bubble è presente il bottone radio, nella bubble memory è presente la variabile a cui è assegnata.
+	\\È stato creato l'elemento bottone radio.
 \end{itemize}
 
 \UCFF{Bottone}{UC1.32}
@@ -357,16 +354,16 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può inserire un elemento \glossario{bottone} all'interno della bubble specificando la funzione che verrà eseguita alla pressione del bottone da parte dell'utente.
+	\\L'utilizzatore del framework può creare un elemento \glossario{bottone}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
 		\item Avere la funzione da eseguire.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo per aggiungere il bottone specificando la funzione da assegnare ad esso.
+	\\L'utilizzatore del framework crea l'elemento bottone specificando la funzione da assegnare ad esso.
 	\item \textbf{Post-condizione:}
-	\\Nella bubble è presente il bottone. Alla pressione da parte dell'utente del bottone della bubble la funzione di \glossario{callback} specificata verrà eseguita.
+	\\È stato creato un elemento bottone
 \end{itemize}
 
 \UCFF{TextEdit}{UC1.33}
@@ -381,15 +378,15 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può richiedere un input testuale \glossario{TextEdit}.
+	\\L'utilizzatore del framework può creare un input testuale \glossario{TextEdit}.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo per aggiungere il testo ricevuto nella bubble memory.
+	\\L'utilizzatore del framework crea l'elemento TextEdit.
 	\item \textbf{Post-condizione:}
-	\\Nella bubble è presente il campo di compilazione TextEdit. Nella bubble memory è presente il valore attuale del testo presente nell'elemento della bubble.
+	\\È stato creato l'elemento TextEdit.
 \end{itemize}
 
 \UCF{Aggiunta di un elemento}{UC1.04}
