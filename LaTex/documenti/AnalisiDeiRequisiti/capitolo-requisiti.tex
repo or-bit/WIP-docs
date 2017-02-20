@@ -20,7 +20,7 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline \RequisitoObV\label{L1} & Obbligatorio & Il framework e la demo sono sviluppati in JavaScript. & Capitolato \\
+	\hline \RequisitoObV\label{L1} & Obbligatorio & Il framework e la demo sono sviluppati in JavaScript 6th edition. & Capitolato \\
 	\hline \RequisitoObV \label{L2} & Obbligatorio & Il framework è sviluppato come pacchetto per Rocket.Chat & Capitolato \\
 	\hline \RequisitoObV\label{L5} & Obbligatorio & Il framework offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & VerbaleEsterno23\_12\_2016 \linebreak \ref{UC1.06.1}  \\
 	\hline \RequisitoObV\label{L54} & Obbligatorio & La demo è caricata in \glossario{Heroku}. & Capitolato \\
@@ -76,6 +76,9 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
 	\hline \RequisitoObQ\label{L57} & Obbligatorio & Viene fornita documentazione in lingua inglese & Capitolato \\
+	\hline \RequisitoObQ\label{L58} & Obbligatorio & Il framework è sviluppato con uso di promise per la programmazione asincrona & Capitolato \\
+	\hline \RequisitoObQ\label{L59} & Obbligatorio & La programmazione in JavaScript segue la Airbnb style guide & Capitolato \\
+	\hline \RequisitoObQ\label{L60} & Obbligatorio & La scrittura del codice segue la guida 12Factor App & Capitolato \\
 	\hline
 \caption{Requisiti di qualità per il framework}
 \end{longtable}
@@ -127,7 +130,7 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{6cm}|P{6cm}|}
 	\hline \textbf{Fonte} & \textbf{Requisiti}\\
-	\hline Capitolato & \RequisitoObVRef{L1} \linebreak \RequisitoObVRef{L2} \linebreak \RequisitoOpFRef{L3} \linebreak \RequisitoOpFRef{L4} \linebreak \RequisitoObVRef{L54} \linebreak \RequisitoObQRef{L55}\\
+	\hline Capitolato & \RequisitoObVRef{L1} \linebreak \RequisitoObVRef{L2} \linebreak \RequisitoOpFRef{L3} \linebreak \RequisitoOpFRef{L4} \linebreak \RequisitoObVRef{L54} \linebreak \RequisitoObQRef{L57} \linebreak \RequisitoObQRef{L58} \linebreak \RequisitoObQRef{L59} \linebreak \RequisitoObQRef{L60}\\
 	\hline VerbaleEsterno23\_12\_2016 & \RequisitoObVRef{L5} \linebreak \RequisitoObFRef{L8} \\
 	\hline \ref{UC1.00} & \RequisitoObFRef{L8} \\
 	\hline \ref{UC1.01} & \RequisitoObFRef{L8} \\
@@ -270,7 +273,10 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline \RequisitoOpFRef{L50} & \ref{UC3.9} \\
 	\hline \RequisitoOpFRef{L51} & \ref{UC3.10} \\
 	\hline \RequisitoOpFRef{L52} & \ref{UC3.11} \\
-	\hline \RequisitoOpQRef{L57} & Capitolato \\	
+	\hline \RequisitoOpQRef{L57} & Capitolato \\
+	\hline \RequisitoOpQRef{L58} & Capitolato \\
+	\hline \RequisitoOpQRef{L59} & Capitolato \\
+	\hline \RequisitoOpQRef{L60} & Capitolato \\	
 	\hline
 	\caption{Tracciamento requisiti-fonti}
 \end{longtable}
