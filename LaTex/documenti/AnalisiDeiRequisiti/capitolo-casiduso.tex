@@ -129,75 +129,31 @@ dove:
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\UCC{Rimozione di un elemento presente}{UC1.03.1}
+\UC{Creazione di un elemento}{UC1.02}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_03.png}
-	\caption{\UCCCaption{} Rimozione di un elemento}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
-	\item \textbf{Scopo e descrizione:}
-	\\Rimuovere dalla bubble un \glossario{elemento}\footnote{Viene considerato elemento del framework un qualsiasi componente grafico (form, immagini, label ad esempio) o funzionale (notifiche, API).} specificato.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una bubble generica;
-		\item La bubble possiede degli \glossario{elementi}.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo, il quale rimuove l'elemento dalla bubble.
-	\item \textbf{Scenari alternativi:}
-	\\L'elemento che si vuole eliminare non è presente nella bubble \ref{UC1.03.2}.
-	\item \textbf{Post-condizione:}
-	\\La bubble non contiene l'elemento indicato da rimuovere.
-\end{itemize}
-
-\UCC{Rimozione di un elemento non presente}{UC1.03.2}
-
-\begin{itemize}
-	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
-	\item \textbf{Scopo e descrizione:} 
-	\\Rimuovere dalla bubble un elemento specificato.
-	\item \textbf{Precondizioni:}
-	\begin{itemize}
-		\item Avere già istanziato una bubble generica;
-		\item La bubble possiede degli elementi.
-	\end{itemize}
-	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore chiama il metodo, il quale, non trovando l'elemento, restituisce un messaggio di errore.
-	\item \textbf{Scenari alternativi:}
-	\\L'elemento è presente nella bubble \ref{UC1.03.1}.
-	\item \textbf{Post-condizione:}
-	\\La bubble non contiene l'elemento indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
-\end{itemize}
-
-\UC{Aggiunta di un elemento}{UC1.04}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_04.png}
-	\caption{\UCCaption{} Aggiunta di un elemento}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
+	\caption{\UCCaption{} Scrittura su database MongoDB}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\Inserire nella bubble un elemento.
+	\\Scrittura dati nel database connesso alla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
-		\item Aver istanziato un elemento.
+		\item La bubble è connessa al database MongoDB \ref{UC1.00};
+		\item L'utilizzatore deve conoscere il nome della collection da cui prelevare i dati.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla bubble e il metodo lo aggiunge alla bubble.
+	\\L'utilizzatore chiama il metodo su una bubble passandogli un oggetto \glossario{JavaScript}, serializzabile in JSON, e il metodo lo salva nel database.
 	\item \textbf{Post-condizione:}
-	\\La bubble avrà al suo interno l'elemento passato al metodo.
+	\\I dati sono scritti nel database collegato.
 \end{itemize}
+
 
 \UCF{Immagine}{UC1.25}
 
@@ -412,52 +368,74 @@ dove:
 	\\Nella bubble è presente il campo di compilazione TextEdit. Nella bubble memory è presente il valore attuale del testo presente nell'elemento della bubble.
 \end{itemize}
 
-\UC{Creazione notifica statica}{UC1.17}
+\UC{Aggiunta di un elemento}{UC1.04}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_17.png}
-	\caption{\UCCaption{} Creazione notifica statica}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_04.png}
+	\caption{\UCCaption{} Aggiunta di un elemento}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework potrà creare una notifica statica specificandone il testo.
+	\\Inserire nella bubble un elemento.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
-		\item Essere in possesso del messaggio che si desidera notificare sotto forma di testo.
+		\item Aver istanziato un elemento.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework chiama il metodo specificando il testo da visualizzare nella notifica statica.
+	\\L'utilizzatore invoca il metodo sulla bubble e il metodo lo aggiunge alla bubble.
 	\item \textbf{Post-condizione:}
-	\\Sul dispositivo sul quale si sta utilizzando Rocket.Chat sarà notificato il testo specificato nel metodo.
+	\\La bubble avrà al suo interno l'elemento passato al metodo.
 \end{itemize}
 
-\UC{Visualizza notifica statica}{UC1.18}
+\UCC{Rimozione di un elemento presente}{UC1.03.1}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_18.png}
-	\caption{\UCCaption{} Visualizza notifica statica}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_03.png}
+	\caption{\UCCCaption{} Rimozione di un elemento}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
-	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework può far visualizzare all'utente una notifica statica che visualizzi del testo.
+	\item \textbf{Scopo e descrizione:}
+	\\Rimuovere dalla bubble un \glossario{elemento}\footnote{Viene considerato elemento del framework un qualsiasi componente grafico (form, immagini, label ad esempio) o funzionale (notifiche, API).} specificato.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
-		\item Aver creato una notifica statica.
+		\item La bubble possiede degli \glossario{elementi}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework fa visualizzare una certa notifica da lui creata.
+	\\L'utilizzatore chiama il metodo, il quale rimuove l'elemento dalla bubble.
+	\item \textbf{Scenari alternativi:}
+	\\L'elemento che si vuole eliminare non è presente nella bubble \ref{UC1.03.2}.
 	\item \textbf{Post-condizione:}
-	\\La notifica contiene il valore del testo specificato.
+	\\La bubble non contiene l'elemento indicato da rimuovere.
+\end{itemize}
+
+\UCC{Rimozione di un elemento non presente}{UC1.03.2}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Rimuovere dalla bubble un elemento specificato.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item La bubble possiede degli elementi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore chiama il metodo, il quale, non trovando l'elemento, restituisce un messaggio di errore.
+	\item \textbf{Scenari alternativi:}
+	\\L'elemento è presente nella bubble \ref{UC1.03.1}.
+	\item \textbf{Post-condizione:}
+	\\La bubble non contiene l'elemento indicato da rimuovere e l'utilizzatore è stato avvisato della sua mancanza.
 \end{itemize}
 
 \UCC{Modifica di un elemento presente}{UC1.05.1}
@@ -504,6 +482,54 @@ dove:
 	\\L'elemento è presente nella bubble \ref{UC1.05.1}.
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo è a conoscenza che la modifica è fallita in quanto non era presente l'elemento da modificare.
+\end{itemize}
+
+\UC{Creazione notifica statica}{UC1.17}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_17.png}
+	\caption{\UCCaption{} Creazione notifica statica}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del framework potrà creare una notifica statica specificandone il testo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Essere in possesso del messaggio che si desidera notificare sotto forma di testo.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del framework chiama il metodo specificando il testo da visualizzare nella notifica statica.
+	\item \textbf{Post-condizione:}
+	\\Sul dispositivo sul quale si sta utilizzando Rocket.Chat sarà notificato il testo specificato nel metodo.
+\end{itemize}
+
+\UC{Visualizza notifica statica}{UC1.18}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_18.png}
+	\caption{\UCCaption{} Visualizza notifica statica}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\L'utilizzatore del framework può far visualizzare all'utente una notifica statica che visualizzi del testo.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Aver creato una notifica statica.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore del framework fa visualizzare una certa notifica da lui creata.
+	\item \textbf{Post-condizione:}
+	\\La notifica contiene il valore del testo specificato.
 \end{itemize}
 
 \UC{Mostra elemento grafico}{UC1.21}
