@@ -15,10 +15,8 @@ Make sure your Docker installation is configured for volume mounting.
 
 ### <a name="instruction">Instructions</a>
 
-[//]: # (TODO: change to official repository url)
-
 1.  Clone this repository:  
-`git clone https://github.com/niktekusho/WIP-docs.git`
+`git clone https://github.com/or-bit/WIP-docs.git`
 2.  Open a terminal or command prompt and `cd` into the local cloned repository
 3.  Build the Docker image based on the provided Dockerfile:  
    `docker build -t <Image name> <Dockerfile path>`  
