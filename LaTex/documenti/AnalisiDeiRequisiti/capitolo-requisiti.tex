@@ -93,6 +93,9 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
 	\hline \RequisitoObF\label{L17} & Obbligatorio & La bubble To-do list permette all'utente la creazione di liste & \ref{UC2.1} \\
+	\hline \RequisitoObF\label{L71} & Obbligatorio & L'utente può invocare il comando di creazione della to-do list & \ref{UC2.1.1} \\
+	\hline \RequisitoObF\label{L72} & Obbligatorio & L'utente può inserire le informazioni per la creazione della to-do list & \ref{UC2.1.3} \\
+	\hline \RequisitoObF\label{L73} & Obbligatorio & L'utente può confermare le informazioni inserite e creare la to-do list & \ref{UC2.1.4} \\
 	\hline \RequisitoObF\label{L18} & Obbligatorio & La bubble To-do list offre la funzionalità di inserimento di nuovi elementi nella lista & \ref{UC2.2} \\
 	\hline \RequisitoObF\label{L19} & Obbligatorio & La bubble To-do list offre la possibilità di segnare come completati elementi della lista & \ref{UC2.3} \\
 	\hline \RequisitoObF\label{L20} & Obbligatorio & La To-do list permette di settare un reminder come notifica statica & \ref{UC2.4} \\
@@ -111,8 +114,12 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 	\hline \RequisitoObF\label{L61} & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database per recuperare informazioni. & \ref{UC3.2.1} \ref{UC3.5.1} \ref{UC3.7.1}  \ref{UC3.9.1} \ref{UC3.12.1} \ref{UC3.13.1.1} \ref{UC3.14.1} \ref{UC3.15.1} \\
 	\hline \RequisitoObF\label{L62} & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database per aggiornare informazioni. & \ref{UC3.6.2} \ref{UC3.8.2} \ref{UC3.10.2} \ref{UC3.11.2} \ref{UC3.12.6}  \ref{UC3.13.2.3} \ref{UC3.13.3.5} \ref{UC3.13.4.4} \ref{UC3.14.6} \ref{UC3.15.5} \\	
 	\hline \RequisitoObF\label{L22} & Obbligatorio & Per permettere ai clienti l'utilizzo della bubble per la ristorazione sono incluse funzionalità di registrazione, con il fine di raccogliere i dati per la consegna dei prodotti e permettere le ordinazioni. & \ref{UC3.1} \\
-	\hline \RequisitoObF\label{L23} & Obbligatorio & I clienti possono consultare il menù del ristorante, in questo modo potranno informarsi sui cibi e sui prezzi per poi effettuare le scelte per l'ordine. & \ref{UC3.2} \\
+	\hline \RequisitoObF\label{L23} & Obbligatorio & I clienti possono consultare il menù del ristorante. & \ref{UC3.2} \\
+	\hline \RequisitoObF \label{L68} & Obbligatorio & I clienti devono poter visualizzare i prezzi delle pietanze & \ref{UC3.2}
 	\hline \RequisitoObF\label{L24} & Obbligatorio & I clienti possono selezionare cibi e relative quantità per effettuare un ordine. & \ref{UC3.3} \\
+	\hline \RequisitoObF\label{L69} & Obbligatorio & La quantità di default per un cibo non selezionato è 0 & \ref{UC3.3} \\
+	\hline \RequisitoObF\label{L69} & Obbligatorio & La quantità di default per un cibo selezionato è 1 & \ref{UC3.3} \\
+	\hline \RequisitoObF\label{L70} & Obbligatorio & Non può essere incrementata la quantità per un cibo non selezionato & \ref{UC3.3} \\
 	\hline \RequisitoObF\label{L25} & Obbligatorio & L'utente Cuoco può visualizzare la lista di piatti da preparare. & \ref{UC3.5} \\
 	\hline \RequisitoObF\label{L26} & Obbligatorio & L'utente Cuoco può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \ref{UC3.6} \\
 	\hline \RequisitoObF\label{L27} & Obbligatorio & L'utente Responsabile acquisti può visualizzare la lista degli acquisti da effettuare. & \ref{UC3.7} \\
