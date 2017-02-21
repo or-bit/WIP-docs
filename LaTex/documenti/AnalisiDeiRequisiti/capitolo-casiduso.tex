@@ -50,7 +50,11 @@ dove:
 		\item Avere l'indirizzo di un database MongoDB con cui si desidera interagire.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore del framework interagisce con il database MongoDB di cui possiede l'indirizzo.
+	\begin{itemize}
+		\item L'utilizzatore del framework si connette al database MongoDB \ref{UC1.00};
+		\item L'utilizzatore del framework effettua una lettura delle informazioni contenute all'interno del database MongoDB \ref{UC1.01};
+		\item L'utilizzatore del framework effettua una scrittura sul database MongoDB \ref{UC1.02}.
+	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\L'utilizzatore del metodo ha interagito con il database.
 \end{itemize}
@@ -135,7 +139,7 @@ dove:
 \\I dati sono scritti nel database collegato.
 \end{itemize}
 
-\UC{Effettuare operazioni sugli elementi}{UC1.02}
+\UC{Effettuare operazioni sugli elementi}{UC3}
 
 \begin{figure}[H]
 	\centering
@@ -153,13 +157,23 @@ dove:
 		\item Avere già istanziato una bubble generica.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore effettua delle operazioni sugli elementi della bubble.
+	\begin{itemize}
+		\item L'utilizzatore del framework crea un elemento \ref{UC3.1};
+		\item L'utilizzatore del framework aggiunge un elemento alla bubble \ref{UC1.04};
+		\item L'utilizzatore del framework rimuove un elemento dalla bubble \ref{UC1.03.1};
+		\item L'utilizzatore del framework modifica un elemento della bubble \ref{UC1.05.1};
+		\item L'utilizzatore del framework crea una notifica statica \ref{UC1.17};
+		\item L'utilizzatore del framework rende visualizzabile da un utente una notifica statica \ref{UC1.18};
+		\item L'utilizzatore del framework mostra un elemento grafico \ref{UC1.21};
+		\item L'utilizzatore del framework nasconde un elemento grafico \ref{UC1.22};
+		\item L'utilizzatore del framework imposta la posizione di un elemento grafico \ref{UC1.23}.
+	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\Sono state apportate delle modifiche agli elementi della bubble.
 \end{itemize}
 
 \begin{samepage}
-\UCF{Creazione di un elemento}{UC1.02}
+\UCF{Creazione di un elemento}{UC3.1}
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -179,7 +193,17 @@ dove:
 		\item Disporre di tutte le risorse necessarie a creare l'elemento.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore crea l'elemento della tipologia desiderata.
+	\begin{itemize}
+		\item L'utilizzatore del framework crea un elemento di tipo Immagine \ref{UC1.25};
+		\item L'utilizzatore del framework crea un elemento di tipo TextView \ref{UC1.26};
+		\item L'utilizzatore del framework crea un elemento di tipo Label \ref{UC1.27};
+		\item L'utilizzatore del framework crea un elemento di tipo Grafico a torta \ref{UC1.28};
+		\item L'utilizzatore del framework crea un elemento di tipo Grafico a istogramma \ref{UC1.29};
+		\item L'utilizzatore del framework crea un elemento di tipo Checkbox \ref{UC1.30};
+		\item L'utilizzatore del framework crea un elemento di tipo Bottone radio \ref{UC1.31};
+		\item L'utilizzatore del framework crea un elemento di tipo Bottone \ref{UC1.32};
+		\item L'utilizzatore del framework crea un elemento di tipo TextEdit \ref{UC1.33}; 
+	\end{itemize}
 	\item \textbf{Post-condizione:}
 	\\È stato creato un elemento.
 \end{itemize}
@@ -436,12 +460,13 @@ dove:
 		\item Aver istanziato un elemento.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
-	\\L'utilizzatore invoca il metodo sulla bubble e il metodo lo aggiunge alla bubble.
+	\\L'utilizzatore invoca il metodo sulla bubble indicando l'elemento da aggiungere e il metodo lo aggiunge alla bubble.
 	\item \textbf{Post-condizione:}
 	\\La bubble avrà al suo interno l'elemento passato al metodo.
 \end{itemize}
 
 \begin{samepage}
+\isfirsttrue
 \UCC[2]{Rimozione di un elemento presente}{UC1.03.1}
 \nopagebreak
 \begin{figure}[H]
