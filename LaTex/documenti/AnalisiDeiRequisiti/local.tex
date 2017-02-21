@@ -62,7 +62,7 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 
 \newcommand{\UC}[2]{
 	\refstepcounter{usecase}
-	\isfirsttrue 
+	\isfirsttrue
 	\textlabel{UC\theusecase{}}{#2}
 	\subsubsection{UC\theusecase{} #1} 
 }
@@ -84,8 +84,8 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 	\ifnum#1=1
 		\ifisfirst
 			\setcounter{alternativi}{1}
-			\isfirstfalse
-			\isfigliofalse
+			\global\isfirstfalse
+			\global\isfigliofalse
 			\refstepcounter{usecase}
 			\textlabel{UC\theusecase.\thealternativi{}}{#3}
 			\subsubsection{UC\theusecase.\thealternativi{} #2}
@@ -98,8 +98,8 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 		\ifnum#1=2
 			\ifisfirst
 				\setcounter{alternativi}{1}
-				\isfirstfalse
-				\isfigliotrue
+				\global\isfirstfalse
+				\global\isfigliotrue
 				\refstepcounter{usecasefiglio}
 				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
 				\paragraph{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
