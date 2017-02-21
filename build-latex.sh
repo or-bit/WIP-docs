@@ -38,7 +38,11 @@ cd "$input_path"
 latexmk -halt-on-error -outdir="$build_output_directory" -pdf "$document_name"
 
 # rename output if last argument exists
-if [ $# -eq 4 ] ; then
-    doc_name_no_ext=${document_name%%.*}
-    mv "$build_output_directory"/"$doc_name_no_ext.pdf" "$build_output_directory"/"$pdf_name.pdf"
+if [ "$#" -eq 4 ] ; then
+    doc_name_no_ext="${document_name%%.*}"
+	if [ "$doc_name_no_ext.pdf" = "$pdf_name.pdf" ] ; then
+		echo "File with corrected name existing..."
+	else
+		mv -u "$build_output_directory"/"$doc_name_no_ext.pdf" "$build_output_directory"/"$pdf_name.pdf"
+	fi
 fi
