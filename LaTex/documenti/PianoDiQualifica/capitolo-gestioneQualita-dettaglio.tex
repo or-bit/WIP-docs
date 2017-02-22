@@ -4,21 +4,41 @@
 Le risorse umane vengono descritte nelle \NormeDiProgetto{}. I ruoli con maggiori responsabilità sono il \Responsabile{} e il \Verificatore{}, soprattutto per l'attività di \VV{}.
 Le risorse tecnologiche corrispondono a tutti gli strumenti software e hardware utilizzati per la verifica sui processi e prodotti.
 
-\subsection{Misure e Metriche}\label{sec:metriche}
-Per poter descrivere il processo di verifica è necessario che esso sia quantificabile. Questo avviene tramite misure basate su metriche prestabilite.
+\subsection{Obiettivi per le metriche}\label{sec:metriche}
+Per poter descrivere il processo di verifica è necessario che esso sia quantificabile. Questo avviene tramite misure basate su metriche prestabilite consultabili nelle \NormeDiProgetto{}.
 
 \subsubsection{Metriche per la documentazione}\label{sec:metriche_documentazione}
 \paragraph{Indice Gulpease}\mbox{}\\
-Per garantire la leggibilità della documentazione in lingua italiana si applica il calcolo dell'indice di leggibilità Gulpease sui testi, considerando la lunghezza in lettere di parole e frasi.
-\[ 89+\frac{300 \cdot \left(n°\ frasi\right)-10 \cdot \left(n°\ lettere\right)}{n°\ parole} \]
-La formula per il calcolo dell'indice di Gulpease restituisce un punteggio in centesimi che determina il grado di comprensibilità rapportato al livello di istruzione del lettore.
-\begin{itemize}
-	\item punteggi intorno a 0: testi a leggibilità più bassa;
-	\item punteggi minori di 40: testi di difficile comprensione per lettori in possesso di un diploma di scuola superiore;
-	\item punteggi minori di 60: testi di difficile comprensione per lettori in possesso di licenza di scuola media;
-	\item punteggi minori di 80: testi di difficile comprensione per lettori in possesso di licenza elementare;
-	\item punteggi intorno a 100: i testi con maggiore livello di comprensione.
-\end{itemize}
+Per garantire la leggibilità della documentazione in lingua italiana si fa riferimento a i seguenti punteggi minimi selezionati per raggiungere un grado di comprensibilità adeguato. Per rendere di facile comprensione i documenti a lettori in possesso di scuola superiore è individuato come minimo di accettazione 40 punti e come range di ottimalità da 50 a 100 punti per lettori in possesso di licenza di scuola media.
+
+\begin{longtable}{|c|c|c|}
+	\hline \multicolumn{1}{|c|}{\textbf{Documento}} & \multicolumn{1}{c|}{\textbf{Accettazione}} & \multicolumn{1}{c|}{\textbf{Ottimalità}} \\
+	\hline 
+	\endfirsthead
+	
+	\hline \multicolumn{1}{|c|}{\textbf{Documento}} & \multicolumn{1}{c|}{\textbf{Accettazione}} & \multicolumn{1}{c|}{\textbf{Ottimalità}} \\
+	\hline 
+	\endhead
+	
+	\hline \multicolumn{3}{|r|}{{Continua nella prossima pagina}} \\ 
+	\hline
+	\endfoot
+	
+	\hline
+	\endlastfoot
+	
+	\hline \NormeDiProgetto{}  & 40-100 & 50-100 \\
+	\hline \StudioDiFattibilita{}  & 40-100 & 50-100  \\
+	\hline \PianoDiProgetto{}  & 40-100 & 50-100  \\
+	\hline \PianoDiQualifica{}  & 40-100 & 50-100  \\
+	\hline \AnalisiDeiRequisiti{}  & 40-100 & 50-100  \\
+	\hline \Glossario{}  & 40-100 & 50-100  \\
+	\hline VerbaleEsterno23\_12\_2016 & 40-100 & 50-100 \\
+	\hline
+	\caption{Valori indice di Gulpease - Fase A}
+\end{longtable}
+
+
 
 \paragraph{Indice Gunning Fog}\mbox{}\\
 Per garantire la leggibilità della documentazione in lingua inglese si applica il calcolo dell'indice di leggibilità Gunning Fog. Come per l'indice Gulpease, l'indice Gunning Fog calcola il grado di leggibilità del testo rapportato al livello di istruzione del lettore.\\
@@ -178,23 +198,3 @@ Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di c
 	\hline
 	\caption{Metriche di gestione degli errori}
 \end{longtable}
-Vengono ora descritti i parametri utilizzati:
-\begin{itemize}
-	\item \textbf{Criticità}: indica la gravità dell'errore rispetto all'avanzamento del progetto. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{bassa}: l'errore non compromette il corretto avanzamento del progetto;
-		\item \textbf{media}: l'errore non è bloccante, ma può compromettere il corretto avanzamento del progetto;
-		\item \textbf{alta}: l'errore è bloccante e compromette l'avanzamento del progetto.	
-	\end{itemize}
-	\item \textbf{Priorità}: indica la priorità di risoluzione dell'errore. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{bassa}: l'errore deve essere risolto entro la milestone successiva;
-		\item \textbf{media}: l'errore deve essere risolto entro una settimana dalla segnalazione;
-		\item \textbf{alta}: l'errore deve essere risolto nel più breve tempo possibile.
-	\end{itemize}
-	\item \textbf{Modalità}: indica la modalità di gestione dell'errore. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{correzione immediata}: il \Verificatore{} può correggere immediatamente l'errore se ne è in grado;
-		\item \textbf{segnalazione}: il \Verificatore{} deve effettuare una segnalazione, secondo le procedure indicate nelle \NormeDiProgetto{}.
-	\end{itemize}
-\end{itemize}
