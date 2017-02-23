@@ -37,45 +37,6 @@ La formula produce un punteggio compreso tra 6, minor grado di complessità del 
 \subsubsection{Metriche di processo}\label{sec:metriche_processo}
 Misurano le caratteristiche principali del processo di sviluppo e di manutenzione del software quali costi, tempi e produttività.
 
-\paragraph{Schedule Variance}\mbox{}\\
-Lo Schedule Variance Management permette di valutare lo stato dei progressi nella pianificazione. 
-\[ SV=EV-PV \]
-dove
-\begin{itemize}
-	\item $SV$ = Schedule Variance;
-	\item $EV$ = Earned Value;
-	\item $PV$ = Planned Value.
-\end{itemize}
-La formula calcola l'anticipo o il ritardo sulla pianificazione tramite la differenza fra il valore prodotto dal progetto nel momento della misurazione e il costo pianificato nel momento della misurazione.\\
-Quando la Schedule Variance è di valore positivo si è in anticipo rispetto alla pianificazione. Se il valore è negativo si è in ritardo rispetto alla pianificazione. Quando il valore è zero si sta procedendo come pianificato.
-
-\paragraph{Cost Variance}\mbox{}\\
-Permette di calcolare le stime sull'utilizzo del budget. 
-\[ CV=EV-AC \]
-dove
-\begin{itemize}
-	\item $CV$ = Cost Variance;
-	\item $EV$ = Earned Value;
-	\item $AC$ = Actual Cost.
-\end{itemize}
-La formula calcola la differenza del costo maturato fra costo stimato e costo effettivamente sostenuto.
-
-\subsubsection{Metriche di prodotto}
-Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
-
-\paragraph{Metriche per l'analisi}\mbox{}\\
-Consentono di monitorare e controllare costi, scheduling e qualità. Consentono di prevedere quale sarà la misura del processo software all'inizio del suo ciclo di vita, per poterne rapportare le risorse.
-
-\subparagraph{Functional Size Measurement}\mbox{}\\
-Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
-Vantaggi di FSM:
-\begin{itemize}
- 	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
- 	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
- 	\item può essere stimata dallo stato dei requisiti a priori.
-\end{itemize}
-\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.
-
 \paragraph{Metriche per la progettazione}\mbox{}\\
 Si concentrano sulle caratteristiche dell'architettura ad alto livello. Si basano sull'analisi di modelli di progetto nei quali sono evidenziati i moduli di sistema e i dati scambiati.
 
@@ -106,26 +67,26 @@ Vengono così contrassegnati i componenti del codice:
 Secondo questa marcatura possiamo calcolare:
 \begin{itemize}
 	\item il vocabolario del programma:
-		\[ \eta = \eta_{1} + \eta_{2} \]
+	\[ \eta = \eta_{1} + \eta_{2} \]
 	\item la lunghezza del programma:
-		\[ N = N1 + N2 \]
+	\[ N = N1 + N2 \]
 	\item la lunghezza calcolata del programma: 
-		\[ {\hat {N}}=\eta_{1} \cdot \log_{2}\eta_{1}+\eta_{2} \cdot \log_{2}\eta_{2} \]
+	\[ {\hat {N}}=\eta_{1} \cdot \log_{2}\eta_{1}+\eta_{2} \cdot \log_{2}\eta_{2} \]
 	\item il volume del programma:
-		\[ V = N \cdot \log_{2}\eta \] 
-		dove
-		\begin{itemize}
-			\item $ \log_{2}\eta $ è il numero di bit necessari per rappresentare il vocabolario;
-			\item $ V $ è il numero di bit necessari per rappresentare il programma nella sua forma minima.\footnote{Il concetto di volume è legato quindi al contenuto di informazione del programma e dovrebbe dipendere unicamente dall'algoritmo scelto, non dall'espressività del linguaggio di programmazione.}
-		\end{itemize}
+	\[ V = N \cdot \log_{2}\eta \] 
+	dove
+	\begin{itemize}
+		\item $ \log_{2}\eta $ è il numero di bit necessari per rappresentare il vocabolario;
+		\item $ V $ è il numero di bit necessari per rappresentare il programma nella sua forma minima.\footnote{Il concetto di volume è legato quindi al contenuto di informazione del programma e dovrebbe dipendere unicamente dall'algoritmo scelto, non dall'espressività del linguaggio di programmazione.}
+	\end{itemize}
 	\item la difficoltà di scrittura e comprensione del programma:
-		\[ D = \frac{\eta_{1}}{2} \cdot \frac{N_{2}}{\eta_{2}} \]
+	\[ D = \frac{\eta_{1}}{2} \cdot \frac{N_{2}}{\eta_{2}} \]
 	\item lo sforzo complessivo sostenuto nella scrittura del programma:
-		\[ E = D \cdot V \]
+	\[ E = D \cdot V \]
 	\item il tempo di scrittura del programma:
-		\[ T=\frac{E}{18}\ secondi\]
+	\[ T=\frac{E}{18}\ secondi\]
 	\item il numero di bug in proporzione allo sforzo richiesto:
-		\[ B = \frac{E^{\frac{2}{3}}}{3000} \]	
+	\[ B = \frac{E^{\frac{2}{3}}}{3000} \]	
 \end{itemize}
 
 \paragraph{Metriche per la verifica}\mbox{}
@@ -156,3 +117,50 @@ I parametri utilizzati:
 		\item \textbf{segnalazione}: il \Verificatore{} deve effettuare una segnalazione, secondo le procedure indicate nelle \NormeDiProgetto{}.
 	\end{itemize}
 \end{itemize}
+
+\subsubsection{Metriche di prodotto}
+Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
+
+\paragraph{Functional Size Measurement}\mbox{}\\
+Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
+Vantaggi di FSM:
+\begin{itemize}
+ 	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
+ 	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
+ 	\item può essere stimata dallo stato dei requisiti a priori.
+\end{itemize}
+\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.\\
+Il calcolo della copertura offerta è effettuato mediante la formula
+\[ \left(1 - \frac{N_{FM}}{N_{FI}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{FM}$: numero di funzionalità mancanti;
+	\item $N_{FI}$: numero di funzionalità individuate. 
+\end{itemize}
+
+\paragraph{Accuratezza rispetto alle attese}\mbox{}\\
+Rappresenta la percentuale di risultati dei test che rispettano quanto previsto. Viene calcolata come
+\[ \left(1 - \frac{N_{RD}}{N_{TE}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{RD}$: numero di test che producono risultati discordanti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Fallimento dei test}
+Rappresenta la percentuale di operazioni di test che si sono concluse con fallimento. Viene calcolato come
+\[\frac{N_{FR}}{N_{TE} \cdot 100}\]
+dove
+\begin{itemize}
+	\item $N_{FR}$: numero di fallimenti ricevuti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Gestione delle operazioni non permesse}\mbox{}\\
+Rappresenta la percentuale di funzionalità che gestiscono correttamente errori che potrebbero verificarsi. Viene calcolato come
+\[ \frac{N_{EE}}{N_{TE}} \cdot 100\]
+dove
+\begin{itemize}
+	\item $N_{EE}$: numero di errori evitati durante i test;
+	\item $N_{TE}$: numero di test eseguiti che prevedono l'esecuzione di operazioni non corrette.
+\end{itemize} 
