@@ -91,10 +91,9 @@ L'accoppiamento può avvenire a seguito di lettura o modifica di attributi, chia
 $M$ componenti in accoppiamento con $N$ altri componenti producono un grado di interdipendenza $U$.
 
 \subparagraph{Complessità ciclomatica}\mbox{}\\
-Questa tecnica utilizza elementi della teoria dei grafi per schematizzare il flusso di controllo del programma. Rappresenta gruppi di istruzioni in nodi e le interazioni fra loro in archi: i nodi corrispondono ai gruppi di istruzioni, mentre gli archi connettono gruppi di istruzioni che possono essere eseguite sequenzialmente.\\
-Dato un grafo $G$ di $n$ nodi ed $e$ archi, la complessità ciclomatica è data da:
-\[ V\left(G\right) = e - n + 2 \]
-Valori alti di complessità indicano poca manutenibilità del codice e maggiore quantità di test per la verifica, ma valori bassi possono indicare poca efficienza.
+
+Per mantenere sotto controlla la complessità del software prodotto è calcolata la complessità ciclomatica del codice. 
+Sono dichiarati come accettabili range di complessità per i risultati ottenuti dal calcolo: range 1-10 riguardano programmi semplici con poco rishio d'errore e range 11-20 adatti a programmi complessi ma a rischio moderato in modo da massimizzarne la manutenibilità e semplicità di testing.
 
 \paragraph{Metriche per la codifica}\mbox{}
 \subparagraph{Metriche di Halstead}\mbox{}\\
