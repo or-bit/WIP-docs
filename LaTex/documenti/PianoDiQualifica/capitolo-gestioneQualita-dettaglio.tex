@@ -42,44 +42,9 @@ Per garantire la leggibilità della documentazione in lingua italiana si fa rife
 Per garantire la leggibilità della documentazione in lingua inglese il punteggio calcolato non deve superare 12, livello datto per un High School Senior Student, si individua l'ottimalità nel limite di 14 punti, corrispondente ad un livello adatto ad un College Sophomore.
 
 \subsubsection{Metriche di processo}\label{sec:metriche_processo}
-\paragraph{Schedule Variance}\mbox{}\\
-Lo Schedule Variance Management permette di valutare lo stato dei progressi nella pianificazione. 
-\[ SV=EV-PV \]
-dove
-\begin{itemize}
-	\item $SV$ = Schedule Variance;
-	\item $EV$ = Earned Value;
-	\item $PV$ = Planned Value.
-\end{itemize}
-La formula calcola l'anticipo o il ritardo sulla pianificazione tramite la differenza fra il valore prodotto dal progetto nel momento della misurazione e il costo pianificato nel momento della misurazione.\\
-Quando la Schedule Variance è di valore positivo si è in anticipo rispetto alla pianificazione. Se il valore è negativo si è in ritardo rispetto alla pianificazione. Quando il valore è zero si sta procedendo come pianificato.
-
-\paragraph{Cost Variance}\mbox{}\\
-Permette di calcolare le stime sull'utilizzo del budget. 
-\[ CV=EV-AC \]
-dove
-\begin{itemize}
-	\item $CV$ = Cost Variance;
-	\item $EV$ = Earned Value;
-	\item $AC$ = Actual Cost.
-\end{itemize}
-La formula calcola la differenza del costo maturato fra costo stimato e costo effettivamente sostenuto.
-
-\subsubsection{Metriche di prodotto}
-Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
-
 \paragraph{Metriche per l'analisi}\mbox{}\\
 Consentono di monitorare e controllare costi, scheduling e qualità. Consentono di prevedere quale sarà la misura del processo software all'inizio del suo ciclo di vita, per poterne rapportare le risorse.
 
-\subparagraph{Functional Size Measurement}\mbox{}\\
-Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
-Vantaggi di FSM:
-\begin{itemize}
-	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
-	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
-	\item può essere stimata dallo stato dei requisiti a priori.
-\end{itemize}
-\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.
 
 \paragraph{Metriche per la progettazione}\mbox{}\\
 Si concentrano sulle caratteristiche dell'architettura ad alto livello. Si basano sull'analisi di modelli di progetto nei quali sono evidenziati i moduli di sistema e i dati scambiati.
@@ -190,3 +155,35 @@ Function Coverage in percentuale:
 	\hline
 	\caption{Metriche di gestione degli errori}
 \end{longtable}
+
+\subsubsection{Metriche di prodotto}
+Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
+
+\paragraph{Functional Size Measurement}\mbox{}
+Copertura in percentuale dei requisiti funzionali implementati:
+\begin{itemize}
+	\item range ottimale: 100\%;
+	\item range di accettazione: 80\%-100\%.
+\end{itemize}
+
+\paragraph{Accuratezza rispetto alle attese}\mbox{}\\
+Percentuale di risultati che rispettano le attese:
+\begin{itemize}
+	\item range ottimale: 100\%;
+	\item range di accettazione: 80\%-100\%.
+\end{itemize}
+
+\paragraph{Fallimento dei test}\mbox{}\\
+Percentuale di test conclusi con fallimento:
+\begin{itemize}
+	\item range ottimale: 0\%;
+	\item range di accettazione: 0\%-15\%.
+\end{itemize}
+
+\paragraph{Gestione delle operazioni non permesse}\mbox{}\\
+Percentuale di funzionalità in grado di gestire gli errori per operazioni non permesse:
+\begin{itemize}
+	\item range ottimale: 100\%;
+	\item range di accettazione: 80\%-100\%.
+\end{itemize}
+
