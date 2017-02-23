@@ -84,6 +84,8 @@ L'accoppiamento determina il numero di collaborazioni tra classi, ovvero il nume
 L'accoppiamento può avvenire a seguito di lettura o modifica di attributi, chiamata di metodi o istanziazione di oggetti. Un uso eccessivo è negativo per la modularità ed il riuso: più una classe è indipendente più è riutilizzabile. L'accoppiamento influisce anche sull'impatto delle modifiche in altri moduli: valori elevati di accoppiamento complicano le attività di testing e le modifiche.
 \[ U = M \cdot N \]
 $M$ componenti in accoppiamento con $N$ altri componenti producono un grado di interdipendenza $U$.
+\textit{Fan-In} denomina quante classi utilizzano la classe presa in esame durante la loro esecuzione. 
+\textit{Fan-Out} denomina quante classi vengono utilizzate dalla classe presa in esame durante la sua esecuzione.
 
 \subparagraph{Complessità ciclomatica}\mbox{}\\
 Questa tecnica utilizza elementi della teoria dei grafi per schematizzare il flusso di controllo del programma. Rappresenta gruppi di istruzioni in nodi e le interazioni fra loro in archi: i nodi corrispondono ai gruppi di istruzioni, mentre gli archi connettono gruppi di istruzioni che possono essere eseguite sequenzialmente.\\
