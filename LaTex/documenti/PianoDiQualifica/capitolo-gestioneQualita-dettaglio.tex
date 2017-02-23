@@ -97,37 +97,23 @@ Sono dichiarati come accettabili range di complessità per i risultati ottenuti 
 
 \paragraph{Metriche per la codifica}\mbox{}
 \subparagraph{Metriche di Halstead}\mbox{}\\
-Misurano l'implementazione del programma in base al codice sorgente considerato come un algoritmo, quindi come un insieme di operatori e operandi.\\
-Vengono così contrassegnati i componenti del codice:
+
+Lo difficoltà di scrittura e comprensione del programma calcolato con le metriche di Halstead:
 \begin{itemize}
-	\item $\eta_{1}$ = numero di operatori distinti;
-	\item $\eta_{2}$ = numero di operandi distinti;
-	\item $N1$ = numero totale di occorrenze degli operatori; 
-	\item $N2$ = numero totale di occorrenze degli operandi;
+	\item range ottimale: 0-15;
+	\item range di accettazione 0-25.
 \end{itemize}
-Secondo questa marcatura possiamo calcolare:
+
+Lo sforzo complessivo di scrittura del programma è calcolato con le metriche di Halstead:
 \begin{itemize}
-	\item il vocabolario del programma:
-		\[ \eta = \eta_{1} + \eta_{2} \]
-	\item la lunghezza del programma:
-		\[ N = N1 + N2 \]
-	\item la lunghezza calcolata del programma: 
-		\[ {\hat {N}}=\eta_{1} \cdot \log_{2}\eta_{1}+\eta_{2} \cdot \log_{2}\eta_{2} \]
-	\item il volume del programma:
-		\[ V = N \cdot \log_{2}\eta \] 
-		dove
-		\begin{itemize}
-			\item $ \log_{2}\eta $ è il numero di bit necessari per rappresentare il vocabolario;
-			\item $ V $ è il numero di bit necessari per rappresentare il programma nella sua forma minima.\footnote{Il concetto di volume è legato quindi al contenuto di informazione del programma e dovrebbe dipendere unicamente dall'algoritmo scelto, non dall'espressività del linguaggio di programmazione.}
-		\end{itemize}
-	\item la difficoltà di scrittura e comprensione del programma:
-		\[ D = \frac{\eta_{1}}{2} \cdot \frac{N_{2}}{\eta_{2}} \]
-	\item lo sforzo complessivo sostenuto nella scrittura del programma:
-		\[ E = D \cdot V \]
-	\item il tempo di scrittura del programma:
-		\[ T=\frac{E}{18}\ secondi\]
-	\item il numero di bug in proporzione allo sforzo richiesto:
-		\[ B = \frac{E^{\frac{2}{3}}}{3000} \]	
+	\item range ottimale: 0-300;
+	\item range di accettazione: 0-400.
+\end{itemize}
+
+Il volume del programma è calcolato con le metriche di Halstead:
+\begin{itemize}
+	\item range ottimale: 20-100;
+	\item range di accettazione: 20-1500.
 \end{itemize}
 
 \paragraph{Metriche per la verifica}\mbox{}
