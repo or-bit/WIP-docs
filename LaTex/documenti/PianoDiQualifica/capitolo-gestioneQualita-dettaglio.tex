@@ -118,7 +118,11 @@ Il volume del programma è calcolato con le metriche di Halstead per funzione:
 
 \paragraph{Metriche per la verifica}\mbox{}
 \subparagraph{Code coverage}\mbox{}\\
-Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di codice di un modulo. Una copertura topologica del test del 100\% di tipo code coverage garantisce di aver eseguito almeno una volta tutte le istruzioni, ma non tutti i rami.
+La copertura in percentuale dei test effettuati è individuata nel modo seguente:
+\begin{itemize}
+	\item range ottimale: 60-100;
+	\item range di accettazione: 40-100.
+\end{itemize}
 
 \subparagraph{Modified condition/decision coverage (MC/DC)}
 \`{E} una combinazione delle metriche di \textit{function coverage} (copertura delle funzioni chiamate) e \textit{branch coverage} (copertura dei branch delle strutture di controllo). Questa metrica richiede che ogni punto di entrata o uscita in un programma sia invocato almeno una volta e che per ogni decisione condizionale vengano considerati tutti i possibili esiti. La versione \textit{modified} richiede inoltre che entrambe le coperture siano soddisfatte, ed in particolare che ogni condizione influenzi gli esiti condizionali indipendentemente.\footnote{Si rimanda al seguente link \url{https://en.wikipedia.org/wiki/Code_coverage} per esempi esplicativi.}
