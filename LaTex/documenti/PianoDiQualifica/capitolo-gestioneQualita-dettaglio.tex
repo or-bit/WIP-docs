@@ -85,10 +85,19 @@ Vantaggi di FSM:
 Si concentrano sulle caratteristiche dell'architettura ad alto livello. Si basano sull'analisi di modelli di progetto nei quali sono evidenziati i moduli di sistema e i dati scambiati.
 
 \subparagraph{Accoppiamento}\mbox{}\\
-L'accoppiamento determina il numero di collaborazioni tra classi, ovvero il numero di altre classi cui una classe è accoppiata.\\
-L'accoppiamento può avvenire a seguito di lettura o modifica di attributi, chiamata di metodi o istanziazione di oggetti. Un uso eccessivo è negativo per la modularità ed il riuso: più una classe è indipendente più è riutilizzabile. L'accoppiamento influisce anche sull'impatto delle modifiche in altri moduli: valori elevati di accoppiamento complicano le attività di testing e le modifiche.
-\[ U = M \cdot N \]
-$M$ componenti in accoppiamento con $N$ altri componenti producono un grado di interdipendenza $U$.
+Per determinare un livello di accoppiamento accettabile il numero di chiamate reciproche fra classi viene racchiuso nei range di ottimalità e accettazione seguenti.
+
+Fan-In:
+\begin{itemize}
+	\item range ottimale: 2 o superiore;
+	\item range di accettazione 0 o superiore.
+\end{itemize}
+
+Fan-Out:
+\begin{itemize}
+	\item range ottimale: 0-1;
+	\item range di accettazione 0-5.
+\end{itemize}
 
 \subparagraph{Complessità ciclomatica}\mbox{}\\
 Per mantenere sotto controlla la complessità del software prodotto è calcolata la complessità ciclomatica del codice. 
