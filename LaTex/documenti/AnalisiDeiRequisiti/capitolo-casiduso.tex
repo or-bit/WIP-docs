@@ -43,7 +43,7 @@ dove:
 	\item \textbf{Attori:}
 	\\Utilizzatore del framework.
 	\item \textbf{Scopo e descrizione:} 
-	\\L'utilizzatore del framework interagisce con un database MongoDB esterno.
+	\\L'utilizzatore del framework interagisce con un database \glossario{MongoDB} esterno.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
 		\item Avere già istanziato una bubble generica;
@@ -60,7 +60,7 @@ dove:
 \end{itemize}
 
 \begin{samepage}
-\UCF{Connessione a database \glossario{MongoDB}}{UC1.00}
+\UCC[2]{Connessione a database MongoDB}{UC1.00}
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -81,8 +81,29 @@ dove:
 	\end{itemize}
 \item \textbf{Flusso principale degli eventi:}
 \\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che genera una connessione con il database MongoDB.
+\item \textbf{Scenari alternativi:}
+\\Non è possibile stabilire la connessione.
 \item \textbf{Post-condizione:}
 \\La bubble generica da cui è invocato il metodo è connessa al database.
+\end{itemize}
+
+\UCC[2]{Connessione a database MongoDB non possibile}{UC1.00.2}
+\begin{itemize}
+	\item \textbf{Attori:}
+	\\Utilizzatore del framework.
+	\item \textbf{Scopo e descrizione:} 
+	\\Connettersi ad un database MongoDB esterno all'applicazione.
+	\item \textbf{Precondizioni:}
+	\begin{itemize}
+		\item Avere già istanziato una bubble generica;
+		\item Avere l'indirizzo del database MongoDB a cui si desidera connettersi.
+	\end{itemize}
+	\item \textbf{Flusso principale degli eventi:}
+	\\L'utilizzatore passa l'indirizzo del database a cui connettersi al metodo che fallisce nel tentativo di stabilire una connessione con il database MongoDB.
+	\item \textbf{Scenari alternativi:}
+	\\La connessione avviene correttamente \ref{UC1.00}.
+	\item \textbf{Post-condizione:}
+	\\La bubble generica lancia un messaggio di errore e avvisa l'utente che la connessione non è riuscita.
 \end{itemize}
 
 \begin{samepage}
@@ -601,7 +622,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework può far visualizzare all'utente una notifica statica che visualizzi del testo.
 	\item \textbf{Precondizioni:}
@@ -627,7 +651,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework potrà mostrare un \glossario{elemento grafico}.\footnote{Esempi di elementi grafici sono: label, immagini, textview.}
 	\item \textbf{Precondizioni:}
@@ -653,7 +680,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework potrà nascondere un elemento grafico.
 	\item \textbf{Precondizioni:}
@@ -679,7 +709,7 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\\Utilizzatore del framework;
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework può specificare una posizione per un elemento grafico della bubble.
 	\item \textbf{Precondizioni:}
@@ -931,7 +961,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework può fornire un orario per l'esecuzione della funzionalità della bubble.
 	\item \textbf{Precondizioni:}
@@ -942,7 +975,7 @@ dove:
 	\item \textbf{Flusso principale degli eventi:}
 	\\Alla chiamata del metodo viene specificato l'orario di esecuzione della specifica funzionalità della bubble.
 	\item \textbf{Post-condizione:}
-	\\Nell'orario stabilito viene eseguita la funzionalità della bubble.
+	\\Nell'orario stabilito viene eseguita la funzionalità della bubble all'interno di Rocket.Chat.
 \end{itemize}
 
 \begin{samepage}
@@ -1199,7 +1232,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework, utilizzando questo metodo, rende la bubble visibile all'interno della chat.
 	\item \textbf{Precondizioni:}
@@ -1222,7 +1258,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework potrà terminare la bubble.
 	\item \textbf{Precondizioni:}

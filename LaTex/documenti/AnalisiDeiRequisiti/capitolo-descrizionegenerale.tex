@@ -2,7 +2,7 @@
 \subsection{Obiettivo del prodotto}
 Il prodotto si inserisce in un panorama in evoluzione continua, costituito da bot e sistemi automatici di comunicazione che interagiscono con gli utenti.
 Lo scopo di  questa interazione è l'integrazione dei servizi offerti dalla rete all'interno delle piattaforme di messaggistica. 
-\ProjectName{} propone agli sviluppatori un framework che permetta loro la creazione agevole di Rocket.Chat interattive all'interno dell'ambiente Rocket.Chat. Esso inoltre fornisce alcune Rocket.Chat complete, sviluppate utilizzando il framework realizzato, che potranno essere utilizzate direttamente dagli utenti oppure dagli sviluppatori come punto di partenza per la creazione di altre Rocket.Chat.
+\ProjectName{} propone agli sviluppatori un framework che permetta loro la creazione agevole di Rocket.Chat interattive all'interno dell'ambiente Rocket.Chat. Esso inoltre fornisce alcune bubble complete, sviluppate utilizzando il framework realizzato, che potranno essere utilizzate direttamente dagli utenti oppure dagli sviluppatori come punto di partenza per la creazione di altre bubble.
 Esempi di queste sono: 
 \begin{itemize}
 	\item bubble multimediali per includere all'interno di Rocket.Chat la visualizzazione diretta di contenuti video, anteprima di link multimediali e \glossario{GIF};
@@ -11,12 +11,12 @@ Esempi di queste sono:
 \end{itemize}
 
 \subsection{Funzioni del prodotto}
-Il prodotto è composto da due parti. La prima consiste di un  destinato agli sviluppatori, mentre la seconda è formata da alcune bubble interattive, destinate a qualsiasi tipo di utente.
+Il prodotto è composto da due parti. La prima consiste di un framework destinato agli sviluppatori, mentre la seconda è formata da alcune bubble interattive, destinate a qualsiasi tipo di utente.
 
 \subsubsection{Framework}
 Il framework consiste in un insieme di elementi, suddivisi in 2 categorie: grafici e funzionali.\\
 Gli elementi grafici sono \glossario{widget} inseribili all'interno della bubble, mediante i quali sarà possibile per l'utilizzatore del servizio interagire con la bubble stessa.\\
-Gli elementi funzionali rappresentano uno strato logico dell'applicazione tramite cui si rende programmabile il comportamento della bolla.\\
+Gli elementi funzionali rappresentano uno strato logico dell'applicazione tramite cui si rende programmabile il comportamento della bubble.\\
 Per una descrizione più dettagliata delle funzionalità offerte dal framework si rimanda alla lettura dei casi d'uso in questo documento.
 
 \subsubsection{Bubble}
@@ -28,7 +28,7 @@ Il primo caso consiste in una bubble nominata \virgolette{\glossario{To-do list}
 	\item impostare reminder opzionali per l'inserimento e il completamento degli elementi nell'elenco.
 \end{itemize}
 Il secondo caso pratico sviluppato è un sistema automatizzato per la gestione di un'attività di ristorazione per asporto; il sistema permette di amministrare l'attività di ristorazione mediante l'utilizzo delle bubble. All'interno di questo scenario sono previsti ruoli con diversi privilegi di accesso e modifica dell'informazione e diverse \glossario{GUI} corrispondenti.
-Lo scopo di questa bubble è quello di distribuire gli incarichi a chi di dovere utilizzando la bubble To do list descritta precedentemente e dare la possibilità di marcare il proprio compito come svolto.\\
+Lo scopo di questa bubble è quello di distribuire gli incarichi a chi di dovere utilizzando la bubble To-do list descritta precedentemente e dare la possibilità di marcare il proprio compito come svolto.\\
 Un cliente dell'attività di ristorazione può compiere un'ordinazione tramite bubble, che viene processata automaticamente dal sistema.\\
 Per una descrizione più dettagliata delle funzionalità offerte si rimanda alla lettura dei casi d'uso in questo documento.
 
@@ -38,7 +38,7 @@ Per quanto riguarda le bubble interattive, il target è costituito da utenti sen
 \subsection{Demo}
 
 \subsubsection{Descrizione}
-Per la demo del progetto il gruppo \GroupName{} presenterà ai proponenti del progetto una bubble interattiva legata alla gestione di un'attività di ristorazione per asporto. Questa bubble viene chiamata \textit{Bubble \& eat}.
+Per la demo del progetto il gruppo \GroupName{} presenterà al Proponente del progetto una bubble interattiva legata alla gestione di un'attività di ristorazione per asporto. Questa bubble viene chiamata \textit{Bubble \& eat}.
 \\Questa bubble apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà dei servizi.
 \\L'utente generico della bubble potrà visualizzare il menù del ristorante e fare un ordine, previo inserimento dei propri dati, incluso l'indirizzo in cui consegnare il cibo ordinato.
 \\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite bubble \virgolette{To-do list}, sotto forma di casella aggiunta automaticamente in fondo alla lista. Il \glossario{Cuoco} una volta completato l'ordine avrà facoltà di segnare completata l'ordinazione dalla lista.
