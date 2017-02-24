@@ -55,6 +55,9 @@ Dato un grafo $G$ di $n$ nodi ed $e$ archi, la complessità ciclomatica è data 
 Valori alti di complessità indicano poca manutenibilità del codice e maggiore quantità di test per la verifica, ma valori bassi possono indicare poca efficienza.
 
 \paragraph{Metriche per la codifica}\mbox{}
+\subparagraph{Numero di parametri per funzione}\mbox{}\\
+Indica il numero di parametri passati ad un metodo; un valore molto alto potrebbe indicare eccessiva complessità e una suddivisione non efficace in sotto-metodi.
+
 \subparagraph{Metriche di Halstead}\mbox{}\\
 Misurano l'implementazione del programma in base al codice sorgente considerato come un algoritmo, quindi come un insieme di operatori e operandi.\\
 Vengono così contrassegnati i componenti del codice:
@@ -88,6 +91,12 @@ Secondo questa marcatura possiamo calcolare:
 	\item il numero di bug in proporzione allo sforzo richiesto:
 	\[ B = \frac{E^{\frac{2}{3}}}{3000} \]	
 \end{itemize}
+
+\subparagraph{Core size}\mbox{}\\
+I core file sono file altamente interconnessi da una catena di dipendenze cicliche, i quali sono maggiormente propensi ad avere difetti. Core size è la percentuale di file con una o più dipendenze che hanno un alto fan-in ed un alto fan-out. Il calcolo di questa metrica viene effettuato attraverso strumenti automatici.
+
+\subparagraph{Indice di manutenibilità}\mbox{}\\
+Misura l’attitudine di una entità in assegnate condizioni di utilizzazione a essere mantenuta o riportata in uno stato nel quale può svolgere la funzione richiesta, quando la manutenzione è eseguita nelle condizioni date, con procedure e mezzi prescritti. Viene calcolato attraverso strumenti automatici.
 
 \paragraph{Metriche per la verifica}\mbox{}
 \subparagraph{Code coverage}\mbox{}\\
