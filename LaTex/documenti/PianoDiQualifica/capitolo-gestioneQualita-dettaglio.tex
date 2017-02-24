@@ -75,9 +75,16 @@ Sono dichiarati come accettabili i seguenti range di complessità per i risultat
 \end{itemize}
 
 \paragraph{Metriche per la codifica}\mbox{}
-\subparagraph{Metriche di Halstead}\mbox{}\\
 
-Lo difficoltà di scrittura e comprensione del programma calcolato con le metriche di Halstead per funzione:
+\subparagraph{Numero di parametri per metodo}\mbox{}\\
+I limiti imposti per il numero di parametri per metodo sono i seguenti:
+\begin{itemize}
+	\item range ottimale: 0-4;
+	\item range di accettazione: 0-7.
+\end{itemize}
+
+\subparagraph{Metriche di Halstead}\mbox{}\\
+La difficoltà di scrittura e comprensione del programma calcolato con le metriche di Halstead per funzione:
 \begin{itemize}
 	\item range ottimale: 0-15;
 	\item range di accettazione 0-25.
@@ -93,6 +100,20 @@ Il volume del programma è calcolato con le metriche di Halstead per funzione:
 \begin{itemize}
 	\item range ottimale: 20-100;
 	\item range di accettazione: 20-1500.
+\end{itemize}
+
+\subparagraph{Core size}\mbox{}\\
+Per evitare l'eccessiva interdipendenza tra i file sono stati selezionati i seguenti limiti per il core size:
+\begin{itemize}
+	\item range ottimale: 0-40;
+	\item range di accettazione: 0-50.
+\end{itemize}
+
+\subparagraph{Indice di manutenibilità}\mbox{}\\
+L'indice di manutenibilità indica approssimativamente la difficoltà di mantenere il prodotto.
+\begin{itemize}
+	\item range ottimale: 120-171;
+	\item range di accettazione: 90-171.
 \end{itemize}
 
 \paragraph{Metriche per la verifica}\mbox{}
