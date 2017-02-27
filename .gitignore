@@ -178,3 +178,15 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+# Default build directory
+build-output
+
+# Default release directory
+Or-Bit
+
+# Zip containing PDFs
+**/Documentazione.zip
+
+# Temporary folder containing spellcheck reports
+spell-check-temp/**
