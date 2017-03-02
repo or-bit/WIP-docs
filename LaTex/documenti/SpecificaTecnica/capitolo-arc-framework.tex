@@ -1,1 +1,154 @@
 \section{Framework}
+
+\subsection{Architettura Generale}
+L’architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell’interfaccia grafica per l’utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle API. La parte di Controller che consiste nella bubble generica si occuperà di gestire l’aggiornamento della GUI e l’invio delgli input dell’utente agli elementi funzionali.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	\caption{Architettura framework}
+\end{figure}
+
+\subsection{Model}
+Nella scomposizione logica in MVC la parte relativa al model, ossia la business logic dell'applicativo, è delegata alla bubble memory e ai pacchetti di metodi che compongono il framework. Questi metodi possono essere combinati tra loro e legati all'interfaccia grafica mediante il controller.
+
+\subsection{Bubble Memory}
+La componente di bubble memory gestisce la parte di persistenza della bubble in locale, tenendo traccia di variabili e del loro valore, incluso lo stato della bubble. La bubble memory è strutturata come un oggetto JavaScript, non avendo così vincoli relativamente al tipo di informazioni che è possibile inserire al suo interno.
+
+\subsection{API del framework}
+Ciascun package contiene classi di metodi, i quali garantiscono funzionalità che possono essere combinate nel corpo della bubble al fine di determinarne la business logic.\\
+Data la natura del progetto non sono rappresentate connessioni tra i vari package riportati nel diagramma sopra, in quanto, essendo questa parte del prodotto un framework volto a garantire la possibilità di creare bubble interattive a sviluppatori terzi, verrà perseguito l'obiettivo di massimizzare l'indipendenza tra queste funzionalità in maniera tale da altrettanto massimizzare le possibilità di riutilizzo delle stesse.
+
+\subsubsection{Package interni}
+
+\begin{samepage}
+\paragraph{Api::ciclo di vita della bubble}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::ciclo di vita della bubble}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita della bubble\\
+\textbf{Utilizzo:}\\
+Si occupa di controllare la durata di vita della bubble interrompendo il funzionamento dopo un tempo prefissato\\
+
+\begin{samepage}
+\paragraph{Api::notifica}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::notifica}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+I metodi presenti all'interno del package di notifica hanno lo scopo di creare e mostrare agli utenti delle notifiche collegate con le azioni della bubble. Se incluso nella bubble sarà possibile notificare del testo in modo statico.\\
+\textbf{Scopo:}\\
+Si occupa della gestione di notifiche statiche all'utente.\\
+
+\begin{samepage}
+\paragraph{Api::ApiEsterne}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::ApiEsterne}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Il package di chiamata delle API esterne aggiunge al framework la possibilità di effettuare internamente alla bubble chiamate di API REST di terze parti restituendo nella bubble memory il risultato di questa chiamata. \\
+\textbf{Scopo:}\\
+Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubble memory.\\
+
+\begin{samepage}
+\paragraph{Api::Partecipanti}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::Partecipanti}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Gestisce le operazioni di gestione degli utenti e delle loro interazioni.\\
+\textbf{Scopo:}\\
+Questo package garantisce alla bubble la possibilità di avere accesso alla lista dei partecipanti alla chat e uno storico delle interazioni di ciascuno con essa.
+
+\begin{samepage}
+\paragraph{Api::Operazioni sul DB}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::Operazioni sul DB}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\
+Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi ad un database non relazionale ed effettuare al suo interno operazioni di lettura e di scrittura.\\
+\textbf{Scopo:}\\
+Oltre alle normali operazioni sul database l’utente avrà la possibilità di utilizzare un database esterno.
+
+\begin{samepage}
+\paragraph{Api::Limitazioni input}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::Limitazioni input}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\
+Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
+\textbf{Scopo:}\\
+In questo package sono contenute le funzionalità del framework relative alle limitazioni sull’input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
+Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato json (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
+
+\begin{samepage}
+\paragraph{Api::Timing}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::Timing}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\
+Il package di timing si occupa della pianificazione dell'esecuzione di determinati metodi ad orari prestabiliti all'interno della bubble.\\
+\textbf{Scopo:}\\
+Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automatico.
+
+\begin{samepage}
+\paragraph{Api::File}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::File}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Il package gestisce l'interazione della bubble con dei file.\\ 
+\textbf{Scopo:}\\
+Verrà usato come descritto nei casi d’uso per convertire del testo in PDF e salvare il file così prodotto.
+
+\begin{samepage}
+\paragraph{Api::ControlloJSON}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::ControlloJSON}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Il package permette il controllo di file JSON secondo uno schema specificato.\\ 
+\textbf{Scopo:}\\
+Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema precedentemente fornito.
+
+\begin{samepage}
+\paragraph{Api::matchRegularExpr}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Api::matchRegularExpr}
+%\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\ 
+Il package permette di effettuare confronti con espressioni regolari.\\ 
+\textbf{Scopo:}\\
+\textbf{??}
+
