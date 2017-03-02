@@ -1,0 +1,155 @@
+\section{Tracciamento}
+\subsection{Tracciamento componenti-requisiti}
+\begin{longtable}{|P{6cm}|P{6cm}|}
+	\hline \textbf{Componente} & \textbf{Requisiti} \\ 
+	\endfirsthead
+	% Framework
+	\hline \nameref{api-ciclovita} & \ref{AdR-L9} \linebreak \ref{AdR-L10} \linebreak \ref{AdR-L93} \\
+	\hline \nameref{api-notifica} & \ref{AdR-L15} \linebreak \ref{AdR-L16} \\
+	\hline \nameref{api-esterne} & \ref{AdR-L44} \linebreak \ref{AdR-L92} \\
+	\hline \nameref{api-partecipanti} & \ref{AdR-L36} \linebreak \ref{AdR-L37} \\
+	\hline \nameref{api-db} & \ref{AdR-L8} \linebreak \ref{AdR-L81} \linebreak \ref{AdR-L82} \linebreak \ref{AdR-L83} \linebreak \ref{AdR-L89} \\
+	\hline \nameref{api-limiti} & \ref{AdR-L47} \linebreak \ref{AdR-L48} \\
+	\hline \nameref{api-timing} & \ref{AdR-L43} \\
+	\hline \nameref{api-file} & \ref{AdR-L39} \linebreak \ref{AdR-L40} \\
+	\hline \nameref{api-json} & \ref{AdR-L35} \\
+	\hline \nameref{api-regexpr} & \ref{AdR-L42} \\
+	\hline \nameref{fm-memory} & \ref{AdR-L90} \linebreak \ref{AdR-L91} \\
+	\hline \nameref{fm-generica} & \ref{AdR-L6} \linebreak \ref{AdR-L7} \linebreak \ref{AdR-L86} \linebreak \ref{AdR-L87} \linebreak \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L94} \\
+	\hline \nameref{gui} & \ref{AdR-L13} \linebreak \ref{AdR-L14} \linebreak \ref{AdR-L63} \\
+	\hline \nameref{gui-container} & \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L94} \\
+	\hline \nameref{gui-label} & \ref{AdR-L12} \\
+	\hline \nameref{gui-file} & \ref{AdR-L38} \linebreak \ref{AdR-L49} \\
+	\hline \nameref{gui-button} & \ref{AdR-L41} \\
+	\hline \nameref{gui-teditor} & \ref{AdR-L34} \\
+	\hline \nameref{gui-tview} & \ref{AdR-L33} \\
+	\hline \nameref{gui-image} & \ref{AdR-L45} \\
+	\hline \nameref{gui-check} & \ref{AdR-L85} \\
+	\hline \nameref{gui-radio} & \ref{AdR-L84} \\
+	\hline \nameref{gui-pie} & \ref{AdR-L46} \\
+	\hline \nameref{gui-bar} & \ref{AdR-L64} \\
+	
+	% To-do list
+	\hline \nameref{todo-item} & \ref{AdR-L18} \linebreak \ref{AdR-L74} \linebreak \ref{AdR-L19} \\
+	% Bubble & eat
+	
+	\hline \nameref{eat-customer} & \ref{AdR-L22} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L97} \linebreak \ref{AdR-L98} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L24} \linebreak \ref{AdR-L69} \linebreak \ref{AdR-L77} \linebreak \ref{AdR-L70} \linebreak \ref{AdR-L99} \linebreak \ref{AdR-L100} \\
+	
+	\hline
+	\caption{Tracciamento componenti-requisiti}
+\end{longtable}
+
+\subsection{Tracciamento requisiti-componenti}
+
+\begin{longtable}{|P{6cm}|P{6cm}|}
+	\hline \textbf{Requisito} & \textbf{Componenti} \\ 
+	\endfirsthead
+	% Framework
+	\hline \ref{AdR-L6} & \nameref{fm-generica} \\ %5
+	\hline \ref{AdR-L7} & \nameref{fm-generica} \\ 
+	\hline \ref{AdR-L8} & \nameref{api-db} \\
+	\hline \ref{AdR-L81} & \nameref{api-db} \\
+	\hline \ref{AdR-L82} & \nameref{api-db} \\
+	\hline \ref{AdR-L83} & \nameref{api-db} \\ %10
+	\hline \ref{AdR-L86} & \nameref{fm-generica} \\
+	\hline \ref{AdR-L87} & \nameref{fm-generica} \\
+	\hline \ref{AdR-L9} & \nameref{api-ciclovita} \\
+	\hline \ref{AdR-L10} & \nameref{api-ciclovita} \\
+	\hline \ref{AdR-L11} & \nameref{fm-generica} \linebreak \nameref{gui-container} \\ %15
+	\hline \ref{AdR-L56} & \nameref{fm-generica} \linebreak \nameref{gui-container} \\
+	\hline \ref{AdR-L89} & \nameref{api-db} \linebreak \nameref{fm-generica} \linebreak \nameref{gui-container} \\
+	\hline \ref{AdR-L55} & \nameref{fm-generica} \linebreak \nameref{gui-container} \\
+	\hline \ref{AdR-L88} & \nameref{fm-generica} \linebreak \nameref{gui-container} \\
+	\hline \ref{AdR-L12} & \nameref{gui-label} \\ %20
+	\hline \ref{AdR-L13} & \nameref{gui} \\
+	\hline \ref{AdR-L14} & \nameref{gui} \\
+	\hline \ref{AdR-L63} & \nameref{gui} \\
+	\hline \ref{AdR-L15} & \nameref{api-notifica} \\
+	\hline \ref{AdR-L16} & \nameref{api-notifica} \\ %25
+	\hline \ref{AdR-L33} & \nameref{gui-tview} \\
+	\hline \ref{AdR-L34} & \nameref{gui-teditor} \\
+	\hline \ref{AdR-L35} & \nameref{api-json} \\
+	\hline \ref{AdR-L94} & \nameref{fm-generica} \linebreak \nameref{gui-container} \\
+	\hline \ref{AdR-L36} & \nameref{api-partecipanti} \\ %30
+	\hline \ref{AdR-L37} & \nameref{api-partecipanti} \\
+	\hline \ref{AdR-L38} & \nameref{gui-file} \\
+	\hline \ref{AdR-L39} & \nameref{api-file} \\
+	\hline \ref{AdR-L40} & \nameref{api-file} \\
+	\hline \ref{AdR-L41} & \nameref{gui-button} \\ %35
+	\hline \ref{AdR-L84} & \nameref{gui-radio} \\
+	\hline \ref{AdR-L85} & \nameref{gui-check} \\
+	\hline \ref{AdR-L42} & \nameref{api-regexpr} \\
+ 	\hline \ref{AdR-L43} & \nameref{api-timing} \\
+	\hline \ref{AdR-L44} & \nameref{api-esterne} \\ %40
+	\hline \ref{AdR-L92} & \nameref{api-esterne} \\
+	\hline \ref{AdR-L45} & \nameref{gui-image} \\
+	\hline \ref{AdR-L46} & \nameref{gui-pie} \\
+	\hline \ref{AdR-L64} & \nameref{api-bar} \\
+	\hline \ref{AdR-L93} & \nameref{api-ciclovita} \\ %45
+	\hline \ref{AdR-L47} & \nameref{api-limiti} \\
+	\hline \ref{AdR-L48} & \nameref{api-limiti} \\
+	\hline \ref{AdR-L49} & \nameref{gui-file} \\
+	\hline \ref{AdR-L3} & \nameref{api-} \\
+	\hline \ref{AdR-L4} & \nameref{api-} \\ %50
+	\hline \ref{AdR-L90} & \nameref{fm-memory} \\
+	\hline \ref{AdR-L91} & \nameref{fm-memory} \\ %52
+	
+	% To-do list
+	\hline \ref{AdR-L17} & \nameref{todo-} \\ %59
+	\hline \ref{AdR-L71} & \nameref{todo-} \\ %60
+	\hline \ref{AdR-L95} & \nameref{todo-} \\
+	\hline \ref{AdR-L72} & \nameref{todo-} \\
+	\hline \ref{AdR-L73} & \nameref{todo-} \\
+	\hline \ref{AdR-L18} & \nameref{todo-item} \\
+	\hline \ref{AdR-L74} & \nameref{todo-item} \\ %65
+	\hline \ref{AdR-L19} & \nameref{todo-item} \\
+	\hline \ref{AdR-L75} & \nameref{todo-} \\
+	\hline \ref{AdR-L20} & \nameref{todo-} \\
+	\hline \ref{AdR-L76} & \nameref{todo-} \\ %69
+	
+	% Bubble & eat
+	\hline \ref{AdR-L21} & \nameref{eat-} \\ %70
+	\hline \ref{AdR-L61} & \nameref{eat-} \\
+	\hline \ref{AdR-L62} & \nameref{eat-} \\
+	\hline \ref{AdR-L22} & \nameref{eat-} \\
+	\hline \ref{AdR-L96} & \nameref{eat-} \\
+	\hline \ref{AdR-L97} & \nameref{eat-} \\ %75
+	\hline \ref{AdR-L98} & \nameref{eat-} \\
+	\hline \ref{AdR-L23} & \nameref{eat-} \\
+	\hline \ref{AdR-L68} & \nameref{eat-} \\
+	\hline \ref{AdR-L24} & \nameref{eat-} \\
+	\hline \ref{AdR-L69} & \nameref{eat-} \\ %80
+	\hline \ref{AdR-L77} & \nameref{eat-} \\
+	\hline \ref{AdR-L70} & \nameref{eat-} \\
+	\hline \ref{AdR-L99} & \nameref{eat-} \\
+	\hline \ref{AdR-L100} & \nameref{eat-} \\
+	\hline \ref{AdR-L25} & \nameref{eat-} \\ %85
+	\hline \ref{AdR-L26} & \nameref{eat-} \\
+	\hline \ref{AdR-L78} & \nameref{eat-} \\
+	\hline \ref{AdR-L27} & \nameref{eat-} \\
+	\hline \ref{AdR-L28} & \nameref{eat-} \\
+	\hline \ref{AdR-L104} & \nameref{eat-} \\ %90
+	\hline \ref{AdR-L105} & \nameref{eat-} \\
+	\hline \ref{AdR-L29} & \nameref{eat-} \\
+	\hline \ref{AdR-L79} & \nameref{eat-} \\
+	\hline \ref{AdR-L108} & \nameref{eat-} \\
+	\hline \ref{AdR-L80} & \nameref{eat-} \\ %95
+	\hline \ref{AdR-L106} & \nameref{eat-} \\
+	\hline \ref{AdR-L30} & \nameref{eat-} \\
+	\hline \ref{AdR-L31} & \nameref{eat-} \\
+	\hline \ref{AdR-L32} & \nameref{eat-} \\
+	\hline \ref{AdR-L101} & \nameref{eat-} \\ %100
+	\hline \ref{AdR-L102} & \nameref{eat-} \\
+	\hline \ref{AdR-L107} & \nameref{eat-} \\
+	\hline \ref{AdR-L103} & \nameref{eat-} \\
+	\hline \ref{AdR-L53} & \nameref{eat-} \\
+	\hline \ref{AdR-L65} & \nameref{eat-} \\ %105
+	\hline \ref{AdR-L109} & \nameref{eat-} \\
+	\hline \ref{AdR-L50} & \nameref{eat-} \\
+	\hline \ref{AdR-L51} & \nameref{eat-} \\
+	\hline \ref{AdR-L52} & \nameref{eat-} \\ %109
+	
+	\hline
+	\caption{Tracciamento componenti-requisiti}
+\end{longtable}
+

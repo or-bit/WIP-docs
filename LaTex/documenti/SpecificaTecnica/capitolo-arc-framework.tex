@@ -22,7 +22,7 @@ Data la natura del progetto non sono rappresentate connessioni tra i vari packag
 \subsubsection{Package interni}
 
 \begin{samepage}
-\paragraph{Api::ciclo di vita della bubble}\mbox{}\\
+\paragraph{Api::ciclo di vita della bubble}\label{api-ciclovita}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -35,7 +35,7 @@ Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita d
 Si occupa di controllare la durata di vita della bubble interrompendo il funzionamento dopo un tempo prefissato\\
 
 \begin{samepage}
-\paragraph{Api::notifica}\mbox{}\\
+\paragraph{Api::notifica}\label{api-notifica}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -48,7 +48,7 @@ I metodi presenti all'interno del package di notifica hanno lo scopo di creare e
 Si occupa della gestione di notifiche statiche all'utente.\\
 
 \begin{samepage}
-\paragraph{Api::ApiEsterne}\mbox{}\\
+\paragraph{Api::ApiEsterne}\label{api-esterne}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -61,7 +61,7 @@ Il package di chiamata delle API esterne aggiunge al framework la possibilità d
 Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubble memory.\\
 
 \begin{samepage}
-\paragraph{Api::Partecipanti}\mbox{}\\
+\paragraph{Api::Partecipanti}\label{api-partecipanti}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -74,7 +74,7 @@ Gestisce le operazioni di gestione degli utenti e delle loro interazioni.\\
 Questo package garantisce alla bubble la possibilità di avere accesso alla lista dei partecipanti alla chat e uno storico delle interazioni di ciascuno con essa.
 
 \begin{samepage}
-\paragraph{Api::Operazioni sul DB}\mbox{}\\
+\paragraph{Api::Operazioni sul DB}\label{api-db}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -87,7 +87,7 @@ Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi
 Oltre alle normali operazioni sul database l’utente avrà la possibilità di utilizzare un database esterno.
 
 \begin{samepage}
-\paragraph{Api::Limitazioni input}\mbox{}\\
+\paragraph{Api::Limitazioni input}\label{api-limiti}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -101,7 +101,7 @@ In questo package sono contenute le funzionalità del framework relative alle li
 Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato json (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
 \begin{samepage}
-\paragraph{Api::Timing}\mbox{}\\
+\paragraph{Api::Timing}\label{api-timing}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -114,7 +114,7 @@ Il package di timing si occupa della pianificazione dell'esecuzione di determina
 Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automatico.
 
 \begin{samepage}
-\paragraph{Api::File}\mbox{}\\
+\paragraph{Api::File}\label{api-file}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -127,7 +127,7 @@ Il package gestisce l'interazione della bubble con dei file.\\
 Verrà usato come descritto nei casi d’uso per convertire del testo in PDF e salvare il file così prodotto.
 
 \begin{samepage}
-\paragraph{Api::ControlloJSON}\mbox{}\\
+\paragraph{Api::ControlloJSON}\label{api-json}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -140,7 +140,7 @@ Il package permette il controllo di file JSON secondo uno schema specificato.\\
 Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema precedentemente fornito.
 
 \begin{samepage}
-\paragraph{Api::matchRegularExpr}\mbox{}\\
+\paragraph{Api::matchRegularExpr}\label{api-regexpr}\mbox{}\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
