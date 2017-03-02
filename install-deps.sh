@@ -10,10 +10,11 @@ sudo apt-get -qq install -y --no-install-recommends \
 	latex-xcolor \
 	lmodern \
 	pgf \
+	poppler-utils \
 	texlive \
 	texlive-extra-utils \
 	texlive-lang-english \
 	texlive-lang-italian \
 	texlive-latex-extra \
 	texlive-latex-recommended \
-	xpdf
+	
