@@ -1,0 +1,82 @@
+\section{Tracciamento Test-Requisiti}
+
+\subsection{Test di Integrazione}
+
+\subsubsection{Framework}
+
+
+
+\begin{longtable}{|c|P{9cm}|c|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{I} & Verificare che la bubble riceva gli input dalla GUI&  \\
+	\hline \test{I} & Verificare che la GUI riceva i dati dalla bubble &  \\
+	\hline \test{I} & Verificare che la GUI venga modificata come previsto &  \\
+	\hline \test{I} & Verificare che l'elemnto funzionale riceva i dati &  \\
+	\hline \test{I} & Verificare la bubble riceva il risultato dell'elaborazione &  \\
+	\hline \test{I} & Verificare che il risultato ritornato alla bolla sia corretto &  \\
+	\hline \test{I} & Verificare che  inviando all’elemento funzionale dati non corretti sia notificato l’errore&  \\
+	\hline \test{I} & Verificare che i dati inseriti correttamente modifichino la GUI correttamente &  \\
+	\hline \test{I} & Verificare che i dati inseriti non corretti non modifichino la GUI e sia notificato un errore  &  \\
+	\hline \test{I} & Verificare che evento originato dall'elemento funzionale abbia ripercussioni sulla bubble generica e sulla GUI &  \\
+	\hline \test{I} & Verificare che gli elementi funzionali ricevano dati dall abubble &  \\
+	\hline \test{I} & Vertificare che la bubble riceva il risultato dell'elaborazione dei dati &  \\
+	\hline \test{I} & Verificare che all'arrivo di un segnale dalla GUI sia ritornato un valore corretto alla bubble &  \\
+	\hline \test{I} & Verificare che con l'inviop di dati non corretti  all’ elemento funzionale sia notificato l’errore &  \\
+	\hline \test{I} & Verificare che la bubble riceva input dalla GUI & \\
+	\hline \test{I} & Verificare che la GUI riceva dati dalla bubble & \\
+	\hline \test{I} & Verificare che con la modifica dell'elemento funzionale la GUI venga modificata & \\
+	\hline
+	\caption{Test di Integrazione per il Framework}
+\end{longtable}
+
+\subsubsection{Bubble To-do List}
+
+\begin{longtable}{|c|P{9cm}|c|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento la vista venga modificata &  \\
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati non corretti il controller ritorni un mesaggio d'errore  &  \\
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati corretti ma con fallimento del salvataggio nell abubble memory venga notificato un mesaggio d'errore &  \\
+	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati corretti sia ritornato un messaggio dell'avvenita creazione  &  \\
+	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati non corretti sia ritornato un messaggio d'errore  &  \\
+	
+	\hline \test{I} & Verificare che alla creazione di un nuovo elemento nella view esso venga correttamente inviato al controller &  \\
+	\hline \test{I} & Verificare che alla  cancellazione di un elemento nella view questo venga correttamente inviato al controller &  \\
+	\hline \test{I} & Verificare alla creazione di una notifica statica nella view essa venga correttamente inviata al controller &  \\
+	\hline \test{I} & Verificare che un errore proveniente dal controller venga renderizzato in modo corretto dalla view &  \\
+	\hline \test{I} & Verificare che con l'aggiornamento dell'interfaccia grafica venga interpretato correttamente e che l'interfaccia grafica subisca le variazioni attese &  \\
+	\hline
+	\caption{Test di Integrazione per la bubble To-do List}
+\end{longtable}
+
+\subsubsection{Bubble and Eat}
+
+\begin{longtable}{|c|P{9cm}|c|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{I} & Verificare che alla visualizzazione del menu da parte del cliente l'Order Gateway ritorni i dati correttamente &  \\
+	\hline \test{I} & Verificare che alla visualizzazione del menu da parte del cliente senza la presenza di un menu nel gateway venga ritornato un messaggio d'errore all'utente &  \\
+	\hline \test{I} & Verificare che l'invio di un ordinazione da parte di un utente l'ordinazione sia immagazzinata all'interno del database e che venga correttamente inoltrata al cuoco
+	&  \\
+	\hline \test{I} & Verificare che con l'invio di un ordinazione da parte di un cliente con dati sbagliati l'ordinazione non venga salvata non venga inoltrata il cuoco e venga a ritornata l'utente un messaggio di errore &  \\
+	\hline \test{I} & Verificare che con l'invio dei dati personali con dati corretti i dati vengano correttamente salvati nel database &  \\
+	\hline \test{I} & Verificare che con l'invio di dati personali con dati non corretti i dati non vengono salvati nel database e venga inviato una segnalazione di errore all'utente &  \\
+	
+	\hline \test{I} & Verificare che con l'arrivo di un’ordinazione al cuoco l'ordinazione sia inserita nella todolist del cuoco &  \\
+	\hline \test{I} & Verificare che con il completamento di preparazione di un piatto da parte del cuoco all'interno dell'Ordine sia salvato lo stato di pronto sul piatto e che l'ordinazione venga trasferita al fattorino &  \\
+	\hline \test{I} & Verificare che con il completamento di preparazione di un piatto da parte del cuoco con errore nel salvataggio venga mostrato al cuoco un messaggio d'errore&  \\
+	
+	\hline \test{I} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del delivery man &  \\
+	\hline \test{I} & Verificare che al segnale di completamento della consegna da parte del delivery man il segnale arrivi correttamente correttamente all’order gateway &  \\
+	\hline \test{I} & Verificare che al segnale di non completamento della consegna da parte del delivery man il segnale arrivi correttamente all’ order gateway &  \\
+	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente  l'ingrediente mancante sia correttamente visualizzato nella lista del purchasing manager &  \\
+	\hline \test{I} & Verificare che al segnale di ingrediente acquistato da parte del purchasing manager il dato sia correttamente salvato nel database e vengano incrementati i valori relativi a quelli ingrediente nella lista delle scorte  &  \\
+	
+	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente da parte del manager all'order gateway vengano correttamente salvate le informazioni nel database  &  \\
+	\hline \test{I} & Verificare che al segnale di cancellazione di un ordine da parte del managerle informazioni siano correttamente salvate nel database  &  \\
+	\hline \test{I} & Verificare che al  segnale creazione di un nuovo menù nel database sia salvato il menù corretto  &  \\
+	\hline \test{I} & Verificare che alla modifica del menù da parte del manager nel database sia salvato il menù corretto. &  \\
+	\hline
+	\caption{Test di Integrazione per la Bubble \& Eat}
+\end{longtable}
