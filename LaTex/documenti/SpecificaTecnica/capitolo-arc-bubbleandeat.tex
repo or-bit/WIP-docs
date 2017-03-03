@@ -1,13 +1,13 @@
 \subsection{Bubble \& Eat}
 
 \subsubsection{Package}
-Il package della demo Bubble \& eat è composto da due ulteriori packages: customer e ristorante. 
-Il primo si riferisce soltato all'utente customer. Il secondo invece contiene i package di tutti gli altri attori:
+Il package della demo Bubble \& eat è composto da due ulteriori packages: \Customer{} e ristorante. 
+Il primo si riferisce soltato all'utente \Customer{}. Il secondo invece contiene i package di tutti gli altri attori:
 \begin{itemize}
-	\item manager;
-	\item chef;
-	\item delivery man;
-	\item purchasing manager.
+	\item \Manager{};
+	\item \Chef{};
+	\item \Deliveryman{};
+	\item \Purchasingmanager{}.
 \end{itemize}
 Nel package Ristorante, inoltre, è anche contenuto il pacchetto Order Gateway.\\
 Lo scopo del package Order Gateway è quello di creare, modificare ed eliminare le ordinazioni interagendo con il database che le contiene.
@@ -39,31 +39,31 @@ Tutte le interazioni con gli elementi descritti sopra sono rese disponibili agli
 
 \paragraph{Demo Bubble\&eat::customer::Bubble customer}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette al customer di consultare il menu, registrare i propri dati personali e inviare le proprie ordinazioni.\\
+La classe permette al \Customer{} di consultare il menu, registrare i propri dati personali e inviare le proprie ordinazioni.\\
 \textbf{Utilizzo:}\\
 Questa classe attraverso l’Order gateway riceve il menu da consultare per mezzo del quale può creare la propria ordinazione.\\
 
 \paragraph{Demo Bubble\&eat::Ristorante::manager::Bubble manager}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette al manager di gestire il menu, il magazzino e le ordinazioni.\\
+La classe permette al \Manager{} di gestire il menu, il magazzino e le ordinazioni.\\
 \textbf{Utilizzo:}\\
 Questa classe permette di gestire tutte le operazioni fornite da Order Gateway ed ha la possibilità di manipolare il magazzino e le ordinazioni.\\
 
 \paragraph{Demo Bubble\&eat::Ristorante::chef::Bubble chef}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette allo chef di consultare le ordinazioni e di impostare lo stato di una ordinazione in modo da renderla disponibile alla consegna.\\
+La classe permette allo \Chef{} di consultare le ordinazioni e di impostare lo stato di una ordinazione in modo da renderla disponibile alla consegna.\\
 \textbf{Utilizzo:}\\
-Questa classe attraverso l’Order Gateway recupera e visualizza le ordinazioni e offre la possibilità allo chef di modificarne lo stato.\\
+Questa classe attraverso l’Order Gateway recupera e visualizza le ordinazioni e offre la possibilità allo \Chef{} di modificarne lo stato.\\
 
 \paragraph{Demo Bubble\&eat::Ristorante::deliveryman::Bubble deliveryman}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette al delivery man di consultare gli ordini pronti alla consegna, di ottenere i dati personali dei clienti relativi alle consegne selezionate e di eliminarle una volta completate.\\
+La classe permette al \Deliveryman{} di consultare gli ordini pronti alla consegna, di ottenere i dati personali dei \Customer[2]{} relativi alle consegne selezionate e di eliminarle una volta completate.\\
 \textbf{Utilizzo:}\\
 Questa classe attraverso l’Order Gateway riceve la lista delle ordinazioni da consegnare, le visualizza e permette di selezionare le consegne ed eliminarle una volta selezionate.
 
 \paragraph{Demo Bubble\&eat::Ristorante::Purchasing Manager::Bubble Purchasing Manager}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette al Purchasing Manager di recuperare e visualizzare la lista della fornitura da acquistare oltre ad eliminare gli acquisti dalla lista.\\
+La classe permette al \Purchasingmanager{} di recuperare e visualizzare la lista della fornitura da acquistare oltre ad eliminare gli acquisti dalla lista.\\
 \textbf{Utilizzo:}\\
 Questa classe recupera dall’Order Gateway la lista degli acquisti, la visualizza e consente di eliminare gli acquisti presenti nella stessa.
 
@@ -78,11 +78,11 @@ La classe aggiorna le risorse in modo automatico scalando gli ingredienti dai va
 \textbf{Descrizione:}\\
 La classe permette la creazione delle ordinazioni ed attraverso l’Order Gateway fornisce diverse operazioni agli utenti:
 \begin{itemize}
-	\item customer: recupero del menu e creazione dell’ordinazione;
-	\item manager: recupero e modifica del menu.
+	\item \Customer{}: recupero del menu e creazione dell’ordinazione;
+	\item \Manager{}: recupero e modifica del menu.
 \end{itemize}
 \textbf{Utilizzo:}\\
-Questa classe implementa il design pattern del Factory method e permette la creazione delle ordinazioni, inoltre fornisce dei metodi per modificare ed ottenere il menu.
+Questa classe implementa il design pattern del Factory method e permette la creazione delle orinazioni, inoltre fornisce dei metodi per modificare ed ottenere il menu.
 
 \paragraph{Demo Bubble\&eat::Ristorante::Order Gateway::Ordinazione::Order}\mbox{}\\ 
 \textbf{Descrizione:}\\
