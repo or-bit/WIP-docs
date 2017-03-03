@@ -63,8 +63,23 @@ La classe List\-Item permette la gestione di una collezione di voci della To-do 
 \textbf{Utilizzo:}\\
 Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di elementi della To-do list.\\
 
-\subparagraph{Model\-::Db\-Gateway\-::Db\-Gateway}\label{todo-gateway}\mbox{}\\
+\subparagraph{Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe Db\-Gateway permette agli attori di interagire con la To-do list. La classe si occupa inoltre di inviare le notifiche impostate sui List\-Item. \\
+La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.
 \textbf{Utilizzo:}\\
-Questa classe permette agli attori la manipolazione dei List\-Item, per segnare come completate le voci della lista, settare notifiche, creare ed eliminare List\-Items dalla To-do list.\\
+Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato.
+
+\paragraph{Controller}\mbox{}
+\begin{samepage}
+	\subparagraph{Controller\-::Todo\-Controller}\mbox{}\\
+	\nopagebreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{diagrammi_img/classi_e_package/todo_controller}
+		\caption{Controller\-::Todo\-Controller}
+	\end{figure}
+\end{samepage}
+\textbf{Descrizione:}\\
+La classe TodoController svolge il ruolo di controller all'interno della bubble To-do list. \\
+\textbf{Utilizzo:}\\
+Viene utilizzata per controllare le interazioni tra GUI e model all'interno della bubble. Corrisponde alla GenericBubble del framework. \\

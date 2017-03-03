@@ -70,11 +70,6 @@ I dati inviati dal controller vengono validati prima di essere ricevuti dalla GU
 	%	\caption{Diagrammi di attività - Flusso principale View}
 	%\end{figure}
 \end{samepage}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/todo_aggiungi_notifica.png}
-%	\caption{Diagramma di sequenza - Flusso principale View}
-%\end{figure}
 Dal punto di vista visuale la bubble apparirà come elenco interattivo composto da una serie di elementi. Selezionando l'apposito pulsante sarà possibile aggiungere o rimuovere un elemento dalla lista. L'aggiunta e la rimozione di elementi della lista comportano un aggiornamento della parte grafica con la conseguente aggiunta o rimozione dell'elemento (rappresentato come testo) dalla lista.\\
 Sarà inoltre presente un comando per creare una notifica statica relativa alla lista.\\
 L'interazione dell'utente utilizzatore della bubble con l'interfaccia grafica genererà dei segnali che verranno mandati al controller della bubble stessa.
@@ -88,11 +83,7 @@ L'interazione dell'utente utilizzatore della bubble con l'interfaccia grafica ge
 	%	\caption{Diagramma di attività - Flusso principale controller}
 	%\end{figure}
 \end{samepage}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/todo_aggiungi_notifica.png}
-%	\caption{Diagramma di sequenza - Flusso principale controller}
-%\end{figure}
+
 Il controller sarà una componente software incaricata di ascoltare e di attendere i segnali generati dall'interfaccia grafica e dalla parte di business logic dell'applicativo, collegandone le funzionalità secondo quanto specificato nei requisiti. 
 
 \subsection{Bubble \& Eat}
@@ -107,11 +98,12 @@ Nello scenario descritto dalla demo, tramite il framework e le bubble da esso pr
 %	\caption{Diagramma di attività - Inserimento dati personali}
 %\end{figure}
 \end{samepage}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/todo_aggiungi_notifica.png}
-%	\caption{Diagramma di sequenza - Inserimento dati personali}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/sequenza/cliente_inserisci_informazioni.png}
+	\caption{Diagramma di sequenza - Inserimento dati personali}
+\end{figure}
+Il \Customer{} inserisce le proprie informazioni e le invia. I dati vengono ricevuti dall'Order\-Gateway, che li verifica tramite MatchRegularExpr e li salva nel database se rispettano il formato prefissato, altrimenti ritorna un messaggio di errore all'utente.
 
 \begin{samepage}
 \paragraph{Lettura dal menu}\mbox{}\\
