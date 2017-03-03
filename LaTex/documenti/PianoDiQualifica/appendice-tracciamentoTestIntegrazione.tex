@@ -4,7 +4,7 @@
 
 \subsubsection{Framework}
 
-\begin{longtable}{|c|P{9cm}|c|}
+\begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}} \\ 
 	\endfirsthead
 	\hline \test{I} & Verificare che la bubble riceva gli input dalla GUI & Controller::BubbleGenerica \\
@@ -30,7 +30,7 @@
 
 \subsubsection{Bubble To-do List}
 
-\begin{longtable}{|c|P{9cm}|c|}
+\begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}} \\ 
 	\endfirsthead
 	\hline \test{I} & Verificare che con la creazione di un nuovo elemento la vista venga modificata &  \\
@@ -49,7 +49,7 @@
 
 \subsubsection{Bubble \& eat}
 
-\begin{longtable}{|c|P{9cm}|c|}
+\begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}} \\ 
 	\endfirsthead
 	\hline \test{I} & Verificare che alla visualizzazione del menu da parte del cliente l'Order Gateway ritorni i dati correttamente & Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway \\
@@ -61,12 +61,12 @@
 	
 	\hline \test{I} & Verificare che con l'arrivo di un'ordinazione al Cuoco l'ordinazione sia inserita nella to-do list del Cuoco &  Demo Bubble\&eat::Ristorante::chef::Bubble chef \\
 	\hline \test{I} & Verificare che con il completamento della preparazione di un piatto da parte del Cuoco all'interno dell'ordine impostato il piatto come pronto & Demo Bubble\&eat::Ristorante::Order Gateway::Ordinazione::Order \\
-	\hline \test{I} & Verificare che quando lo stato di un piatto diventa \virgolette{pronto} l'ordinazione venga trasferita al Fattorino & Demo Bubble\&eat::Ristorante::deliveryman::Bubble deliveryman \\
+	\hline \test{I} & Verificare che quando lo stato di un piatto diventa \virgolette{pronto} l'ordinazione venga trasferita al Fattorino & Demo Bubble\&eat::Ristorante:: deliveryman::Bubble deliveryman \\
 	\hline \test{I} & Verificare che con il completamento della preparazione di un piatto da parte del Cuoco con errore nel salvataggio venga mostrato al Cuoco un messaggio d'errore & Demo Bubble\&eat::Ristorante::chef::Bubble chef \\
-	\hline \test{I} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Fattorino & Demo Bubble\&eat::Ristorante::deliveryman::Bubble deliveryman  \\
+	\hline \test{I} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Fattorino & Demo Bubble\&eat::Ristorante:: deliveryman::Bubble deliveryman  \\
 	\hline \test{I} & Verificare che al segnale di completamento della consegna da parte del Fattorino il segnale arrivi correttamente correttamente all'Order Gateway &  Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway \\
 	\hline \test{I} & Verificare che al segnale di non completamento della consegna da parte del Fattorino il segnale arrivi correttamente all’Order Gateway &  Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway \\
-	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente l'ingrediente mancante sia correttamente visualizzato nella lista del Responsabile Acquisti & DemoBubble\&eat::Ristorante::PurchasingManager::BubblePurchasingManager  \\
+	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente l'ingrediente mancante sia correttamente visualizzato nella lista del Responsabile Acquisti & DemoBubble\&eat::Ristorante::Purchasing Manager::Bubble PurchasingManager  \\
 	\hline \test{I} & Verificare che al segnale di ingrediente acquistato da parte del Responsabile Acquisti il dato sia correttamente salvato nel database e vengano incrementati i valori relativi a tale ingrediente nella lista delle scorte & Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway  \\
 	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente da parte del Direttore all'Order Gateway vengano correttamente salvate le informazioni nel database & Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway  \\
 	\hline \test{I} & Verificare che al segnale di cancellazione di un ordine da parte del Direttore le informazioni siano correttamente salvate nel database & Demo Bubble\&eat::Ristorante::Order Gateway::Order Gateway  \\
