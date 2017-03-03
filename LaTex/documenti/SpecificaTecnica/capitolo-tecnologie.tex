@@ -13,7 +13,7 @@ In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del 
 
 \subsection{Meteor}
 Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la creazione di applicazioni web gestendo allo stesso tempo le parti di front end, \glossario{back-end} e dei dati. Si integra facilmente con diverse tecnologie utilizzate nello sviluppo web come \glossario{AngularJS} e \glossario{React}.
-L’utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Questo però porta a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web.
+L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Questo però porta a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web.
 
 \subsection{MongoDB}
 MongoDB è un \glossario{DBMS} \glossario{non relazionale} \glossario{document-oriented} di tipo \glossario{NoSQL} ed è distribuito come \glossario{software libero} \glossario{open-source}. L'utilizzo di questa tecnologia è vincolato dalla sua integrazione con Meteor, tuttavia a fronte dello svantaggo di essere una tecnologia poco conosciuta ai membri del gruppo presenta anche numerosi punti di forza:
@@ -21,8 +21,8 @@ MongoDB è un \glossario{DBMS} \glossario{non relazionale} \glossario{document-o
 	\item semplicità di apprendimento;
 	\item un'efficienza superiore ai database relazionali non esistendo join che porterebbero ad un rallentamento delle operazioni di lettura o scrittura; 
 	\item è più flessibile di un database \glossario{SQL} facilitando la rappresentazione su un modello ad oggetti;
-	\item scalabilità a seconda delle esigenze dell’applicazione;
-	\item svincola dall’uso del linguaggio SQL per la generazioni delle query.
+	\item scalabilità a seconda delle esigenze dell'applicazione;
+	\item svincola dall'uso del linguaggio SQL per la generazioni delle query.
 \end{itemize}
 Grazie all'integrazione con Meteor l'accesso al database è ulteriormente semplificato.
 
@@ -30,16 +30,16 @@ Grazie all'integrazione con Meteor l'accesso al database è ulteriormente sempli
 Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche \glossario{ECMAScript} 6 (o ECMAScript 2015), ossia la versione stabile più aggiornata dello standard ECMAScript. 
 ECMAScript 6 introduce in javascript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
 \begin{itemize}
-	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico;
+	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di Java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico;
 	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura;
 	\item \textbf{Classi:} ECMAScript 6 prevede inoltre di aggiungere zucchero sintattico al pattern \glossario{ObjectOriented} di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro  linguaggio orientato agli oggetti.
 \end{itemize}
 
 \subsection{Html5}
-\glossario{Html5} è l’ultima versione dell’HTML (HyperText Markup Language). È stato scelto in quanto:
+\glossario{Html5} è l'ultima versione dell'HTML (HyperText Markup Language). È stato scelto in quanto:
 \begin{itemize}
 	\item ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard;
-	\item permette l’integrazione con diversi formati multimediali senza utilizzare plugin esterni; 
+	\item permette l'integrazione con diversi formati multimediali senza utilizzare plugin esterni; 
 	\item favorisce una struttura dinamica di visualizzazione dei dati, allontanandosi da quella di ipertesto delle versioni precedenti.
 \end{itemize}
 
@@ -50,7 +50,7 @@ ECMAScript 6 introduce in javascript diverse migliorie utilizzabili per rendere 
 Bootstrap è un framework per la progettazione della parte front-end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Boostrap garantisce un notevole supporto allo sviluppo del front-end di Monolith grazie alla presenza di numerose componenti responsive e classi css già configurate.
 
 \subsection{React}
-Per una migliore gestione della UI il gruppo ha deciso di utilizzare la libreria JavaScript React. Essa utilizza HTML e CSS per creare componenti web. È possibile creare delle viste dedicate per ogni stato dell’applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. L’utilizzo della libreria React è stato consigliato dal proponente, vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
+Per una migliore gestione della UI il gruppo ha deciso di utilizzare la libreria JavaScript React. Essa utilizza HTML e CSS per creare componenti web. È possibile creare delle viste dedicate per ogni stato dell'applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. L'utilizzo della libreria React è stato consigliato dal proponente, vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
 
 \subsection{WebStorm}
 Per la stesura del codice la scelta è ricaduta sull'\glossario{IDE} WebStorm della \glossario{JetBrains}, indicato come principale IDE per lo sviluppo di codice web e JavaScript. Esso infatti è un IDE estremamente sofisticato che include, oltre a suggerimenti nel codice tratti sia dalla libreria standard che dalle librerie incluse, integrazione con git, funzionalità di analisi del codice, ottimizzazione, analisi delle ripetizioni e segnalazione della ricorsione. Consente inoltre di tracciare le chiamate dei metodi e di integrarsi con un debugger.

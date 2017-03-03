@@ -3,36 +3,36 @@ I \glossario{Design Pattern} descrivono la metodologia con cui affrontare proble
 La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.\\
 I principali Design Pattern vengono suddivisi in quattro categorie:
 \begin{itemize}
-	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l’architettura;
+	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura;
 	\begin{itemize}
 		\item{MVC}
 	\end{itemize}
-	\item \textit{Creazionali}: affrontano il problema di astrarre il sistema rendendolo indipendente dall’implementazione concreta delle sue componenti;
-	\item \textit{Strutturali}: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l’ereditarietà e l'aggregazione;
-	\item \textit{Comportamentali}: affrontano il problema dell’interazione tra i componenti, definendo la funzione degli oggetti e il modo in cui interagisce con gli altri.
+	\item \textit{Creazionali}: affrontano il problema di astrarre il sistema rendendolo indipendente dall'implementazione concreta delle sue componenti;
+	\item \textit{Strutturali}: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l'ereditarietà e l'aggregazione;
+	\item \textit{Comportamentali}: affrontano il problema dell'interazione tra i componenti, definendo la funzione degli oggetti e il modo in cui interagisce con gli altri.
 \end{itemize}
-Per una descrizione più approfondita e completa dei diversi Design Pattern utilizzati nella progettazione di Monolith si rimanda all'appendice A. Di seguito viene invece descritto come sono stati utilizzati i diversi Design Pattern nella progettazione delle diverse parti dell'architettura.
+Per una descrizione più approfondita e completa dei diversi Design Pattern utilizzati nella progettazione di \ProjectName{} si rimanda all'\appendice{app:design_pattern}. Di seguito viene invece descritto come sono stati utilizzati i diversi Design Pattern nella progettazione delle diverse parti dell'architettura.
 
 \subsection{Design Pattern Architetturali}
 
 \subsubsection{MVC - Model View Controller}
-\textbf{Scopo:} permette di separare le responsabilità dei diversi componenti dell’applicazione dividendo presentazione, struttura e operazioni sui dati. Questo rende il codice manutenibile e di più semplice interpretazione.\\
-\textbf{Utilizzo:} Viene utilizzato per lasciare la parte di gestione dell’interfaccia alla view lasciando al model e controller la gestione logica dell’applicazione, quindi storage dei dati, interazione tra gli utenti e aggiornamento bubble.
+\textbf{Scopo:} permette di separare le responsabilità dei diversi componenti dell'applicazione dividendo presentazione, struttura e operazioni sui dati. Questo rende il codice manutenibile e di più semplice interpretazione.\\
+\textbf{Utilizzo:} Viene utilizzato per lasciare la parte di gestione dell'interfaccia alla view lasciando al model e controller la gestione logica dell'applicazione, quindi storage dei dati, interazione tra gli utenti e aggiornamento bubble.
 
 \subsection{Design Pattern Creazionali}
 
 \subsubsection{Prototype}
-\textbf{Scopo:} specifica il tipo di oggetti da creare utilizzando un’istanza \virgolette{prototipo} che viene copiata ed estesa.\\
+\textbf{Scopo:} specifica il tipo di oggetti da creare utilizzando un'istanza \virgolette{prototipo} che viene copiata ed estesa.\\
 \textbf{Utilizzo:} 
 
 \subsubsection{Singleton}
-\textbf{Scopo:} viene utilizzato per vincolare le classi che devono avere una sola istanza durante l’esecuzione dell’applicazione.\\
-\textbf{Utilizzo:} viene utilizzato per l’interfaccia che gestisce la comunicazione col database MongoDB.
+\textbf{Scopo:} viene utilizzato per vincolare le classi che devono avere una sola istanza durante l'esecuzione dell'applicazione.\\
+\textbf{Utilizzo:} viene utilizzato per l'interfaccia che gestisce la comunicazione col database MongoDB.
 
 \subsection{Design Pattern Strutturali}
 
 \subsubsection{Facade}
-\textbf{Scopo:} fornisce un’interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti, ed avendo un unico punto d’accesso minimizza le comunicazioni e le dipendenze.\\
+\textbf{Scopo:} fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti, ed avendo un unico punto d'accesso minimizza le comunicazioni e le dipendenze.\\
 \textbf{Utilizzo:} 
 
 
@@ -43,5 +43,5 @@ Per una descrizione più approfondita e completa dei diversi Design Pattern util
 \subsection{Design Pattern Comportamentali}
 
 \subsubsection{Observer}
-\textbf{Scopo:} permette l’aggiornamento di più viste contemporaneamente, disinteressandosi a quante o quali esse siano.\\
+\textbf{Scopo:} permette l'aggiornamento di più viste contemporaneamente, disinteressandosi a quante o quali esse siano.\\
 \textbf{Utilizzo:} verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate ed allineate.

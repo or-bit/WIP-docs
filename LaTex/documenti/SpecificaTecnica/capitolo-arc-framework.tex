@@ -1,7 +1,7 @@
 \section{Framework}
 
 \subsection{Architettura Generale}
-L’architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell’interfaccia grafica per l’utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle API. La parte di Controller che consiste nella bubble generica si occuperà di gestire l’aggiornamento della GUI e l’invio delgli input dell’utente agli elementi funzionali.
+L'architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell'interfaccia grafica per l'utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle API. La parte di Controller che consiste nella bubble generica si occuperà di gestire l'aggiornamento della GUI e l'invio delgli input dell'utente agli elementi funzionali.
 
 \begin{figure}[H]
 	\centering
@@ -97,7 +97,7 @@ Questo package garantisce alla bubble la possibilità di avere accesso alla list
 \textbf{Descrizione:}\\
 Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi ad un database non relazionale ed effettuare al suo interno operazioni di lettura e di scrittura.\\
 \textbf{Scopo:}\\
-Oltre alle normali operazioni sul database l’utente avrà la possibilità di utilizzare un database esterno.
+Oltre alle normali operazioni sul database l'utente avrà la possibilità di utilizzare un database esterno.
 
 \begin{samepage}
 \paragraph{Api::Limitazioni input}\label{api-limiti}\mbox{}\\
@@ -110,7 +110,7 @@ Oltre alle normali operazioni sul database l’utente avrà la possibilità di u
 \textbf{Descrizione:}\\
 Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
 \textbf{Scopo:}\\
-In questo package sono contenute le funzionalità del framework relative alle limitazioni sull’input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
+In questo package sono contenute le funzionalità del framework relative alle limitazioni sull'input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
 Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato json (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
 \begin{samepage}
@@ -137,7 +137,7 @@ Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automati
 \textbf{Descrizione:}\\ 
 Il package gestisce l'interazione della bubble con dei file.\\ 
 \textbf{Scopo:}\\
-Verrà usato come descritto nei casi d’uso per convertire del testo in PDF e salvare il file così prodotto.
+Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e salvare il file così prodotto.
 
 \begin{samepage}
 \paragraph{Api::ControlloJSON}\label{api-json}\mbox{}\\
@@ -188,15 +188,15 @@ Serve a rilevare i comandi ricevuti dall'utente tramite la GUI e propagarli alla
 %\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
-La parte di View dedicata alla gestione dell’interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
-Ogni elemento dell GUI, come button, text editor o label, implementa l’interfaccia GUI specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
+La parte di View dedicata alla gestione dell'interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
+Ogni elemento dell GUI, come button, text editor o label, implementa l'interfaccia GUI specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
 Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore (GUI container). In questo modo il Controller potrà organizzare in modo più semplice lo scambio di informazioni tra la parte Model e quella View, inserendo diversi elementi di GUI relativi ad una specifica funzionalità in un unico container.
 
 \subsubsection{Classi}
 
 \paragraph{View::Gui}\label{gui}\mbox{}\\
 \textbf{Descrizione:}\\
-L’interfaccia GUI racchiude i dati riguardanti la visibilità e l’aggiornamento e offre le funzionalità di gestione dell’evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
+L'interfaccia GUI racchiude i dati riguardanti la visibilità e l'aggiornamento e offre le funzionalità di gestione dell'evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
 \textbf{Utilizzo:}\\
 Questa classe viene usata per gestire gli eventi degli elementi grafici.
 
@@ -204,7 +204,7 @@ Questa classe viene usata per gestire gli eventi degli elementi grafici.
 \textbf{Descrizione:}\\
 La classe contiene una collezione di uno o più elementi della GUI.\\ 
 \textbf{Utilizzo:}\\
-Questa classe permette l’inserimento, la manipolazione e la rimozione di elementi dall’interno della collezione della GUI. 
+Questa classe permette l'inserimento, la manipolazione e la rimozione di elementi dall'interno della collezione della GUI. 
 
 \paragraph{View::Gui::Label}\label{gui-label}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -240,7 +240,7 @@ Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i meto
 
 \paragraph{View::Gui::TextView}\label{gui-tview}\mbox{}\\
 \textbf{Descrizione:}\\
-Classe volta alla realizzazione di un elemento in grado di mostrare all’utente del testo non modificabile.\\
+Classe volta alla realizzazione di un elemento in grado di mostrare all'utente del testo non modificabile.\\
 \textbf{Utilizzo:}\\
 Consentire all'utente la visualizzazione di testo nella bubble.\\
 \textbf{Relazioni con le altre classi:}\\
@@ -258,7 +258,7 @@ Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i meto
 \textbf{Descrizione:}\\
 La classe check button porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
-L’utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
+L'utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
@@ -266,7 +266,7 @@ Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i meto
 \textbf{Descrizione:}\\
 La classe radio button porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
-L’utilizzo di questa classe è quello di fornire un bottone selezionabile in modo esclusivo.\\
+L'utilizzo di questa classe è quello di fornire un bottone selezionabile in modo esclusivo.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
@@ -274,7 +274,7 @@ Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i meto
 \textbf{Descrizione:}\\
 La classe PieChart porta all'interno del framework la possibilità di utilizzare grafici a torta.\\
 \textbf{Utilizzo:}\\
-L’utilizzo di questa classe è quello di fornire un grafico a torta per l’elaborazione grafica di dati.\\
+L'utilizzo di questa classe è quello di fornire un grafico a torta per l'elaborazione grafica di dati.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
@@ -282,6 +282,6 @@ Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i meto
 \textbf{Descrizione:}\\
 La classe BarChart porta all'interno del framework la possibilità di utilizzare grafici a istogramma.\\
 \textbf{Utilizzo:}\\
-L’utilizzo di questa classe è quello di fornire un grafico a istogramma per l’elaborazione grafica di dati.\\
+L'utilizzo di questa classe è quello di fornire un grafico a istogramma per l'elaborazione grafica di dati.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\

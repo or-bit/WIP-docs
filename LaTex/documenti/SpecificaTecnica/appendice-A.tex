@@ -1,18 +1,18 @@
-\section{Descrizione Design Pattern}
+\section{Descrizione Design Pattern} \label{app:design_pattern}
 
 \subsection{Design Pattern Architetturali}
 
 \subsubsection{MVC - Model View Controler}
-\textit{Model-View-Controller} (MVC) è un pattern architetturale con la funzione di suddividere l’architettura dell’applicazione in tre parti distinte ma interconnesse, permettendo una separazione tra la gestione dei dati e la modalità attraverso la quale vengono mostrati all’utente.
+\textit{Model-View-Controller} (MVC) è un pattern architetturale con la funzione di suddividere l'architettura dell'applicazione in tre parti distinte ma interconnesse, permettendo una separazione tra la gestione dei dati e la modalità attraverso la quale vengono mostrati all'utente.
 I tre componenti sono:
 \begin{itemize}
-	\item \textbf{Model}: definisce il modello dei dati, ne realizza la logica e le diverse operazioni che possono essere effettuate su di essi. Viene progettato attraverso le tecniche object oriented e permette di notificare alle varie view l’aggiornamento del modello dei dati (Observer pattern).
-	\item \textbf{View}: si occupa della gestione della logica di presentazione dei dati ai vari client, cattura gli input dell'utente e delega al controller la loro gestione. L’aggiornamento della view può avvenire in due modalità:
+	\item \textbf{Model}: definisce il modello dei dati, ne realizza la logica e le diverse operazioni che possono essere effettuate su di essi. Viene progettato attraverso le tecniche object oriented e permette di notificare alle varie view l'aggiornamento del modello dei dati (Observer pattern).
+	\item \textbf{View}: si occupa della gestione della logica di presentazione dei dati ai vari client, cattura gli input dell'utente e delega al controller la loro gestione. L'aggiornamento della view può avvenire in due modalità:
 	\begin{itemize}
 		\item \textbf{push model}: se la view deve essere costantemente aggiornata (Observer pattern); si usa se il pattern MVC si sviluppa in un unico ambiente di esecuzione;
 		\item \textbf{pull model}: se la view necessita di essere aggiornata solo in momenti precisi; si usa se il pattern MVC si sviluppa su diversi ambienti di esecuzione.
 	\end{itemize}
-	\item \textbf{Controller}: trasforma le interazioni effettuate dal client attraverso la view in azioni sui dati presenti sul model. Ha la funzione di generare la logica dell’applicazione. Esiste un controller per ogni view.
+	\item \textbf{Controller}: trasforma le interazioni effettuate dal client attraverso la view in azioni sui dati presenti sul model. Ha la funzione di generare la logica dell'applicazione. Esiste un controller per ogni view.
 \end{itemize}
 MVC è fortemente utilizzato per applicazioni web.
 
@@ -22,29 +22,29 @@ MVC è fortemente utilizzato per applicazioni web.
 Prototype è un pattern creazionale che si occupa della creazione degli oggetti, rendendo indipendente un sistema dal modo in cui i suoi oggetti vengono creati.
 È utile nelle seguenti situazioni:
 \begin{itemize}
-	\item l’istanziazione della classe avviene a tempo di esecuzione per cui il codice statico non può occuparsi della creazione dell’oggetto;
+	\item l'istanziazione della classe avviene a tempo di esecuzione per cui il codice statico non può occuparsi della creazione dell'oggetto;
 	\item per evitare di costruire gerarchie factory parallele come avviene utilizzando Abstract factory;
-	\item se si vuole limitare il numero di stati delle istanze di una classe, rendendo dunque più conveniente clonare l’oggetto piuttosto che crearlo e configurarlo.
+	\item se si vuole limitare il numero di stati delle istanze di una classe, rendendo dunque più conveniente clonare l'oggetto piuttosto che crearlo e configurarlo.
 \end{itemize}
 
 \subsubsection{Singleton}
 \textit{Singleton} è un pattern creazionale frequentemente utilizzato e necessario in molte applicazioni il cui scopo è di vincolare una classe alla creazione di una e una sola istanza della stessa, fornendo un punto di accesso unico e globale a questa istanza. Per permettere questo funzionamento è necessario fornire solo alla classe stessa la capacità di venire istanziata e di bloccarla nel caso questo sia già avvenuto. Il singleton dovrebbe essere estensibile utilizzando il subclassing.\\
 Il pattern singleton garantisce le seguenti condizioni:
 \begin{itemize}
-	\item un accesso unico e controllato all’istanza, poiché solo la classe stessa è in grado di controllare l’accesso da parte dei client;
-	\item l’istanza potrebbe essere usata come contenitore unico per variabili che altrimenti sarebbero globali;
-	\item permette la definizione delle operazioni definite nella classe che utilizza il singleton che andrebbe sempre estesa prima dell’utilizzo \textbf{(frase da riscrivere)};
-	\item il numero delle istanze può essere controllato, e non è necessariamente limitato ad una sola. Questa funzione viene sempre gestita dalla classe stessa che implementa anche il modo di fornire ai vari client l’istanza corretta.
+	\item un accesso unico e controllato all'istanza, poiché solo la classe stessa è in grado di controllare l'accesso da parte dei client;
+	\item l'istanza potrebbe essere usata come contenitore unico per variabili che altrimenti sarebbero globali;
+	\item permette la definizione delle operazioni definite nella classe che utilizza il singleton che andrebbe sempre estesa prima dell'utilizzo \textbf{(frase da riscrivere)};
+	\item il numero delle istanze può essere controllato, e non è necessariamente limitato ad una sola. Questa funzione viene sempre gestita dalla classe stessa che implementa anche il modo di fornire ai vari client l'istanza corretta.
 \end{itemize}
 
 \subsection{Design Pattern Strutturali}
 
 \subsubsection{Fa\c{c}ade}
-\textit{Fa\c{c}ade} è un pattern strutturale che fornisce un’interfaccia unica per un insieme di sotto interfacce. La suddivisione del sistema in sottosistemi aiuta a ridurne la complessità.
+\textit{Fa\c{c}ade} è un pattern strutturale che fornisce un'interfaccia unica per un insieme di sotto interfacce. La suddivisione del sistema in sottosistemi aiuta a ridurne la complessità.
 Il pattern può essere utilizzato nei seguenti casi:
 \begin{itemize}
-	\item Per fornire un’interfaccia unica e semplificata ad un sottosistema complesso, che con la sua evoluzione tende ad aumentare di complessità, spesso a causa dell’utilizzo di altri pattern che rendono il sottosistema più riusabile e personalizzabile, ma rendono l’accesso dei client che non richiedono personalizzazione più complicato. Il fa\c{c}ade propone quindi una vista di default del sottosistema per chi non ha bisogno di un accesso dettagliato.
-	\item Se vogliamo disaccoppiare i sottoinsiemi dai client a causa delle molte dipendenze introducendo un fa\c{c}ade queste possono essere ridotte, facilitandone la portabilità e l’indipendenza dei sottoinsiemi.
+	\item Per fornire un'interfaccia unica e semplificata ad un sottosistema complesso, che con la sua evoluzione tende ad aumentare di complessità, spesso a causa dell'utilizzo di altri pattern che rendono il sottosistema più riusabile e personalizzabile, ma rendono l'accesso dei client che non richiedono personalizzazione più complicato. Il fa\c{c}ade propone quindi una vista di default del sottosistema per chi non ha bisogno di un accesso dettagliato.
+	\item Se vogliamo disaccoppiare i sottoinsiemi dai client a causa delle molte dipendenze introducendo un fa\c{c}ade queste possono essere ridotte, facilitandone la portabilità e l'indipendenza dei sottoinsiemi.
 	\item Se abbiamo una struttura a più livelli e vogliamo organizzare i sottoinsiemi. Il fa\c{c}ade fa da punto di ingresso per i sottolivelli.
 \end{itemize}
 
@@ -63,7 +63,7 @@ Il pattern definisce due ruoli:
 \end{itemize}
 Il pattern può essere utilizzato nei seguenti casi:
 \begin{itemize}
-	\item se si vogliono associare più viste differenti ad un’unica astrazione, aumentando il riuso dei singoli tipi;
+	\item se si vogliono associare più viste differenti ad un'unica astrazione, aumentando il riuso dei singoli tipi;
 	\item quando il cambiamento di stato di un oggetto provoca anche il cambiamento di altri e non si conosce quanti oggetti debbano cambiare;
-	\item se si vuole evitare l’accoppiamento forte, si può notificare gli oggetti senza fare assunzioni su quali essi siano.
+	\item se si vuole evitare l'accoppiamento forte, si può notificare gli oggetti senza fare assunzioni su quali essi siano.
 \end{itemize}

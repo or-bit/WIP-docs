@@ -31,7 +31,7 @@ Il procedimento è del tutto analogo a quello adottato per l'aggiunta di un elem
 \end{itemize}
 Una volta effettuata la rimozione dell'elemento viene ritornato al controller:
 \begin{itemize}
-	\item lo stesso elemento appena rimosso se l’operazione va a buon fine;
+	\item lo stesso elemento appena rimosso se l'operazione va a buon fine;
 	\item un messaggio di errore altrimenti.
 \end{itemize}
 Il controller si occupa poi di inoltrare questi messaggi alla view affinché possano essere renderizzati e visualizzati così dall'utente.
@@ -44,7 +44,7 @@ Il controller si occupa poi di inoltrare questi messaggi alla view affinché pos
 	%	\caption{Aggiunta notifica statica}
 	%\end{figure}
 \end{samepage}
-I dati inviati dal controller vengono validati prima di essere ricevuti dalla GUI. In caso siano presenti errori l’operazione viene interrotta con un messaggio di errore e la notifica non viene creata. Il messaggio di errore viene quindi inviato alla GUI, affinché possa essere renderizzato e mostrato all’utente. Se invece i dati sono conformi, viene creata una notifica statica. Il successo o meno di questa operazione viene segnalata dal model al controller e dal controller alla GUI, cosicché l’utente sia a conoscenza di quanto successo.
+I dati inviati dal controller vengono validati prima di essere ricevuti dalla GUI. In caso siano presenti errori l'operazione viene interrotta con un messaggio di errore e la notifica non viene creata. Il messaggio di errore viene quindi inviato alla GUI, affinché possa essere renderizzato e mostrato all'utente. Se invece i dati sono conformi, viene creata una notifica statica. Il successo o meno di questa operazione viene segnalata dal model al controller e dal controller alla GUI, cosicché l'utente sia a conoscenza di quanto successo.
 
 \subsubsection{View}
 \begin{samepage}
@@ -83,7 +83,7 @@ Nello scenario descritto dalla demo, tramite il framework e le bubble da esso pr
 %\end{figure}
 
 \paragraph{Lettura dal menu}\mbox{}\\
-Il \Customer{} invia la richiesta di visualizzare il menù, la richiesta viene ricevuta dall’Order Gateway ed è inoltrata al database che risponde fornendo il menù, il quale viene inviato poi al \Customer{}.
+Il \Customer{} invia la richiesta di visualizzare il menù, la richiesta viene ricevuta dall'Order Gateway ed è inoltrata al database che risponde fornendo il menù, il quale viene inviato poi al \Customer{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -91,7 +91,7 @@ Il \Customer{} invia la richiesta di visualizzare il menù, la richiesta viene r
 %\end{figure}
 
 \paragraph{Fai ordinazione}\mbox{}\\
-Selezionate le pietanze l'ordine è inviato all’Order Gateway, il quale salva nel database un'approssimazione delle risorse che verranno consumate nella preparazione; fatto questo l'ordinazione viene inviata al \Chef{} che provverderà a preparare il piatto.
+Selezionate le pietanze l'ordine è inviato all'Order Gateway, il quale salva nel database un'approssimazione delle risorse che verranno consumate nella preparazione; fatto questo l'ordinazione viene inviata allo \Chef{} che provverderà a preparare il piatto.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -99,7 +99,7 @@ Selezionate le pietanze l'ordine è inviato all’Order Gateway, il quale salva 
 %\end{figure}
 
 \paragraph{Conferma ricezione ordinazione}\mbox{}\\
-Ricevuta la consegna, il \Customer{} invia una segnalazione all’Order Gateway che provvederà a salvare l'informazione nel database.
+Ricevuta la consegna, il \Customer{} invia una segnalazione all'Order Gateway che provvederà a salvare l'informazione nel database.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -109,7 +109,7 @@ Ricevuta la consegna, il \Customer{} invia una segnalazione all’Order Gateway 
 \subsubsection{\Chef{}}
 
 \paragraph{Conferma completata la preparazione del piatto}\mbox{}\\
-Completata la preparazione della pietanza, il \Chef{} segnala l’avvenuta preparazione all’Order Gateway. L’Order Gateway provvede a registrare l’avvenuta preparazione del piatto nel Database, il quale conferma il salvataggio o ritorna con un errore.
+Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta preparazione all'Order Gateway. L'Order Gateway provvede a registrare l'avvenuta preparazione del piatto nel Database, il quale conferma il salvataggio o ritorna con un errore.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -119,7 +119,7 @@ Completata la preparazione della pietanza, il \Chef{} segnala l’avvenuta prepa
 \subsubsection{\Deliveryman{}}
 
 \paragraph{Seleziona consegna}\mbox{}\\
-Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all’Order Gateway, il quale inoltra gli ordini al database; il database quindi aggiorna lo stato degli ordini ricevuti e ricava le informazioni personali degli utenti per la consegna, inviandole come risposta all’Order Gateway. A questo punto l’operazione viene confermata e le informazioni di consegna spedite al \Deliveryman{}, il quale può procedere con le consegne.
+Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all'Order Gateway, il quale inoltra gli ordini al database; il database quindi aggiorna lo stato degli ordini ricevuti e ricava le informazioni personali degli utenti per la consegna, inviandole come risposta all'Order Gateway. A questo punto l'operazione viene confermata e le informazioni di consegna spedite al \Deliveryman{}, il quale può procedere con le consegne.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -127,7 +127,7 @@ Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all’Or
 %\end{figure}
 
 \paragraph{Segnala la consegna come compiuta}\mbox{}\\
-Una volta completata la consegna il \Deliveryman{} lo segnala all’Order Gateway, il quale inoltra l’informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall’Order Gateway ed inoltrato al \Deliveryman{}.
+Una volta completata la consegna il \Deliveryman{} lo segnala all'Order Gateway, il quale inoltra l'informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall'Order Gateway ed inoltrato al \Deliveryman{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -135,7 +135,7 @@ Una volta completata la consegna il \Deliveryman{} lo segnala all’Order Gatewa
 %\end{figure}
 
 \paragraph{Segnala fallimento}\mbox{}\\
-Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all’Order Gateway, il quale inoltra l’informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall’Order Gateway ed inoltrato al \Deliveryman{}.
+Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order Gateway, il quale inoltra l'informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall'Order Gateway ed inoltrato al \Deliveryman{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -145,7 +145,7 @@ Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all’Orde
 \subsubsection{\Purchasingmanager{}}
 
 \paragraph{Segnala acquistate le scorte}\mbox{}\\
-Il \Purchasingmanager{} segnala l’acquisto delle scorte all’Order Gateway. L’Order Gateway effettua il salvataggio nel Database dei dati riguardanti le scorte acquistate. Il Database al completamento dell’operazione invia un segnale che viene poi riportato dall’Order Gateway al \Purchasingmanager{}.
+Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order Gateway. L'Order Gateway effettua il salvataggio nel Database dei dati riguardanti le scorte acquistate. Il Database al completamento dell'operazione invia un segnale che viene poi riportato dall'Order Gateway al \Purchasingmanager{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -155,7 +155,7 @@ Il \Purchasingmanager{} segnala l’acquisto delle scorte all’Order Gateway. L
 \subsubsection{\Manager{}}
 
 \paragraph{Visualizzazione menu}\mbox{}\\
-Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall’Order Gateway ed inoltrata al database, il quale ricerca le informazioni richieste e le ritorna in risposta all’Order Gateway. Questo a sua volta le inoltra al \Manager{} che visualizza il menu.
+Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall'Order Gateway ed inoltrata al database, il quale ricerca le informazioni richieste e le ritorna in risposta all'Order Gateway. Questo a sua volta le inoltra al \Manager{} che visualizza il menu.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -163,7 +163,7 @@ Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall’O
 %\end{figure}
 
 \paragraph{Modifica menu}\mbox{}\\
-Il \Manager{}, una volta effettuate le modifiche al menù, le invia all’Order Gateway, il quale le inoltra al database. Vengono quindi aggiornate le informazioni sul database e viene ritornato un segnale di conferma, ricevuto e inoltrato dall’Order Gateway al \Manager{}.
+Il \Manager{}, una volta effettuate le modifiche al menù, le invia all'Order Gateway, il quale le inoltra al database. Vengono quindi aggiornate le informazioni sul database e viene ritornato un segnale di conferma, ricevuto e inoltrato dall'Order Gateway al \Manager{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -171,7 +171,7 @@ Il \Manager{}, una volta effettuate le modifiche al menù, le invia all’Order 
 %\end{figure}
 
 \paragraph{Visualizzazione magazzino}\mbox{}\\
-Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ricevuta dall’Order Gateway e inoltrata al database. Vengono quindi recuperate le informazioni richieste e ritornate all’Order Gateway, il quale le inoltra al \Manager{}.
+Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ricevuta dall'Order Gateway e inoltrata al database. Vengono quindi recuperate le informazioni richieste e ritornate all'Order Gateway, il quale le inoltra al \Manager{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -179,7 +179,7 @@ Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ri
 %\end{figure}
 
 \paragraph{Modifica magazzino}\mbox{}\\
-Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all’Order Gateway, il quale le inoltra al database, che provvede ad aggiornare i dati. Il database ritorna quindi un segnale di conferma all’Order Gateway, che lo inoltra al \Manager{}.
+Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Order Gateway, il quale le inoltra al database, che provvede ad aggiornare i dati. Il database ritorna quindi un segnale di conferma all'Order Gateway, che lo inoltra al \Manager{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
@@ -187,7 +187,7 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all’Or
 %\end{figure}
 
 \paragraph{Visualizzazione orders}\mbox{}\\
-Il \Manager{} effettua una richiesta per visualizzare gli ordini all’Order Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all’Order Gateway, il quale a sua volta inoltra i dati al \Manager{}.
+Il \Manager{} effettua una richiesta per visualizzare gli ordini all'Order Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all'Order Gateway, il quale a sua volta inoltra i dati al \Manager{}.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
