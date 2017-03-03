@@ -160,6 +160,17 @@ Selezionate le pietanze l'ordine è inviato all'Order\-Gateway, il quale salva n
 \end{figure}
 Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta preparazione all'Order\-Gateway. L'Order\-Gateway provvede a registrare l'avvenuta preparazione del piatto nel Database, il quale conferma il salvataggio o ritorna con un errore.
 
+\subsubsection{\Chef{}}
+
+\begin{samepage}
+	\paragraph{Segnala ordinazioni completate}\mbox{}\\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=14cm]{diagrammi_img/attivita/chef_comlete_order.png}
+		\caption{Diagramma di attività - Completamento ordinazione}
+	\end{figure}
+\end{samepage}
+Lo \Chef{} seleziona le ordinazaioni pronte della lista di ordini ed invia la richiesta all'Order\-Gateway. L'Order\-Gateway inoltra al Database la richiesta che effettua poi l'aggiornamento degli order. Il Database al completamento dell'operazione invia un segnale di conferma per lo \Chef{} ed uno di notifica per il \Deliveryman{} che vengono poi inoltrati dall'Order\-Gateway.
 
 \subsubsection{\Deliveryman{}}
 
@@ -307,3 +318,13 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Orde
 	\caption{Diagramma di sequenza - Visualizzazione orders}
 \end{figure}
 Il \Manager{} effettua una richiesta per visualizzare gli ordini all'Order\-Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all'Order\-Gateway, il quale a sua volta inoltra i dati al \Manager{}.
+
+\begin{samepage}
+	\paragraph{Visualizzazione orders}\mbox{}\\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=14cm]{diagrammi_img/attivita/manager_order_remove.png}
+		\caption{Diagramma di attività - Visualizzazione orders}
+	\end{figure}
+\end{samepage}
+Il \Manager{} seleziona dagli ordini da eliminare ed invia la richiesta all'Order\-Gateway, il quale la inoltra al database. Vengono quindi eliminati gli ordini selezionati e viene inviato un segnale di conferma dal database all'Order\-Gateway, il quale a sua volta lo inoltra al \Manager{}.
