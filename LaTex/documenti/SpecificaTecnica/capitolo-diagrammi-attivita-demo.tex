@@ -1,1 +1,196 @@
 \section{Diagrammi di attività - Demo}
+
+\subsection{To-do List}
+
+\subsubsection{Model}
+Per mantenere una persistenza dei dati questi verranno salvati nella bubble memory, in modo tale da essere disponibili per la visualizzazione. Essendo la bubble memory strutturata in modo simile ad un database non relazionale questa funzionalità sarà facilmente estensibile, interagendo direttamente con un database esterno.
+
+\begin{samepage}
+\paragraph{Aggiunta elemento alla to-do list}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Aggiunta elemento alla to-do list}
+%\end{figure}
+\end{samepage}
+Dopo una verifica preliminare della loro correttezza, i dati vengono salvati nella bubble memory e ritornati al controller che li inoltra alla view, da cui saranno renderizzati.
+La procedura è analoga anche nel caso in cui si verifichino degli errori, che verranno visualizzati nel medesimo modo.
+
+\begin{samepage}
+	\paragraph{Rimozione elemento dalla to-do list}\mbox{}\\
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	%	\caption{Rimozione elemento dalla to-do list}
+	%\end{figure}
+\end{samepage}
+Il procedimento è del tutto analogo a quello adottato per l'aggiunta di un elemento alla to-do list. Inizialmente viene controllato se all'interno della bubble memory è presente l'elemento che si intende eliminare: 
+\begin{itemize}
+	\item se è presente si procede all'eliminazione;
+	\item se non è presente viene effettuata una segnalazione tramite valore di ritorno.
+\end{itemize}
+Una volta effettuata la rimozione dell'elemento viene ritornato al controller:
+\begin{itemize}
+	\item lo stesso elemento appena rimosso se l’operazione va a buon fine;
+	\item un messaggio di errore altrimenti.
+\end{itemize}
+Il controller si occupa poi di inoltrare questi messaggi alla view affinché possano essere renderizzati e visualizzati così dall'utente.
+
+\begin{samepage}
+	\paragraph{Aggiunta notifica statica}\mbox{}\\
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	%	\caption{Aggiunta notifica statica}
+	%\end{figure}
+\end{samepage}
+I dati inviati dal controller vengono validati prima di essere ricevuti dalla GUI. In caso siano presenti errori l’operazione viene interrotta con un messaggio di errore e la notifica non viene creata. Il messaggio di errore viene quindi inviato alla GUI, affinché possa essere renderizzato e mostrato all’utente. Se invece i dati sono conformi, viene creata una notifica statica. Il successo o meno di questa operazione viene segnalata dal model al controller e dal controller alla GUI, cosicché l’utente sia a conoscenza di quanto successo.
+
+\subsubsection{View}
+\begin{samepage}
+	\paragraph{Flusso principale View}\mbox{}\\
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	%	\caption{Flusso principale View}
+	%\end{figure}
+\end{samepage}
+Dal punto di vista visuale la bubble apparirà come elenco interattivo composto da una serie di elementi. Selezionando l'apposito pulsante sarà possibile aggiungere o rimuovere un elemento dalla lista. L'aggiunta e la rimozione di elementi della lista comportano un aggiornamento della parte grafica con la conseguente aggiunta o rimozione dell'elemento (rappresentato come testo) dalla lista.\\
+Sarà inoltre presente un comando per creare una notifica statica relativa alla lista.\\
+L'interazione dell'utente utilizzatore della bubble con l'interfaccia grafica genererà dei segnali che verranno mandati al controller della bubble stessa.
+
+\subsubsection{Controller}
+\begin{samepage}
+	\paragraph{Flusso principale controller}\mbox{}\\
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	%	\caption{Flusso principale controller}
+	%\end{figure}
+\end{samepage}
+Il controller sarà una componente software incaricata di ascoltare e di attendere i segnali generati dall'interfaccia grafica e dalla parte di business logic dell'applicativo, collegandone le funzionalità secondo quanto specificato nei requisiti. 
+
+\subsection{Bubble \& Eat}
+Nello scenario descritto dalla demo, tramite il framework e le bubble da esso prodotte sarà possibile per gli attori interagire con il sistema nei seguenti modi, suddivisi per attore che li compie.
+
+\subsubsection{Cliente}
+
+\paragraph{Inserimento dati personali}\mbox{}\\
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Inserimento dati personali}
+%\end{figure}
+
+\paragraph{Lettura dal menu}\mbox{}\\
+Il cliente invia la richiesta di visualizzare il menù, la richiesta viene ricevuta dall’Order Gateway ed è inoltrata al database che risponde fornendo il menù, il quale viene inviato poi al cliente.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Lettura dal menu}
+%\end{figure}
+
+\paragraph{Fai ordinazione}\mbox{}\\
+Selezionate le pietanze l'ordine è inviato all’Order Gateway, il quale salva nel database un'approssimazione delle risorse che verranno consumate nella preparazione; fatto questo l'ordinazione viene inviata al cuoco che provverderà a preparare il piatto.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Fai ordinazione}
+%\end{figure}
+
+\paragraph{Conferma ricezione ordinazione}\mbox{}\\
+Ricevuta la consegna, il cliente invia una segnalazione all’Order Gateway che provvederà a salvare l'informazione nel database.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Conferma ricezione ordinazione}
+%\end{figure}
+
+\subsubsection{Cuoco}
+
+\paragraph{Conferma completata la preparazione del piatto}\mbox{}\\
+Completata la preparazione della pietanza, il cuoco segnala l’avvenuta preparazione all’Order Gateway. L’Order Gateway provvede a registrare l’avvenuta preparazione del piatto nel Database, il quale conferma il salvataggio o ritorna con un errore.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Conferma completata la preparazione del piatto}
+%\end{figure}
+
+\subsubsection{Fattorino}
+
+\paragraph{Seleziona consegna}\mbox{}\\
+Selezionati gli ordini da consegnare il Delivery man invia un segnale all’Order Gateway, il quale inoltra gli ordini al database; il database quindi aggiorna lo stato degli ordini ricevuti e ricava le informazioni personali degli utenti per la consegna, inviandole come risposta all’Order Gateway. A questo punto l’operazione viene confermata e le informazioni di consegna spedite al Deliveryman, il quale può procedere con le consegne.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Seleziona consegna}
+%\end{figure}
+
+\paragraph{Segnala la consegna come compiuta}\mbox{}\\
+Una volta completata la consegna il Deliveryman lo segnala all’Order Gateway, il quale inoltra l’informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall’Order Gateway ed inoltrato al Deliveryman.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Segnala la consegna come compiuta}
+%\end{figure}
+
+\paragraph{Segnala fallimento}\mbox{}\\
+Se la consegna non è andata a buon fine il Deliveryman lo segnala all’Order Gateway, il quale inoltra l’informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall’Order Gateway ed inoltrato al Deliveryman.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Segnala fallimento}
+%\end{figure}
+
+\subsubsection{Responsabile Acquisti}
+
+\paragraph{Segnala acquistate le scorte}\mbox{}\\
+Il Purchasing manager segnala l’acquisto delle scorte all’Order Gateway. L’Order Gateway effettua il salvataggio nel Database dei dati riguardanti le scorte acquistate. Il Database al completamento dell’operazione invia un segnale che viene poi riportato dall’Order Gateway al Purchasing manager.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Segnala acquistate le scorte}
+%\end{figure}
+
+\subsubsection{Direttore}
+
+\paragraph{Visualizzazione menu}\mbox{}\\
+Il Manager effettua una richiesta per visualizzare il menu, ricevuta dall’Order Gateway ed inoltrata al database, il quale ricerca le informazioni richieste e le ritorna in risposta all’Order Gateway. Questo a sua volta le inoltra al Manager che visualizza il menu.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Visualizzazione menu}
+%\end{figure}
+
+\paragraph{Modifica menu}\mbox{}\\
+Il Manager, una volta effettuate le modifiche al menù, le invia all’Order Gateway, il quale le inoltra al database. Vengono quindi aggiornate le informazioni sul database e viene ritornato un segnale di conferma, ricevuto e inoltrato dall’Order Gateway al Manager.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Modifica menu}
+%\end{figure}
+
+\paragraph{Visualizzazione magazzino}\mbox{}\\
+Il manager effettua una richiesta per visualizzare il magazzino, che viene ricevuta dall’Order Gateway e inoltrata al database. Vengono quindi recuperate le informazioni richieste e ritornate all’Order Gateway, il quale le inoltra al Manager.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Visualizzazione magazzino}
+%\end{figure}
+
+\paragraph{Modifica magazzino}\mbox{}\\
+Il Manager, una volta effettuate le modifiche al magazzino, le invia all’Order Gateway, il quale le inoltra al database, che provvede ad aggiornare i dati. Il database ritorna quindi un segnale di conferma all’Order Gateway, che lo inoltra al Manager.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Modifica magazzino}
+%\end{figure}
+
+\paragraph{Visualizzazione orders}\mbox{}\\
+Il Manager effettua una richiesta per visualizzare gli ordini all’Order Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all’Order Gateway, il quale a sua volta inoltra i dati al Manager.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\caption{Modifica magazzino}
+%\end{figure}
+
