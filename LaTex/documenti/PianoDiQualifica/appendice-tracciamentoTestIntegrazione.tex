@@ -33,16 +33,16 @@
 \begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}} \\ 
 	\endfirsthead
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento la vista venga modificata &  \\
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati non corretti il controller ritorni un messaggio d'errore &  \\
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati corretti ma con fallimento del salvataggio nella bubble memory venga notificato un messaggio d'errore &  \\
-	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati corretti sia ritornato un messaggio dell'avvenuta creazione &  \\
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento la vista venga modificata & View \\
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati non corretti il controller ritorni un messaggio d'errore & Model::DbGateway::DbGateway \\
+	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati corretti ma con fallimento del salvataggio nella bubble memory venga notificato un messaggio d'errore & View \\
+	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati corretti sia ritornato un messaggio dell'avvenuta creazione & View \\
 	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati non corretti sia ritornato un messaggio d'errore  &  \\
-	\hline \test{I} & Verificare che alla creazione di un nuovo elemento nella view esso venga correttamente inviato al controller &  \\
-	\hline \test{I} & Verificare che alla cancellazione di un elemento nella view questo venga correttamente inviato al controller &  \\
-	\hline \test{I} & Verificare alla creazione di una notifica statica nella view essa venga correttamente inviata al controller &  \\
-	\hline \test{I} & Verificare che un errore proveniente dal controller venga renderizzato in modo corretto dalla view &  \\
-	\hline \test{I} & Verificare che l'aggiornamento dell'interfaccia grafica venga interpretato correttamente e che l'interfaccia grafica subisca le variazioni attese &  \\
+	\hline \test{I} & Verificare che alla creazione di un nuovo elemento nella view esso venga correttamente inviato al controller & Model::DbGateway::DbGateway \\
+	\hline \test{I} & Verificare che alla cancellazione di un elemento nella view questo venga correttamente inviato al controller & Model::DbGateway::DbGateway \\
+	\hline \test{I} & Verificare alla creazione di una notifica statica nella view essa venga correttamente inviata al controller & Model::DbGateway::DbGateway \\
+	\hline \test{I} & Verificare che un errore proveniente dal controller venga renderizzato in modo corretto dalla view & View \\
+	\hline \test{I} & Verificare che l'aggiornamento dell'interfaccia grafica venga interpretato correttamente e che l'interfaccia grafica subisca le variazioni attese & View \\
 	\hline
 	\caption{Test di integrazione per la bubble To-do list}
 \end{longtable}
