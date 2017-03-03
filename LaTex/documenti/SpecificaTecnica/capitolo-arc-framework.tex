@@ -5,7 +5,7 @@ L'architettura che abbiamo scelto per la progettazione del framework è del tipo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/framework.png}
 	\caption{Architettura framework}
 \end{figure}
 
@@ -17,11 +17,11 @@ La componente di bubble memory gestisce la parte di persistenza della bubble in 
 
 \begin{samepage}
 \subsubsection{Bubble memory}\label{fm-memory}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Bubble memory}
-%\end{figure}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/bubble_memory.png}
+	\caption{Bubble memory}
+\end{figure}	
 \end{samepage}
 \textbf{Descrizione:}\\
 La bubble memory è la parte che si occupa di immagazzinare i dati relativi alla bubble. \\
@@ -36,11 +36,11 @@ Data la natura del progetto non sono rappresentate connessioni tra i vari packag
 
 \begin{samepage}
 \paragraph{Api\-::Life\-Cycle}\label{api-ciclovita}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::ciclo di vita della bubble}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_vitabolla.png}
+	\caption{Api\-::ciclo di vita della bubble}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita della bubble\\
@@ -49,11 +49,11 @@ Si occupa di controllare la durata di vita della bubble interrompendo il funzion
 
 \begin{samepage}
 \paragraph{Api\-::Notification}\label{api-notifica}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::notifica}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_notifica.png}
+	\caption{Api\-::notifica}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 I metodi presenti all'interno del package di notifica hanno lo scopo di creare e mostrare agli utenti delle notifiche collegate con le azioni della bubble. Se incluso nella bubble sarà possibile notificare del testo in modo statico.\\
@@ -62,11 +62,11 @@ Si occupa della gestione di notifiche statiche all'utente.\\
 
 \begin{samepage}
 \paragraph{Api\-::External\-Api}\label{api-esterne}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::ApiEsterne}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_esterne.png}
+	\caption{Api\-::ApiEsterne}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Il package di chiamata delle API esterne aggiunge al framework la possibilità di effettuare internamente alla bubble chiamate di API REST di terze parti restituendo nella bubble memory il risultato di questa chiamata. \\
@@ -75,11 +75,11 @@ Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubb
 
 \begin{samepage}
 \paragraph{Api\-::Partecipants}\label{api-partecipanti}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::Partecipanti}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_partecipanti.png}
+	\caption{Api\-::Partecipanti}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Gestisce le operazioni di gestione degli utenti e delle loro interazioni.\\
@@ -88,11 +88,11 @@ Questo package garantisce alla bubble la possibilità di avere accesso alla list
 
 \begin{samepage}
 \paragraph{Api\-::DbOperation}\label{api-db}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::Operazioni sul DB}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_operazionidb.png}
+	\caption{Api\-::Operazioni sul DB}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
 Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi ad un database non relazionale ed effettuare al suo interno operazioni di lettura e di scrittura.\\
@@ -101,11 +101,11 @@ Oltre alle normali operazioni sul database l'utente avrà la possibilità di uti
 
 \begin{samepage}
 \paragraph{Api\-::Input\-Limitation}\label{api-limiti}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::Limitazioni input}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_limitinput.png}
+	\caption{Api\-::Limitazioni input}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
 Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
@@ -115,11 +115,11 @@ Saranno inoltre presenti dei metodi per verificare il match di un eventuale inpu
 
 \begin{samepage}
 \paragraph{Api\-::Timing}\label{api-timing}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::Timing}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_timing.png}
+	\caption{Api\-::Timing}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
 Il package di timing si occupa della pianificazione dell'esecuzione di determinati metodi ad orari prestabiliti all'interno della bubble.\\
@@ -128,11 +128,11 @@ Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automati
 
 \begin{samepage}
 \paragraph{Api\-::File}\label{api-file}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::File}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_file.png}
+	\caption{Api\-::File}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Il package gestisce l'interazione della bubble con dei file.\\ 
@@ -141,11 +141,11 @@ Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e sal
 
 \begin{samepage}
 \paragraph{Api\-::Json\-Control}\label{api-json}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::ControlloJSON}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_json.png}
+	\caption{Api\-::ControlloJSON}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Il package permette il controllo di file JSON secondo uno schema specificato.\\ 
@@ -154,11 +154,11 @@ Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema prec
 
 \begin{samepage}
 \paragraph{Api\-::match\-Regular\-Expr}\label{api-regexpr}\mbox{}\\
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Api\-::matchRegularExpr}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/api_matchex.png}
+	\caption{Api\-::matchRegularExpr}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
 Il package permette di effettuare confronti con espressioni regolari.\\ 
@@ -168,11 +168,11 @@ Verrà usato per controllare l'input inserito dall'utente.
 \subsection{Controller}
 \begin{samepage}
 \subsubsection{Controller\-::Generic\-Bubble}\label{fm-generica}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{Controller\-::BubbleGenerica}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/bubble_generica.png}
+	\caption{Controller\-::BubbleGenerica}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
 La componente del software che funge da controller nello schema MVC è la classe bubble generica.\\
@@ -181,11 +181,11 @@ Serve a rilevare i comandi ricevuti dall'utente tramite la GUI e propagarli alla
 
 \begin{samepage}
 \subsection{View}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
-%	\caption{View}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/gui_classes.png}
+	\caption{View}
+\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
 La parte di View dedicata alla gestione dell'interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
