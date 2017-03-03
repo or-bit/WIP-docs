@@ -14,7 +14,7 @@ Lo scopo del package Order Gateway è quello di creare, modificare ed eliminare 
 Tutti gli attori interni ed esterni al ristorante hanno dipendenze verso l'Order Gateway.
 %\begin{figure}[H]
 %	\centering
-%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
 %	\caption{Demo Bubble \& Eat}
 %\end{figure}
 
@@ -24,14 +24,14 @@ Il package Orders definisce le ordinazioni e la collezione di quest'ultime che v
 Tutte le interazioni con gli elementi descritti sopra sono rese disponibili agli attori dalla classe Order Gateway.
 %\begin{figure}[H]
 %	\centering
-%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
 %	\caption{Package Order Gateway}
 %\end{figure}
 
 \subsubsection{Struttura delle classi}
 %\begin{figure}[H]
 %	\centering
-%	\includegraphics[width=15cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
+%	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/framework.png}
 %	\caption{Diagramma di struttura delle classi}
 %\end{figure}
 
@@ -61,7 +61,7 @@ La classe permette al \Deliveryman{} di consultare gli ordini pronti alla conseg
 \textbf{Utilizzo:}\\
 Questa classe attraverso l'Order Gateway riceve la lista delle ordinazioni da consegnare, le visualizza e permette di selezionare le consegne ed eliminarle una volta selezionate.
 
-\paragraph{Demo Bubble\&eat::Ristorante::Purchasing Manager::Bubble Purchasing Manager}\label{eat-prchasing}\mbox{}\\
+\paragraph{Demo Bubble\&eat::Ristorante::Purchasing Manager::Bubble Purchasing Manager}\label{eat-purchasing}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette al \Purchasingmanager{} di recuperare e visualizzare la lista della fornitura da acquistare oltre ad eliminare gli acquisti dalla lista.\\
 \textbf{Utilizzo:}\\
@@ -87,7 +87,7 @@ Questa classe implementa il design pattern del Factory method e permette la crea
 \paragraph{Demo Bubble\&eat::Ristorante::Order Gateway::Ordinazione::Order}\label{eat-order}\mbox{}\\ 
 \textbf{Descrizione:}\\
 Questa classe definisce il contenuto dell'ordinazione. Contiene gli elementi scelti dal menu e i dati forniti dall'utente per la consegna.\\
-L'ordinazione è definita anche da uno stato e la classe offre i metodi per modificarlo.
+L'ordinazione è definita anche da uno stato e la classe offre i metodi per modificarlo. \\
 \textbf{Utilizzo:}\\
 Questa classe permette di inserire gli elementi del menu nell'ordinazione e di modificare lo stato della stessa. 
 

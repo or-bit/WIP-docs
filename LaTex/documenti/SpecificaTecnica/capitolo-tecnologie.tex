@@ -1,5 +1,5 @@
 \section{Tecnologie utilizzate}
-In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del progetto Monolith e la motivazione che ha portato alla loro scelta come strumenti di lavoro. Alcune delle tecnologie sono richieste come requisito dal capitolato scelto.
+In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del progetto \ProjectName{} e la motivazione che ha portato alla loro scelta come strumenti di lavoro. Alcune delle tecnologie sono richieste come requisito dal capitolato scelto.
 \begin{itemize}
 	\item \textbf{Meteor:} framework JavaScript su cui si basa \glossario{Rocket.Chat};
 	\item \textbf{MongoDB:} database non relazionale integrato con di Meteor;
@@ -8,7 +8,7 @@ In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del 
 	\item \textbf{Sass(css3):} estensione di CSS utilizzata per dare stile all'HTML; 
 	\item \textbf{Bootstrap:} framework utilizzato per realizzare il \glossario{front-ent};
 	\item \textbf{React:} libreria JavaScript utilizzata per gestire la \glossario{UI};
-	\item \textbf{WebStorm:} IDE utilizzato per lo sviluppo del codice JavScript.
+	\item \textbf{WebStorm:} IDE utilizzato per lo sviluppo del codice JavaScript.
 \end{itemize}
 
 \subsection{Meteor}
@@ -28,7 +28,7 @@ Grazie all'integrazione con Meteor l'accesso al database è ulteriormente sempli
 
 \subsection{ECMAScript 6}
 Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche \glossario{ECMAScript} 6 (o ECMAScript 2015), ossia la versione stabile più aggiornata dello standard ECMAScript. 
-ECMAScript 6 introduce in javascript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
+ECMAScript 6 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
 \begin{itemize}
 	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di Java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico;
 	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura;
@@ -47,7 +47,7 @@ ECMAScript 6 introduce in javascript diverse migliorie utilizzabili per rendere 
 È un'estensione del css che permette di utilizzare variabili, creare funzioni e organizzare il foglio di stile dividendolo in più file. Rispetto al css standard permette di costruire strutture più complesse con minor sforzo, minimizzando così la possibilità di fare errori durante la stesura.
 
 \subsection{Bootstrap}
-Bootstrap è un framework per la progettazione della parte front-end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Boostrap garantisce un notevole supporto allo sviluppo del front-end di Monolith grazie alla presenza di numerose componenti responsive e classi css già configurate.
+Bootstrap è un framework per la progettazione della parte front-end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Boostrap garantisce un notevole supporto allo sviluppo del front-end di \ProjectName{} grazie alla presenza di numerose componenti responsive e classi css già configurate.
 
 \subsection{React}
 Per una migliore gestione della UI il gruppo ha deciso di utilizzare la libreria JavaScript React. Essa utilizza HTML e CSS per creare componenti web. È possibile creare delle viste dedicate per ogni stato dell'applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. L'utilizzo della libreria React è stato consigliato dal proponente, vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
