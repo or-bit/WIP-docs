@@ -12,6 +12,12 @@ L'architettura che abbiamo scelto per la progettazione del framework è del tipo
 \subsection{Model}
 Nella scomposizione logica in MVC la parte relativa al model, ossia la business logic dell'applicativo, è delegata alla bubble memory e ai pacchetti di metodi che compongono il framework. Questi metodi possono essere combinati tra loro e legati all'interfaccia grafica mediante il controller.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/framework_api_package.png}
+	\caption{Architettura framework model api}
+\end{figure}
+
 \subsection{Bubble Memory}
 La componente di bubble memory gestisce la parte di persistenza della bubble in locale, tenendo traccia di variabili e del loro valore, incluso lo stato della bubble. La bubble memory è strutturata come un oggetto JavaScript, non avendo così vincoli relativamente al tipo di informazioni che è possibile inserire al suo interno.
 
