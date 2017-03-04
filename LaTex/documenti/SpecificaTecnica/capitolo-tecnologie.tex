@@ -3,7 +3,7 @@ In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del 
 \begin{itemize}
 	\item \textbf{Meteor:} framework JavaScript su cui si basa \glossario{Rocket.Chat};
 	\item \textbf{MongoDB:} database non relazionale integrato con Meteor;
-	\item \textbf{ECMAScript 6:} standard JavaScript che viene applicato nella scrittura del software;
+	\item \textbf{ECMAScript 2015:} standard JavaScript che viene applicato nella scrittura del software;
 	\item \textbf{HTML5:} standard HTML utilizzato da Rocket.Chat per gestire la componente grafica;
 	\item \textbf{Sass (CSS3):} estensione di CSS utilizzata per dare stile all'HTML; 
 	\item \textbf{Bootstrap:} framework utilizzato per realizzare il \glossario{front-ent};
@@ -26,13 +26,13 @@ L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo quest
 \end{itemize}
 Grazie all'integrazione con Meteor l'accesso al database è ulteriormente semplificato.
 
-\subsection{ECMAScript 6}
-Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche \glossario{ECMAScript} 6 (o ECMAScript 2015), ossia la versione stabile più aggiornata dello standard ECMAScript. 
-ECMAScript 6 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
+\subsection{ECMAScript 2015}
+Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche \glossario{ECMAScript} 2015 (o ECMAScript 6), ossia la versione stabile più aggiornata dello standard ECMAScript. 
+ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
 \begin{itemize}
 	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di Java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
 	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura.
-	\item \textbf{Classi:} ECMAScript 6 prevede inoltre di aggiungere zucchero sintattico al pattern \glossario{Object-Oriented} di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro linguaggio orientato agli oggetti.
+	\item \textbf{Classi:} ECMAScript 2015 prevede inoltre di aggiungere zucchero sintattico al pattern \glossario{Object-Oriented} di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro linguaggio orientato agli oggetti.
 \end{itemize}
 
 \subsection{HTML5}
