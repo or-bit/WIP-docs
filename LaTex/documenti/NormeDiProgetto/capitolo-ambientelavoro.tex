@@ -69,6 +69,22 @@ La piattaforma di versionamento scelta è \glossario{\textbf{Git}} in tandem al 
 	\captionof{figure}{Procedura di creazione di una Pull Request parte 2}
 \end{center}
 
+\begin{samepage}
+	\subparagraph{Procedura di tag dell'ultimo commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
+	\begin{center}
+		\includegraphics[width=16cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/git-tag_ultimo_commit.png}
+		\captionof{figure}{Procedura di tag dell'ultimo commit nel Repository e \textit{push} del tag nel Repository remoto}
+	\end{center}
+\end{samepage}
+
+\begin{samepage}
+	\subparagraph{Procedura di tag di uno specifico commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
+	\begin{center}
+		\includegraphics[width=16cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/git-tag_specifico_commit.png}
+		\captionof{figure}{Procedura di tag di uno specifico commit nel Repository e \textit{push} del tag nel Repository remoto}
+	\end{center}
+\end{samepage}
+
 \subsubsection{Software di integrazione continua}
 Come software di integrazione continua viene utilizzato \textbf{\glossario{Travis}}.
 Travis è un servizio open source sotto licenza MIT, quindi disponibile in versione gratuita, hosted ed integrabile con vari altri servizi, tra cui GitHub e \glossario{Heroku}.\\ Travis permette di produrre e testare progetti ospitati su GitHub. Ad ogni nuovo commit o pull request in GitHub, vengono quindi eseguiti specifici test e ne viene segnalato l'esito agli sviluppatori interessati. Travis è inoltre integrabile con strumenti e servizi esterni, per esempio per l'analisi statica.
