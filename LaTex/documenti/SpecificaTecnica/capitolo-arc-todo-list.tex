@@ -1,6 +1,6 @@
 \section{Demo}
 
-\subsection{To-do List}
+\subsection{To-do List} \label{todo-list}
 Al fine di dare una dimostrazione pratica dell'utilizzo del framework presentato nel paragrafo antecedente, verranno sviluppati due esempi significativi di bubble interattiva.\\
 Il primo è una bubble contenente una lista di cose da fare chiamata To-do list.\\
 La struttura di questa bubble interattiva sarà analoga a quella presentata nel framework relativamente alla bubble generica e sarà quindi composta da tre parti:
@@ -51,19 +51,19 @@ Il package Model gestisce i dati contenuti nella bubble memory e nel database as
 	\caption{List\-Items}
 \end{figure}
 
-\subparagraph{Model\-::List\-Items\-::List\-Item}\label{todo-item}\mbox{}\\
+\subparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item}\label{todo-item}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe List\-Item rappresenta un'entrata per la To-do list.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un'implementazione per le entrate della bubble To-do list in modo da poter creare o eliminare voci dalla lista, essere segnate come completate o settare un reminder.\\
 
-\subparagraph{Model\-::List\-Items\-::List\-Item\-Container}\label{todo-container}\mbox{}\\
+\subparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item\-Container}\label{todo-container}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe List\-Item permette la gestione di una collezione di voci della To-do list definite dalla classe List\-Item.\\
 \textbf{Utilizzo:}\\
 Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di elementi della To-do list.\\
 
-\subparagraph{Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
+\subparagraph{TodoList\-::Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.
 \textbf{Utilizzo:}\\
@@ -71,7 +71,7 @@ Questa classe permette di verificare l'integrità dei dati inviati dall'utente r
 
 \paragraph{Controller}\mbox{}
 \begin{samepage}
-	\subparagraph{Controller\-::Todo\-Controller}\mbox{}\\
+	\subparagraph{TodoList\-::Controller\-::Todo\-Controller}\label{todo-controller}\mbox{}\\
 	\nopagebreak
 	\begin{figure}[H]
 		\centering

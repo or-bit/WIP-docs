@@ -312,11 +312,16 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Orde
 Il \Manager{} effettua una richiesta per visualizzare gli ordini all'Order\-Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all'Order\-Gateway, il quale a sua volta inoltra i dati al \Manager{}.
 
 \begin{samepage}
-	\paragraph{Visualizzazione orders}\mbox{}\\
+	\paragraph{Elimina orders}\mbox{}\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=14cm]{diagrammi_img/attivita/manager_order_remove.png}
-		\caption{Diagramma di attività - Visualizzazione orders}
+		\caption{Diagramma di attività - Elimina order}
 	\end{figure}
 \end{samepage}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/sequenza/direttore_elimina_orders.png}
+	\caption{Diagramma di sequenza - Elimina order}
+\end{figure}
 Il \Manager{} seleziona dagli ordini da eliminare ed invia la richiesta all'Order\-Gateway, il quale la inoltra al database. Vengono quindi eliminati gli ordini selezionati e viene inviato un segnale di conferma dal database all'Order\-Gateway, il quale a sua volta lo inoltra al \Manager{}.
