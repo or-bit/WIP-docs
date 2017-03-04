@@ -28,7 +28,6 @@ Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunq
 	\caption{Package To-do List}
 \end{figure}
 
-\begin{samepage}
 \subparagraph{View}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -36,7 +35,13 @@ Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunq
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_view.png}
 	\caption{View}
 \end{figure}
-\end{samepage}
+La componente View è strutturata utilizzando quattro elementi :
+\begin{itemize}
+	\item Label che permette di mostrare gli output restituiti dalle funzioni o per riportare scritte statiche;
+	\item TextEdit che permette all’utente di inserire in input i nomi dei task che andrà a creare;
+	\item Button che permette di inserire pulsanti per l’invio del contenuto dei campi di testo;
+	\item CheckBox che permette di inserire delle caselle spuntabili al completamento di un task.
+\end{itemize}
 Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
 
 \subparagraph{Model}\mbox{}\\
@@ -71,6 +76,17 @@ Questa classe offre la possibilità di aggiungere, rimuovere e restituire elemen
 La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.\\
 \textbf{Utilizzo:}\\
 Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato.
+
+\begin{samepage}
+	\subparagraph{View}\mbox{}\\
+	\nopagebreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_view.png}
+		\caption{View}
+	\end{figure}
+\end{samepage}
+Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
 
 \subparagraph{Controller}\mbox{}
 \begin{samepage}

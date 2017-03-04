@@ -20,14 +20,15 @@ Nella scomposizione logica in MVC la parte relativa al model, ossia la business 
 
 \subsubsection{Bubble Memory}
 La componente di bubble memory gestisce la parte di persistenza della bubble in locale, tenendo traccia di variabili e del loro valore, incluso lo stato della bubble. La bubble memory è strutturata come un oggetto JavaScript, non avendo così vincoli relativamente al tipo di informazioni che è possibile inserire al suo interno.
-
-\paragraph{BubbleMemory}\label{fm-memory}\mbox{}\\
-\nopagebreak
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=5cm]{diagrammi_img/classi_e_package/bubble_memory.png}
-	\caption{BubbleMemory}
-\end{figure}	
+\begin{samepage}
+	\paragraph{BubbleMemory}\label{fm-memory}\mbox{}\\
+	\nopagebreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{diagrammi_img/classi_e_package/bubble_memory.png}
+		\caption{BubbleMemory}
+	\end{figure}	
+\end{samepage}
 \textbf{Descrizione:}\\
 La bubble memory è la parte che si occupa di immagazzinare i dati relativi alla bubble. \\
 \textbf{Scopo:}\\
@@ -37,7 +38,7 @@ Verrà usato come contenitore per le variabili degli elementi di input e output 
 Ciascun package contiene classi di metodi, i quali garantiscono funzionalità che possono essere combinate nel corpo della bubble al fine di determinarne la business logic.\\
 Data la natura del progetto non sono rappresentate connessioni tra i vari package riportati nel diagramma sopra, in quanto, essendo questa parte del prodotto un framework volto a garantire la possibilità di creare bubble interattive a sviluppatori terzi, verrà perseguito l'obiettivo di massimizzare l'indipendenza tra queste funzionalità in maniera tale da altrettanto massimizzare le possibilità di riutilizzo delle stesse.
 
-\paragraph{Package interni}\mbox{}\\
+\paragraph{Package interni}\mbox{}
 
 \begin{samepage}
 \subparagraph{Api\-::Life\-Cycle}\label{api-ciclovita}\mbox{}\\
@@ -198,21 +199,21 @@ La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra 
 Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica ed invia all’interfaccia gli eventuali output secondo le direttive fornite dall’utente.
 
 
-\begin{samepage}
+%\begin{samepage}
 \subsubsection{View}
-\nopagebreak
+%\nopagebreak
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/gui_classes.png}
 	\caption{View}
 \end{figure}
-\end{samepage}
+%\end{samepage}
 \textbf{Descrizione:}\\
 La parte di View dedicata alla gestione dell'interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
 Ogni elemento della GUI, come Button, TextEdit o Label, implementa l'interfaccia GUI, specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
 Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. In questo modo il Controller potrà organizzare in modo più semplice lo scambio di informazioni tra la parte Model e quella View, inserendo diversi elementi di GUI relativi ad una specifica funzionalità in un unico container.
 
-\paragraph{Classi}\mbox{}\\
+\paragraph{Classi}\mbox{}
 
 \subparagraph{View\-::Gui}\label{gui}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -232,7 +233,7 @@ La classe Label offre all'interno del framework la possibilità di utilizzare l'
 \textbf{Utilizzo:}\\
 Questa classe offre la possibilità di renderizzare un output nella bubble.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::File}\label{gui-file}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -240,7 +241,7 @@ Componente progettato per consentire alla bubble e al suo utilizzatore finale l'
 \textbf{Utilizzo:}\\
 Consente il caricamento di file nella bubble da parte dell'utente e permette alla stessa di rendere file generici disponibili ai suoi utilizzatori.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Button}\label{gui-button}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -248,7 +249,7 @@ Classe che permette di inserire nella bubble un oggetto di tipo Button, per perm
 \textbf{Utilizzo:}\\
 Fornisce alla bubble la possibilità di interagire con l'utente suo utilizzatore mediante un bottone.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Text\-Edit}\label{gui-tedit}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -256,7 +257,7 @@ Classe volta a fornire una funzionalità di interazione con l'utente mediante la
 \textbf{Utilizzo:}\\
 Consentire all'utente l'inserimento nella bubble di testo ove fosse necessario.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Text\-View}\label{gui-tview}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -264,7 +265,7 @@ Classe volta alla realizzazione di un elemento in grado di mostrare all'utente d
 \textbf{Utilizzo:}\\
 Consentire all'utente la visualizzazione di testo nella bubble.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Image}\label{gui-image}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -272,7 +273,7 @@ La classe permette di estendere le funzionalità della bubble mediante l'interaz
 \textbf{Utilizzo:}\\
 Consentire nella bubble la visualizzazione di immagini.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Check\-Button}\label{gui-check}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -280,7 +281,7 @@ La classe CheckButton porta all'interno del framework la possibilità di utilizz
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Radio\-Button}\label{gui-radio}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -288,7 +289,7 @@ La classe RadioButton porta all'interno del framework la possibilità di utilizz
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile in modo esclusivo.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Pie\-Chart}\label{gui-pie}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -296,7 +297,7 @@ La classe PieChart porta all'interno del framework la possibilità di utilizzare
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a torta per l'elaborazione grafica di dati.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Bar\-Chart}\label{gui-bar}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -304,4 +305,4 @@ La classe BarChart porta all'interno del framework la possibilità di utilizzare
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a istogramma per l'elaborazione grafica di dati.\\
 \textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
+Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
