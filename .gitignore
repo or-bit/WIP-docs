@@ -185,6 +185,9 @@ build-output
 # Default release directory
 Or-Bit
 
+# Default spell check
+spellcheck
+
 # Zip containing PDFs
 **/Documentazione.zip
 
