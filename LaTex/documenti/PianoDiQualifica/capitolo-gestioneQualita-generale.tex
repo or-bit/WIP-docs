@@ -63,7 +63,7 @@ Gli obiettivi che il gruppo si impegna a raggiungere sono:
 
 
 \paragraph{Procedure di controllo di qualità di prodotto}\mbox{}\\
-Per garantire la qualità di prodotto vengono applicate le attività di Quality Assurance, Verifica e Validazione.
+Per garantire la qualità di prodotto vengono applicate le attività di Quality Assurance, \VV{}.
 \begin{itemize}
 	\item \textbf{Quality Assurance}: garantisce il raggiungimento degli obiettivi di qualità, tramite analisi statica e dinamica;
 	\item \textbf{Verifica}: determina la correttezza dei risultati. \`{E} un’attività continuativa durante lo svolgimento del progetto. Ad ogni verifica vengono riportati i risultati in \appendice{app:resoconto_verifica};
@@ -73,3 +73,11 @@ Per garantire la qualità di prodotto vengono applicate le attività di Quality 
 \subsection{Scadenze temporali}
 Le scadenze temporali sono fissate nel \PianoDiProgetto{}, così come le metodologie da seguire per individuare e gestire i rischi.\\
 Per evitare errori di impostazione dei documenti, errori tecnici o di contenuto non pertinente ad un documento, si è scelto di far precedere alla redazione dei documenti la stesura della struttura degli stessi.
+
+\subsection{Modalità di verifica}
+Sono state individuate varie modalità di verifica al fine di garantire una copertura continua per le varie attività.
+\begin{itemize}
+	\item \textbf{Travis CI}: vengono eseguiti test sulla corretta compilazione dei documenti e del codice, ad ogni push sul repository, attraverso il sistema di integrazione continua Travis CI. In caso la compilazione non vada a buon fine viene segnalato un errore e il commit non viene integrato nella release.
+	\item \textbf{Script}: sono stati creati degli script per automatizzare il controllo lessicografico dei documenti. Viene così garantita la segnalazione di termini scritti in con lettere sbagliate, invertite o mancanti, favorendo il lavoro dei \Verificatori{}. Questo tipo di verifica va eseguito dopo ogni modifica \virgolette{importante}, quali il completamento di una sezione o di grandi parti di testo.
+	\item \textbf{\Verificatore{}}: è compito del \Verificatore{} eseguire i test che non possono essere svolti in maniera automatica. È altresì compito suo verificare che i risultati dei test effettuati in modo automatico siano corretti. Questo tipo di attività va svolta secondo quanto pianificato nel \PianoDiProgetto{}.
+\end{itemize}
