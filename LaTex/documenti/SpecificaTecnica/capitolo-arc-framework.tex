@@ -29,9 +29,9 @@ La componente di bubble memory gestisce la parte di persistenza della bubble in 
 		\caption{BubbleMemory}
 	\end{figure}	
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La bubble memory è la parte che si occupa di immagazzinare i dati relativi alla bubble. \\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Verrà usato come contenitore per le variabili degli elementi di input e output e lo stato della bubble.
 
 \subsubsection{API del framework}
@@ -49,9 +49,9 @@ Data la natura del progetto non sono rappresentate connessioni tra i vari packag
 	\caption{Api\-::Life\-Cycle}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita della bubble.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Si occupa di controllare la durata di vita della bubble interrompendo il funzionamento dopo un tempo prefissato.\\
 
 \begin{samepage}
@@ -63,9 +63,9 @@ Si occupa di controllare la durata di vita della bubble interrompendo il funzion
 	\caption{Api\-::Notification}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 I metodi presenti all'interno del package di notifica hanno lo scopo di creare e mostrare agli utenti delle notifiche collegate con le azioni della bubble. Se incluso nella bubble sarà possibile notificare del testo in modo statico.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Si occupa della gestione di notifiche statiche all'utente.\\
 
 \begin{samepage}
@@ -77,9 +77,9 @@ Si occupa della gestione di notifiche statiche all'utente.\\
 	\caption{Api\-::External\-Api}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Il package di chiamata delle API esterne aggiunge al framework la possibilità di effettuare internamente alla bubble chiamate di API REST di terze parti restituendo nella bubble memory il risultato di questa chiamata. \\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubble memory.\\
 
 \begin{samepage}
@@ -91,9 +91,9 @@ Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubb
 	\caption{Api\-::Partecipants}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Gestisce le operazioni di gestione degli utenti e delle loro interazioni.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Questo package garantisce alla bubble la possibilità di avere accesso alla lista dei partecipanti alla chat e uno storico delle interazioni di ciascuno con essa.
 
 \begin{samepage}
@@ -105,9 +105,9 @@ Questo package garantisce alla bubble la possibilità di avere accesso alla list
 	\caption{Api\-::DbOperations}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi ad un database non relazionale ed effettuare al suo interno operazioni di lettura e di scrittura.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Oltre alle normali operazioni sul database l'utente avrà la possibilità di utilizzare un database esterno.
 
 \begin{samepage}
@@ -119,9 +119,9 @@ Oltre alle normali operazioni sul database l'utente avrà la possibilità di uti
 	\caption{Api\-::Input\-Limitation}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 In questo package sono contenute le funzionalità del framework relative alle limitazioni sull'input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
 Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato JSON (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
@@ -134,9 +134,9 @@ Saranno inoltre presenti dei metodi per verificare il match di un eventuale inpu
 	\caption{Api\-::Timing}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Il package di timing si occupa della pianificazione dell'esecuzione di determinati metodi ad orari prestabiliti all'interno della bubble.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automatico.
 
 \begin{samepage}
@@ -148,9 +148,9 @@ Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automati
 	\caption{Api\-::File}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Il package gestisce l'interazione della bubble con dei file.\\ 
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e salvare il file così prodotto.
 
 \begin{samepage}
@@ -162,9 +162,9 @@ Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e sal
 	\caption{Api\-::Json\-Control}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Il package permette il controllo di file JSON secondo uno schema specificato.\\ 
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema precedentemente fornito.
 
 \begin{samepage}
@@ -176,9 +176,9 @@ Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema prec
 	\caption{Api\-::match\-Regular\-Expr}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak 
+\textbf{Descrizione:}\\ 
 Il package permette di effettuare confronti con espressioni regolari.\\ 
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Verrà usato per controllare l'input inserito dall'utente.
 
 \subsubsection{Controller}
@@ -193,9 +193,9 @@ L’insieme di questi elementi e le loro interazioni definiranno il comportament
 	\caption{Controller\-::Generic\-Bubble}
 \end{figure}
 \end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra la parte di interfaccia e la parte funzionale di una bubble.\\
-\textbf{Scopo:}\\ \nopagebreak
+\textbf{Scopo:}\\
 Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica ed invia all’interfaccia gli eventuali output secondo le direttive fornite dall’utente.
 
 
@@ -208,7 +208,7 @@ Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di busines
 	\caption{View}
 \end{figure}
 %\end{samepage}
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La parte di View dedicata alla gestione dell'interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
 Ogni elemento della GUI, come Button, TextEdit o Label, implementa l'interfaccia GUI, specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
 Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. In questo modo il Controller potrà organizzare in modo più semplice lo scambio di informazioni tra la parte Model e quella View, inserendo diversi elementi di GUI relativi ad una specifica funzionalità in un unico container.
@@ -216,93 +216,93 @@ Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. 
 \paragraph{Classi}\mbox{}
 
 \subparagraph{View\-::Gui}\label{gui}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 L'interfaccia GUI racchiude i dati riguardanti la visibilità e l'aggiornamento. Offre le funzionalità di gestione dell'evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Questa classe viene usata per gestire gli eventi degli elementi grafici.
 
 \subparagraph{View\-::Gui\-::Container}\label{gui-container}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe contiene una collezione di uno o più elementi della GUI.\\ 
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Questa classe permette l'inserimento, la manipolazione e la rimozione di elementi dall'interno della collezione della GUI. 
 
 \subparagraph{View\-::Gui\-::Label}\label{gui-label}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe Label offre all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Questa classe offre la possibilità di renderizzare un output nella bubble.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::File}\label{gui-file}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Componente progettato per consentire alla bubble e al suo utilizzatore finale l'interazione con file generici.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Consente il caricamento di file nella bubble da parte dell'utente e permette alla stessa di rendere file generici disponibili ai suoi utilizzatori.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Button}\label{gui-button}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Classe che permette di inserire nella bubble un oggetto di tipo Button, per permettere alla stessa di interagire con i suoi utilizzatori.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Fornisce alla bubble la possibilità di interagire con l'utente suo utilizzatore mediante un bottone.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Text\-Edit}\label{gui-tedit}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Classe volta a fornire una funzionalità di interazione con l'utente mediante la modifica di testo.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Consentire all'utente l'inserimento nella bubble di testo ove fosse necessario.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Text\-View}\label{gui-tview}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 Classe volta alla realizzazione di un elemento in grado di mostrare all'utente del testo non modificabile.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Consentire all'utente la visualizzazione di testo nella bubble.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Image}\label{gui-image}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe permette di estendere le funzionalità della bubble mediante l'interazione con immagini.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 Consentire nella bubble la visualizzazione di immagini.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Check\-Button}\label{gui-check}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe CheckButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Radio\-Button}\label{gui-radio}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe RadioButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile in modo esclusivo.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Pie\-Chart}\label{gui-pie}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe PieChart porta all'interno del framework la possibilità di utilizzare grafici a torta.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a torta per l'elaborazione grafica di dati.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::Bar\-Chart}\label{gui-bar}\mbox{}\\
-\textbf{Descrizione:}\\ \nopagebreak
+\textbf{Descrizione:}\\
 La classe BarChart porta all'interno del framework la possibilità di utilizzare grafici a istogramma.\\
-\textbf{Utilizzo:}\\ \nopagebreak
+\textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a istogramma per l'elaborazione grafica di dati.\\
-\textbf{Relazioni con le altre classi:}\\ \nopagebreak
+\textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
