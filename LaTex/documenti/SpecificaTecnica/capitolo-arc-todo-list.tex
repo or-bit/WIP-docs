@@ -1,6 +1,6 @@
-\section{Demo}
+\subsection{Demo}
 
-\subsection{To-do List} \label{todo-list}
+\subsubsection{To-do List} \label{todo-list}
 Al fine di dare una dimostrazione pratica dell'utilizzo del framework presentato nel paragrafo antecedente, verranno sviluppati due esempi significativi di bubble interattiva.\\
 Il primo è una bubble contenente una lista di cose da fare chiamata To-do list.\\
 La struttura di questa bubble interattiva sarà analoga a quella presentata nel framework relativamente alla bubble generica e sarà quindi composta da tre parti:
@@ -17,7 +17,7 @@ Conformemente a quanto riportato nell'\AnalisiDeiRequisiti{} saranno possibili l
 	\item possibilità di aggiungere un reminder come notifica.
 \end{itemize}
 
-\subsubsection{Package To-do list}
+\paragraph{Package To-do list}\mbox{}\\
 
 Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunque contiene i package View, Controller e Model. Il package View contiene tutti gli elementi grafici della To-do List e forma la GUI visibile agli utenti della bubble. Il package Model permette operazioni sui dati riguardanti la To-do List e le notifiche ad essi associate salvati sia nella bubble memory sia nel database attraverso il package Db\-Gateway. Il package Controller è dedicato alla ricezione degli input dagli attori permettendo agli stessi l'interazione con i dati contenuti nel Model e l'aggiornamento della View.
 
@@ -28,7 +28,7 @@ Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunq
 \end{figure}
 
 \begin{samepage}
-\paragraph{View}\mbox{}\\
+\subparagraph{View}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -38,7 +38,7 @@ Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunq
 \end{samepage}
 Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
 
-\paragraph{Model}\mbox{}\\
+\subparagraph{Model}\mbox{}\\
 Il package Model gestisce i dati contenuti nella bubble memory e nel database associato tramite i package BubbleMemory e Db\-Gateway. Permette inoltre di impostare notifiche tramite il package Notification. I dati sono rappresentati dal package List\-Items ovvero le liste contenute nella bubble To-do list. List\-Items\-Container definisce le liste, formate da oggetti della classe List\-Item, cioè singole voci delle liste. 
 \begin{figure}[H]
 	\centering
@@ -52,27 +52,28 @@ Il package Model gestisce i dati contenuti nella bubble memory e nel database as
 	\caption{List\-Items}
 \end{figure}
 
-\subparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item}\label{todo-item}\mbox{}\\
+\subsubparagraphmark{TodoList\-::Model\-::List\-Items\-::List\-Item}\label{todo-item}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe List\-Item rappresenta un'entrata per la To-do list.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un'implementazione per le entrate della bubble To-do list in modo da poter creare o eliminare voci dalla lista, essere segnate come completate o settare un reminder.\\
 
-\subparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item\-Container}\label{todo-container}\mbox{}\\
+\subsubparagraphmark{TodoList\-::Model\-::List\-Items\-::List\-Item\-Container}\label{todo-container}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe List\-Item permette la gestione di una collezione di voci della To-do list definite dalla classe List\-Item.\\
 \textbf{Utilizzo:}\\
 Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di elementi della To-do list.\\
 
-\subparagraph{TodoList\-::Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
+
+\subsubparagraphmark{TodoList\-::Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.
 \textbf{Utilizzo:}\\
 Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato.
 
-\paragraph{Controller}\mbox{}
+\subparagraph{Controller}\mbox{}
 \begin{samepage}
-	\subparagraph{TodoList\-::Controller\-::Todo\-Controller}\label{todo-controller}\mbox{}\\
+	\subsubparagraphmark{TodoList\-::Controller\-::Todo\-Controller}\label{todo-controller}\mbox{}\\
 	\nopagebreak
 	\begin{figure}[H]
 		\centering

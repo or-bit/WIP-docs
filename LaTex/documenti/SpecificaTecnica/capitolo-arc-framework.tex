@@ -1,6 +1,6 @@
-\section{Framework}
+\subsection{Framework}
 
-\subsection{Architettura Generale}
+\subsubsection{Architettura Generale}
 L'architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell'interfaccia grafica per l'utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle API. La parte di Controller che consiste nella bubble generica si occuperà di gestire l'aggiornamento della GUI e l'invio degli input dell'utente agli elementi funzionali.
 
 \begin{figure}[H]
@@ -9,7 +9,7 @@ L'architettura che abbiamo scelto per la progettazione del framework è del tipo
 	\caption{Architettura framework}
 \end{figure}
 
-\subsection{Model}
+\subsubsection{Model}
 Nella scomposizione logica in MVC la parte relativa al model, ossia la business logic dell'applicativo, è delegata alla bubble memory e ai pacchetti di metodi che compongono il framework. Questi metodi possono essere combinati tra loro e legati all'interfaccia grafica mediante il controller.
 
 \begin{figure}[H]
@@ -18,10 +18,10 @@ Nella scomposizione logica in MVC la parte relativa al model, ossia la business 
 	\caption{Architettura framework model api}
 \end{figure}
 
-\subsection{Bubble Memory}
+\subsubsection{Bubble Memory}
 La componente di bubble memory gestisce la parte di persistenza della bubble in locale, tenendo traccia di variabili e del loro valore, incluso lo stato della bubble. La bubble memory è strutturata come un oggetto JavaScript, non avendo così vincoli relativamente al tipo di informazioni che è possibile inserire al suo interno.
 
-\subsubsection{BubbleMemory}\label{fm-memory}
+\paragraph{BubbleMemory}\label{fm-memory}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -33,14 +33,14 @@ La bubble memory è la parte che si occupa di immagazzinare i dati relativi alla
 \textbf{Scopo:}\\
 Verrà usato come contenitore per le variabili degli elementi di input e output e lo stato della bubble.
 
-\subsection{API del framework}
+\subsubsection{API del framework}
 Ciascun package contiene classi di metodi, i quali garantiscono funzionalità che possono essere combinate nel corpo della bubble al fine di determinarne la business logic.\\
 Data la natura del progetto non sono rappresentate connessioni tra i vari package riportati nel diagramma sopra, in quanto, essendo questa parte del prodotto un framework volto a garantire la possibilità di creare bubble interattive a sviluppatori terzi, verrà perseguito l'obiettivo di massimizzare l'indipendenza tra queste funzionalità in maniera tale da altrettanto massimizzare le possibilità di riutilizzo delle stesse.
 
-\subsubsection{Package interni}
+\paragraph{Package interni}\mbox{}\\
 
 \begin{samepage}
-\paragraph{Api\-::Life\-Cycle}\label{api-ciclovita}\mbox{}\\
+\subparagraph{Api\-::Life\-Cycle}\label{api-ciclovita}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -54,7 +54,7 @@ Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita d
 Si occupa di controllare la durata di vita della bubble interrompendo il funzionamento dopo un tempo prefissato.\\
 
 \begin{samepage}
-\paragraph{Api\-::Notification}\label{api-notifica}\mbox{}\\
+\subparagraph{Api\-::Notification}\label{api-notifica}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -68,7 +68,7 @@ I metodi presenti all'interno del package di notifica hanno lo scopo di creare e
 Si occupa della gestione di notifiche statiche all'utente.\\
 
 \begin{samepage}
-\paragraph{Api\-::External\-Api}\label{api-esterne}\mbox{}\\
+\subparagraph{Api\-::External\-Api}\label{api-esterne}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -82,7 +82,7 @@ Il package di chiamata delle API esterne aggiunge al framework la possibilità d
 Si occupa di interfacciarsi con servizi terzi restituendo il risultato alla bubble memory.\\
 
 \begin{samepage}
-\paragraph{Api\-::Partecipants}\label{api-partecipanti}\mbox{}\\
+\subparagraph{Api\-::Partecipants}\label{api-partecipanti}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -96,7 +96,7 @@ Gestisce le operazioni di gestione degli utenti e delle loro interazioni.\\
 Questo package garantisce alla bubble la possibilità di avere accesso alla lista dei partecipanti alla chat e uno storico delle interazioni di ciascuno con essa.
 
 \begin{samepage}
-\paragraph{Api\-::DbOperations}\label{api-db}\mbox{}\\
+\subparagraph{Api\-::DbOperations}\label{api-db}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -110,7 +110,7 @@ Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi
 Oltre alle normali operazioni sul database l'utente avrà la possibilità di utilizzare un database esterno.
 
 \begin{samepage}
-\paragraph{Api\-::Input\-Limitation}\label{api-limiti}\mbox{}\\
+\subparagraph{Api\-::Input\-Limitation}\label{api-limiti}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -125,7 +125,7 @@ In questo package sono contenute le funzionalità del framework relative alle li
 Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato JSON (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
 \begin{samepage}
-\paragraph{Api\-::Timing}\label{api-timing}\mbox{}\\
+\subparagraph{Api\-::Timing}\label{api-timing}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -139,7 +139,7 @@ Il package di timing si occupa della pianificazione dell'esecuzione di determina
 Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automatico.
 
 \begin{samepage}
-\paragraph{Api\-::File}\label{api-file}\mbox{}\\
+\subparagraph{Api\-::File}\label{api-file}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -153,7 +153,7 @@ Il package gestisce l'interazione della bubble con dei file.\\
 Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e salvare il file così prodotto.
 
 \begin{samepage}
-\paragraph{Api\-::Json\-Control}\label{api-json}\mbox{}\\
+\subparagraph{Api\-::Json\-Control}\label{api-json}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -167,7 +167,7 @@ Il package permette il controllo di file JSON secondo uno schema specificato.\\
 Verrà usato per verificare che il JSON prodotto sia conforme ad uno schema precedentemente fornito.
 
 \begin{samepage}
-\paragraph{Api\-::match\-Regular\-Expr}\label{api-regexpr}\mbox{}\\
+\subparagraph{Api\-::match\-Regular\-Expr}\label{api-regexpr}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -180,11 +180,11 @@ Il package permette di effettuare confronti con espressioni regolari.\\
 \textbf{Scopo:}\\
 Verrà usato per controllare l'input inserito dall'utente.
 
-\subsection{Controller}
+\subsubsection{Controller}
 La componente del Controller è costituita dalla classe Generic\-Bubble che si occupa di connettere le varie funzionalità offerte nella parte di Model con i rispettivi input ed output contenuti nella parte di View. Un utente del framework avrà la possibilità di definire e costruire la propria bolla all’interno di questo elemento. Potrà quindi inserire le interfacce offerte dalla GUI e connettere gli eventuali input di quest’ultime con delle componenti funzionali. Queste ultime potranno essere definite dall’utente stesso oppure scelte tra quelle disponibili. 
 L’insieme di questi elementi e le loro interazioni definiranno il comportamento dell’istanza della Bubble creata dall’utente.
 \begin{samepage}
-\subsubsection{Controller\-::Generic\-Bubble}\label{fm-generica}
+\paragraph{Controller\-::Generic\-Bubble}\label{fm-generica}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -199,7 +199,7 @@ Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di busines
 
 
 \begin{samepage}
-\subsection{View}
+\subsubsection{View}
 \nopagebreak
 \begin{figure}[H]
 	\centering
@@ -212,21 +212,21 @@ La parte di View dedicata alla gestione dell'interfaccia utente del framework è
 Ogni elemento della GUI, come Button, TextEdit o Label, implementa l'interfaccia GUI, specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
 Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. In questo modo il Controller potrà organizzare in modo più semplice lo scambio di informazioni tra la parte Model e quella View, inserendo diversi elementi di GUI relativi ad una specifica funzionalità in un unico container.
 
-\subsubsection{Classi}
+\paragraph{Classi}\mbox{}\\
 
-\paragraph{View\-::Gui}\label{gui}\mbox{}\\
+\subparagraph{View\-::Gui}\label{gui}\mbox{}\\
 \textbf{Descrizione:}\\
 L'interfaccia GUI racchiude i dati riguardanti la visibilità e l'aggiornamento. Offre le funzionalità di gestione dell'evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
 \textbf{Utilizzo:}\\
 Questa classe viene usata per gestire gli eventi degli elementi grafici.
 
-\paragraph{View\-::Gui\-::Container}\label{gui-container}\mbox{}\\
+\subparagraph{View\-::Gui\-::Container}\label{gui-container}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe contiene una collezione di uno o più elementi della GUI.\\ 
 \textbf{Utilizzo:}\\
 Questa classe permette l'inserimento, la manipolazione e la rimozione di elementi dall'interno della collezione della GUI. 
 
-\paragraph{View\-::Gui\-::Label}\label{gui-label}\mbox{}\\
+\subparagraph{View\-::Gui\-::Label}\label{gui-label}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe Label offre all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
@@ -234,7 +234,7 @@ Questa classe offre la possibilità di renderizzare un output nella bubble.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::File}\label{gui-file}\mbox{}\\
+\subparagraph{View\-::Gui\-::File}\label{gui-file}\mbox{}\\
 \textbf{Descrizione:}\\
 Componente progettato per consentire alla bubble e al suo utilizzatore finale l'interazione con file generici.\\
 \textbf{Utilizzo:}\\
@@ -242,7 +242,7 @@ Consente il caricamento di file nella bubble da parte dell'utente e permette all
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Button}\label{gui-button}\mbox{}\\
+\subparagraph{View\-::Gui\-::Button}\label{gui-button}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe che permette di inserire nella bubble un oggetto di tipo Button, per permettere alla stessa di interagire con i suoi utilizzatori.\\
 \textbf{Utilizzo:}\\
@@ -250,7 +250,7 @@ Fornisce alla bubble la possibilità di interagire con l'utente suo utilizzatore
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Text\-Edit}\label{gui-tedit}\mbox{}\\
+\subparagraph{View\-::Gui\-::Text\-Edit}\label{gui-tedit}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe volta a fornire una funzionalità di interazione con l'utente mediante la modifica di testo.\\
 \textbf{Utilizzo:}\\
@@ -258,7 +258,7 @@ Consentire all'utente l'inserimento nella bubble di testo ove fosse necessario.\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Text\-View}\label{gui-tview}\mbox{}\\
+\subparagraph{View\-::Gui\-::Text\-View}\label{gui-tview}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe volta alla realizzazione di un elemento in grado di mostrare all'utente del testo non modificabile.\\
 \textbf{Utilizzo:}\\
@@ -266,7 +266,7 @@ Consentire all'utente la visualizzazione di testo nella bubble.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Image}\label{gui-image}\mbox{}\\
+\subparagraph{View\-::Gui\-::Image}\label{gui-image}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette di estendere le funzionalità della bubble mediante l'interazione con immagini.\\
 \textbf{Utilizzo:}\\
@@ -274,7 +274,7 @@ Consentire nella bubble la visualizzazione di immagini.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Check\-Button}\label{gui-check}\mbox{}\\
+\subparagraph{View\-::Gui\-::Check\-Button}\label{gui-check}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe CheckButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
@@ -282,7 +282,7 @@ L'utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Radio\-Button}\label{gui-radio}\mbox{}\\
+\subparagraph{View\-::Gui\-::Radio\-Button}\label{gui-radio}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe RadioButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
@@ -290,7 +290,7 @@ L'utilizzo di questa classe è quello di fornire un bottone selezionabile in mod
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Pie\-Chart}\label{gui-pie}\mbox{}\\
+\subparagraph{View\-::Gui\-::Pie\-Chart}\label{gui-pie}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe PieChart porta all'interno del framework la possibilità di utilizzare grafici a torta.\\
 \textbf{Utilizzo:}\\
@@ -298,7 +298,7 @@ L'utilizzo di questa classe è quello di fornire un grafico a torta per l'elabor
 \textbf{Relazioni con le altre classi:}\\
 Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.\\
 
-\paragraph{View\-::Gui\-::Bar\-Chart}\label{gui-bar}\mbox{}\\
+\subparagraph{View\-::Gui\-::Bar\-Chart}\label{gui-bar}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe BarChart porta all'interno del framework la possibilità di utilizzare grafici a istogramma.\\
 \textbf{Utilizzo:}\\
