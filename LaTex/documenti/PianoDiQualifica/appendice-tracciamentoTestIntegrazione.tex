@@ -7,22 +7,20 @@
 \begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}} \\ 
 	\endfirsthead
-	\hline \test{I} & Verificare che la bubble riceva gli input dalla GUI & Controller::BubbleGenerica \\
+	\hline \test{I} & Verificare che la bubble riceva gli input dalla GUI & Controller::GenericBubble \\
 	\hline \test{I} & Verificare che la GUI riceva i dati dalla bubble & \\
 	\hline \test{I} & Verificare che la GUI venga modificata come previsto & View::GUI \\
-	\hline \test{I} & Verificare che l'elemento funzionale riceva i dati & Bubble memory \\
-	\hline \test{I} & Verificare la bubble riceva il risultato dell'elaborazione & \\
-	\hline \test{I} & Verificare che il risultato ritornato alla bolla sia corretto & \\
-	\hline \test{I} & Verificare che inviando all'elemento funzionale dati non corretti sia notificato l'errore & Bubble memory \\
+	\hline \test{I} & Verificare che l'elemento funzionale riceva i dati & Model::BubbleMemory\\
+	\hline \test{I} & Verificare che il risultato ritornato alla bolla sia corretto & Controller::GenericBubble \\
+	\hline \test{I} & Verificare che inviando all'elemento funzionale dati non corretti sia notificato l'errore & Model::BubbleMemory \\
 	\hline \test{I} & Verificare che i dati inseriti correttamente modifichino la GUI nel modo atteso & View::GUI \\
-	\hline \test{I} & Verificare che i dati inseriti non corretti non modifichino la GUI e sia notificato un errore & \\
-	\hline \test{I} & Verificare che un evento originato dall'elemento funzionale abbia ripercussioni sulla bubble generica e sulla GUI & \\
-	\hline \test{I} & Verificare che gli elementi funzionali ricevano dati dalla bubble & Bubble memory \\
-	\hline \test{I} & Verificare che la bubble riceva il risultato dell'elaborazione dei dati & \\
-	\hline \test{I} & Verificare che all'arrivo di un segnale dalla GUI sia ritornato un valore corretto alla bubble & Controller::BubbleGenerica \\
-	\hline \test{I} & Verificare che con l'invio di dati non corretti all'elemento funzionale sia notificato l'errore & Bubble memory \\
-	\hline \test{I} & Verificare che la bubble riceva input dalla GUI & Controller::BubbleGenerica \\
-	\hline \test{I} & Verificare che la GUI riceva dati dalla bubble & \\
+	\hline \test{I} & Verificare che i dati inseriti non corretti non modifichino la GUI e sia notificato un errore & View::GUI \\
+	\hline \test{I} & Verificare che un evento originato dall'elemento funzionale abbia ripercussioni sulla bubble generica & Controller::GenericBubble \\
+	\hline \test{I} & Verificare che gli elementi funzionali ricevano dati dalla bubble & Model::BubbleMemory \\
+	\hline \test{I} & Verificare che la bubble riceva il risultato dell'elaborazione dei dati & Controller::GenericBubble \\
+	\hline \test{I} & Verificare che all'arrivo di un segnale dalla GUI sia ritornato un valore corretto alla bubble & Controller::GenericBubble \\
+	\hline \test{I} & Verificare che con l'invio di dati non corretti all'elemento funzionale sia notificato l'errore & Model::BubbleMemory \\
+	\hline \test{I} & Verificare che la bubble riceva input dalla GUI & Controller::GenericBubble \\
 	\hline \test{I} & Verificare che con la modifica dell'elemento funzionale la GUI venga modificata & View::GUI \\
 	\hline
 	\caption{Test di integrazione per il framework}
@@ -67,8 +65,6 @@
 	Deliveryman::BubbleDeliveryman \\
 	
 	\hline \test{I} & Verificare che con il completamento della preparazione di un piatto da parte del Cuoco con errore nel salvataggio venga mostrato al Cuoco un messaggio d'errore & Demo Bubble\&eat::Restaurant:: Chef::BubbleChef \\
-	
-	\hline \test{I} & Verificare che un nuovo ordine sia visualizzato nella lista del Manager & DemoBubble\&eat::Restaurant:: Manager::BubbleManager \\
 	
 	\hline \test{I} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Fattorino & DemoBubble\&eat::Restaurant:: Deliveryman::BubbleDeliveryman \\
 	\hline \test{I} & Verificare che al segnale di completamento della consegna da parte del Fattorino il segnale arrivi correttamente correttamente all'Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway \\
