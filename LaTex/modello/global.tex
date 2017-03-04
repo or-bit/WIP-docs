@@ -5,7 +5,19 @@
 % In questa prima parte vanno definite le 'costanti' utilizzate da due o più documenti.
 % Serve a dare la giusta formattazione alle parole presenti nel glossario
 % il nome del comando \glossary è già usato da LaTeX
-\newcommand{\glossario}[1]{\textit{#1\ped{\ped{G}}}}
+% permette di distingure la prima occorrenza della parola nel documento
+\usepackage{xparse}
+\ExplSyntaxOn
+\seq_new:N \l_hernan_seq
+\NewDocumentCommand{\glossario}{m}{
+    \seq_if_in:NnTF{\l_hernan_seq}{#1}{
+        % \textit{#1}
+    }{
+        \seq_put_left:Nn{\l_hernan_seq}{#1}
+        \textit{#1\ped{\ped{G}}}
+    }
+}
+\ExplSyntaxOff
 
 % Meglio non mettere gli \emph dentro le costanti, in certi casi creano problemi
 \newcommand{\GroupName}{Or-bit}
