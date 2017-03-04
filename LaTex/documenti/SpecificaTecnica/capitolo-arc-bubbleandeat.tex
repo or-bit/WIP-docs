@@ -30,10 +30,18 @@ Tutte le interazioni con gli elementi descritti sopra sono rese disponibili agli
 
 \begin{samepage}
 	\subsubsection{Struttura delle classi}
+	La Demo Bubble \& eat può essere divisa due categorie di classi principali:
+	\begin{itemize}
+		\item Gli attori a loro volta divisi in interni quali il \Manager{}, lo \Chef{}, il \Deliveryman{} ed il \Purchasingmanager{} ed unico attore esterno il \Customer{};
+		\item Un Hub gestionale centrale l’Order\-Gateway.
+	\end{itemize}
+	Le classi degli attori non avranno la possibilità di manipolare direttamente il databse o comunicare tra loro ma potranno farlo attraverso alla classe Order\-Gateway.
+	I singoli attori avranno la possibilità di manipolare e visualizzare gli stessi dati in modi differenti determinati dalla loro tipologia di utenza.
+	Tutte le operazioni saranno fornite dall’Order\-Gateway che si occuperà, oltre all’interazione con il database, anche della crezione degli Order.
 	\nopagebreak
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=14cm]{diagrammi_img/classi_e_package/demo_classes.png}
+		\includegraphics[width=13cm]{diagrammi_img/classi_e_package/demo_classes.png}
 		\caption{Diagramma di struttura delle classi}
 	\end{figure}
 \end{samepage}

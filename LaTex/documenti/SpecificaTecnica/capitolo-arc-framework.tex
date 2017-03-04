@@ -183,6 +183,8 @@ Il package permette di effettuare confronti con espressioni regolari.\\
 Verrà usato per controllare l'input inserito dall'utente.
 
 \subsection{Controller}
+La componente del Controller è costituita dalla classe Generic\-Bubble che si occupa di connettere le varie funzionalità offerte nella parte di Model con i rispettivi input ed output contenuti nella parte di View. Un utente del framework avrà la possibilità di definire e costruire la propria bolla all’interno di questo elemento. Potrà quindi inserire le interfacce offerte dalla GUI e connettere gli eventuali input di quest’ultime con delle componenti funzionali. Queste ultime potranno essere definite dall’utente stesso oppure scelte tra quelle disponibili. 
+L’insieme di questi elementi e le loro interazioni definiranno il comportamento dell’istanza della Bubble creata dall’utente.
 \begin{samepage}
 \subsubsection{Controller\-::Generic\-Bubble}\label{fm-generica}
 \nopagebreak
@@ -193,9 +195,10 @@ Verrà usato per controllare l'input inserito dall'utente.
 \end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
-La componente del software che funge da controller nello schema MVC è la classe bubble generica.\\
+La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra la parte di interfaccia e la parte funzionale di una bubble.\\
 \textbf{Scopo:}\\
-Serve a rilevare i comandi ricevuti dall'utente tramite la GUI e propagarli alla business logic garantendo la separazione tra presentazione e contenuto. Al suo interno è definita l'interazione tra le varie parti, l'utilizzo delle API e della bubble memory al fine di massimizzare le possibilità di creare bubble date a sviluppatori di terze parti che utilizzano il framework.
+Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica ed invia all’interfaccia gli eventuali output secondo le direttive fornite dall’utente.
+
 
 \begin{samepage}
 \subsection{View}
