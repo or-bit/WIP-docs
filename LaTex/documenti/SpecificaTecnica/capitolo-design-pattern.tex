@@ -3,10 +3,7 @@ I \glossario{Design Pattern} descrivono la metodologia con cui affrontare proble
 La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.\\
 I principali Design Pattern vengono suddivisi in quattro categorie:
 \begin{itemize}
-	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura;
-	\begin{itemize}
-		\item{MVC}
-	\end{itemize}
+	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura (MVC);
 	\item \textit{Creazionali}: affrontano il problema di astrarre il sistema rendendolo indipendente dall'implementazione concreta delle sue componenti;
 	\item \textit{Strutturali}: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l'ereditarietà e l'aggregazione;
 	\item \textit{Comportamentali}: affrontano il problema dell'interazione tra i componenti, definendo la funzione degli oggetti e il modo in cui interagisce con gli altri.
@@ -16,32 +13,37 @@ Per una descrizione più approfondita e completa dei diversi Design Pattern util
 \subsection{Design Pattern Architetturali}
 
 \subsubsection{MVC - Model View Controller}
-\textbf{Scopo:} permette di separare le responsabilità dei diversi componenti dell'applicazione dividendo presentazione, struttura e operazioni sui dati. Questo rende il codice manutenibile e di più semplice interpretazione.\\
-\textbf{Utilizzo:} Viene utilizzato per lasciare la parte di gestione dell'interfaccia alla view lasciando al model e controller la gestione logica dell'applicazione, quindi storage dei dati, interazione tra gli utenti e aggiornamento bubble.
+\textbf{Scopo:}\\ 
+Permette di separare le responsabilità dei diversi componenti dell'applicazione dividendo presentazione, controllo e operazioni sui dati. Questo rende il codice manutenibile e di più semplice interpretazione.\\
+\textbf{Utilizzo:}\\
+Viene utilizzato per affidare la gestione dell'interfaccia alla view, lasciando al model e al controller la gestione logica dell'applicazione, ed in particolare lo storage dei dati, l'interazione tra gli utenti e l'aggiornamento delle bubble.
 
 \subsection{Design Pattern Creazionali}
 
-\subsubsection{Prototype}
-\textbf{Scopo:} specifica il tipo di oggetti da creare utilizzando un'istanza \virgolette{prototipo} che viene copiata ed estesa.\\
-\textbf{Utilizzo:} 
-
 \subsubsection{Singleton}
-\textbf{Scopo:} viene utilizzato per vincolare le classi che devono avere una sola istanza durante l'esecuzione dell'applicazione.\\
-\textbf{Utilizzo:} viene utilizzato per l'interfaccia che gestisce la comunicazione col database MongoDB.
+\textbf{Scopo:} \\
+Viene utilizzato per vincolare le classi che devono avere una sola istanza durante l'esecuzione dell'applicazione.\\
+\textbf{Utilizzo:} \\
+Viene utilizzato per l'interfaccia che gestisce la comunicazione col database MongoDB e per i controller delle strutture MVC presenti nel framework e nella bubble To-do list. Viene inoltre utilizzato nella classe Order\-Gateway, la quale necessita di rappresentare un'unica istanza per ogni sistema (Ristorante).
 
 \subsection{Design Pattern Strutturali}
 
 \subsubsection{Facade}
-\textbf{Scopo:} fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti, ed avendo un unico punto d'accesso minimizza le comunicazioni e le dipendenze.\\
-\textbf{Utilizzo:} 
-
+\textbf{Scopo:} \\
+Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti, ed avendo un unico punto d'accesso minimizza le comunicazioni e le dipendenze. Facade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
+\textbf{Utilizzo:} \\ 
+Facade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe GUI il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità. 
 
 \subsubsection{Module design pattern}
-\textbf{Scopo:} inserire negli oggetti encapsulation, rendendo \textit{private} e non accessibili dall'esterno campi e funzioni utilizzate come campi intermedi,.\\
-\textbf{Utilizzo:} verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano esserne rese private alcune parti.
+\textbf{Scopo:} \\
+Inserire negli oggetti encapsulation, rendendo \textit{private} e non accessibili dall'esterno campi e funzioni utilizzate come campi intermedi,.\\
+\textbf{Utilizzo:} \\
+Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano esserne rese private alcune parti.
 
 \subsection{Design Pattern Comportamentali}
 
 \subsubsection{Observer}
-\textbf{Scopo:} permette l'aggiornamento di più viste contemporaneamente, disinteressandosi a quante o quali esse siano.\\
-\textbf{Utilizzo:} verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate ed allineate.
+\textbf{Scopo:} \\
+Permette l'aggiornamento di più viste contemporaneamente, disinteressandosi di quante o quali esse siano.\\
+\textbf{Utilizzo:} \\
+Verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate ed allineate.

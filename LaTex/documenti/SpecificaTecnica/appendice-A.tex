@@ -15,17 +15,13 @@ I tre componenti sono:
 	\item \textbf{Controller}: trasforma le interazioni effettuate dal client attraverso la view in azioni sui dati presenti sul model. Ha la funzione di generare la logica dell'applicazione. Esiste un controller per ogni view.
 \end{itemize}
 MVC è fortemente utilizzato per applicazioni web.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/mvc.png}
+	\caption{Design pattern MVC}
+\end{figure}
 
 \subsection{Design Pattern Creazionali}
-
-\subsubsection{Prototype}
-Prototype è un pattern creazionale che si occupa della creazione degli oggetti, rendendo indipendente un sistema dal modo in cui i suoi oggetti vengono creati.
-È utile nelle seguenti situazioni:
-\begin{itemize}
-	\item l'istanziazione della classe avviene a tempo di esecuzione per cui il codice statico non può occuparsi della creazione dell'oggetto;
-	\item per evitare di costruire gerarchie factory parallele come avviene utilizzando Abstract factory;
-	\item se si vuole limitare il numero di stati delle istanze di una classe, rendendo dunque più conveniente clonare l'oggetto piuttosto che crearlo e configurarlo.
-\end{itemize}
 
 \subsubsection{Singleton}
 \textit{Singleton} è un pattern creazionale frequentemente utilizzato e necessario in molte applicazioni il cui scopo è di vincolare una classe alla creazione di una e una sola istanza della stessa, fornendo un punto di accesso unico e globale a questa istanza. Per permettere questo funzionamento è necessario fornire solo alla classe stessa la capacità di venire istanziata e di bloccarla nel caso questo sia già avvenuto. Il singleton dovrebbe essere estensibile utilizzando il subclassing.\\
@@ -33,9 +29,21 @@ Il pattern singleton garantisce le seguenti condizioni:
 \begin{itemize}
 	\item un accesso unico e controllato all'istanza, poiché solo la classe stessa è in grado di controllare l'accesso da parte dei client;
 	\item l'istanza potrebbe essere usata come contenitore unico per variabili che altrimenti sarebbero globali;
-	\item permette la definizione delle operazioni definite nella classe che utilizza il singleton che andrebbe sempre estesa prima dell'utilizzo \textbf{(frase da riscrivere)};
+	\item permette la definizione delle operazioni appartenenti alla classe che utilizza il singleton, la quale andrebbe sempre estesa prima dell'utilizzo;
 	\item il numero delle istanze può essere controllato, e non è necessariamente limitato ad una sola. Questa funzione viene sempre gestita dalla classe stessa che implementa anche il modo di fornire ai vari client l'istanza corretta.
 \end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{diagrammi_img/singleton.jpg}
+	\caption{Modello concettuale del design pattern Singleton}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{diagrammi_img/singleton_class.png}
+	\caption{Design pattern Singleton}
+\end{figure}
 
 \subsection{Design Pattern Strutturali}
 
@@ -48,9 +56,25 @@ Il pattern può essere utilizzato nei seguenti casi:
 	\item Se abbiamo una struttura a più livelli e vogliamo organizzare i sottoinsiemi. Il fa\c{c}ade fa da punto di ingresso per i sottolivelli.
 \end{itemize}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{diagrammi_img/facade.png}
+	\caption{Design pattern Facade}
+\end{figure}
+
 \subsubsection{Module}
 Il \textit{module} pattern è un pattern tipico di JavaScript, utilizzato per incapsulare parti di oggetti.
 Sfrutta la natura funzionale del linguaggio per ottenere lo scopo. Il module è una \glossario{Immediately-Invoked-Function-Expressions} (IIFE) al cui interno è possibile avere diversi tipi di accesso ai dati.
+\begin{center}
+	\begin{lstlisting}[language=JavaScript, caption=Design pattern Module]
+		(function() {
+			// declare private variables and/or functions
+			return{
+				// declare public variable and/or functions
+			}
+		})();
+	\end{lstlisting}
+\end{center}
 
 \subsection{Design Pattern Comportamentali}
 
@@ -67,3 +91,9 @@ Il pattern può essere utilizzato nei seguenti casi:
 	\item quando il cambiamento di stato di un oggetto provoca anche il cambiamento di altri e non si conosce quanti oggetti debbano cambiare;
 	\item se si vuole evitare l'accoppiamento forte, si può notificare gli oggetti senza fare assunzioni su quali essi siano.
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/observer.png}
+	\caption{Design pattern Observer}
+\end{figure}
