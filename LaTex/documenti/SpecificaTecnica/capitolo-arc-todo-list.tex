@@ -27,17 +27,6 @@ Il package della To-do List segue il pattern Model-View-Controller (MVC), e dunq
 	\caption{Package To-do List}
 \end{figure}
 
-\begin{samepage}
-\subparagraph{View}\mbox{}\\
-\nopagebreak
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_view.png}
-	\caption{View}
-\end{figure}
-\end{samepage}
-Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
-
 \subparagraph{Model}\mbox{}\\
 Il package Model gestisce i dati contenuti nella bubble memory e nel database associato tramite i package BubbleMemory e Db\-Gateway. Permette inoltre di impostare notifiche tramite il package Notification. I dati sono rappresentati dal package List\-Items ovvero le liste contenute nella bubble To-do list. List\-Items\-Container definisce le liste, formate da oggetti della classe List\-Item, cioè singole voci delle liste. 
 \begin{figure}[H]
@@ -70,6 +59,17 @@ Questa classe offre la possibilità di aggiungere, rimuovere e restituire elemen
 La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.
 \textbf{Utilizzo:}\\
 Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato.
+
+\begin{samepage}
+	\subparagraph{View}\mbox{}\\
+	\nopagebreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_view.png}
+		\caption{View}
+	\end{figure}
+\end{samepage}
+Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
 
 \subparagraph{Controller}\mbox{}
 \begin{samepage}
