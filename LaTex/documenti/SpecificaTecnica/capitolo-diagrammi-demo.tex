@@ -5,15 +5,14 @@
 \subsubsection{Model}
 Per mantenere una persistenza dei dati questi verranno salvati nella bubble memory, in modo tale da essere disponibili per la visualizzazione. Essendo la bubble memory strutturata in modo simile ad un database non relazionale questa funzionalità sarà facilmente estensibile, interagendo direttamente con un database esterno.
 
-\begin{samepage}
 \paragraph{Aggiunta elemento alla To-do list}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addelementtodolist.png}
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addelementtodolist.png}
 	\caption{Diagramma di attività - Aggiunta elemento alla To-do list}
 \end{figure}
-%\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{diagrammi_img/sequenza/todo_aggiungi_elemento.png}
@@ -22,15 +21,15 @@ Per mantenere una persistenza dei dati questi verranno salvati nella bubble memo
 Dopo una verifica preliminare della loro correttezza, i dati vengono salvati nella bubble memory e ritornati al controller che li inoltra alla view, da cui saranno renderizzati.
 La procedura è analoga anche nel caso in cui si verifichino degli errori, che verranno visualizzati nel medesimo modo.
 
-\begin{samepage}
-	\paragraph{Rimozione elemento dalla To-do list}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics{../../documenti/SpecificaTecnica/diagrammi_img/attivita/removeelementtodolist.png}
-		\caption{Diagramma di attività - Rimozione elemento dalla To-do list}
-	\end{figure}
-\end{samepage}
+
+\paragraph{Rimozione elemento dalla To-do list}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/removeelementtodolist.png}
+	\caption{Diagramma di attività - Rimozione elemento dalla To-do list}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/todo_rimuovi_elemento.png}
@@ -48,15 +47,14 @@ Una volta effettuata la rimozione dell'elemento viene ritornato al controller:
 \end{itemize}
 Il controller si occupa poi di inoltrare questi messaggi alla view affinché possano essere renderizzati e visualizzati così dall'utente.
 
-\begin{samepage}
-	\paragraph{Aggiunta notifica statica}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addstaticnotification.png}
-		\caption{Diagramma di attività - Aggiunta notifica statica}
-	\end{figure}
-\end{samepage}
+\paragraph{Aggiunta notifica statica}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addstaticnotification.png}
+	\caption{Diagramma di attività - Aggiunta notifica statica}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/todo_aggiungi_notifica.png}
@@ -65,29 +63,29 @@ Il controller si occupa poi di inoltrare questi messaggi alla view affinché pos
 I dati inviati dal controller vengono validati prima di essere ricevuti dalla GUI. In caso siano presenti errori l'operazione viene interrotta con un messaggio di errore e la notifica non viene creata. Il messaggio di errore viene quindi inviato alla GUI, affinché possa essere renderizzato e mostrato all'utente. Se invece i dati sono conformi, viene creata una notifica statica. Il successo o meno di questa operazione viene segnalata dal model al controller e dal controller alla GUI, cosicché l'utente sia a conoscenza di quanto successo.
 
 \subsubsection{View}
-\begin{samepage}
-	\paragraph{Flusso principale View}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics{../../documenti/SpecificaTecnica/diagrammi_img/attivita/viewmainflow.png}
-		\caption{Diagrammi di attività - Flusso principale View}
-	\end{figure}
-\end{samepage}
+
+\paragraph{Flusso principale View}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/viewmainflow.png}
+	\caption{Diagrammi di attività - Flusso principale View}
+\end{figure}
+
 Dal punto di vista visuale la bubble apparirà come elenco interattivo composto da una serie di elementi. Selezionando l'apposito pulsante sarà possibile aggiungere o rimuovere un elemento dalla lista. L'aggiunta e la rimozione di elementi della lista comportano un aggiornamento della parte grafica con la conseguente aggiunta o rimozione dell'elemento (rappresentato come testo) dalla lista.\\
 Sarà inoltre presente un comando per creare una notifica statica relativa alla lista.\\
 L'interazione dell'utente utilizzatore della bubble con l'interfaccia grafica genererà dei segnali che verranno mandati al controller della bubble stessa.
 
 \subsubsection{Controller}
-\begin{samepage}
-	\paragraph{Flusso principale controller}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics{../../documenti/SpecificaTecnica/diagrammi_img/attivita/controllermainflow.png}
-		\caption{Diagramma di attività - Flusso principale controller}
-	\end{figure}
-\end{samepage}
+
+\paragraph{Flusso principale controller}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/controllermainflow.png}
+	\caption{Diagramma di attività - Flusso principale controller}
+\end{figure}
+
 
 Il controller sarà una componente software incaricata di ascoltare e di attendere i segnali generati dall'interfaccia grafica e dalla parte di business logic dell'applicativo, collegandone le funzionalità secondo quanto specificato nei requisiti. 
 
@@ -95,15 +93,9 @@ Il controller sarà una componente software incaricata di ascoltare e di attende
 Nello scenario descritto dalla demo, tramite il framework e le bubble da esso prodotte sarà possibile per gli attori interagire con il sistema nei seguenti modi, suddivisi per attore che li compie.
 
 \subsubsection{\Customer{}}
-\begin{samepage}
+
 \paragraph{Inserimento dati personali}\mbox{}\\
 \nopagebreak
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=14cm]{diagrammi_img/attivita/.png}
-%	\caption{Diagramma di attività - Inserimento dati personali}
-%\end{figure}
-\end{samepage}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{diagrammi_img/sequenza/cliente_inserisci_informazioni.png}
@@ -111,15 +103,15 @@ Nello scenario descritto dalla demo, tramite il framework e le bubble da esso pr
 \end{figure}
 Il \Customer{} inserisce le proprie informazioni e le invia. I dati vengono ricevuti dall'Order\-Gateway, che li verifica tramite MatchRegularExpr e li salva nel database se rispettano il formato prefissato, altrimenti ritorna un messaggio di errore all'utente.
 
-\begin{samepage}
-	\paragraph{Lettura dal menu}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=14cm]{diagrammi_img/attivita/costumer_get_menu.png}
-		\caption{Diagramma di attività - Lettura dal menu}
-	\end{figure}
-\end{samepage}
+
+\paragraph{Lettura dal menu}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/attivita/costumer_get_menu.png}
+	\caption{Diagramma di attività - Lettura dal menu}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/client_visualizza_menu.png}
@@ -127,7 +119,7 @@ Il \Customer{} inserisce le proprie informazioni e le invia. I dati vengono rice
 \end{figure}
 Il \Customer{} invia la richiesta di visualizzare il menu, la richiesta viene ricevuta dall'Order\-Gateway ed è inoltrata al database che risponde fornendo il menu, il quale viene inviato poi al \Customer{}.
 
-\begin{samepage}
+
 \paragraph{Fai ordinazione}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -135,7 +127,7 @@ Il \Customer{} invia la richiesta di visualizzare il menu, la richiesta viene ri
 	\includegraphics[width=14cm]{diagrammi_img/attivita/customer_ordinazione.png}
 	\caption{Diagramma di attività - Fai ordinazione}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/cliente_fai_ordinazione.png}
@@ -145,15 +137,14 @@ Selezionate le pietanze l'ordine è inviato all'Order\-Gateway, il quale salva n
 
 \subsubsection{\Chef{}}
 
-\begin{samepage}
-	\paragraph{Conferma completata la preparazione del piatto}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=14cm]{diagrammi_img/attivita/chef_comlete_order.png}
-	\caption{Diagramma di attività - Conferma completata la preparazione del piatto}
-	\end{figure}
-\end{samepage}
+\paragraph{Conferma completata la preparazione del piatto}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/attivita/chef_comlete_order.png}
+\caption{Diagramma di attività - Conferma completata la preparazione del piatto}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{diagrammi_img/sequenza/cuoco_piatto_pronto.png}
@@ -163,15 +154,14 @@ Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta prepara
 
 \subsubsection{\Deliveryman{}}
 
-\begin{samepage}
-	\paragraph{Seleziona consegna}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=14cm]{diagrammi_img/attivita/deliveryman_seleziona.png}
-		\caption{Diagramma di attività - Seleziona consegna}
-	\end{figure}
-\end{samepage}
+\paragraph{Seleziona consegna}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/attivita/deliveryman_seleziona.png}
+	\caption{Diagramma di attività - Seleziona consegna}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/fattorino_seleziona_consegna.png}
@@ -180,7 +170,7 @@ Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta prepara
 
 Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all'Order\-Gateway, il quale inoltra gli ordini al database; il database quindi aggiorna lo stato degli ordini ricevuti e ricava le informazioni personali degli utenti per la consegna, inviandole come risposta all'Order\-Gateway. A questo punto l'operazione viene confermata e le informazioni di consegna spedite al \Deliveryman{}, il quale può procedere con le consegne.
 
-\begin{samepage}
+
 \paragraph{Segnala la consegna come compiuta}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -188,7 +178,7 @@ Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all'Orde
 	\includegraphics[width=14cm]{diagrammi_img/attivita/deliveryman_consegnato.png}
 	\caption{Diagramma di attività - Segnala la consegna come compiuta}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/fattorino_segnala_consegna_completata.png}
@@ -196,7 +186,7 @@ Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all'Orde
 \end{figure}
 Una volta completata la consegna il \Deliveryman{} lo segnala all'Order\-Gateway, il quale inoltra l'informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall'Order\-Gateway ed inoltrato al \Deliveryman{}.
 
-\begin{samepage}
+
 \paragraph{Segnala fallimento}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -204,7 +194,7 @@ Una volta completata la consegna il \Deliveryman{} lo segnala all'Order\-Gateway
 	\includegraphics[width=14cm]{diagrammi_img/attivita/delivetyman_fallimento.png}
 	\caption{Diagramma di attività - Segnala fallimento}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/fattorino_fallimento_consegna.png}
@@ -214,7 +204,7 @@ Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order\
 
 \subsubsection{\Purchasingmanager{}}
 
-\begin{samepage}
+
 \paragraph{Segnala acquistate le scorte}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -222,7 +212,7 @@ Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order\
 	\includegraphics[width=14cm]{diagrammi_img/attivita/responsabile_acquisto.png}
 	\caption{Diagramma di attività - Segnala acquistate le scorte}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/responsabile_acquisti_segnala_scorte_acquistate.png}
@@ -232,7 +222,6 @@ Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order\-Gateway. L'Or
 
 \subsubsection{\Manager{}}
 
-\begin{samepage}
 \paragraph{Visualizzazione menu}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -240,7 +229,7 @@ Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order\-Gateway. L'Or
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_get_menu.png}
 	\caption{Diagramma di attività - Visualizzazione menu}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/direttore_visualizza_menu.png}
@@ -248,7 +237,6 @@ Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order\-Gateway. L'Or
 \end{figure}
 Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall'Order\-Gateway ed inoltrata al database, il quale ricerca le informazioni richieste e le ritorna in risposta all'Order\-Gateway. Questo a sua volta le inoltra al \Manager{} che visualizza il menu.
 
-\begin{samepage}
 \paragraph{Modifica menu}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -256,7 +244,7 @@ Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall'Ord
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_menu_modifiche.png}
 	\caption{Diagramma di attività - Modifica menu}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/direttore_modifica_menu.png}
@@ -265,7 +253,6 @@ Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall'Ord
 Il \Manager{}, una volta effettuate le modifiche al menu, le invia all'Order\-Gateway, il quale le inoltra al database. Vengono quindi aggiornate le informazioni sul database e viene ritornato un segnale di conferma, ricevuto e inoltrato dall'Order\-Gateway al \Manager{}.
 
 
-\begin{samepage}
 \paragraph{Visualizzazione magazzino}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -273,7 +260,7 @@ Il \Manager{}, una volta effettuate le modifiche al menu, le invia all'Order\-Ga
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_mag.png}
 	\caption{Diagramma di attività - Visualizzazione magazzino}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/direttore_visualizza_magazzino.png}
@@ -281,7 +268,6 @@ Il \Manager{}, una volta effettuate le modifiche al menu, le invia all'Order\-Ga
 \end{figure}
 Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ricevuta dall'Order\-Gateway e inoltrata al database. Vengono quindi recuperate le informazioni richieste e ritornate all'Order\-Gateway, il quale le inoltra al \Manager{}.
 
-\begin{samepage}
 \paragraph{Modifica magazzino}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -289,7 +275,7 @@ Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ri
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_mag_modifiche.png}
 	\caption{Diagramma di attività - Modifica magazzino}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/direttore_modifica_magazzino.png}
@@ -297,7 +283,7 @@ Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ri
 \end{figure}
 Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Order\-Gateway, il quale le inoltra al database, che provvede ad aggiornare i dati. Il database ritorna quindi un segnale di conferma all'Order\-Gateway, che lo inoltra al \Manager{}.
 
-\begin{samepage}
+
 \paragraph{Visualizzazione orders}\mbox{}\\
 \nopagebreak
 \begin{figure}[H]
@@ -305,7 +291,7 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Orde
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_ordini.png}
 	\caption{Diagramma di attività - Visualizzazione orders}
 \end{figure}
-\end{samepage}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/sequenza/direttore_visualizza_orders.png}
@@ -313,15 +299,14 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Orde
 \end{figure}
 Il \Manager{} effettua una richiesta per visualizzare gli ordini all'Order\-Gateway, il quale la inoltra al database. Vengono quindi recuperati gli ordini di interesse, restituiti in risposta dal database all'Order\-Gateway, il quale a sua volta inoltra i dati al \Manager{}.
 
-\begin{samepage}
-	\paragraph{Elimina orders}\mbox{}\\
-	\nopagebreak
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=14cm]{diagrammi_img/attivita/manager_order_remove.png}
-		\caption{Diagramma di attività - Elimina order}
-	\end{figure}
-\end{samepage}
+\paragraph{Elimina orders}\mbox{}\\
+\nopagebreak
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_order_remove.png}
+	\caption{Diagramma di attività - Elimina order}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{diagrammi_img/sequenza/direttore_elimina_orders.png}
