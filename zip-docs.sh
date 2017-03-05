@@ -27,7 +27,10 @@ find "$PDFROOT" -type f ! -name '*.pdf' -delete
 if [ "$1" = "-r" -o "$1" = "--release" -o "$1" = "-rc" -o "$1" = "--release-clean" ] ; then
 	set -x
 	rm -r "$RELEASE"
-	cp -r "$PDFROOT" "$RELEASE"
+	mkdir -p "$RELEASE"/Interni
+	mkdir -p "$RELEASE"/Esterni
+	find "$PDFROOT"/Interni -name "*.pdf" -exec cp {} "$RELEASE"/Interni \;
+	find "$PDFROOT"/Esterni -name "*.pdf" -exec cp {} "$RELEASE"/Esterni \;
 	mkdir "$RELEASE"/Esterni/Verbali
 	mkdir "$RELEASE"/Interni/Verbali
 	find "$RELEASE" -name "Verbale E*" -exec mv {} "$RELEASE"/Esterni/Verbali/ \;

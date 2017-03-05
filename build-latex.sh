@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "$1" = "--help" ] ; then
   echo "
@@ -24,11 +24,15 @@ fi
 # v => print script line before executing it
 set -ev
 
+# import common functions
+source common.config
+
 # store current path + args rename
 parent=$(pwd)
 input_path=$1
 document_name=$2
-build_output_directory=$parent/$3
+doc_name_no_ext=$(getFileNameWithoutExtension "$2")
+build_output_directory="$parent"/"$3"/"$doc_name_no_ext"
 pdf_name=$4
 
 # entering the folder with LaTeX document
