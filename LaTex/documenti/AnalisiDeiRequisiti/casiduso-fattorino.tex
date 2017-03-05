@@ -15,14 +15,14 @@
 	\\Lo scopo di questa funzionalità è permettere al Fattorino di consultare la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
 		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Fattorino seleziona la parte corrispondente della bubble;
-		\item Viene recuperata dal database la lista delle consegne \ref{UC3.9.1};
+		\item Il Fattorino seleziona la parte corrispondente della bubble.
+		\item Viene recuperata dal database la lista delle consegne \ref{UC3.9.1}.
 		\item Viene mostrata la lista all'utente \ref{UC3.9.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -38,8 +38,8 @@
 	\\Lo scopo di questa funzionalità è avere a disposizione nella memoria della bubble la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
 		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -57,8 +57,8 @@
 	\\Lo scopo di questa funzionalità è permettere al Fattorino di accedere e leggere la lista delle consegne da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
 		\item Avere accesso alla bubble con il ruolo Fattorino.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -82,16 +82,16 @@
 	\\Lo scopo di questa funzionalità è permettere al Fattorino di selezionare dalla lista delle consegne una da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 		\item Visualizzare la lista delle consegne da effettuare \ref{UC3.9.2};
 		\item Devono esistere consegne da effettuare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Fattorino visualizza la lista delle consegne \ref{UC3.9};
-		\item Il Fattorino seleziona dalla lista quale consegna desidera effettuare \ref{UC3.10.1};
+		\item Il Fattorino visualizza la lista delle consegne \ref{UC3.9}.
+		\item Il Fattorino seleziona dalla lista quale consegna desidera effettuare \ref{UC3.10.1}.
 		\item Il database viene aggiornato per indicare che l'ordine è in consegna \ref{UC3.10.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -107,10 +107,10 @@
 	\\Lo scopo di questa funzionalità è permettere al Fattorino di selezionare dalla lista delle consegne una da effettuare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
-		\item Devono esistere consegne da effettuare;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
+		\item Devono esistere consegne da effettuare.
 		\item La lista delle consegne da effettuare è visualizzata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -128,10 +128,10 @@
 	\\Lo scopo di questa funzionalità è di aggiornare lo stato dell'ordine una volta che il Fattorino l'abbia preso in consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
-		\item Devono esistere consegne da effettuare;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
+		\item Devono esistere consegne da effettuare.
 		\item È stata selezionata una consegna da effettuare come indicato in \ref{UC3.10.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -155,14 +155,14 @@
 	\\Lo scopo di questa funzionalità è permettere al Fattorino di confermare l'effettuazione della consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 		\item Deve essere stata selezionata una consegna dalla lista.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Fattorino indica che la consegna è stata effettuata \ref{UC3.11.1};
+		\item Il Fattorino indica che la consegna è stata effettuata \ref{UC3.11.1}.
 		\item Il database viene aggiornato \ref{UC3.11.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -178,10 +178,10 @@
 	\\Lo scopo di questa funzionalità è di notificare l'avvenuta consegna della pietanza all'indirizzo inviato dall'utente.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
-		\item Deve essere stata selezionata una consegna dalla lista;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
+		\item Deve essere stata selezionata una consegna dalla lista.
 		\item La consegna deve essere stata effettuata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -199,9 +199,9 @@
 	\\Lo scopo di questa funzionalità è aggiornare il database quando un Fattorino conferma l'effettuazione della consegna.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo Fattorino;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo Fattorino.
 		\item Deve essere stata selezionata una consegna dalla lista per essere segnata come completata.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}

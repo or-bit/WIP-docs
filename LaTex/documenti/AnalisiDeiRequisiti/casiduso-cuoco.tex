@@ -15,14 +15,14 @@
 	\\Lo scopo di questa funzionalità è permettere al Cuoco di consultare la lista dei piatti da preparare ottenuta tramite le ordinazioni effettuate dai clienti.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
 		\item Avere accesso alla bubble con il ruolo di Cuoco.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Cuoco seleziona la parte corrispondente della bubble;
-		\item Viene recuperata dal database la lista dei piatti \ref{UC3.5.1};
+		\item Il Cuoco seleziona la parte corrispondente della bubble.
+		\item Viene recuperata dal database la lista dei piatti \ref{UC3.5.1}.
 		\item Viene mostrata la lista all'utente \ref{UC3.5.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -38,8 +38,8 @@
 	\\Lo scopo di questa funzionalità è quello di caricare dal database la lista dei piatti da preparare.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
 		\item Avere accesso alla bubble con il ruolo di Cuoco.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -57,9 +57,9 @@
 	\\Lo scopo di questa funzionalità è di far visualizzare al Cuoco la lista dei piatti precedentemente caricata dal database sulla bubble.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo di Cuoco;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
 		\item Aver caricato la lista dei piatti \ref{UC3.5.1}.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -83,14 +83,14 @@
 	\\I piatti presenti nella lista possono essere spuntati quando il Cuoco ha finito la loro preparazione.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo di Cuoco;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
 		\item Avere la lista dei piatti da preparare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
 	\begin{itemize}
-		\item Il Cuoco indica che ha terminato la preparazione di un piatto \ref{UC3.6.1};
+		\item Il Cuoco indica che ha terminato la preparazione di un piatto \ref{UC3.6.1}.
 		\item Il database viene aggiornato con le nuove informazioni \ref{UC3.6.2}.
 	\end{itemize}
 	\item \textbf{Post-condizione:}
@@ -106,10 +106,10 @@
 	\\Lo scopo di questa funzionalità è di permettere al Cuoco di indicare che ha completato la preparazione di un piatto.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo di Cuoco;
-		\item Avere la lista dei piatti da preparare;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
+		\item Avere la lista dei piatti da preparare.
 		\item Aver precedentemente indicato che si stava preparando un determinato piatto.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
@@ -127,9 +127,9 @@
 	\\Lo scopo di questa funzionalità è quello di aggiornare il database in base ai piatti preparati dal Cuoco.
 	\item \textbf{Precondizioni:}
 	\begin{itemize}
-		\item Avere Rocket.Chat;
-		\item Avere la bubble del ristorante selezionato;
-		\item Avere accesso alla bubble con il ruolo di Cuoco;
+		\item Avere Rocket.Chat.
+		\item Avere la bubble del ristorante selezionato.
+		\item Avere accesso alla bubble con il ruolo di Cuoco.
 		\item Avere preparato dei piatti dalla lista di piatti da preparare.
 	\end{itemize}
 	\item \textbf{Flusso principale degli eventi:}
