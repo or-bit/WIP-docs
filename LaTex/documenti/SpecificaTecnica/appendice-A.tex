@@ -33,13 +33,13 @@ Il pattern singleton garantisce le seguenti condizioni:
 	\item il numero delle istanze può essere controllato, e non è necessariamente limitato ad una sola. Questa funzione viene sempre gestita dalla classe stessa che implementa anche il modo di fornire ai vari client l'istanza corretta.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{diagrammi_img/singleton.jpg}
 	\caption{Modello concettuale del design pattern Singleton}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{diagrammi_img/singleton_class.png}
 	\caption{Design pattern Singleton}
@@ -64,7 +64,7 @@ Il pattern può essere utilizzato nei seguenti casi:
 
 \subsubsection{Module}
 Il \textit{module} pattern è un pattern tipico di JavaScript, utilizzato per incapsulare parti di oggetti.
-Sfrutta la natura funzionale del linguaggio per ottenere lo scopo. Il module è una \glossario{Immediately-Invoked-Function-Expressions} (IIFE) al cui interno è possibile avere diversi tipi di accesso ai dati.
+Sfrutta la natura funzionale del linguaggio per ottenere lo scopo. Il module è una \glossario{Immediately-Invoked-Function-Expression} (IIFE) al cui interno è possibile avere diversi tipi di accesso ai dati.
 \begin{center}
 	\begin{lstlisting}[language=JavaScript, caption=Design pattern Module]
 		(function() {
