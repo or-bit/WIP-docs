@@ -52,19 +52,19 @@ do
    # if the line is less then 3 chars go ahead with the loop
    lineLength=${#line}
    if [[ "$lineLength" -lt "3" ]] ; then
-      echo Skipping line which length is "$lineLength"
+      # echo Skipping line which length is "$lineLength"
       continue
    fi
 
    # if line ends with multiple dots (possibly separated by a space)
    if [[ "$line" =~ \.(\.|[[:space:]])+$ ]] ; then
-     echo Skipping line which ends with multiple dots \("$line"\)
+     # echo Skipping line which ends with multiple dots \("$line"\)
      continue
    fi
 
    # if line contains only numbers separated by '.' or '/' or '-'
    if [[ "$line" =~ ^([[:digit:]]+(\.|-|/)*)+$ ]] ; then
-     echo Skipping line which contains only numbers \("$line"\)
+     # echo Skipping line which contains only numbers \("$line"\)
      continue
    fi
 
@@ -111,7 +111,7 @@ words=($var)
 bigWords=()
 
 # count each character which is of class [:alpha:]
-totalLetters=$(tr -d -C [:alpha:] <"$file" | wc -c)
+totalLetters=$(tr -d -C [:alpha:] <"$file".output | wc -c)
 totalSentences=${#sentences[@]}
 totalWords=${#words[@]}
 
