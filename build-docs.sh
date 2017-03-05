@@ -38,7 +38,7 @@ function setupExternal {
 }
 
 function setupNonDefaultIndex {
-	# store new index file
+	# read from non-default index file
 	if [ "$2" = "-c" ] ; then
 		indexfile=$3
 	fi

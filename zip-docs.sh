@@ -25,8 +25,15 @@ find "$PDFROOT" -type f ! -name '*.pdf' -delete
 
 # if 'release' profile selected, copy docs to 'release' location
 if [ "$1" = "-r" -o "$1" = "--release" -o "$1" = "-rc" -o "$1" = "--release-clean" ] ; then
+	set -x
+	rm -r "$RELEASE"
 	cp -r "$PDFROOT" "$RELEASE"
+	mkdir "$RELEASE"/Esterni/Verbali
+	mkdir "$RELEASE"/Interni/Verbali
+	find "$RELEASE" -name "Verbale E*" -exec mv {} "$RELEASE"/Esterni/Verbali/ \;
+	find "$RELEASE" -name "Verbale I*" -exec mv {} "$RELEASE"/Interni/Verbali/ \;	
 	TOZIP=$RELEASE
+	set +x
 fi
 
 if [ "$1" = "-rc" -o "$1" = "--release-clean" ] ; then

@@ -10,7 +10,7 @@ before_install:
 script:
 - ./build-docs.sh a
 after_success:
-- ./zip-docs.sh
+- ./zip-docs.sh -r
 deploy:
   provider: releases
   api_key:
