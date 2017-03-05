@@ -6,9 +6,9 @@ I principali Design Pattern vengono suddivisi in quattro categorie:
 	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura (MVC);
 	\item \textit{Creazionali}: affrontano il problema di astrarre il sistema rendendolo indipendente dall'implementazione concreta delle sue componenti;
 	\item \textit{Strutturali}: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l'ereditarietà e l'aggregazione;
-	\item \textit{Comportamentali}: affrontano il problema dell'interazione tra i componenti, definendo la funzione degli oggetti e il modo in cui interagisce con gli altri.
+	\item \textit{Comportamentali}: affrontano il problema dell'interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
 \end{itemize}
-Per una descrizione più approfondita e completa dei diversi Design Pattern utilizzati nella progettazione di \ProjectName{} si rimanda all'\appendice{app:design_pattern}. Di seguito viene invece descritto come sono stati utilizzati i diversi Design Pattern nella progettazione delle diverse parti dell'architettura.
+Per una descrizione più approfondita e completa dei diversi Design Pattern utilizzati nella progettazione di \ProjectName{} si rimanda all'\appendice{app:design_pattern}. Di seguito viene invece descritto come sono stati utilizzati i diversi Design Pattern nella progettazione delle varie parti dell'architettura.
 
 \subsection{Design Pattern Architetturali}
 
@@ -22,21 +22,21 @@ Viene utilizzato per affidare la gestione dell'interfaccia alla view, lasciando 
 
 \subsubsection{Singleton}
 \textbf{Scopo:} \\
-Viene utilizzato per vincolare le classi che devono avere una sola istanza durante l'esecuzione dell'applicazione.\\
+Permette di vincolare le classi che devono avere una sola istanza durante l'esecuzione dell'applicazione.\\
 \textbf{Utilizzo:} \\
 Viene utilizzato per l'interfaccia che gestisce la comunicazione col database MongoDB e per i controller delle strutture MVC presenti nel framework e nella bubble To-do list. Viene inoltre utilizzato nella classe Order\-Gateway, la quale necessita di rappresentare un'unica istanza per ogni sistema (Ristorante).
 
 \subsection{Design Pattern Strutturali}
 
-\subsubsection{Facade}
+\subsubsection{Fa\c{c}ade}
 \textbf{Scopo:} \\
-Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti, ed avendo un unico punto d'accesso minimizza le comunicazioni e le dipendenze. Facade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
+Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti. Rendendo unico il punto d'accesso vengono minimizzate le comunicazioni e le dipendenze. Fa\c{c}ade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
 \textbf{Utilizzo:} \\ 
-Facade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe GUI il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità. 
+Fa\c{c}ade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe GUI il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità. 
 
 \subsubsection{Module design pattern}
 \textbf{Scopo:} \\
-Inserire negli oggetti encapsulation, rendendo \textit{private} e non accessibili dall'esterno campi e funzioni utilizzate come campi intermedi,.\\
+Rende disponibile all'interno degli oggetti l'encapsulation, rendendo \textit{private} e non accessibili dall'esterno campi dati e funzioni utilizzate come campi intermedi.\\
 \textbf{Utilizzo:} \\
 Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano esserne rese private alcune parti.
 
@@ -46,4 +46,4 @@ Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano ess
 \textbf{Scopo:} \\
 Permette l'aggiornamento di più viste contemporaneamente, disinteressandosi di quante o quali esse siano.\\
 \textbf{Utilizzo:} \\
-Verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate ed allineate.
+Verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate e consistenti le une con le altre.

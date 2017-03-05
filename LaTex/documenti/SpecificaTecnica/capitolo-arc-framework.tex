@@ -52,7 +52,7 @@ Data la natura del progetto non sono rappresentate connessioni tra i vari packag
 \textbf{Descrizione:}\\ 
 Lo scopo di questo package è di gestire le operazioni legate al ciclo di vita della bubble.\\
 \textbf{Utilizzo:}\\
-Si occupa di controllare la durata di vita della bubble interrompendo il funzionamento dopo un tempo prefissato.\\
+Si occupa di controllare la durata di vita della bubble interrompendone il funzionamento dopo un tempo prefissato.\\
 
 \begin{samepage}
 \subparagraph{Api\-::Notification}\label{api-notifica}\mbox{}\\
@@ -64,7 +64,7 @@ Si occupa di controllare la durata di vita della bubble interrompendo il funzion
 \end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\ 
-I metodi presenti all'interno del package di notifica hanno lo scopo di creare e mostrare agli utenti delle notifiche collegate con le azioni della bubble. Se incluso nella bubble sarà possibile notificare del testo in modo statico.\\
+I metodi presenti all'interno del package Notification hanno lo scopo di creare e mostrare agli utenti delle notifiche collegate con le azioni della bubble. Se incluso nella bubble sarà possibile notificare del testo in modo statico.\\
 \textbf{Scopo:}\\
 Si occupa della gestione di notifiche statiche all'utente.\\
 
@@ -123,7 +123,7 @@ Oltre alle normali operazioni sul database l'utente avrà la possibilità di uti
 Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
 \textbf{Scopo:}\\
 In questo package sono contenute le funzionalità del framework relative alle limitazioni sull'input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
-Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato JSON (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
+Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e per porre limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato JSON (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
 \begin{samepage}
 \subparagraph{Api\-::Timing}\label{api-timing}\mbox{}\\
@@ -196,7 +196,7 @@ L’insieme di questi elementi e le loro interazioni definiranno il comportament
 \textbf{Descrizione:}\\
 La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra la parte di interfaccia e la parte funzionale di una bubble.\\
 \textbf{Scopo:}\\
-Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica ed invia all’interfaccia gli eventuali output secondo le direttive fornite dall’utente.
+Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica ed rimanda all’interfaccia gli eventuali output secondo le direttive fornite dall’utente.
 
 
 %\begin{samepage}
