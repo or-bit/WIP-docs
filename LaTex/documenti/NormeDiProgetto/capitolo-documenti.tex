@@ -230,3 +230,36 @@ Il ciclo di vita indica tutte le fasi in cui un documento può trovarsi a partir
 \subsubsection{Glossario}
 Il \textit{Glossario} è un documento di utilità. Tale documento deve essere aggiornato di pari passo con la stesura dei documenti.
 Si segnalano i termini inclusi nel glossario con una g al pedice alla loro prima occorrenza. 
+
+\subsubsection{Metriche per la documentazione}
+\paragraph{Indice Gulpease}\mbox{}\\
+Per garantire la leggibilità della documentazione in lingua italiana si applica il calcolo dell'indice di leggibilità Gulpease sui testi, considerando la lunghezza in lettere di parole e frasi.
+\[ 89+\frac{300 \cdot \left(n°\ frasi\right)-10 \cdot \left(n°\ lettere\right)}{n°\ parole} \]
+La formula per il calcolo dell'indice di Gulpease restituisce un punteggio in centesimi che determina il grado di comprensibilità rapportato al livello di istruzione del lettore.
+\begin{itemize}
+	\item punteggi intorno a 0: testi a leggibilità più bassa;
+	\item punteggi minori di 40: testi di difficile comprensione per lettori in possesso di un diploma di scuola superiore;
+	\item punteggi minori di 60: testi di difficile comprensione per lettori in possesso di licenza di scuola media;
+	\item punteggi minori di 80: testi di difficile comprensione per lettori in possesso di licenza elementare;
+	\item punteggi intorno a 100: i testi con maggiore livello di comprensione.
+\end{itemize}
+
+\paragraph{Indice Gunning Fog}\mbox{}\\
+Per garantire la leggibilità della documentazione in lingua inglese si applica il calcolo dell'indice di leggibilità Gunning Fog. Come per l'indice Gulpease, l'indice Gunning Fog calcola il grado di leggibilità del testo rapportato al livello di istruzione del lettore.\\
+La formula per il calcolo della leggibilità prende in esame la lunghezza media delle frasi e la percentuale di parole formate da più di tre sillabe.
+\[ 0.4 \cdot \left[\left(\frac{n°\ parole}{n°\ frasi}\right)+100 \cdot \left(\frac{n°\ parole\ complesse}{n°\ parole}\right)\right] \]
+La formula produce un punteggio compreso tra 6, minor grado di complessità del testo, e 17, il maggior grado di complessità del testo.
+\begin{itemize}
+	\item punteggio di 17: il testo è adatto a un \textit{College Graduate};
+	\item punteggio di 16: il testo è adatto a un \textit{College Senior};
+	\item punteggio di 15: il testo è adatto a un \textit{College Junior};
+	\item punteggio di 14: il testo è adatto a un \textit{College Sophomore};
+	\item punteggio di 13: il testo è adatto a un \textit{College Freshman};
+	\item punteggio di 12: il testo è adatto a un \textit{High School Senior Student}; 
+	\item punteggio di 11: il testo è adatto a un \textit{High School Junior Student};
+	\item punteggio di 10: il testo è adatto a un \textit{High School Sophomore Student};
+	\item punteggio di 9: il testo è adatto a un \textit{High School Freshman Student};
+	\item punteggio di 8: il testo è adatto a un \textit{Eighth Grade Student};
+	\item punteggio di 7: il testo è adatto a un \textit{Seventh Grade Student};
+	\item punteggio di 6: il testo è adatto a un \textit{Sixth Grade Student}.
+\end{itemize}
