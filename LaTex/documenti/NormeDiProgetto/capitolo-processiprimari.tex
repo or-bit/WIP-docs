@@ -138,19 +138,19 @@ Si è deciso di seguire le linee guida specificate nel capitolato e concordate c
 \paragraph{Ricorsione}\mbox{}\\
 La ricorsione deve essere evitata quando possibile, onde evitare un elevato consumo di memoria a discapito delle performance del prodotto finale.
 
-\subsubsection{Verifica}
+\subsection{Verifica}
 L’attività di verifica deve essere svolta in modo continuativo durante l'avanzamento del progetto. Sono quindi definite modalità operative per agevolare il lavoro dei \Verificatori.
 
-\paragraph{Analisi statica}\mbox{}\\
+\subsubsection{Analisi statica}
 \`{E} prevista l'attività di analisi statica, applicata a tutti i processi del progetto, per individuare errori nella documentazione e nel software prodotto. Viene eseguita da \Verificatori{} e \Programmatori{}, con ruoli distinti.
 
-\subparagraph{Walkthrough} \mbox{}\\
+\paragraph{Walkthrough} \mbox{}\\
 Si esegue una lettura critica del documento (o codice), a largo spettro e senza alcun presupposto. A seguito di questa attività deve essere redatta una lista che riporti gli errori rilevati con più frequenza, la quale verrà inserita in questo documento per favorire l'uso della tecnica \glossario{inspection} nelle verifiche successive.
 
-\subparagraph{Inspection} \mbox{}\\
+\paragraph{Inspection} \mbox{}\\
 Si esegue una lettura mirata del documento (o codice), focalizzando la ricerca sui presupposti individuati tramite precedenti analisi \glossario{walkthrough}.
 
-\subparagraph{Linting}\mbox{}\\
+\paragraph{Linting}\mbox{}\\
 Vengono identificate nel codice prodotto strutture che non rispettano le linee guida imposte tramite strumenti automatici che analizzano il codice e individuano pattern indesiderati o discrepanze.\\
 Alcuni di questi sono:\begin{itemize}
 	\item variabili usate prima di essere inizializzate;  
@@ -170,11 +170,11 @@ Lo strumento utilizzato per questo tipo di analisi è \glossario{ESLint}, ottimi
 	\item indice di manutenibilità.
 \end{itemize}
 
-\paragraph{Analisi dinamica}\mbox{}\\
+\subparagraph{Analisi dinamica}\mbox{}\\
 \`{E} prevista l’attività di analisi dinamica per il software prodotto per verificarne il corretto funzionamento, in quanto si avvale dell'esecuzione di test su di esso.
 Vengono utilizzati gli strumenti \glossario{Mocha} e \glossario{Chai}, integrati con lo strumento di testing offerto da \glossario{Meteor}.\footnote{Per maggiori dettagli si rimanda al sito ufficiale https://guide.meteor.com/testing.html}
 
-\subparagraph{Test}\mbox{}\\
+\paragraph{Test}\mbox{}\\
 Vengono svolti vari test, riportati nel \PianoDiQualifica{} e catalogati come segue:
 \begin{center}
 	T[tipo][numero]

@@ -41,7 +41,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework interagisce con un database \glossario{MongoDB} esterno.
 	\item \textbf{Precondizioni:}
@@ -71,7 +74,10 @@ dove:
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del framework.
+\begin{itemize}
+	\item Utilizzatore del framework;
+	\item Database.
+\end{itemize}
 \item \textbf{Scopo e descrizione:} 
 \\Connettersi ad un database MongoDB esterno all'applicazione.
 \item \textbf{Precondizioni:}
@@ -90,7 +96,10 @@ dove:
 \UCC[2]{Connessione a database MongoDB non possibile}{UC1.00.2}
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Connettersi ad un database MongoDB esterno all'applicazione.
 	\item \textbf{Precondizioni:}
@@ -118,7 +127,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Prelevare dati dal database connesso alla bubble.
 	\item \textbf{Precondizioni:}
@@ -145,7 +157,10 @@ dove:
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del framework.
+\begin{itemize}
+	\item Utilizzatore del framework;
+	\item Database.
+\end{itemize}
 \item \textbf{Scopo e descrizione:} 
 \\Scrittura dati nel database connesso alla bubble.
 \item \textbf{Precondizioni:}
@@ -170,7 +185,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Effettuare una o più operazioni sugli elementi della bubble.
 	\item \textbf{Precondizioni:}
@@ -730,7 +748,7 @@ dove:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_06.png}
-	\caption{\UCCCaption{} Cambiamento di stato della bubble}
+	\caption{\UCCCaption{} Cambiamento di stato della bubble su proprietà esistente}
 \end{figure}
 \end{samepage}
 
@@ -777,13 +795,16 @@ dove:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_07.png}
-	\caption{\UCCCaption{} Chiamata API esterne}
+	\caption{\UCCCaption{} Chiamata API esterne disponibili}
 \end{figure}
 \end{samepage}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Server remoto.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Ottenere il risultato dell'interrogazione di un servizio esterno al framework tramite chiamata di \glossario{API}.
 	\item \textbf{Precondizioni:}
@@ -853,7 +874,10 @@ dove:
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Modificare le impostazioni della bubble per adattarle allo scopo della stessa.
 	\item \textbf{Precondizioni:}
@@ -1057,7 +1081,7 @@ dove:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_15.png}
-	\caption{\UCCCaption{} Storico interazioni con la bubble per utente}
+	\caption{\UCCCaption{} Storico interazioni con la bubble per utente presente}
 \end{figure}
 \end{samepage}
 
