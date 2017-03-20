@@ -21,4 +21,6 @@ deploy:
   on:
     repo: or-bit/WIP-docs
     all_branches: true
+notifications:
+  slack: or-bitteam:QUI8ReSEYuE6reMuP3icez5j
     
