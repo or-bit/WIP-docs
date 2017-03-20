@@ -17,4 +17,6 @@ sudo apt-get -qq install -y --no-install-recommends \
 	texlive-lang-italian \
 	texlive-latex-extra \
 	texlive-latex-recommended \
+	&& rm -rf /var/lib/apt/lists/*
+	
 	
