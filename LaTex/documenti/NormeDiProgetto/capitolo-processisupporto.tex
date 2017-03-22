@@ -263,3 +263,167 @@ La formula produce un punteggio compreso tra 6, minor grado di complessità del 
 	\item punteggio di 7: il testo è adatto a un \textit{Seventh Grade Student};
 	\item punteggio di 6: il testo è adatto a un \textit{Sixth Grade Student}.
 \end{itemize}
+
+\subsection{Verifica}
+L’attività di verifica deve essere svolta in modo continuativo durante l'avanzamento del progetto. Sono quindi definite modalità operative per agevolare il lavoro dei \Verificatori.
+
+\subsubsection{Analisi statica}
+\`{E} prevista l'attività di analisi statica, applicata a tutti i processi del progetto, per individuare errori nella documentazione e nel software prodotto. Viene eseguita da \Verificatori{} e \Programmatori{}, con ruoli distinti.
+
+\paragraph{Walkthrough} \mbox{}\\
+Si esegue una lettura critica del documento (o codice), a largo spettro e senza alcun presupposto. A seguito di questa attività deve essere redatta una lista che riporti gli errori rilevati con più frequenza, la quale verrà inserita in questo documento per favorire l'uso della tecnica \glossario{inspection} nelle verifiche successive.
+
+\paragraph{Inspection} \mbox{}\\
+Si esegue una lettura mirata del documento (o codice), focalizzando la ricerca sui presupposti individuati tramite precedenti analisi \glossario{walkthrough}.
+
+\paragraph{Linting}\mbox{}\\
+Vengono identificate nel codice prodotto strutture che non rispettano le linee guida imposte tramite strumenti automatici che analizzano il codice e individuano pattern indesiderati o discrepanze.\\
+Alcuni di questi sono:
+\begin{itemize}
+	\item variabili usate prima di essere inizializzate;  
+	\item divisioni per zero;
+	\item condizioni costanti;
+	\item operazioni il cui risultato probabilmente potrebbe risultare esterno all'intervallo di valori rappresentabili con il tipo usato.
+\end{itemize}
+Lo strumento utilizzato per questo tipo di analisi è \glossario{ESLint}, ottimizzato per la Airbnb JavaScript style guide indicata in \sezione{sec:convenzioni} di questo documento. ESLint viene descritto in \sezione{sec:eslint}.
+
+\subparagraph{Complexity report}\mbox{}\\
+È un'applicazione installabile come modulo per \glossario{Node.js} e misura metriche riguardanti codice \glossario{JavaScript}, in particolare:
+\begin{itemize}
+	\item complessità ciclomatica;
+	\item numero di parametri per funzioni;
+	\item Halstead;
+	\item core size;
+	\item indice di manutenibilità.
+\end{itemize}
+
+\subparagraph{Analisi dinamica}\mbox{}\\
+\`{E} prevista l’attività di analisi dinamica per il software prodotto per verificarne il corretto funzionamento, in quanto si avvale dell'esecuzione di test su di esso.
+Vengono utilizzati gli strumenti \glossario{Mocha} e \glossario{Chai}, integrati con lo strumento di testing offerto da \glossario{Meteor}.\footnote{Per maggiori dettagli si rimanda al sito ufficiale https://guide.meteor.com/testing.html}
+
+\paragraph{Test}\mbox{}\\
+Vengono svolti vari test, riportati nel \PianoDiQualifica{} e catalogati come segue:
+\begin{center}
+	T[tipo][numero]
+\end{center}
+dove
+\begin{itemize}
+	\item \textit{T} specifica che si sta parlando di un test;
+	\item \textit{tipo} assume uno dei seguenti valori:
+	\begin{itemize}
+		\item [U] se il test è di unità;
+		\item [I] se il test è di integrazione;
+		\item [R] se il test è di regressione;
+		\item [S] se il test è di sistema;
+		\item [V] se il test è di validazione.
+	\end{itemize}
+	\item \textit{numero} è assoluto e rappresenta un riferimento univoco al test in questione.
+\end{itemize}
+In particolare:
+\begin{itemize}
+	\item i test di unità verificano che le singole componenti non abbiano errori prese individualmente;
+	\item i test di integrazione verificano che più unità collaborino correttamente;
+	\item i test di regressione verificano che le modifiche apportate non invalidino i test già svolti in precedenza;
+	\item i test di sistema verificano che il prodotto soddisfi tutti i requisiti;
+	\item i test di validazione coincidono con il collaudo finale.
+\end{itemize}
+
+\paragraph{Metriche per la verifica}\mbox{}
+\subparagraph{Code coverage}\mbox{}\\
+Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di codice di un modulo. Una copertura topologica del test del 100\% di tipo code coverage garantisce di aver eseguito almeno una volta tutte le istruzioni, ma non tutti i rami.
+
+\subparagraph{Modified condition/decision coverage (MC/DC)}\mbox{}\\
+\`{E} una combinazione delle metriche di \textit{function coverage} (copertura delle funzioni chiamate) e \textit{branch coverage} (copertura dei branch delle strutture di controllo). Questa metrica richiede che ogni punto di entrata o uscita in un programma sia invocato almeno una volta e che per ogni decisione condizionale vengano considerati tutti i possibili esiti. La versione \textit{modified} richiede inoltre che entrambe le coperture siano soddisfatte, ed in particolare che ogni condizione influenzi gli esiti condizionali indipendentemente.\footnote{Si rimanda al seguente link \url{https://en.wikipedia.org/wiki/Code_coverage} per esempi esplicativi.}
+
+\subparagraph{Test eseguiti}\mbox{}
+Rappresenta la percentuale di test eseguiti rispetto a quelli pianificati. Viene calcolata come
+\[\frac{N_{TE}}{N_{TT}} \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{TE}$: numero di test eseguiti;
+	\item $N_{TT}$: numero di test totali pianificati.
+\end{itemize}
+
+\subparagraph{Test superati}\mbox{}\\
+Indica la percentuale di test superati rispetto a quelli eseguiti. Viene calcolata come
+\[ \frac{N_{TS}}{N_{TE}} \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{TS}$: numero di test superati;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\subparagraph{Metriche di gestione degli errori}\mbox{}\\
+I parametri utilizzati:
+\begin{itemize}
+	\item \textbf{Criticità}: indica la gravità dell'errore rispetto all'avanzamento del progetto. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{bassa}: l'errore non compromette il corretto avanzamento del progetto;
+		\item \textbf{media}: l'errore non è bloccante, ma può compromettere il corretto avanzamento del progetto;
+		\item \textbf{alta}: l'errore è bloccante e compromette l'avanzamento del progetto.	
+	\end{itemize}
+	\item \textbf{Priorità}: indica la priorità di risoluzione dell'errore. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{bassa}: l'errore deve essere risolto entro la milestone successiva;
+		\item \textbf{media}: l'errore deve essere risolto entro una settimana dalla segnalazione;
+		\item \textbf{alta}: l'errore deve essere risolto nel più breve tempo possibile.
+	\end{itemize}
+	\item \textbf{Modalità}: indica la modalità di gestione dell'errore. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{correzione immediata}: il \Verificatore{} può correggere immediatamente l'errore se ne è in grado;
+		\item \textbf{segnalazione}: il \Verificatore{} deve effettuare una segnalazione, secondo le procedure indicate nelle \NormeDiProgetto{}.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Metriche di prodotto}
+Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
+
+\paragraph{Functional Size Measurement}\mbox{}\\
+Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
+Vantaggi di FSM:
+\begin{itemize}
+	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
+	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
+	\item può essere stimata dallo stato dei requisiti a priori.
+\end{itemize}
+\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.\\
+Il calcolo della copertura offerta è effettuato mediante la formula
+\[ \left(1 - \frac{N_{FM}}{N_{FI}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{FM}$: numero di funzionalità mancanti;
+	\item $N_{FI}$: numero di funzionalità individuate. 
+\end{itemize}
+
+\paragraph{Accuratezza rispetto alle attese}\mbox{}\\
+Rappresenta la percentuale di risultati dei test che rispettano quanto previsto. Viene calcolata come
+\[ \left(1 - \frac{N_{RD}}{N_{TE}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{RD}$: numero di test che producono risultati discordanti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Fallimento dei test}\mbox{}\\
+Rappresenta la percentuale di operazioni di test che si sono concluse con fallimento. Viene calcolato come
+\[ \frac{N_{FR}}{N_{TE}} \cdot 100\]
+dove
+\begin{itemize}
+	\item $N_{FR}$: numero di fallimenti ricevuti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Gestione delle operazioni non permesse}\mbox{}\\
+Rappresenta la percentuale di funzionalità che gestiscono correttamente errori che potrebbero verificarsi. Viene calcolato come
+\[ \frac{N_{EE}}{N_{TE}} \cdot 100\]
+dove
+\begin{itemize}
+	\item $N_{EE}$: numero di errori evitati durante i test;
+	\item $N_{TE}$: numero di test eseguiti che prevedono l'esecuzione di operazioni non corrette.
+\end{itemize} 
+
+
+\subsection{Validazione}
+L'attività di Validazione è necessaria per assicurare che il prodotto sia conforme ai requisiti.
+La validazione può essere eseguita attraverso i test di sistema per confermare che l'architettura progettata sia funzionante, corretta e soddisfi tutti i requisti. \\
+Vanno svolti collaudi interni per assicurare la buona riuscita della validazione di accettazione del prodotto, simulando i test che saranno in seguito eseguiti durante il collaudo esterno. In corrispondenza della \RA{} si esegue il collaudo finale volto a verificare la soddisfazione del Proponente, tramite test di validazione.
