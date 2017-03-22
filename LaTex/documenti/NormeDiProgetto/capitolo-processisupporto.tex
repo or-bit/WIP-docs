@@ -1,4 +1,4 @@
-\section{Processi di supporto}
+\section{Processi di supporto} \label{sec:supporto}
 \subsection{Documentazione}
 
 \subsubsection{Template}
@@ -287,7 +287,7 @@ Alcuni di questi sono:
 \end{itemize}
 Lo strumento utilizzato per questo tipo di analisi è \glossario{ESLint}, ottimizzato per la Airbnb JavaScript style guide indicata in \sezione{sec:convenzioni} di questo documento. ESLint viene descritto in \sezione{sec:eslint}.
 
-\subparagraph{Complexity report}\mbox{}\\
+\paragraph{Complexity report}\mbox{}\\
 È un'applicazione installabile come modulo per \glossario{Node.js} e misura metriche riguardanti codice \glossario{JavaScript}, in particolare:
 \begin{itemize}
 	\item complessità ciclomatica;
@@ -297,7 +297,7 @@ Lo strumento utilizzato per questo tipo di analisi è \glossario{ESLint}, ottimi
 	\item indice di manutenibilità.
 \end{itemize}
 
-\subparagraph{Analisi dinamica}\mbox{}\\
+\subsubsection{Analisi dinamica}\mbox{}\\
 \`{E} prevista l’attività di analisi dinamica per il software prodotto per verificarne il corretto funzionamento, in quanto si avvale dell'esecuzione di test su di esso.
 Vengono utilizzati gli strumenti \glossario{Mocha} e \glossario{Chai}, integrati con lo strumento di testing offerto da \glossario{Meteor}.\footnote{Per maggiori dettagli si rimanda al sito ufficiale https://guide.meteor.com/testing.html}
 
@@ -328,14 +328,14 @@ In particolare:
 	\item i test di validazione coincidono con il collaudo finale.
 \end{itemize}
 
-\paragraph{Metriche per la verifica}\mbox{}
-\subparagraph{Code coverage}\mbox{}\\
+\subsubsection{Metriche per la verifica}\mbox{}
+\paragraph{Code coverage}\mbox{}\\
 Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di codice di un modulo. Una copertura topologica del test del 100\% di tipo code coverage garantisce di aver eseguito almeno una volta tutte le istruzioni, ma non tutti i rami.
 
-\subparagraph{Modified condition/decision coverage (MC/DC)}\mbox{}\\
+\paragraph{Modified condition/decision coverage (MC/DC)}\mbox{}\\
 \`{E} una combinazione delle metriche di \textit{function coverage} (copertura delle funzioni chiamate) e \textit{branch coverage} (copertura dei branch delle strutture di controllo). Questa metrica richiede che ogni punto di entrata o uscita in un programma sia invocato almeno una volta e che per ogni decisione condizionale vengano considerati tutti i possibili esiti. La versione \textit{modified} richiede inoltre che entrambe le coperture siano soddisfatte, ed in particolare che ogni condizione influenzi gli esiti condizionali indipendentemente.\footnote{Si rimanda al seguente link \url{https://en.wikipedia.org/wiki/Code_coverage} per esempi esplicativi.}
 
-\subparagraph{Test eseguiti}\mbox{}
+\paragraph{Test eseguiti}\mbox{}
 Rappresenta la percentuale di test eseguiti rispetto a quelli pianificati. Viene calcolata come
 \[\frac{N_{TE}}{N_{TT}} \cdot 100 \]
 dove
@@ -344,7 +344,7 @@ dove
 	\item $N_{TT}$: numero di test totali pianificati.
 \end{itemize}
 
-\subparagraph{Test superati}\mbox{}\\
+\paragraph{Test superati}\mbox{}\\
 Indica la percentuale di test superati rispetto a quelli eseguiti. Viene calcolata come
 \[ \frac{N_{TS}}{N_{TE}} \cdot 100 \]
 dove
@@ -353,7 +353,7 @@ dove
 	\item $N_{TE}$: numero di test eseguiti.
 \end{itemize}
 
-\subparagraph{Metriche di gestione degli errori}\mbox{}\\
+\paragraph{Metriche di gestione degli errori}\mbox{}\\
 I parametri utilizzati:
 \begin{itemize}
 	\item \textbf{Criticità}: indica la gravità dell'errore rispetto all'avanzamento del progetto. Può assumere i seguenti valori:
