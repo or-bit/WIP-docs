@@ -39,7 +39,7 @@ Make sure your Docker installation is configured for volume mounting.
     -   **Docker for Unix/Linux**  
     *Repository cloned in <user> home directory: `/home/<user>/WIP-docs`*  
     `docker run -it --name PDF -v /home/<user>/WIP-docs:/data texpdfbuilder`
-    -   **Docker for Mac (tommaso testa please!)**  
+    -   **Docker for Mac**  
     *Repository cloned in <user> home directory: `/Users/<user>/WIP-docs`*  
     `docker run -it --name PDF -v /Users/<user>/WIP-docs:/data texpdfbuilder`
 
