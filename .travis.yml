@@ -20,7 +20,6 @@ deploy:
   overwrite: true
   on:
     repo: or-bit/WIP-docs
-    all_branches: true
     tags: true
     branch: master
 notifications:
