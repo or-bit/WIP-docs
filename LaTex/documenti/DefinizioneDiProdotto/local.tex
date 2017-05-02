@@ -29,13 +29,22 @@ Documento relativo alla descrizione del prodotto e dei componenti che costituisc
 %%%%%%%%%%%%%%
 
 % In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
+% Setter e getter per il nome::delle::classi::che::è::infinito::da::scrivere
 \newcommand{\class}{}
 \newcommand{\setclass}[1]{
 	\renewcommand{\class}{#1}
 }
 
-% This command doesn't work (YET!)
-%\newcommand{\lwclass}{\lw}
+% Comando per i riferimenti alle classi
+\newcommand{\cref}[1]{\hyperref[#1]{\texttt{#1}}}
+\newcommand{\coderef}[1]{\hyperref[#1]{\code{#1}}}
 
+% Change symbol for second level lists
+\renewcommand{\labelitemii}{$\circ$}
 
+\definecolor{green}{RGB}{0,102,0}
+\definecolor{blue}{RGB}{0,43,128}
+\newcommand{\method}[1]{\textcolor{blue}{\code{#1}}}
+\newcommand{\field}[1]{\textcolor{green}{\code{#1}}}
+\newcommand{\param}[1]{\textcolor{black}{\code{#1}}}
 
