@@ -201,16 +201,16 @@ Classe che permette di salvare una risposta API.
 	\end{itemize}
 \end{itemize}
 
-\setclass{Framework::Model::API::Partecipants::Partecipants}
-\subparagraph[::Partecipants::Partecipants]{\class}\mbox{}\\ \label{\class}
+%\setclass{Framework::Model::API::Partecipants::Partecipants}
+%\subparagraph[::Partecipants::Partecipants]{\class}\mbox{}\\ \label{\class}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=7cm]{./diagrammi/framework/model/api/partecipants.png}
 %	\caption{Classe \class}
 %\end{figure}
 
-\textbf{Descrizione:}\\
-Classe che permette di visualizzare la lista dei partecipanti della bubble e uno storico delle interazioni con essa.
+%\textbf{Descrizione:}\\
+%Classe che permette di visualizzare la lista dei partecipanti della bubble e uno storico delle interazioni con essa.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per monitorare gli accessi alla bubble.
@@ -228,7 +228,7 @@ Classe che permette di visualizzare la lista dei partecipanti della bubble e uno
 %\end{itemize}
 
 \setclass{Framework::Model::API::DBOperations::DBOperations}
-\subparagraph[::DBOperations]::DBOperations{\class}\mbox{}\\ \label{\class}
+\subparagraph[::DBOperations]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{./diagrammi/framework/model/api/dboperations.png}
@@ -268,16 +268,16 @@ Viene utilizzata per connettere la bubble al database e effettuare operazioni su
 	\end{itemize}
 \end{itemize}
 
-\setclass{Framework::Model::API::InputLimitation::InputLimitation}
-\subparagraph[::InputLimitation::InputLimitation]{\class}\mbox{}\\ \label{\class}
+%\setclass{Framework::Model::API::InputLimitation::InputLimitation}
+%\subparagraph[::InputLimitation::InputLimitation]{\class}\mbox{}\\ \label{\class}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=7cm]{./diagrammi/framework/model/api/inputlimitation.png}
 %	\caption{Classe \class}
 %\end{figure}
 
-\textbf{Descrizione:}\\
-Classe che permette di effettuare controlli dell'input.
+%\textbf{Descrizione:}\\
+%Classe che permette di effettuare controlli dell'input.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per controllare e limitare le interazioni con la bubble.
@@ -294,16 +294,16 @@ Classe che permette di effettuare controlli dell'input.
 %\begin{itemize}
 %\end{itemize}
 
-\setclass{Framework::Model::API::Timing::Timing}
-\subparagraph[::Timing::Timing]{\class}\mbox{}\\ \label{\class}
+%\setclass{Framework::Model::API::Timing::Timing}
+%\subparagraph[::Timing::Timing]{\class}\mbox{}\\ \label{\class}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=7cm]{./diagrammi/framework/model/api/timing.png}
 %	\caption{Classe \class}
 %\end{figure}
 
-\textbf{Descrizione:}\\
-Classe che permette di pianificare l'esecuzione di azioni ed eventi.
+%\textbf{Descrizione:}\\
+%Classe che permette di pianificare l'esecuzione di azioni ed eventi.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per la gestione delle scadenze o di eventi ripetuti in modo automatico.
@@ -320,16 +320,16 @@ Classe che permette di pianificare l'esecuzione di azioni ed eventi.
 %\begin{itemize}
 %\end{itemize}
 
-\setclass{Framework::Model::API::File::File}
-\subparagraph[::File::File]{\class}\mbox{}\\ \label{\class}
+%\setclass{Framework::Model::API::File::File}
+%\subparagraph[::File::File]{\class}\mbox{}\\ \label{\class}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=7cm]{./diagrammi/framework/model/api/file.png}
 %	\caption{Classe \class}
 %\end{figure}
 
-\textbf{Descrizione:}\\
-Classe che permette di gestire file.
+%\textbf{Descrizione:}\\
+%Classe che permette di gestire file.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per convertire del testo in PDF e salvare dei file.
@@ -346,16 +346,16 @@ Classe che permette di gestire file.
 %\begin{itemize}
 %\end{itemize}
 
-\setclass{Framework::Model::API::JSONControl::JSONControl}
-\subparagraph[::JSONControl::JSONControl]{\class}\mbox{}\\ \label{\class}
+%\setclass{Framework::Model::API::JSONControl::JSONControl}
+%\subparagraph[::JSONControl::JSONControl]{\class}\mbox{}\\ \label{\class}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=7cm]{./diagrammi/framework/model/api/jsoncontrol.png}
 %	\caption{Classe \class}
 %\end{figure}
 
-\textbf{Descrizione:}\\
-Classe che permette di effettuare un controllo sullo schema di un file JSON.
+%\textbf{Descrizione:}\\
+%Classe che permette di effettuare un controllo sullo schema di un file JSON.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per verificare che il JSON prodotto sia conforme ad uno schema fornito.
@@ -502,13 +502,13 @@ Viene utilizzata come base per creare le bubble.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{GenericBubble(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
+	\item \method{+ GenericBubble(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
 	\begin{itemize}
 		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
 	\end{itemize}
-	\item \method{\textit{+ aliveRender(): React.Component}}: renderizza la bubble mentre è in vita;
-	\item \method{\textit{+ notAliveRender(): React.Component}}: renderizza la bubble a vita terminata;
-	\item \method{+ render(): React.Component}: renderizza la bubble.
+	\item \method{\textit{+ aliveRender(): React::Component}}: renderizza la bubble mentre è in vita;
+	\item \method{\textit{+ notAliveRender(): React::Component}}: renderizza la bubble a vita terminata;
+	\item \method{+ render(): React::Component}: renderizza la bubble.
 \end{itemize}
 
 \setclass{Framework::View}
@@ -550,11 +550,11 @@ Viene utilizzato per raggruppare blocchi di elementi correlati tra loro.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{GUIContainer(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
+	\item \method{+ GUIContainer(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
 	\begin{itemize}
 		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
 	\end{itemize}
-	\item \method{+ render(): React.Component}: renderizza il contenitore.
+	\item \method{+ render(): React::Component}: renderizza il contenitore.
 \end{itemize}
 
 \setclass{Framework::View::GUI::GUI}
@@ -587,12 +587,12 @@ Viene utilizzato per costruire gli elementi grafici.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
+	\item \method{+ GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
 	\begin{itemize}
 		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
 		\item \param{WrappedComponent: class}: componente da creare;
 	\end{itemize}
-	\item \method{+ render(): React.Component}: renderizza il componente.
+	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
 
 \setclass{Framework::View::GUI::BarChart}
@@ -620,16 +620,16 @@ Classe che rappresenta un grafico a istogramma.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{props: Object[]}: proprietà della classe.
+	\item \field{- props: Object[]}: proprietà della classe.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{BarChart(props: Object[])}: costruttore, assegna le proprietà;
+	\item \method{+ BarChart(props: Object[])}: costruttore, assegna le proprietà;
 	\begin{itemize}
 		\item \param{props: Object[]}: array di oggetti contenenti le proprietà;
 	\end{itemize}
-	\item \method{+ render(): React.Component}: renderizza il componente.
+	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
 
 \setclass{Framework::View::GUI::Button}
@@ -657,7 +657,7 @@ Viene utilizzato per i bottoni generici all'interno della bubble.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{props: Object[]}: array contenente le proprietà.
+	\item \field{- props: Object[]}: array contenente le proprietà.
 \end{itemize}
 
 \textbf{Metodi:}
@@ -666,7 +666,7 @@ Viene utilizzato per i bottoni generici all'interno della bubble.
 	\begin{itemize}
 		\item \param{props: Object[]}: array di oggetti contenenti le proprietà;
 	\end{itemize}
-	\item \method{+ render(): React.Component}: renderizza il componente.
+	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
 
 \setclass{Framework::View::GUI::CheckBox}
@@ -694,16 +694,414 @@ Viene utilizzata per costruire gli elementi della to-do list.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{props: Object[]}: array contenente le proprietà della classe;
-	\item \field{checked: boolean}: indica lo stato della checkbox.
+	\item \field{- props: Object[]}: array contenente le proprietà della classe;
+	\item \field{- checked: boolean}: indica lo stato della checkbox.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{CheckBox(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ CheckBox(props: Object[])}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
 		\item \param{props: Object[]}: array contenente le proprietà della classe;
 	\end{itemize}
-	\item \method{+ render(): React.Component}: renderizza il componente.
+	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
 
+\setclass{Framework::View::CheckBoxGroup}
+\paragraph[::CheckBoxGroup]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{./diagrammi/framework/view/gui/checkboxgroup.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta una contenitore di checkbox.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per racchiudere gli elementi della to-do list.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- checks: CheckBox[]}: array contenente le checkbox;
+	\item \field{- props: Object[]}: array contenente le proprietà della classe.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ CheckBoxGroup(checks: CheckBox[], props: Object[])}: costruttore della classe, assegna le proprietà:
+	\begin{itemize}
+		\item \param{checks: CheckBox[]}: array contenente le checkbox;
+		\item \param{props: Object[]}: array contenente le proprietà della classe;
+	\end{itemize}
+	\item \method{+ processInput(): React::Component}: renderizza i singoli componenti CheckBox;
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::Image}
+\paragraph[::Image]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/image.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta una immagine.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per inserire qualsiasi tipo di immagine.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- caption: string}: descrizione testuale dell'immagine;
+	\item \field{- src: string}: URI dell'immagine.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ Image(caption: string, src: string)}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{caption: string}: descrizione testuale dell'immagine;
+		\item \param{src: string}: URI dell'immagine;
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::InputFile}
+\paragraph[::InputFile]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/inputfile.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che permette di caricare un file.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per caricare file.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- id: string}: id dell'input;
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ InputFile(id: string)}: costruttore della classe, assegna l'id:
+	\begin{itemize}
+		\item \param{id: string}: id da assegnare;
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::InputText}
+\paragraph[::InputText]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/inputtext.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un form di inserimento testo.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per permettere raccogliere informazioni testuali inserite dall'utente.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- id: string}: id dell'input;
+	\item \field{- value: string}: testo di default.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ InputText(id: string, value: string)}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{id: string}: id da assegnare al componente;
+		\item \param{value: string}: valore da visualizzare;
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::Label}
+\paragraph[::Label]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/label.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta una label per un generico campo di inserimento dati.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata assieme ai campi input per assegnarci un'etichetta descrittiva.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- forId: string}: id del componente input associato;
+	\item \field{- value: string}: descrizione del componente input.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ Label(forId: string, value: string)}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{forId: string}: id del componente input da descrivere;
+		\item \param{value: string}: descrizione dell'input da immettere;
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::PieChart}
+\paragraph[::PieChart]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/piechart.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un grafico a torta.
+
+%\textbf{Utilizzo:}\\
+%Viene utilizzata per inserire qualsiasi tipo di immagine.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{Rechart::PieChart}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- props: Object[]}: proprietà della classe.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ PieChart(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\begin{itemize}
+		\item \param{props: Object[]}: proprietà dell'oggetto da costruire;
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::RadioButton}
+\paragraph[::RadioButton]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{./diagrammi/framework/view/gui/radiobutton.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta una bottone radio.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per i bottoni radio all'interno della bubble.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- value: string}: valore del bottone;
+	\item \field{- groupName: string}: identificativo del gruppo di bottoni di appartenenza;
+	\item \field{- checked: boolean}: stato di selezione;
+	\item \field{- label: string}: descrizione testuale del bottone;
+	\item \field{- optional: Object[]}: array contenente proprietà opzionali.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ RadioButton(value: string, groupName: string, checked: boolean, label: string, optional: Object[])}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{value: string}: valore del bottone;
+		\item \param{groupName: string}: nome del gruppo di appartenenza;
+		\item \param{checked: boolean}: setta il bottone come selezionato se true (solo uno per gruppo dovrebbe avere questo parametro a true);
+		\item \param{label: string}: descrizione testuale del bottone;
+		\item \param{optional: Object[]}: array di oggetti contenente proprietà opzionali;
+	\end{itemize}
+	\item \method{+ onChange(): void}: comportamento da adottare quando lo stato \texttt{checked} varia;
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+\setclass{Framework::View::RadioButtonGroup}
+\paragraph[::RadioButtonGroup]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{./diagrammi/framework/view/gui/radiobuttongroup.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un contenitore per bottoni radio.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata nella bubble per raggruppare bottoni radio affini.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- selected: string}: valore del bottone selezionato;
+	\item \field{- groupName: string}: nome identificativo del gruppo;
+	\item \field{- buttons: RadioButton[]}: array di bottoni radio appartenenti al gruppo;
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ RadioButtonGroup(groupName: string, buttons: RadioButton[])}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{groupName: string}: nome del gruppo;
+		\item \param{buttons: RadioButton[]}: insieme di bottoni radio da assegnare all'istanza del gruppo;
+	\end{itemize}
+	\item \method{+ onCheckedChange(value: string): void}: aggiorna il valore di \texttt{selected};
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+
+\setclass{Framework::View::TextEdit}
+\paragraph[::TextEdit]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=9cm]{./diagrammi/framework/view/gui/textedit.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un campo di testo modificabile.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per permettere l'inserimento di più righe di testo.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- value: string}: valore di default del testo;
+	\item \field{- name: string}: identificativo del campo di testo;
+	\item \field{- label: string}: descrizione testuale dell'input.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ TextEdit(value: string, name: string, label: string)}: costruttore della classe, assegna gli attributi:
+	\begin{itemize}
+		\item \param{value: string}: descrizione testuale dell'input;
+		\item \param{name: string}: identificativo del campo di testo;
+		\item \param{label: string}: descrizione testuale dell'input;
+	\end{itemize}
+	\item \method{+ handleChange(event: Event): void}: aggiorna lo stato del componente;
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
+
+
+\setclass{Framework::View::TextView}
+\paragraph[::TextView]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/framework/view/gui/textview.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che visualizza del testo non modificabile.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per mostrare testo generico.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}
+\end{itemize}
+
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item 
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- text: string}: testo visualizzato.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ TextView(text: string)}: costruttore della classe:
+	\begin{itemize}
+		\item \param{text: string}: testo da visualizzare.
+	\end{itemize}
+	\item \method{+ render(): React::Component}: renderizza il componente.
+\end{itemize}
