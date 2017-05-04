@@ -10,7 +10,7 @@ Il server è composto dall'OrderGateway, che ne è la base, dal package Order, c
 \paragraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=15cm]{./diagrammi/demo/order.png}
+	\includegraphics[width=12cm]{./diagrammi/demo/server/orderpkg.png}
 	\caption{Componente \class}
 \end{figure}
 
@@ -20,14 +20,14 @@ Questo componente ha la funzione di rappresentare gli ordini.
 \subparagraph[::OrderContainer]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-	%	\includegraphics[width=15cm]{./diagrammi/demo/server/order/ordercontainer.png}
+	\includegraphics[width=7cm]{./diagrammi/demo/server/order/ordercontainer.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
 Classe che rappresenta un contenitore per gli ordini.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata come contenitore comune per tutti gli utenti.
+Viene utilizzata come contenitore comune degli ordini attivi per tutti gli utenti interni al ristorante.
 
 %\textbf{Classi ereditate:}
 %\begin{itemize}
@@ -50,21 +50,22 @@ Viene utilizzata come contenitore comune per tutti gli utenti.
 	\begin{itemize}
 		\item \param{order: Order}: il nuovo ordine da processare;
 	\end{itemize}
-	\item \method{+ complete()}
+	\item \method{+ complete(orderId: int): Order}: l'ordine con id \texttt{orderId} viene completato e il suo stato aggiornato;
+	\item \method{+ delete(orderId: int): Order[]}: l'ordine con id \texttt{orderId} viene eliminato dalla lista degli ordini attivi.
 \end{itemize}
 
 \setclass{BubbleAndEat::OrderGateway::Order::Order}
 \subparagraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=15cm]{./diagrammi/demo/server/order/order.png}
+	\includegraphics[width=15cm]{./diagrammi/demo/server/order/order.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
 Classe che rappresenta un singolo ordine.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per creare e effettuare operazioni sugli ordini.
+Viene utilizzata per rappresentare i singoli ordini effettuati dai clienti, ovvero l'insieme delle pietanze che un utente ha ordinato.
 
 %\textbf{Classi ereditate:}
 %\begin{itemize}
@@ -80,13 +81,13 @@ Viene utilizzata per creare e effettuare operazioni sugli ordini.
 \begin{itemize}
 	\item \field{- id: int}: numero identificativo dell'ordine;
 	\item \field{- client: Client}: cliente che ha effettuato l'ordine;
-	\item \field{- dishes: MenuItem[]}: lista dei piatti ordinati;
+	\item \field{- dishes: OrderItem[]}: lista dei piatti ordinati;
 	\item \field{- state: string}: indica lo stato di avanzamento dell'ordine.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ Order(client: Client, dishes: MenuItem[])}: costruttore, crea un nuovo ordine con cliente e pietanze ordinate:
+	\item \method{+ Order(client: Client, dishes: OrderItem[])}: costruttore, crea un nuovo ordine con cliente e pietanze ordinate:
 	\begin{itemize}
 		\item \param{client: Client}: cliente che ha effettuato l'ordine;
 		\item \param{dishes: MenuItem[]}: pietanze ordinate;
@@ -98,7 +99,7 @@ Viene utilizzata per creare e effettuare operazioni sugli ordini.
 \subparagraph[::OrderItem]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=7cm]{./diagrammi/demo/server/order/orderitem.png}
+	\includegraphics[width=12cm]{./diagrammi/demo/server/order/orderitem.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
