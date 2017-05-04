@@ -6,6 +6,44 @@
 \end{figure}
 Il server è composto dall'OrderGateway, che ne è la base, dal package Order, che contiene le classi che rappresentano degli ordini, e da Menu, il quale fornisce e gestisce varie operazioni.
 
+\setclass{BubbleAndEat::OrderGateway::OrderGateway}
+\subparagraph[::OrderContainer]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+%	\includegraphics[width=7cm]{./diagrammi/demo/server/ordergateway.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un gateway per le comunicazioni tra le bubble e il server.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni alle giuste bubble attraverso appositi handler.
+
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{}.
+%\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+%\begin{itemize}
+%	\item \field{- }: array contenente gli ordini, inizializzato di default ad un array vuoto. È statico in quanto la lista degli ordini è condivisa da tutte le bubble.
+%\end{itemize}
+
+\textbf{Metodi:}
+%\begin{itemize}
+%	\item \method{+ process(order: Order): Order[]}: processa l'ordine, lo imposta come attivo e lo aggiunge all'array \texttt{orders}:
+%	\begin{itemize}
+%		\item \param{order: Order}: il nuovo ordine da processare;
+%	\end{itemize}
+%	\item \method{+ complete(orderId: int): Order}: l'ordine con id \texttt{orderId} viene completato e il suo stato aggiornato;
+%	\item \method{+ delete(orderId: int): Order[]}: l'ordine con id \texttt{orderId} viene eliminato dalla lista degli ordini attivi.
+%\end{itemize}
+
 \setclass{BubbleAndEat::OrderGateway::Order}
 \paragraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
@@ -183,3 +221,55 @@ Viene utilizzata per creare le singole pietanze da mostrare nel menu e da inseri
 	\item \method{+ setDesctiption(description: string): void}: setter per \texttt{description};
 \end{itemize}
 
+\setclass{BubbleAndEat::OrderGateway::Menu}
+\paragraph[::Menu]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{./diagrammi/demo/server/menu.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta il menu.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per raccogliere e gestire le pietanze disponibili nel ristorante.
+
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{}.
+%\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- dishes: MenuItem[] = []}: array contenete le pietanze del menu;
+	\item \field{- date: Date = new Date()}: data di creazione del menu;
+	\item \field{- nextId: int = 0}: numero di pietanze inserite e id per la nuova pietanza da inserire.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ Menu()}: costruttore di default;
+	\item \method{+ Menu(dishes: MenuItem[])}: costruttore, inizializza l'array delle pietanze:
+	\begin{itemize}
+		\item \param{dishes: MenuItem[]}: array di pietanze;
+	\end{itemize}
+	\item \method{+ getMenu(): MenuItem[]} getter per \texttt{dishes};
+	\item \method{+ addDish(dish: MenuItem): Menu}: permette di aggiungere una pietanza al menu:
+	\begin{itemize}
+		\item \param{dish: Menuitem}: pietanza da aggiungere
+	\end{itemize}
+	\item \method{+ removeDish(dishId: int): Menu} rimuove la pietanza con id \texttt{dishId} dal menu:
+	\begin{itemize}
+		\item \param{dishId: int}: id della pietanza da rimuovere;
+	\end{itemize}
+	\item \method{+ modifyDish(id: int, dish: MenuItem): Menu}: modifica la pietanza con id \texttt{id} in \texttt{dish}:
+	\begin{itemize}
+		\item \param{id: int}: id della pietanza da modificare;
+		\item \param{dish: MenuItem}: pietanza con informazioni aggiornate.
+	\end{itemize}
+\end{itemize}
