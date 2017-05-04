@@ -16,6 +16,43 @@ Il server è composto dall'OrderGateway, che ne è la base, dal package Order, c
 
 Questo componente ha la funzione di rappresentare gli ordini.
 
+\setclass{BubbleAndEat::OrderGateway::Order::OrderContainer}
+\subparagraph[::OrderContainer]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	%	\includegraphics[width=15cm]{./diagrammi/demo/server/order/ordercontainer.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta un contenitore per gli ordini.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata come contenitore comune per tutti gli utenti.
+
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{}.
+%\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- \ul{orders: Order[] = []}}: array contenente gli ordini, inizializzato di default ad un array vuoto. È statico in quanto la lista degli ordini è condivisa da tutte le bubble.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ process(order: Order): Order[]}: processa l'ordine, lo imposta come attivo e lo aggiunge all'array \texttt{orders}:
+	\begin{itemize}
+		\item \param{order: Order}: il nuovo ordine da processare;
+	\end{itemize}
+	\item \method{+ complete()}
+\end{itemize}
+
 \setclass{BubbleAndEat::OrderGateway::Order::Order}
 \subparagraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
@@ -41,14 +78,20 @@ Viene utilizzata per creare e effettuare operazioni sugli ordini.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{id: int}: numero identificativo dell'ordine;
-	\item \field{client: Client}: cliente che ha effettuato l'ordine;
-	\item \field{dishes: MenuItem[]}: lista dei piatti ordinati;
+	\item \field{- id: int}: numero identificativo dell'ordine;
+	\item \field{- client: Client}: cliente che ha effettuato l'ordine;
+	\item \field{- dishes: MenuItem[]}: lista dei piatti ordinati;
+	\item \field{- state: string}: indica lo stato di avanzamento dell'ordine.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{process}
+	\item \method{+ Order(client: Client, dishes: MenuItem[])}: costruttore, crea un nuovo ordine con cliente e pietanze ordinate:
+	\begin{itemize}
+		\item \param{client: Client}: cliente che ha effettuato l'ordine;
+		\item \param{dishes: MenuItem[]}: pietanze ordinate;
+	\end{itemize}
+	\item \method{+ setState(state: string): void}: permette di aggiornare lo stato dell'ordine.
 \end{itemize}
 
 \setclass{BubbleAndEat::OrderGateway::OrderItem}
@@ -138,3 +181,4 @@ Viene utilizzata per creare le singole pietanze da mostrare nel menu e da inseri
 	\item \method{+ getDescription(): string} getter per \texttt{description};
 	\item \method{+ setDesctiption(description: string): void}: setter per \texttt{description};
 \end{itemize}
+
