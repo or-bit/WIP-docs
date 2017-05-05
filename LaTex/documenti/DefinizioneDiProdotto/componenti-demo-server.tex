@@ -1,12 +1,13 @@
-\subsubsection{Server - OrderGateway}
+\setclass{BubbleAndEat::Restaurant::OrderGateway}
+\subsubsection{Server - \class}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm]{./diagrammi/demo/server/ordergatewaypkg.png}
-	\caption{Componente OrderGateway}
+	\caption{Componente \class}
 \end{figure}
 La parte server della \DemoName{} è formata da OrderGateway, la classe principale che amministra tutte le operazioni legate al server stesso, Server, che crea il server vero e proprio, Menu e MenuItem, che rappresentano il menu del ristorante, e dai package Order e Handler, che si occupano rispettivamente di rappresentare gli ordini e di gestire le richieste da parte delle bubble. 
 
-\setclass{BubbleAndEat::OrderGateway::Server}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Server}
 \paragraph[::Server]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -48,7 +49,7 @@ Viene utilizzata per inizializzare il server stesso e i socket.
 	\item \method{+ getSocket(): socket.io}: getter per \texttt{socket};
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::OrderGateway}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::OrderGateway}
 \paragraph[::OrderGateway]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -91,7 +92,7 @@ Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni
 	\item \method{+ handle(socket: socket.io, authData: string): void}: gestisce le connessioni indirizzandole al corretto handler.
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Handlers}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Handlers}
 \paragraph[::Handlers]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -100,7 +101,7 @@ Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni
 \end{figure}
 Questo componente raggruppa gli handler per le varie bubble. Gli handler hanno lo scopo di gestire le richieste delle bubble. Sono presenti ManagerHandler, CustomerHandler e ChefHandler.
 
-\setclass{BubbleAndEat::OrderGateway::Handlers::Handler}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Handlers::Handler}
 \subparagraph[::Handler]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -120,9 +121,9 @@ Viene utilizzata per gestire gli handlers tramite polimorfismo.
 %
 \textbf{Sottoclassi:}
 \begin{itemize}
-	\item \coderef{BubbleAndEat::OrderGateway::Handlers::ManagerHandler}.
-	\item \coderef{BubbleAndEat::OrderGateway::Handlers::ChefHandler}.
-	\item \coderef{BubbleAndEat::OrderGateway::Handlers::CustomerHandler}.
+	\item \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler}.
+	\item \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ChefHandler}.
+	\item \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler}.
 \end{itemize}
 
 \textbf{Attributi:}
@@ -146,7 +147,7 @@ Viene utilizzata per gestire gli handlers tramite polimorfismo.
 	\item \method{+ disconnect(): void}: termina la connessione e le comunicazioni del Manager con il server.
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Handlers::ManagerHandler}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler}
 \subparagraph[::ManagerHandler]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -161,7 +162,7 @@ Viene utilizzata per gestire l'autenticazione del Manager ed eseguire le operazi
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \coderef{BubbleAndEat::OrderGateway::Handlers::Handler}.
+	\item \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::Handler}.
 \end{itemize}
 %
 %\textbf{Sottoclassi:}
@@ -204,7 +205,7 @@ Viene utilizzata per gestire l'autenticazione del Manager ed eseguire le operazi
 	\end{itemize}
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Handlers::ChefHandler}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Handlers::ChefHandler}
 \subparagraph[::ChefHandler]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -247,7 +248,7 @@ Viene utilizzata per gestire l'autenticazione dello Chef ed eseguire le operazio
 \end{itemize}
 
 
-\setclass{BubbleAndEat::OrderGateway::Handlers::CustomerHandler}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler}
 \subparagraph[::CustomerHandler]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -262,7 +263,7 @@ Viene utilizzata per gestire l'autenticazione del Customer ed eseguire le operaz
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \coderef{BubbleAndEat::OrderGateway::Handlers::Handler}.
+	\item \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::Handler}.
 \end{itemize}
 %
 %\textbf{Sottoclassi:}
@@ -293,7 +294,7 @@ Viene utilizzata per gestire l'autenticazione del Customer ed eseguire le operaz
 	\item \method{+ getMenu(): Menu}: recupera il menu dallo store e lo ritorna.
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::MenuItem}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::MenuItem}
 \paragraph[::MenuItem]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -343,7 +344,7 @@ Viene utilizzata per creare le singole pietanze da mostrare nel menu e da inseri
 	\item \method{+ setDesctiption(description: string): void}: setter per \texttt{description};
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Menu}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Menu}
 \paragraph[::Menu]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -396,7 +397,7 @@ Viene utilizzata per raccogliere e gestire le pietanze disponibili nel ristorant
 	\end{itemize}
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Order}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Order}
 \paragraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -406,7 +407,7 @@ Viene utilizzata per raccogliere e gestire le pietanze disponibili nel ristorant
 
 Questo componente ha la funzione di rappresentare gli ordini.
 
-\setclass{BubbleAndEat::OrderGateway::Order::OrderContainer}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Order::OrderContainer}
 \subparagraph[::OrderContainer]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -444,7 +445,7 @@ Viene utilizzata come contenitore comune degli ordini attivi per tutti gli utent
 	\item \method{+ delete(orderId: int): Order[]}: l'ordine con id \texttt{orderId} viene eliminato dalla lista degli ordini attivi.
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::Order::Order}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::Order::Order}
 \subparagraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
@@ -485,7 +486,7 @@ Viene utilizzata per rappresentare i singoli ordini effettuati dai clienti, ovve
 	\item \method{+ setState(state: string): void}: permette di aggiornare lo stato dell'ordine.
 \end{itemize}
 
-\setclass{BubbleAndEat::OrderGateway::OrderItem}
+\setclass{BubbleAndEat::Restaurant::OrderGateway::OrderItem}
 \subparagraph[::OrderItem]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
