@@ -1,16 +1,58 @@
 \subsubsection{Server - OrderGateway}
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=15cm]{./diagrammi/demo/server.png}
+	\includegraphics[width=15cm]{./diagrammi/demo/server/ordergatewaypkg.png}
 	\caption{Componente OrderGateway}
 \end{figure}
-Il server è composto dall'OrderGateway, che ne è la base, dal package Order, che contiene le classi che rappresentano degli ordini, e da Menu, il quale fornisce e gestisce varie operazioni.
+La parte server della \DemoName{} è formata da OrderGateway, la classe principale che amministra tutte le operazioni legate al server stesso, Server, che crea il server vero e proprio, Menu e MenuItem, che rappresentano il menu del ristorante, e dai package Order e Handler, che si occupano rispettivamente di rappresentare gli ordini e di gestire le richieste da parte delle bubble. 
+
+\setclass{BubbleAndEat::OrderGateway::Server}
+\paragraph[::Server]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=5cm]{./diagrammi/demo/server/server.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta il server.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per inizializzare il server stesso e i socket.
+
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{}.
+%\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- app: Express}: applicazione Express;
+	\item \field{- server: http.Server}: server http;
+	\item \field{- socket: socket.io}: socket sul server;
+	\item \field{- handlers: Map<string, Handler>}: oggetto che contiene gli handlers associati ad una chiave letterale.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ Server()}: costruttore di default, inizializza gli attributi;
+	\item \method{+ open(port: int): void}: mette in ascolto il server sulla porta indicata:
+	\begin{itemize}
+		\item \param{port: int}: porta da ascoltare;
+	\end{itemize}
+	\item \method{+ close(): void}: termina il server;
+	\item \method{+ getSocket(): socket.io}: getter per \texttt{socket};
+\end{itemize}
 
 \setclass{BubbleAndEat::OrderGateway::OrderGateway}
 \paragraph[::OrderGateway]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=7cm]{./diagrammi/demo/server/ordergateway.png}
+	\includegraphics[width=8cm]{./diagrammi/demo/server/ordergateway.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
@@ -33,21 +75,223 @@ Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni
 \begin{itemize}
 	\item \field{- mongoClient: MongoClient}: database MongoDB;
 	\item \field{- mongoUrl: string}: URI del database;
-	\item \field{- store: Redux::Store}: oggetto contenente lo stato dell'applicazione.
+	\item \field{- store: Redux::Store}: oggetto contenente lo stato dell'applicazione;
+	\item \field{- handlers: map<string, Handler>}: oggetto che contiene gli handlers associati ad una chiave letterale.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
 	\item \method{+ OrderGateway()}: costruttore, inizializza lo stato dell'applicazione recuperandolo, se possibile, dal database;
-	\item \method{+ saveStatetoDB(): void}: effettua la connessione al database e salva lo stato dell'applicazione;
+	\item \method{+ saveStateToDB(): void}: effettua la connessione al database e salva lo stato dell'applicazione;
 	\item \method{+ addCompletedOrderToDB(ordination: Order): void}: aggiunge l'ordine alla collezione degli ordini completati sul database:
 	\begin{itemize}
 		\item \param{ordination: Order}: l'ordine completato da aggiungere;
 	\end{itemize}
 	\item \method{+ run(): void}: avvia il server;
-	\item \method{+ handler(socket: Socket.Io): void}: gestisce le connessioni indirizzandole al corretto handler.
+	\item \method{+ handle(socket: socket.io, authData: string): void}: gestisce le connessioni indirizzandole al corretto handler.
 \end{itemize}
 
+\setclass{BubbleAndEat::OrderGateway::Handlers}
+\paragraph[::Handlers]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{./diagrammi/demo/server/handlerpkg.png}
+	\caption{Classe \class}
+\end{figure}
+Questo componente raggruppa gli handler per le varie bubble. Gli handler hanno lo scopo di gestire le richieste delle bubble. Sono presenti ManagerHandler, CustomerHandler e ChefHandler.
+
+\setclass{BubbleAndEat::OrderGateway::Handlers::Handler}
+\subparagraph[::Handler]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{./diagrammi/demo/server/handlers/handler.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe astratta che fornisce una base comune per gli handlers.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per gestire gli handlers tramite polimorfismo.
+
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{}.
+%\end{itemize}
+%
+\textbf{Sottoclassi:}
+\begin{itemize}
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::ManagerHandler}.
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::ChefHandler}.
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::CustomerHandler}.
+\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- orders: OrderContainer}: ordini del ristorante;
+	\item \field{- socket: socket.io}: socket per le comunicazioni con il server;
+	\item \field{- store: Redux::Store}: store redux dell'appicazione.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{\# Handler(orders: OrderContainer[], socket: socket.io, store: Redux::Store)}: costruttore, assegna i parametri agli attributi:
+	\begin{itemize}
+		\item \param{orders: OrderContainer}: contenitore degli ordini;
+		\item \param{socket: socket.io}: socket di connessione;
+		\item \param{store: Redux::Store}: store dell'applicazione;
+	\end{itemize}
+	\item \method{+ getOrders(): OrderContainer}: getter per \texttt{orders};
+	\item \method{+ getSocket(): socket.io}: getter per \texttt{socket};
+	\item \method{+ getStore(): Redux::Store}: getter per \texttt{store};
+	\item \method{+ disconnect(): void}: termina la connessione e le comunicazioni del Manager con il server.
+\end{itemize}
+
+\setclass{BubbleAndEat::OrderGateway::Handlers::ManagerHandler}
+\subparagraph[::ManagerHandler]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{./diagrammi/demo/server/handlers/managerhandler.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che gestisce le richieste provenienti dalla bubble ManagerBubble.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per gestire l'autenticazione del Manager ed eseguire le operazioni richieste dalla bubble lato client sul server.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::Handler}.
+\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- menu: Menu}: menu del ristorante.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ ManagerHandler(socket: socket.io, store: Redux::Store)}: costruttore, assegna i parametri agli attributi:
+	\begin{itemize}
+		\item \param{socket: socket.io}: socket contenente i parametri di connessione;
+		\item \param{store: Redux::Store}: store dell'applicazione;
+	\end{itemize}
+	\item \method{+ showMenu(): Menu}: ritorna il menu del ristorante;
+	\item \method{+ addDish(dish: MenuItem): MenuItem}: aggiunge una pietanza al menu:
+	\begin{itemize}
+		\item \param{dish: MenuItem}: la pietanza da aggiungere;
+	\end{itemize}
+	\item \method{+ removeDish(id: int): int}: rimuove la pietanza dal menu:
+	\begin{itemize}
+		\item \param{id: int}: id della pietanza da rimuovere;
+	\end{itemize}
+	\item \method{+ editDish(id: int, dish: MenuItem): MenuItem}: modifica la pietanza del menu in \texttt{dish}:
+	\begin{itemize}
+		\item \param{id: int}: id della pietanza da modificare;
+		\item \param{dish: MenuItem}: pietanza con dati aggiornati;
+	\end{itemize}
+	\item \method{+ getAllOrders(): OrderContainer}: ritorna tutti gli ordini presenti nell'applicazione;
+	\item \method{+ getActiverOrders(): OrderContainer}: ritorna tutti gli ordini attivi (non completati) dell'applicazione;
+	\item \method{+ getCompletedOrders(): OrderContainer}: ritorna tutti gli ordini completati dell'applicazione;
+	\item \method{+ deleteOrder(id: int): int}: elimina l'ordine dall'applicazione:
+	\begin{itemize}
+		\item \param{id: int}: id dell'ordine da eliminare.
+	\end{itemize}
+\end{itemize}
+
+\setclass{BubbleAndEat::OrderGateway::Handlers::ChefHandler}
+\subparagraph[::ChefHandler]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{./diagrammi/demo/server/handlers/chefhandler.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che gestisce le richieste provenienti dalla bubble ChefBubble.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per gestire l'autenticazione dello Chef ed eseguire le operazioni richieste dalla bubble lato client sul server.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::Handler}.
+\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+%\textbf{Attributi:}
+%\begin{itemize}
+%\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ ChefHandler(socket: socket.io, store: Redux::Store, orders: OrderContainer)}: costruttore, assegna i parametri agli attributi e salva nello store la presenza dello Chef:
+	\begin{itemize}
+		\item \param{socket: socket.io}: socket contenente i parametri di connessione;
+		\item \param{store: Redux::Store}: store dell'applicazione;
+		\item \param{orders: OrderContainer}: contenitore di ordini nello stato di \virgolette{attivo};
+	\end{itemize}
+	\item \method{+ notify(): OrderContainer}: notifica lo Chef di una nuova ordinazione da preparare;
+	\item \method{+ completeOrder(id: int): void}: salva l'ordine come completato:
+	\begin{itemize}
+		\item \param{id: int}: id dell'ordine completato.
+	\end{itemize}
+\end{itemize}
+
+
+\setclass{BubbleAndEat::OrderGateway::Handlers::CustomerHandler}
+\subparagraph[::CustomerHandler]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{./diagrammi/demo/server/handlers/customerhandler.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che gestisce le richieste provenienti dalla bubble CustomerBubble.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per gestire l'autenticazione del Customer ed eseguire le operazioni richieste dalla bubble lato client sul server.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \coderef{BubbleAndEat::OrderGateway::Handlers::Handler}.
+\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+%\textbf{Attributi:}
+%\begin{itemize}
+%\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ CustomerHandler(socket: socket.io, store: Redux::Store, orders: OrderContainer)}: costruttore, assegna i parametri agli attributi:
+	\begin{itemize}
+		\item \param{socket: socket.io}: socket contenente i parametri di connessione;
+		\item \param{store: Redux::Store}: store dell'applicazione;
+		\item \param{orders: OrderContainer}: ordini effettuati dal cliente;
+	\end{itemize}
+	\item \method{+ getOrderStatus(id: int): string}: ritorna lo stato dell'ordine:
+	\begin{itemize}
+		\item \param{id: int}: id dell'ordine di cui si vuole conoscere lo stato;
+	\end{itemize}
+	\item \method{+ order(order: Order): id}: processa l'ordine confermato dal Customer e gli assegna un id, che viene ritornato al Customer cosicché egli possa tracciare lo stato dell'ordine stesso:
+	\begin{itemize}
+		\item \param{order: Order}: l'ordine confermato e inviato;
+	\end{itemize}
+	\item \method{+ getMenu(): Menu}: recupera il menu dallo store e lo ritorna.
+\end{itemize}
 
 \setclass{BubbleAndEat::OrderGateway::MenuItem}
 \paragraph[::MenuItem]{\class}\mbox{}\\ \label{\class}
@@ -204,7 +448,7 @@ Viene utilizzata come contenitore comune degli ordini attivi per tutti gli utent
 \subparagraph[::Order]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{./diagrammi/demo/server/order/order.png}
+	\includegraphics[width=12cm]{./diagrammi/demo/server/order/order.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
