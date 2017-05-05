@@ -64,16 +64,16 @@ Viene utilizzata per raccogliere le informazioni dei clienti.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{-props:Object[]}: array contenente le proprietà degli elementi della lista;
-	\item \field{-menu:Menu}: array contenente le diverse entrate del menu;
-	\item \field{-page:string}: stringa che indica la pagina corrente;
-	\item \field{-quantita:int[]}: array delle quantità dei diversi piatti presenti nell'ordinazione;
-	\item \field{-order:Order}: oggetto che rappresenta l'ordine;
-	\item \field{-orderState:string} stringa che indica lo stato dell'ordine;
-	\item \field{-client:Client}: oggetto che rappresenta il cliente;
-	\item \field{-total:int}: numero che indica il totale dei piatti ordinati;
-	\item \field{-socket:Socket}: oggetto tramite il quale la classe gestisce la connessione con le altre componenti dell'applicazione;
-	\item \field{-orderId}: id dell'ordine del cliente.
+%	\item \field{- props: Object[]}: array contenente le proprietà degli elementi della lista;
+	\item \field{- menu: Menu}: menu del ristorante;
+	\item \field{- page: string}: stringa che indica la pagina corrente;
+	\item \field{- quantita: int[]}: array delle quantità dei diversi piatti presenti nell'ordinazione;
+	\item \field{- order: Order}: oggetto che rappresenta l'ordine;
+	\item \field{- orderState: string} stringa che indica lo stato dell'ordine;
+	\item \field{- client: Client}: oggetto che rappresenta il cliente;
+	\item \field{- total: double}: prezzo totale dell'ordine;
+	\item \field{- socket: socket.io}: oggetto tramite il quale la classe gestisce la connessione con le altre componenti dell'applicazione;
+	\item \field{- orderId: int}: id dell'ordine del cliente.
 \end{itemize}
 
 \textbf{Metodi:}
@@ -94,32 +94,97 @@ Viene utilizzata per raccogliere le informazioni dei clienti.
 		\begin{itemize}
 			\item \param{orderId:string}: id che identifica l'ordine.
 		\end{itemize}
-	\item \method{+ disconnect():void}: libera le risorse quando viene distrutta la classe;
-	\item \method{+ redirectToHome():void}: renderizza e si sposta sulla la pagine home;
-	\item \method{+ redirectToMenu():void}: renderizza e si sposta sulla pagina menu;
-	\item \method{+ redirectToNewOreder():void}: renderizza e si sposta sulla pagina dei costruzione dell'ordine;
-	\item \method{+ rediretToOrder():void}: renderizza e si sposta sulla pagina di gestione dell'ordine; 
-	\item \method{+ redirectToInfo():void}: renderizza e si sposta sulla pagina info;
-	\item \method{+ reloadTotal():integer}: ricalcola il totale e ne restituisce il valore;
-	\item \method{+ addDishToOrder(i:int):void}: invoca updateAmount per aggiungere il piatto selezionato all'ordine;
+	\item \method{+ disconnect(): void}: libera le risorse quando viene distrutta la classe;
+	\item \method{+ redirectToHome(): void}: renderizza e si sposta sulla pagina home;
+	\item \method{+ redirectToMenu(): void}: renderizza e si sposta sulla pagina menu;
+	\item \method{+ redirectToNewOreder(): void}: renderizza e si sposta sulla pagina di costruzione dell'ordine;
+	\item \method{+ rediretToOrder(): void}: renderizza e si sposta sulla pagina di gestione dell'ordine; 
+	\item \method{+ redirectToInfo() :void}: renderizza e si sposta sulla pagina info;
+	\item \method{+ reloadTotal(): double}: ricalcola il totale e ne restituisce il valore;
+	\item \method{+ addDishToOrder(i: int): void}: invoca updateAmount per aggiungere il piatto selezionato all'ordine;
+		\begin{itemize}
+			\item \param{i: int}: intero che identifica il piatto.
+		\end{itemize}
+	\item \method{+ removeDishToOrder(i: int): void}: invoca updateAmount per rimuovere il piatto selezionato dall'ordine;
 		\begin{itemize}
 			\item \param{i:int}: intero che identifica il piatto.
 		\end{itemize}
-	\item \method{+ removeDishToOrder(i:int):void}: invoca updateAmount per rimuovere il piatto selezionato dall'ordine;
+	\item \method{+ handleChange(e: string, i: int): void}: invoca updateAmount con il valore indicato;
 		\begin{itemize}
-			\item \param{i:int}: intero che identifica il piatto.
+			\item \param{e: string}: quantità del piatto da aggiungere o rimuovere;
+			\item \param{i: int}: intero che identifica il piatto.
 		\end{itemize}
-	\item \method{+ handleChange(e:string,i:int):void}: invoca updateAmount con il valore indicato;
+	\item \method{+ updateAmount(amount: int, i: int): void}: aggiorna le quantità dei diversi piatti;
+	\item \method{+ updateClient(e: string, data: string): void}: aggiorna i dati del cliente;
 		\begin{itemize}
-			\item \param{e:string}: quantità del piatto da aggiungere o rimuovere;
-			\item \param{i:int}: intero che identifica il piatto.
+			\item \param{e: string}: contiene le nuove informazioni da inserire;
+			\item \param{data: string}: indica il tipo di informazione;
 		\end{itemize}
-	\item \method{+ updateAmount(amount:int,i:int):void}: aggiorna le quantità dei diversi piatti;
-	\item \method{+ updateClient(e:string,data:string):void}: aggiorna i dati del cliente;
-		\begin{itemize}
-			\item \param{e:string}: contiene le nuove informazioni da inserire;
-			\item \param{data:string}: indica il tipo di informazione;
-		\end{itemize}
-	\item \method{+ confirmOrder():void}: effettua l'ordine;
-	\item \method{+ render():void}: renderizza il componente.
+	\item \method{+ confirmOrder(): void}: effettua l'ordine;
+	\item \method{+ render(): void}: renderizza il componente.
+\end{itemize}
+
+\setclass{BubbleAndEat::Manager::BubbleManager}
+\paragraph[::BubbleManager]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+%	\includegraphics[width=7cm]{./diagrammi/demo/client/manager/bubblemanager.png}
+	\caption{Classe \class}
+\end{figure}
+\textbf{Descrizione:}\\
+Classe che rappresenta la bubble del Manager.
+
+\textbf{Utilizzo:}\\
+Viene utilizzata per fornire all'utente Manager le funzionalità per egli disponibili.
+
+\textbf{Classi ereditate:}
+\begin{itemize}
+	\item \code{React::Component}.
+\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{}.
+%\end{itemize}
+
+\textbf{Attributi:}
+\begin{itemize}
+	\item \field{- menu: Menu}: menu del ristorante;
+	\item \field{- allOrders: OrderContainer}: contenitore di tutti gli ordini esistenti nell'applicazione;
+	\item \field{- completedOrders: OrderContainer}: contenitore di tutti e soli gli ordini completati;
+	\item \field{- activeOrders: OrderContainer}: contenitore di tutti e soli gli ordini attivi (non completati);
+	\item \field{- page: string}: pagina da renderizzare;
+	\item \field{- formDataName: string}: valore contenuto nel campo \virgolette{Name} di creazione e modifica di una pietanza del menu;
+	\item \field{- formDataPrice: price}: valore contenuto nel campo \virgolette{Price} di creazione e modifica di una pietanza del menu;
+	\item \field{- socket: socket.io}: socket per la connessione al server.
+\end{itemize}
+
+\textbf{Metodi:}
+\begin{itemize}
+	\item \method{+ BubbleManager(props: Object[])}: costruttore, passa al costruttore della classe ereditata \texttt{props} e inizializza gli attributi con valori di default:
+	\begin{itemize}
+		\item \param{props: Object[]}: proprietà del componente React;
+	\end{itemize}
+	\item \method{+ componentDidMount(): void}: metodo invocato in automatico al caricamento della bubble, richiama in sè il metodo \texttt{connect};
+	\item \method{+ connect(): void}: crea la connessione con il server;
+	\item \method{+ showMenu(): void}: invia una richiesta al server per ricevere il menu aggiornato e lo assegna a \texttt{menu};
+	\item \method{+ addDish(dish: MenuItem): void}: aggiunge una pietanza al menu e lo segnala al server;
+	\item \method{+ removeDish(id: int): void}: rimuove una pietanza dal menu e lo segnala al server;
+	\item \method{+ editDish(id: int, newDish: MenuItem): void}: modifica la pietanza con id \texttt{id} e lo segnala al server;
+	\item \method{+ fetchAllOrders(): void}: invia una richiesta al server per ricevere il contenitore degli ordini aggiornato e lo assegna a \texttt{allOrders};
+	\item \method{+ fetchActiveOrders(): void}: invia una richiesta al server per ricevere il contenitore degli ordini attivi e lo assegna a \texttt{activeOrders};
+	\item \method{+ fetchCompletedOrders(): void}: invia una richiesta al server per ricevere il contenitore degli ordini completati e lo assegna a \texttt{completedOrders};
+	\item \method{+ deleteOrder(orderId:int): void}: elimina un ordine e lo segnala al server:
+	\begin{itemize}
+		\item \param{orderId: int}: id dell'ordine da eliminare;
+	\end{itemize}
+	\item \method{+ disconnect(): void}: chiude la connessione con il server;
+	\item \method{- formOnClick(): void}: definisce il comportamento della bubble quando viene azionato il \virgolette{submit} del form di aggiunta/modifica;
+	\item \method{+ redirectToFormAdd(): void}: invoca la renderizzazione della pagina di aggiunta di una pietanza al menu;
+	\item \method{+ redirectToFormEdit():void}: invoca la renderizzazione della 
+	\item \method{+ redirectToHome():void}: invoca la renderizzazione della 
+	\item \method{+ redirectToMenu():void}: invoca la renderizzazione della 
+	\item \method{+ redirectToOrders():void}: invoca la renderizzazione della 
+	\item \method{+ render():void}: invoca la renderizzazione della 
+	
 \end{itemize}
