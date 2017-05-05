@@ -1,10 +1,55 @@
 \subsection{Test di Unità}
 
 %\subsubsection{Framework}
-%
+
+
+
+
+
+
+
+
+                                            %
 %\begin{longtable}{|P{5cm}|P{5cm}|P{5cm}|}
 %	\hline \textbf{Codice} & \textbf{Descrizione} & \textbf{Requisito} \\
 %	\endfirshead
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %	
 %	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale dalla GUI alla bubble, seguendo tutto il percorso, per controllare che ciò che la GUI ritorna sia corretto & \\
 %	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale non corretto dalla GUI alla bubble, seguendo tutto il percorso, per controllare che la GUI ritorni un errore e non si aggiorni le informazioni sbagliate & \\
@@ -26,67 +71,67 @@
 	\endfirsthead
 	\hline \test{U} & Verifica che il server:
 	\begin{itemize}
-		\item viene creato correttamente;
-		\item ascolta alla porta assegnata;
-		\item ritorna un socket che non sia nullo.
+		\item venga creato correttamente;
+		\item ascolti alla porta assegnata;
+		\item ritorni un socket che non sia nullo.
 	\end{itemize}
 	& Superato \\
 	\hline\test{U} & Verifica che l'handler dell'admin:
 	\begin{itemize}
-		\item si connette correttamente alla porta;
-		\item ottiene il menu;
-		\item aggiuge un piatto al menu;
-		\item modifica un piatto dal menu;
-		\item rimuove un piatto dal menu;
-		\item ottiene tutte le ordinazioni;
-		\item ottiene le ordinazioni attive;
-		\item ottiene le ordinazioni completate;
-		\item rimuove un'ordinazione.
+		\item si connetta correttamente alla porta;
+		\item ottenga il menu;
+		\item aggiuga un piatto al menu;
+		\item modifichi un piatto dal menu;
+		\item rimuova un piatto dal menu;
+		\item ottenga tutte le ordinazioni;
+		\item ottenga le ordinazioni attive;
+		\item ottenga le ordinazioni completate;
+		\item rimuova un'ordinazione.
 	\end{itemize}
 	 & Superato \\
 	 \hline\test{U} & Verifica che l'handler del client:
 	 \begin{itemize}
 	 	\item si connette correttamente alla porta;
-	 	\item ottiene il menu;
-	 	\item crea una nuova ordinazione;
-	 	\item ottiene i dati relativo al proprio ordine;
-	 	\item ottiene l'id relativo al proprio ordine;
-	 	\item riceve una notifica quando l'ordine è completato;
+	 	\item ottenga il menu;
+	 	\item crei una nuova ordinazione;
+	 	\item ottenga i dati relativo al proprio ordine;
+	 	\item ottenga l'id relativo al proprio ordine;
+	 	\item riceva una notifica quando l'ordine è completato;
 	 	\item riceva un errore quando non viene trovato l'ordine relativo al prorprio id;
-	 	\item riottiene lo stato del prorpio ordine nel caso di una disconnessione;
-	 	\item ottiene la notifica del prorpio ordine se viene completato mentre l'utente è disconnesso alla sua riconnessione.
+	 	\item riottenga lo stato del prorpio ordine nel caso di una disconnessione;
+	 	\item ottenga la notifica del prorpio ordine se viene completato mentre l'utente è disconnesso alla sua riconnessione.
 	 \end{itemize}
 	 & Superato \\
 	 \hline\test{U} & Verifica che l'handler dell'cook:
 	 \begin{itemize}
-	 	\item si connette correttamente alla porta;
-	 	\item si disconnette correttamente;
-	 	\item comunica correttamente con il database;
-	 	\item controlla che riceva correttamente le ordinazioni attive(anche se non ce ne fossero) quando è nello stato di pronto;
-	 	\item attiva correttamente il completamento dell'ordinazione.
+	 	\item si connetta correttamente alla porta;
+	 	\item si disconnetta correttamente;
+	 	\item comunichi correttamente con il database;
+	 	\item controlli che riceva correttamente le ordinazioni attive(anche se non ce ne fossero) quando è nello stato di pronto;
+	 	\item attivi correttamente il completamento dell'ordinazione.
 	 \end{itemize}
  	& Superato \\
 	\hline\test{U} & Verifica che l'oggetto JSON dedicato alla connessione sia formattato in modo corretta & Superato \\
 	\hline \test{U} & Verifica che il CookReducer:
 	\begin{itemize}
-		\item legge che lo stato è indefinito se non ancora istanziato;
-		\item imposta in modo corretto lo stato in assente;
-		\item imposta in modo corretto lo stato in presente.
+		\item legga che lo stato è indefinito se non ancora istanziato;
+		\item imposti in modo corretto lo stato in assente;
+		\item imposti in modo corretto lo stato in presente.
 	\end{itemize}
 	& Superato \\
 	\hline \test{U} & Verifica che il MenuReducer:
 	\begin{itemize}
-		\item legge che lo stato è indefinito se non ancora istanziato;
-		\item aggiunge correttamente il piatto ed incrementa l'id;
-		\item rimuove in modo corretto un piatto dal menù;
-		\item modifica correttamente i dati di un piatto senza modificarne l'id.
+		\item legga che lo stato è indefinito se non ancora istanziato;
+		\item aggiuga correttamente il piatto ed incrementa l'id;
+		\item rimuova in modo corretto un piatto dal menù;
+		\item modifichi correttamente i dati di un piatto senza modificarne l'id.
 	\end{itemize}
 	& Superato \\
-	\hline \test{U} & Verifica che il OrderReducer:
+	\hline \test{U} & Verifica che l'OrderReducer:
 	\begin{itemize}
-		\item aggiunge correttamente un'ordinazione;
-		\item cambia in modo corretto lo stato di un'ordinazione completata;
-		\item rimuove in modo corretto un'ordinazione.
+		\item aggiuga correttamente un'ordinazione;
+		\item cambi in modo corretto lo stato di un'ordinazione completata;
+		\item rimuova in modo corretto un'ordinazione.
 	\end{itemize}
 	& Superato \\
 	\hline\test{U} & Verifica che l'istanza di un oggetto di tipo Actions sia formattato in modo corretto & Superato \\
