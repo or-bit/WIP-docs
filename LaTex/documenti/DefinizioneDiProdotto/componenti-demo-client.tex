@@ -1,6 +1,16 @@
 \subsubsection{Client}
+La parte client della \DemoName{} è formata sostanzialmente dalle singole bubble, ognuna risiedente nel proprio package utente. Vi è inoltre la classe Client, che viene posta all'interno del componente Customer, data la correlazione con la bubble Customer.
+\setclass{BubbleAndEat::Customer}
+\paragraph[::Customer]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=7cm]{./diagrammi/demo/client/customer.png}
+	\caption{Classe \class}
+\end{figure}
+Questo componente rappresenta il cliente e la sua bubble.
+
 \setclass{BubbleAndEat::Customer::Client}
-\paragraph[::Client]{\class}\mbox{}\\ \label{\class}
+\subparagraph[::Client]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=7cm]{./diagrammi/demo/client/customer/client.png}
@@ -43,11 +53,11 @@ Viene utilizzata per raccogliere le informazioni dei clienti.
 
 \setclass{BubbleAndEat::Customer::BubbleCustomer}
 \paragraph[::BubbleCustomer]{\class}\mbox{}\\ \label{\class}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=7cm]{./diagrammi/demo/client/customer/client.png}
-%	\caption{Classe \class}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{./diagrammi/demo/client/customer/bubblecustomer.png}
+	\caption{Classe \class}
+\end{figure}
 \textbf{Descrizione:}\\
 Classe che rappresenta il Customer e le sue funzionalità all'interno dell'applicazione.
 
@@ -56,7 +66,7 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \code{React.Component}.
+	\item \code{React::Component}.
 \end{itemize}
 
 %\textbf{Sottoclassi:}
@@ -126,22 +136,22 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 	\item \method{+ render(): React.Component}: renderizza la bubble.
 \end{itemize}
 
-\setclass{BubbleAndEat::Chef::ChefBubble}
-\paragraph[::ChefBubble]{\class}\mbox{}\\ \label{\class}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=7cm]{./diagrammi/demo/client/customer/client.png}
-%	\caption{Classe \class}
-%\end{figure}
+\setclass{BubbleAndEat::Restaurant::Chef::BubbleChef}
+\paragraph[::Restaurant::Chef::BubbleChef]{\class}\mbox{}\\ \label{\class}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{./diagrammi/demo/client/bubblechef.png}
+	\caption{Classe \class}
+\end{figure}
 \textbf{Descrizione:}\\
 Classe che rappresenta lo Chef e le sue funzionalità all'interno dell'applicazione.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire le funzionalità del Cuoco.
+Viene utilizzata per gestire le funzionalità dello Chef.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \code{React.Component}.
+	\item \code{React::Component}.
 \end{itemize}
 
 %\textbf{Sottoclassi:}
@@ -163,22 +173,22 @@ Viene utilizzata per gestire le funzionalità del Cuoco.
 		\item \param{props: Object[]}: array contenente le proprietà degli elementi;
 	\end{itemize}
 	\item \method{+ componentDidMount(): void}: viene invocata alla creazione della classe e invoca la funzione connect;
-	\item \method{+ connect():void}: connette la classe al resto dell'applicazione tramite socket e invoca fetchOrders;
-	\item \method{+ fetchOrders():void}: invia la richiesta di visualizzazione delle ordinazioni;
+	\item \method{+ connect(): void}: crea la connessione con il server;
+	\item \method{+ fetchOrders(): void}: invia la richiesta di visualizzazione delle ordinazioni;
 	\item \method{+ disconnect(): void}: libera le risorse quando viene distrutta la classe;
-	\item \method{+ markOrdinationCOmpleted(id:string): void}: indica come completata un'ordinazione;
+	\item \method{+ markOrdinationCompleted(id: int): void}: indica come completata un'ordinazione;
 		\begin{itemize}
-			\item \param{id:string}: identifica l'ordine da completare;
+			\item \param{id: int}: identifica l'ordine da completare;
 		\end{itemize}
-	\item \method{+ render(): void}: renderizza il componente.
+	\item \method{+ render(): React::Component}: renderizza la bubble.
 \end{itemize}
 
 
-\setclass{BubbleAndEat::Manager::BubbleManager}
-\paragraph[::Manager::BubbleManager]{\class}\mbox{}\\ \label{\class}
+\setclass{BubbleAndEat::Restaurant::Manager::BubbleManager}
+\paragraph[::Restaurant::Manager::BubbleManager]{\class}\mbox{}\\ \label{\class}
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=7cm]{./diagrammi/demo/client/manager/bubblemanager.png}
+	\includegraphics[width=14cm]{./diagrammi/demo/client/manager.png}
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
