@@ -63,21 +63,18 @@ Questa classe permette di verificare l'integrità dei dati inviati dall'utente r
 	\caption{List\-Items}
 \end{figure}
 
-\subsubparagraph{TodoList\-::View\-::List\-Items\-::ListItemView}\label{todo-item}\mbox{}\\
+\subsubparagraph{TodoList\-::View\-::ListItemView}\label{todo-item}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe ListItemView rappresenta graficamente un'entrata per la To-do list.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di rappresentare le singole entrate della To-do list e permetterne la selezione per la gestione della rimozione e del completamento in modo indipendente dalle altre voci all'interno della lista.\\
 
-\subsubparagraph{TodoList\-::View\-::List\-Items\-::ListItemController}\label{todo-controller}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe ListItemController permette la gestione di una collezione di voci della To-do list definite dalla classe ListItemView.\\
-\textbf{Utilizzo:}\\
-La funzione di questa classe è quella di Controller della To-do list, essa permette l'interazione fra la View ed il Model della To-do list.\\
+
+
 
 \subparagraph{Controller}\mbox{}
 \begin{samepage}
-	\subsubparagraph{TodoList\-::Controller\-::listItemsActions}\label{todo-controller}\mbox{}\\
+	\subsubparagraph{TodoList\-::Controller\-::List\-Items\-::ListItemController}\label{todo-controller}\mbox{}\\
 	\nopagebreak
 	\begin{figure}[H]
 		\centering
@@ -86,6 +83,6 @@ La funzione di questa classe è quella di Controller della To-do list, essa perm
 	\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
-La classe listItemsActions svolge il ruolo di controller all'interno della bubble To-do list. \\
+La classe ListItemController permette la gestione di una collezione di voci della To-do list definite dalla classe ListItemView.\\
 \textbf{Utilizzo:}\\
-Viene utilizzata per controllare le interazioni tra GUI e model all'interno della bubble. \\
+La funzione di questa classe è quella di Controller della To-do list, essa permette l'interazione fra la View ed il Model della To-do list.\\
