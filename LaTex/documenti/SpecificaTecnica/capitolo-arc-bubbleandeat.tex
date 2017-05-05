@@ -18,7 +18,7 @@ Tutti gli attori interni ed esterni al ristorante hanno dipendenze verso l'Order
 	\caption{Demo Bubble \& eat}
 \end{figure}
 
-\subsubsection{Package Order\-Gateway OLD}
+\subsubsection{Package Order\-Gateway}
 Il package Order\-Gateway si occupa di gestire le interazioni tra attori e database e le eventuali comunicazioni tra gli attori stessi. Il package internamente è composto dalle classi Order\-Gateway e Menu e dal package Orders.\\
 Il package Orders definisce le ordinazioni e la collezione di queste ultime che verranno poi costruite seguendo il Factory method come design pattern dalla classe Menu.\\
 Tutte le interazioni con gli elementi descritti sopra sono rese disponibili agli attori dalla classe Order\-Gateway.
@@ -28,35 +28,21 @@ Tutte le interazioni con gli elementi descritti sopra sono rese disponibili agli
 	\caption{Package Order\-Gateway}
 \end{figure}
 
-\subsubsection{Package Order\-Gateway NEW}
-Il package Order\-Gateway si occupa di gestire le interazioni tra attori e database e le eventuali comunicazioni tra gli attori stessi. Il package internamente è composto dalle classi Order\-Gateway ed i package Handlers, States, Reducer, Action e Server.\\
-La classe order\-gateway si occupa di indirizzare le diverse utenze all'handler corretto e gestisce la connessione con il database e le ordinazioni.\\
-Il package Handlers contiene la classi dedicate alla gestione delle diverse tipologie di utenza.\\
-Il package States contiene le classi che si occupano a salvare lo stato dei componenti.\\
-Il package Reducer contiene le classi che che interagiscono con il package States per aggiornare gli stati dei componenti.\\
-Il package Action contiene le classi che si occupano della gestione delle funzionalità dell'Order\-Gateway.\\
-Il package Server contiene la classe server e si occupa di istanziarla e di gestire i socket.\\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{diagrammi_img/classi_e_package/ordergateNEW.png}
-	\caption{Package Order\-Gateway}
-\end{figure}
-
-\subsubsection{Struttura delle classi}
-La Demo Bubble \& eat può essere divisa in due categorie di classi principali:
-\begin{itemize}
-	\item gli attori, a loro volta divisi in interni, quali \Manager{}, \Chef{}, \Deliveryman{} e \Purchasingmanager{}, ed un unico attore esterno, il \Customer{};
-	\item un Hub gestionale centrale, l’Order\-Gateway.
-\end{itemize}
-Le classi degli attori non avranno la possibilità di manipolare direttamente il database o comunicare tra loro ma potranno farlo attraverso alla classe Order\-Gateway.
-I singoli attori avranno la possibilità di manipolare e visualizzare gli stessi dati in modi differenti determinati dalla loro tipologia di utenza.
-Tutte le operazioni saranno fornite dall'Order\-Gateway che si occuperà, oltre che dell'interazione con il database, anche della creazione degli Order.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=13cm]{diagrammi_img/classi_e_package/demo_classes.png}
-	\caption{Diagramma di struttura delle classi}
-\end{figure}
+	\subsubsection{Struttura delle classi}
+	La Demo Bubble \& eat può essere divisa in due categorie di classi principali:
+	\begin{itemize}
+		\item gli attori, a loro volta divisi in interni, quali \Manager{}, \Chef{}, \Deliveryman{} e \Purchasingmanager{}, ed un unico attore esterno, il \Customer{};
+		\item un Hub gestionale centrale, l’Order\-Gateway.
+	\end{itemize}
+	Le classi degli attori non avranno la possibilità di manipolare direttamente il database o comunicare tra loro ma potranno farlo attraverso alla classe Order\-Gateway.
+	I singoli attori avranno la possibilità di manipolare e visualizzare gli stessi dati in modi differenti determinati dalla loro tipologia di utenza.
+	Tutte le operazioni saranno fornite dall'Order\-Gateway che si occuperà, oltre che dell'interazione con il database, anche della creazione degli Order.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=13cm]{diagrammi_img/classi_e_package/demo_classes.png}
+		\caption{Diagramma di struttura delle classi}
+	\end{figure}
 
 \subsubsection{Descrizione classi}
 
@@ -92,97 +78,30 @@ Questa classe recupera dall'Order\-Gateway la lista degli acquisti, la visualizz
 
 \paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-Gateway}\label{eat-gateway}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette a tutti gli attori di interagire con il database e di effettuare la connessione con quest'ultimo. Inoltre si occupa di indirizzare gli utenti verso il proprio specifico handler.\\
+La classe permette a tutti gli attori di interagire con il database attraverso apposite funzioni e si occupa di gestire le interazioni con il menu e l'insieme delle ordinazioni contenute nell'OrderContainer. La classe si occupa inoltre di inviare le notifiche agli attori quando viene richiesto o in maniera automatica ed aggiorna le risorse e le liste in tempo reale.\\
 \textbf{Utilizzo:}\\
-La classe gestisce:
-\begin{itemize}
-	\item La connessione con il database ed il salvataggio dei dati;
-	\item L'indirizzamento dei diversi utenti verso l'apposito Handler.\\
-\end{itemize}
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Server\-::Server};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Cook\-Handler};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Client\-Handler};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Admin\-Handler};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Reducers\-::Combine\-Reducer}.
-\end{itemize}
+Questa classe offre diverse funzionalità agli attori per manipolare il database, le ordinazioni contenute nell'OrderContainer ed il menu, che permette a sua volta la creazione delle ordinazioni. Queste funzioni saranno disponibili o meno a seconda del tipo di attore.\\
+La classe aggiorna le risorse in modo automatico, scalando gli ingredienti dai valori impostati per ogni piatto nel menu. Ha inoltre delle funzioni di notifica che possono essere impostate automaticamente durante le operazioni o chiamate da alcuni attori.
 
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Server\-::Server}\label{eat-Actions}\mbox{}\\
+\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Menu}\label{eat-menu}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe definisce il costruttore del Server e la gestione dei socket.\\
+La classe permette la creazione delle ordinazioni ed attraverso l'Order\-Gateway fornisce diverse operazioni agli utenti:
+\begin{itemize}
+	\item \Customer{}: recupero del menu e creazione dell'ordinazione;
+	\item \Manager{}: recupero e modifica del menu.
+\end{itemize}
 \textbf{Utilizzo:}\\
-La classe Server si occupa di della connessione del server e gestisce l'utilizzo dei socket. Questa classe viene usata per la creazione del server all'interno dell'Order\-Gateway.
+Questa classe implementa il design pattern del Factory method e permette la creazione delle orinazioni, inoltre fornisce dei metodi per modificare ed ottenere il menu.
 
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Cook\-Handler}\label{eat-handler}\mbox{}\\
+\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Order}\label{eat-order}\mbox{}\\ 
 \textbf{Descrizione:}\\
-La classe permette di gestire le operazioni dedicate allo \Chef{} interagendo con il database e con le ordinazioni.\\
+Questa classe definisce il contenuto dell'ordinazione. Contiene gli elementi scelti dal menu e i dati forniti dall'utente per la consegna.\\
+L'ordinazione è definita anche da uno stato e la classe offre i metodi per modificarlo. \\
 \textbf{Utilizzo:}\\
-La classe controlla la connessione e la disconnessione dello \Chef{}. La classe si occupa di recuperare in tempo reale le ordinazioni attive offrendo la possibilità di cambiarne lo stato in completato di quest'ultime.\\
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Actions\-::Orders};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Actions\-::Cook}.
-\end{itemize}
+Questa classe permette di inserire gli elementi del menu nell'ordinazione e di modificare lo stato della stessa. 
 
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Client\-Handler}\label{eat-handler}\mbox{}\\
+\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Order\-Contai\-ner}\label{eat-container}\mbox{}\\
 \textbf{Descrizione:}\\
-La classe permette di gestire le operazioni dedicate allo \Customer{} interagendo con il database e con le ordinazioni.\\
+La classe permette la gestione di una collezione di ordinazioni definite dalla classe Order.\\
 \textbf{Utilizzo:}\\
-La classe gestisce:
-\begin{itemize}
-	\item La connessione e la disconnessione del \Customer{};
-	\item Il recupero delle eventuali informazioni sullo stato dell'ordinazione;
-	\item La richiesta del menu;
-	\item La richiesta dell'id identificativo dell'ordine;
-	\item La possibililità di effettuare l'ordinazione.\\
-\end{itemize}
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Actions\-::Orders}.
-\end{itemize}
-
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Handlers\-::Admin\-Handler}\label{eat-handler}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe permette di gestire le operazioni dedicate allo \Manager{} interagendo con il database, le ordinazioni ad il menù.\\
-\textbf{Utilizzo:}\\
-La classe controlla la connessione e la disconnessione del \Manager{}. La classe si occupa di recuperare in tempo reale le ordinazioni attive e completate offrendo la possibilità di cancellarle. La classe permette di recuperare il menu e offre la possibilità di aggiungere, rimuovere e modificare i piatti.\\
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Actions\-::Orders};
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Actions\-::Menu}.
-\end{itemize}
-
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Reducer\-::Cook\-Reducer}\label{eat-reducer}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe permette di modificare lo stato dello \Chef{}.\\
-\textbf{Utilizzo:}\\
-La classe gestisce le operazioni possibili sullo stato relativo allo \Chef{} per definire se è connesso.\\
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::States}.
-\end{itemize}
-
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Reducer\-::Menu\-Reducer}\label{eat-reducer}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe permette di modificare lo stato del menu.\\
-\textbf{Utilizzo:}\\
-La classe gestisce lo stato del menu e permette le operazioni di aggiunta, modifica e rimozioni dei piatti.\\
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::States}.
-\end{itemize}
-
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Reducer\-::Order\-Reducer}\label{eat-reducer}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe permette di modificare lo stato delle ordinazioni.\\
-\textbf{Utilizzo:}\\
-La classe gestisce lo stato delle ordinazioni e permette le operazioni di aggiunta, modifica e rimozioni delle ordinazioni.\\
-\textbf{Relazioni con altre classi:}\\
-\begin{itemize}
-	\item {Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::States}.
-\end{itemize}
-
-\paragraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Reducer\-::Combine\-Reducer}\label{eat-reducer}\mbox{}\\
-\textbf{Descrizione:}\\
-
+Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di ordinazioni.
