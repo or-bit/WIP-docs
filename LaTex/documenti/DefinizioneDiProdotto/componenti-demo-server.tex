@@ -442,7 +442,8 @@ Viene utilizzata come contenitore comune degli ordini attivi per tutti gli utent
 		\item \param{order: Order}: il nuovo ordine da processare;
 	\end{itemize}
 	\item \method{+ complete(orderId: int): Order}: l'ordine con id \texttt{orderId} viene completato e il suo stato aggiornato;
-	\item \method{+ delete(orderId: int): Order[]}: l'ordine con id \texttt{orderId} viene eliminato dalla lista degli ordini attivi.
+	\item \method{+ delete(orderId: int): Order[]}: l'ordine con id \texttt{orderId} viene eliminato dalla lista degli ordini attivi;
+	\item \method{+ getOrders(): Order[]}: getter per \texttt{orders}.
 \end{itemize}
 
 \setclass{BubbleAndEat::Restaurant::OrderGateway::Order::Order}
