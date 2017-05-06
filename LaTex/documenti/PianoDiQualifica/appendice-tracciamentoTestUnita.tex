@@ -1,55 +1,9 @@
 \subsection{Test di Unità}
 
-%\subsubsection{Framework}
-
-
-
-
-
-
-
-
-                                            %
+%\subsubsection{Framework}                                            %
 %\begin{longtable}{|P{5cm}|P{5cm}|P{5cm}|}
 %	\hline \textbf{Codice} & \textbf{Descrizione} & \textbf{Requisito} \\
 %	\endfirshead
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 %	
 %	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale dalla GUI alla bubble, seguendo tutto il percorso, per controllare che ciò che la GUI ritorna sia corretto & \\
 %	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale non corretto dalla GUI alla bubble, seguendo tutto il percorso, per controllare che la GUI ritorni un errore e non si aggiorni le informazioni sbagliate & \\
@@ -63,6 +17,63 @@
 %	\hline
 %	\caption{Test di sistema per il framework}
 %\end{longtable}
+
+\subsubsection{Framework}
+
+\begin{longtable}{|c|P{9cm}|c|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
+	\endfirsthead
+	\hline \test{U} & Verifica che il DataBase:
+	\begin{itemize}
+		\item abbia l'URL corretto;
+		\item si connetta e riceva l'oggetto in modo corretto;
+		\item salvi gli oggetti nella collezzione nel modo corretto.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che l'ExternalAPI:
+	\begin{itemize}
+		\item controlli che esita un myurl valido;
+		\item riceva un un oggetto JSON valido dall'url.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che l'ItemStore:
+	\begin{itemize}
+		\item venga creato in modo coretto e sia vuoto;
+		\item aggiunga un elemento in modo corretto;
+		\item rimuova correttamente l'ultimo elemento.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che il LifeCycle:
+	\begin{itemize}
+		\item venga creato in modo coretto;
+		\item faccia il reset del timer correttamente.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che la classe MatchRegularExpr:
+	\begin{itemize}
+		\item venga instanziata in modo coretto;
+		\item utilizzi le funzioni di match in modo corretto;
+		\item il risultato del match sia corretto.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che l'InputFile sia sia formato in modo corretto & Superato \\
+	& Superato \\
+	\hline \test{U} & Verifica che l'InputText sia sia formato in modo corretto & Superato \\
+	\hline \test{U} & Verifica che il Label:
+	\begin{itemize}
+		\item venga renderizzato;
+		\item riceva il valore da renderizzare correttamente.
+	\end{itemize}
+	& Superato \\
+	\hline \test{U} & Verifica che il TextView:
+	\begin{itemize}
+		\item venga renderizzato;
+		\item riceva il valore da renderizzare correttamente.
+	\end{itemize}
+	& Superato \\
+	\hline
+	\caption{Test di unità per Bubble \& eat}
+\end{longtable}
 
 \subsubsection{Order Gateway}
 
