@@ -35,19 +35,19 @@ Il package Model gestisce i dati contenuti nella bubble memory e nel database as
 	\caption{Model}
 \end{figure}
 
-\subsubparagraph{TodoList\-::Model\-::ItemsStore}\label{todo-itemsStore}\mbox{}\\
+\subsubparagraph{TodoList\-::Model\-::ItemsStore}\label{todo-itemsstore}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe ItemsStore contiene i dati riguardanti le entrate della TodoList.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire il salvataggio dei dati per le entrate della bubble To-do list in modo da poter modificare i dati alla creazione, eliminazione o completamento di voci della lista.\\
 
-\subsubparagraph{TodoList\-::Model\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
+\subsubparagraph{TodoList\-::Model\-::Data\-Checker}\label{todo-datachecker}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe DataChecker verifica la correttezza dei dati rispetto ad uno schema dato e li salva sul database.\\
 \textbf{Utilizzo:}\\
 Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato, salvandoli successivamente sul database.
 
-\subsubparagraph{TodoList\-::Model\-::ListItems}\mbox{}\\
+\subsubparagraph{TodoList\-::Model\-::ListItems}\mbox{}\\ \label{todo-item-model}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_listitems.png}
@@ -77,7 +77,7 @@ Il package ListItems rappresenta tramite le classi che contiene la to-do list a 
 	\caption{View}
 \end{figure}
 
-\subsubparagraph{TodoList\-::View\-::ListItemView}\label{todo-item}\mbox{}\\
+\subsubparagraph{TodoList\-::View\-::ListItemView}\label{todo-view}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe ListItemView rappresenta graficamente un'entrata per la To-do list.\\
 \textbf{Utilizzo:}\\
