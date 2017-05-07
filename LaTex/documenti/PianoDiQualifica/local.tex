@@ -35,7 +35,12 @@
 
 \newcounter{testcounter}
 \newcommand*{\test}[1]{%
-	\refstepcounter{testcounter}
+	\stepcounter{testcounter}
 	T#1\thetestcounter
 }
 
+\newcounter{testcount}
+\newcommand*{\testt}{%
+	\refstepcounter{testcount}
+	TI\thetestcount
+}
