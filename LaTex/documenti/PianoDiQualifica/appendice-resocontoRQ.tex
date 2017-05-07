@@ -79,13 +79,12 @@ Vengono ora presentati i risultati ottenuti dalle misurazioni relativamente alle
 	\hline Halstead: volume & 1053 & 20-1500 & 20-1000 & Superato \\
 	\hline Core size & 22 & 0-50 & 0-40 & Superato \\
 	\hline Indice di manutenibilità & 126 & 90-171 & 120-171 & Superato \\
-	\hline Code coverage &  & 40-100 & 60-100 & Superato \\
-	\hline Branch coverage &  & 70-100 & 80-100 & Superato \\
-	\hline Function coverage &  & 70-100 & 80-100 & Superato \\
+	\hline Code coverage\footnote{Questa metrica è stata calcolata escludendo le tre classi BubbleCustomer, BubbleChef e BubbleManager} & 91 & 40-100 & 60-100 & Superato \\
+	\hline Branch coverage\footnote{Questa metrica è stata calcolata escludendo le tre classi BubbleCustomer, BubbleChef e BubbleManager} & 75 & 70-100 & 80-100 & Superato \\
+	\hline Function coverage\footnote{Questa metrica è stata calcolata escludendo le tre classi BubbleCustomer, BubbleChef e BubbleManager} & 87 & 70-100 & 80-100 & Superato \\
 	\hline Test di unità eseguiti &  & 85-100 & 100 & Superato \\
 	\hline Test di integrazione eseguiti &  & 60-100 & 70-100 & Superato \\
-	\hline Test di sistema eseguiti &  & 70-100 & 80-100 & Superato \\
-	\hline Test di sistema validazione eseguiti &  & 90-100 & 100 & Superato \\
+	\hline Test di sistema eseguiti & 63 & 70-100 & 80-100 & Non superato \\
 	\hline Test superati &  & 85-100 & 100 & Superato \\
 	\hline
 	\caption{Metriche di processo - \RQ{}}
@@ -108,11 +107,10 @@ Vengono ora presentati i risultati ottenuti dalle misurazioni relativamente alle
 	\hline
 	\endlastfoot
 	
-	\hline Functional size measurement &  & 80-100 & 100 & Superato \\
-	\hline Accuratezza rispetto alle attese &  & 80-100 & 100 & Superato\\
-	\hline Fallimento dei test &  & 0-15 & 0 & Superato \\
-	\hline Parametri per metodo &  & 0-7 & 0-4 & Superato \\
-	\hline Gestione delle operazioni non permesse &  & 80-100 & 100 & Superato \\
+	\hline Functional size measurement & 72 & 80-100 & 100 & Non superato \\
+	\hline Accuratezza rispetto alle attese & 91 & 90-100 & 100 & Superato\\
+	\hline Fallimento dei test & 9 & 0-15 & 0 & Superato \\
+	\hline Parametri per metodo & 1.2 & 0-7 & 0-4 & Superato \\
 	\hline
 	\caption{Metriche di prodotto - \RQ{}}
 \end{longtable}
