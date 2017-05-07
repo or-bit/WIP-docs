@@ -68,7 +68,7 @@ I dati inviati dal controller vengono validati prima di essere ricevuti dalla GU
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/viewmainflow.png}
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/todo_view.png}
 	\caption{Diagrammi di attività - Flusso principale View}
 \end{figure}
 
@@ -82,7 +82,7 @@ L'interazione dell'utente utilizzatore della bubble con l'interfaccia grafica ge
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/controllermainflow.png}
+	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/todo_controller.png}
 	\caption{Diagramma di attività - Flusso principale controller}
 \end{figure}
 
@@ -92,7 +92,7 @@ Il controller sarà una componente software incaricata di ascoltare e di attende
 \subsection{Bubble \& eat}
 Nello scenario descritto dalla demo, tramite il framework e le bubble da esso prodotte sarà possibile per gli attori interagire con il sistema nei seguenti modi, suddivisi per attore che li compie.
 
-\subsubsection{\Customer{}}
+\subsubsection{Customer}
 
 \paragraph{Inserimento dati personali}\mbox{}\\
 \nopagebreak
@@ -135,7 +135,7 @@ Il \Customer{} invia la richiesta di visualizzare il menu, la richiesta viene ri
 \end{figure}
 Selezionate le pietanze l'ordine è inviato all'Order\-Gateway, il quale salva nel database un'approssimazione delle risorse che verranno consumate nella preparazione; fatto questo l'ordinazione viene inviata allo \Chef{} che provvederà a preparare il piatto.
 
-\subsubsection{\Chef{}}
+\subsubsection{Chef}
 
 \paragraph{Conferma completata la preparazione del piatto}\mbox{}\\
 \nopagebreak
@@ -152,7 +152,7 @@ Selezionate le pietanze l'ordine è inviato all'Order\-Gateway, il quale salva n
 \end{figure}
 Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta preparazione all'Order\-Gateway. L'Order\-Gateway provvede a registrare l'ordine pronto nel Database, il quale conferma il salvataggio o ritorna un errore. Al completamento dell'operazione in modo corretto, l'Order\-Gateway invia un segnale di conferma per lo \Chef{} e uno di notifica per il \Deliveryman{}.
 
-\subsubsection{\Deliveryman{}}
+\subsubsection{Deliveryman}
 
 \paragraph{Seleziona consegna}\mbox{}\\
 \nopagebreak
@@ -202,7 +202,7 @@ Una volta completata la consegna il \Deliveryman{} lo segnala all'Order\-Gateway
 \end{figure}
 Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order\-Gateway, il quale inoltra l'informazione al database. Vengono quindi salvate le informazioni nel database, il quale ritorna un segnale di conferma, ricevuto dall'Order\-Gateway ed inoltrato al \Deliveryman{}.
 
-\subsubsection{\Purchasingmanager{}}
+\subsubsection{Purchasingmanager}
 
 
 \paragraph{Segnala acquistate le scorte}\mbox{}\\
@@ -220,7 +220,7 @@ Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order\
 \end{figure}
 Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order\-Gateway. L'Order\-Gateway effettua il salvataggio nel Database dei dati riguardanti le scorte acquistate. Il Database, al completamento dell'operazione, invia un segnale che viene poi riportato dall'Order\-Gateway al \Purchasingmanager{}.
 
-\subsubsection{\Manager{}}
+\subsubsection{Manager}
 
 \paragraph{Visualizzazione menu}\mbox{}\\
 \nopagebreak
