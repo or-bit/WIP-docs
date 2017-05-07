@@ -12,6 +12,7 @@ Per mantenere una persistenza dei dati questi verranno salvati nella bubble memo
 	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addelementtodolist.png}
 	\caption{Diagramma di attività - Aggiunta elemento alla To-do list}
 \end{figure}
+La procedura di aggiunta di un elemento alla To-do list inizia con la verifica della correttezza dei dati forniti, in caso vi sia un errore la sua tipologia verrà segnalata al controller. In caso la verifica abbia successo le informazioni vengono salvate nella Bubble Memory. Se il salvataggio dei dati fallisce l'errore viene segnalato, altrimenti i dati vengono inviati al controller per essere poi renderizzati dalla View.
 
 \begin{figure}[H]
 	\centering
@@ -29,6 +30,7 @@ La procedura è analoga anche nel caso in cui si verifichino degli errori, che v
 	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/removeelementtodolist.png}
 	\caption{Diagramma di attività - Rimozione elemento dalla To-do list}
 \end{figure}
+La procedura di rimozione di un elemento dalla To-do list inizia con il controllo dell'esistenza dell'elemento nella Bubble Memory. In caso l'elemento non sia presente viene segnalato l'errore, altrimenti l'elemento viene eliminato. In caso di errore nella cancellazione questo viene segnalato, altrimenti il successo della cancellazione viene inviato al controller e la View verrà aggiornata.
 
 \begin{figure}[H]
 	\centering
@@ -54,6 +56,7 @@ Il controller si occupa poi di inoltrare questi messaggi alla view affinché pos
 	\includegraphics[width=10cm]{../../documenti/SpecificaTecnica/diagrammi_img/attivita/addstaticnotification.png}
 	\caption{Diagramma di attività - Aggiunta notifica statica}
 \end{figure}
+La procedura di aggiunta di una notifica statica inizia con la validazione dei dati inseriti. In caso i dati risultino non validi l'errore verrà segnalato, altrimenti verrà creata la notifica. Se avviene un errore nella creazione della notifica questo verrà segnalato, altrimenti verrà notificato il successo dell'operazione di aggiunta.
 
 \begin{figure}[H]
 	\centering
@@ -111,6 +114,7 @@ Il \Customer{} inserisce le proprie informazioni e le invia. I dati vengono rice
 	\includegraphics[width=14cm]{diagrammi_img/attivita/costumer_get_menu.png}
 	\caption{Diagramma di attività - Lettura dal menu}
 \end{figure}
+La procedura di lettura del menu inizia con la richiesta di visualizzare il menu inviata all'OrderGateway da parte del \Customer{}. Dopo aver effettuato la richiesta il \Customer{} si mette in attesa di risposta, in caso non riceva il menu entro un tempo predefinito effettuerà nuovamente la richiesta del menu all'OrderGateway. Ricevuto il segnale del \Customer{} l'OrderGateway inoltra la richiesta al database, il quale effettua la ricerca e ritorna il menu all'OrderGateway. L'OrderGateway, una volta ricevuto il menu, lo ritorna al \Customer{} che può così visualizzarlo. 
 
 \begin{figure}[H]
 	\centering
@@ -127,6 +131,7 @@ Il \Customer{} invia la richiesta di visualizzare il menu, la richiesta viene ri
 	\includegraphics[width=14cm]{diagrammi_img/attivita/customer_ordinazione.png}
 	\caption{Diagramma di attività - Fai ordinazione}
 \end{figure}
+La procedura di ordinazione inizia con il controllo della presenza o meno del menu. In caso il menu sia presente il \Customer{} può proseguire con la selezione degli elementi dal menu, operazione che può ripetere più volte. Una volta selezionati tutti gli elementi desiderati il \Customer{} può proseguire all'inserimento dei dati di consegna e successivamente all'invio dell'ordine all'OrderGateway. A questo punto il \Customer{} resta in attesa di un segnale di conferma e se non lo riceve entro un periodo di tempo predefinito reinvia la richiesta. L'OrderGateway riceve l'ordine dal \Customer{} e lo inoltra al database, il quale lo salva e invia un segnale di conferma all'OrderGateawy. L'OrderGateway quindi notifica lo \Chef{} dell'esistenza dell'ordine, ed egli ritorna un segnale di conferma di ricezione del messaggio. Una volta ricevuta la conferma dallo \Chef{} l'OrderGateway segnala al \Customer{} che l'ordine è andato a buon fine.
 
 \begin{figure}[H]
 	\centering
@@ -144,6 +149,7 @@ Selezionate le pietanze l'ordine è inviato all'Order\-Gateway, il quale salva n
 	\includegraphics[width=14cm]{diagrammi_img/attivita/chef_comlete_order.png}
 \caption{Diagramma di attività - Conferma completata la preparazione del piatto}
 \end{figure}
+La procedura di conferma del completamento della preparazione di un piatto inizia con il controllo della presenza della lista degli ordini. Se questa è presente lo \Chef{} può procedere a selezionare l'ordinazione che ha completato, una procedura che può effettuare più volte. Una volta segnalate tutte le ordinazioni completate lo \Chef{} invia un segnale all'OrderGateway e rimane in attesa di una risposta. Se l'OrderGateway non risponde entro un periodo di tempo predefinito lo \Chef{} invia di nuovo il segnale di completamento. L'OrderGateway una volta ricevuto il segnale dallo \Chef{} inoltra la conferma al database, il quale si aggiorna e conferma l'aggiornamento all'OrderGateway. L'OrderGateway quindi notifica il \Deliveryman{} del completamento degli ordini. Una volta ricevuta conferma della ricezione del messaggio dal \Deliveryman{} l'OrderGateway avvissa lo \Chef{} che la procedura è terminata con successo.
 
 \begin{figure}[H]
 	\centering
@@ -161,6 +167,7 @@ Completata la preparazione della pietanza, lo \Chef{} segnala l'avvenuta prepara
 	\includegraphics[width=14cm]{diagrammi_img/attivita/deliveryman_seleziona.png}
 	\caption{Diagramma di attività - Seleziona consegna}
 \end{figure}
+La procedura di selezione di una consegna inizia con il controllo della presenza della lista degli ordini completati. Se la lista è presente il \Deliveryman{} può proseguire alla selezione dell'ordine da consegnare. Questa operazione può essere effettuata più volte. Quando il \Deliverymna{} ha selezionato tutti gli ordini che desidera consegnare manda un segnale all'OrderGateway e si mette in attesa di una risposta. Se non riceve una risposta entro un intervallo di tempo predefinito il \Deliveryman{} invierà nuovamente il segnale. L'OrderGateway riceve il segnale e lo inoltra al database il quale si aggiorna e recupera le informazioni necessarie al \Deliveryman{} per effettuare la consegna. Il database restituisce le informazioni all'OrderGateway il quale le inoltra al \Deliveryman{} insieme alla conferma del successo dell'operazione. A questo punto viene aggiornata la lista delle consegne del \Deliveryman{} e gli appaiono le informazioni di consegna.
 
 \begin{figure}[H]
 	\centering
@@ -178,6 +185,7 @@ Selezionati gli ordini da consegnare il \Deliveryman{} invia un segnale all'Orde
 	\includegraphics[width=14cm]{diagrammi_img/attivita/deliveryman_consegnato.png}
 	\caption{Diagramma di attività - Segnala la consegna come compiuta}
 \end{figure}
+La procedura di segnalazione del completamento di una consegna inizia con il controllo della presenza di un ordine da consegnare. Se l'ordine è presente il \Deliveryman{} può indicarlo come completato, inviando un segnale all'OrderGateway. A questo punto il \Deliveryman{} si mette in attesa del sengale di conferma, nel caso in cui non lo riceva entro un periodo di tempo predefinito invierà di nuovo il segnale. L'OrderGateway inoltra il segnale ricevuto dal \Deliveryman{} al database, il quale si aggiorna e conferma l'eliminazione dell'ordine all'OrderGateway. Una volta ricevuto il segnale di conferma l'OrderGateway lo inoltra al \Deliveryman{} completando così la procedura. 
 
 \begin{figure}[H]
 	\centering
