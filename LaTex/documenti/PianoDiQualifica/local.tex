@@ -34,5 +34,9 @@
 \externaldocument[AdR-]{../AnalisiDeiRequisiti/capitolo-requisiti}
 
 \newcounter{testcounter}
-\newcommand*{\test}[1]{\stepcounter{testcounter} T#1\thetestcounter}
+\newcommand*{\test}[1]{%
+	\refstepcounter{testcounter}
+	\textlabel{T#1\thetestcounter}{T#1\thetestcounter}
+	T#1\thetestcounter
+}
 
