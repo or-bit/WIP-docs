@@ -1,6 +1,5 @@
 \subsection{Test di Unità}
 \subsubsection{Framework}
-
 \begin{longtable}{|c|P{9cm}|c|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
 	\endfirsthead
@@ -121,8 +120,24 @@
 	\caption{Test di unità per il framework}
 \end{longtable}
 
-\subsubsection{Order Gateway}
+\subsubsection{To-do List}
+\begin{longtable}{|c|P{9cm}|c|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
+	\endfirsthead
+	\hline \test{U} & Verifica che il Model:
+	\begin{itemize}
+		\item crei correttamente un elemento della lista;
+		\item crei correttamente la lista;
+		\item aggiorni lo stato degli elementi quando gli viene notificato.
+	\end{itemize}
+	& Non implementato \\
+	\hline \test{U} & Verifica che il Controller renderizzi correttamente & Non implementato \\
+	\hline \test{U} & Verifica che la View renderizzi correttamente & Non implementato \\
+	\hline
+	\caption{Test di unità per la To-do list}
+\end{longtable}
 
+\subsubsection{\DemoName{}}
 \begin{longtable}{|c|P{9cm}|c|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
 	\endfirsthead
@@ -195,6 +210,31 @@
 %	\hline\test{U} & Verifica che le istanze di tipo Actions della presenza e dell'assenza del cook sono generate in modo corretto & Superato \\
 	\hline\test{U} & Verifica che le chiamate di aggiunta, modifica e rimozione del menu siano generate in modo corretto & Superato \\
 	\hline\test{U} & Verifica che le chiamate di aggiunta, modifica e rimozione dell'ordinazione siano generate in modo corretto & Superato \\
+	\hline \test{U} & Verifica che la BubbleCustomer:
+	\begin{itemize}
+		\item renderizzi correttamente;
+		\item aggiunga le pietanze all'ordine;
+		\item rimuova pietanze dall'ordine;
+		\item invii l'ordine;
+		\item effettui una richiesta per visualizzare il menu.
+	\end{itemize}
+	& Non implementato \\
+	\hline \test{U} & Verifica che la BubbleManager:
+	\begin{itemize}
+		\item renderizzi correttamente;
+		\item esegua una richiesta per aggiungere un piatto al menu;
+		\item esegua una richiesta per rimuovere un piatto dal menu;
+		\item esegua una richiesta per modificare un piatto del menu;
+		\item esegua una richiesta per eliminare un ordine;
+		\item esegua una richiesta per visualizzare il menu.
+	\end{itemize}
+	& Non implementato \\
+		\hline \test{U} & Verifica che la BubbleChef:
+	\begin{itemize}
+		\item renderizzi correttamente;
+		\item esegua una richiesta per completare un ordine.
+	\end{itemize}
+	& Non implementato \\
 	\hline
 	\caption{Test di unità per l'order gateway}
 \end{longtable}
