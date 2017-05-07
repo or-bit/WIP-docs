@@ -202,6 +202,7 @@ Una volta completata la consegna il \Deliveryman{} lo segnala all'Order\-Gateway
 	\includegraphics[width=14cm]{diagrammi_img/attivita/delivetyman_fallimento.png}
 	\caption{Diagramma di attività - Segnala fallimento}
 \end{figure}
+La procedura di segnalazione del fallimento di una consegna inizia con il controllo della presenza di un ordine in consegna. Se l'ordine è presente il \Deliveryman{} può procedere alla selezione della consegna fallita. Viene quindi inviato un segnale all'OrderGateway e il \Deliveryman{} si mette in attesa di risposta. Se non riceve una risposta entro un periodo di tempo predeterminato il \Deliveryman{} invierà nuovamente il sengale. L'OrderGateway, una volta ricevuto il segnale, lo inoltra al database, il quale si aggiorna e conferma l'avvenimento dell'operazione all'OrderGateway. L'OrderGateway quindi conferma al \Deliveryman{} che l'operazione è andata a buon fine.
 
 \begin{figure}[H]
 	\centering
@@ -220,6 +221,7 @@ Se la consegna non è andata a buon fine il \Deliveryman{} lo segnala all'Order\
 	\includegraphics[width=14cm]{diagrammi_img/attivita/responsabile_acquisto.png}
 	\caption{Diagramma di attività - Segnala acquistate le scorte}
 \end{figure}
+La procedura di sengalazione dell'acquisto delle scorte inizia con il controllo della presenza della lista di acquisti da effettuare. Se la lista è presente il \Purchasingmanager{} può procedere ad indicare come acquistato un elemento della lista. Questa operazione può essere svolta più volte. Una volta selezionati tutti gli acquisti che ha completato il \Purchasingmanager{} invia un segnale all'OrderGateway e rimane in attesa di una risposta. Se non riceve risposta entro un tempo predeterminato invierà di nuovo il segnale. L'OrderGateway, una volta ricevuto il messaggio, lo inoltra al database, il quale si aggiorna e conferema all'OrderGateway che l'operazione è stata eseguita. L'OrderGateway quindi inoltra il segnale di conferma al \Purchasingmanager{}.
 
 \begin{figure}[H]
 	\centering
@@ -237,6 +239,7 @@ Il \Purchasingmanager{} segnala l'acquisto delle scorte all'Order\-Gateway. L'Or
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_get_menu.png}
 	\caption{Diagramma di attività - Visualizzazione menu}
 \end{figure}
+La procedura di visualizzazione del menu inizia con la richiesta del menu da parte del \Manager{}, che viene inviata all'OrderGateway. Il \Manager{} quindi si mette in attesa di una risposta e se non la riceve entro un intervallo di tempo predefinito invia di nuovo la richiesta ricevuta dal \Manager{} al database, il quale recupera il menu e lo ritorna all'OrderGateway. L'OrderGateway quindi inoltra il menu ricevuto dal database al \Manager{} il quale può così visualizzarlo.
 
 \begin{figure}[H]
 	\centering
@@ -252,6 +255,7 @@ Il \Manager{} effettua una richiesta per visualizzare il menu, ricevuta dall'Ord
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_menu_modifiche.png}
 	\caption{Diagramma di attività - Modifica menu}
 \end{figure}
+La procedura di modifica del menu inizia con il controllo della presenza del menu. Se il menu è presente il \Manager{} può procedere ad effettuare le modifiche su un elemento del menu. Questa operazione può essere effettuata più volte. Quando ha effettuato tutte le modifiche desiderate il \Manager{} procede ad inviarle all'OrderGateway e si mette poi in attesa di una conferma. Se non riceve conferma entro un intervallo di tempo predefinito il \Manager{} invierà di nuovo le modifiche. L'OrderGateway riceve le modifichea al mennu e le inoltra al database il quale si aggiorna e manda un segnale di conferma all'OrderGateway. L'OrderGateway inoltra il segnale di conferma delle modifiche del database al \Manager{} terminando così la procedura.
 
 \begin{figure}[H]
 	\centering
@@ -268,6 +272,7 @@ Il \Manager{}, una volta effettuate le modifiche al menu, le invia all'Order\-Ga
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_mag.png}
 	\caption{Diagramma di attività - Visualizzazione magazzino}
 \end{figure}
+La procedura di visualizzazione del magazzino inizia con l'invio della richiesta all'OrderGateway da parte del \Manager{}. Il \Manager{} quindi rimane in attesa di una risposta, e se non la riceve entro un intervallo di tempo predefinito invia nuovamente la richiesta. L'OrderGateway riceve la richiesta del \Manager{} e inoltra al database, il quale recupera i dati e li restituisce all'OrderGateway. L'OrderGateway quindi inoltra i dati ricevuti dal database al \Manager{} il quale può visualizzare il magazzino.
 
 \begin{figure}[H]
 	\centering
@@ -283,6 +288,7 @@ Il \Manager{} effettua una richiesta per visualizzare il magazzino, che viene ri
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_mag_modifiche.png}
 	\caption{Diagramma di attività - Modifica magazzino}
 \end{figure}
+La procedura di modifica del magazzino inizia con il controllo della presenza o meno della lista dei prodotti in magazzino. Se la lista è presente il \Manager{} può proseguire alla modifica di un element. Questa azione può essere effettuata più volte. Una volta effettuate tutte le modifiche desiderate il \Manager{} procede ad inviarle all'OrderGateway, e si mette quindi in attesa di un segnale di conferma. Se non riceve il segnale entro un periodo di tempo predefinito invia nuovamente le modifiche. L'OrderGateway riceve le modifiche effettuate dal \Manager{} e le inoltra al database, il quale si aggiora e manda un messaggio di conferma del successo dell'operazione all'OrderGateway. L'OrderGateway quindi inoltra il segnale di conferma al \Manager{}.
 
 \begin{figure}[H]
 	\centering
@@ -299,6 +305,7 @@ Il \Manager{}, una volta effettuate le modifiche al magazzino, le invia all'Orde
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_ordini.png}
 	\caption{Diagramma di attività - Visualizzazione orders}
 \end{figure}
+La procedura di visualizzazione degli ordini inizia con l'invio della richiesta della  all'OrderGateway da parte del \Manager{}, il quale si mette poi in attesa di ricevere la lista. Se non la riceve entro un intervallo di tempo predeterminato il \Manager{} invia di nuovo la richiesta all'OrderGateway. L'OrderGateway riceve la richiesta della lista degli ordini dal \Manager{} e la inoltra al database, il quale recupera le informazioni e le restituisce all'OrderGateway. L'OrderGateway quindi inoltra le informazioni ricevute dal database al \Manager{}, che può quindi visualizzare la lista degli ordini.
 
 \begin{figure}[H]
 	\centering
@@ -314,6 +321,7 @@ Il \Manager{} effettua una richiesta per visualizzare gli ordini all'Order\-Gate
 	\includegraphics[width=14cm]{diagrammi_img/attivita/manager_order_remove.png}
 	\caption{Diagramma di attività - Elimina order}
 \end{figure}
+La procedura di eliminazione degli ordini inizia con il controllo della presenza della lista degli ordini. Se la lista è presente il \Manager{} può proseguire alla selezione di un ordine da eliminare. Questa operazione può essere effettuata più volte. Una volta selezionati tutti gli ordini da eliminare il \Manager{} invia le modifiche all'OrderGateway e rimane in attesa di una risposta. Se non riceve una risposta entro un periodo di tempo predefinito invia di nuovo le modifiche. L'OrderGateway riceve le modifiche effettuate dal \Manager{} e le invia al database, il qualle si aggiorna con le nuove informazioni e manda un messaggio di conferma all'OrderGateway. L'OrderGateway quindi inoltra il messaggio di conferma di avvenuta eliminazione del database al \Manager{}.
 
 \begin{figure}[H]
 	\centering
