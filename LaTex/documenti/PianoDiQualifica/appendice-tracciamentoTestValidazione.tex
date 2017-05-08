@@ -24,6 +24,31 @@ Di seguito sono elencati i test di validazione attraverso i quali è possibile c
 \subsubsection{Bubble To-do list}
 
 \begin{longtable}{|c|P{9cm}|P{2.5cm}|}
+	\hline \multicolumn{1}{|l}{\textbf{Codice}} &  \multicolumn{1}{|l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{V} & L'utente desidera aggiungere task alla lista. L'utente :
+	\begin{itemize}
+		\item seleziona la barra dell'editor;
+		\item inserisce il nome del task; 
+		\item seleziona il pulsante "Add" ed il task viene aggiunto alla To-do List.
+	\end{itemize}
+	& \ref{AdR-L17} \ref{AdR-L18} \ref{AdR-L95} \ref{AdR-L72} \ref{AdR-L73} \ref{AdR-L74}  \\
+	\hline
+	\hline \test{V} & L'utente desidera selezionare i task, segnare come completati i task selezionati ed eliminare i task selezionati. L'utente :
+	\begin{itemize}
+		\item seleziona il task dalla lista;
+		\item seleziona il pulsante"Complete Selected"; 
+		\item visualizza i task completati in trasparenza;
+		\item seleziona il pulsante "Delete Selected" ed i task selezionati vengono rimossi dalla To-do List.
+	\end{itemize}
+	& \ref{AdR-L19} \ref{AdR-L75} \\
+	\hline
+	\caption{Test di validazione Bubble To-do list}
+\end{longtable}
+
+\subsubsection{\DemoName{}}
+
+\begin{longtable}{|c|P{9cm}|P{2.5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
 	\endfirsthead
 	\hline \test{V} & L'utente cliente intende visualizzare il menu del ristorante consultando i piatti,i prezzi e selezionando le relative quantità ed effettuare la sua ordinazione. L'utente :
@@ -71,6 +96,6 @@ Di seguito sono elencati i test di validazione attraverso i quali è possibile c
 	\end{itemize}
 	& \ref{AdR-L30} \ref{AdR-L32} \ref{AdR-L101} \\
 	\hline
-	\caption{Test di validazione}
+	\caption{Test di validazione \DemoName{}}
 \end{longtable}
 
