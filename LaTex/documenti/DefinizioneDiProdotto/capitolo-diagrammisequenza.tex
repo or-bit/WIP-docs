@@ -1,27 +1,32 @@
 \section{Diagrammi di sequenza}
 In questa sezione verranno presentate le diverse funzionalità offerte dal progetto in forma di diagrammi di sequenza.
 
-\subsection{Framework}
-
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=7cm]{./diagrammi/demo/client/customer.png}
-%	\caption{Classe \class}
-%\end{figure}
-
 \subsection{To-do list}
+La bubble To-do list fornisce all'utente i seguenti modi per interagire con il sistema.
 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=7cm]{./diagrammi/sequenza}
-%	\caption{Classe \class}
-%\end{figure}
+\subsubsection{Aggiunta elemento alla To-do list}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./diagrammi/sequenza/aggiunta_elemento_todo.png}
+	\caption{Diagramma di sequenza - Aggiunta elemento alla To-do list}
+\end{figure}
+Lo \textit{User} effettua la richiesta di aggiunta di un elemento, che viene ricevuta dalla classe \code{ListItemController}. La classe quindi invoca il metodo \code{handleSubmit()} che recupera l'oggetto da aggiungere alla lista. Quindi invoca il metodo \code{addItems(item)} della classe \code{ItemsStore}, il quale crea l'oggetto \code{ListItem}.
 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=7cm]{./diagrammi/sequenza}
-%	\caption{Classe \class}
-%\end{figure}
+\subsubsection{Rimozione elemento dalla To-do list}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./diagrammi/sequenza/rimozione_elemento_todo.png}
+	\caption{Diagramma di sequenza - Rimozione elemento dalla To-do list}
+\end{figure}
+Lo \textit{User} effettua la richiesta di rimozione di un elemento, che viene ricevuta dalla classe \code{ListItemController}. La classe quindi invoca il metodo \code{handleRemove()} che recupera l'id dell'oggetto da rimuovere dalla lista. Quindi invoca il metodo \code{removeItems(id)} della classe \code{ItemsStore}, il quale distrugge l'oggetto \code{ListItem}.
+
+\subsubsection{Completamento elemento dalla To-do list}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./diagrammi/sequenza/completa_elemento_todo.png}
+	\caption{Diagramma di sequenza - Completamento elemento dalla To-do list}
+\end{figure}
+Lo \textit{User} effettua la richiesta di completamento di un elemento, che viene ricevuta dalla classe \code{ListItemController}. La classe quindi invoca il metodo \code{handleComplete()} che recupera l'id dell'oggetto da completare. Quindi invoca il metodo \code{completeItems(id)} della classe \code{ItemsStore}, il quale invoca la funzione \code{setChecked()} che modifica lo stato dell'oggetto \code{ListItem}.
 
 \subsection{\DemoName}
 Nello scenario descritto dalla demo, tramite il framework e le bubble da esso prodotte sarà possibile per gli attori interagire con il sistema nei seguenti modi, suddivisi per attore che li compie.
