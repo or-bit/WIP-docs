@@ -70,8 +70,9 @@ dove:
 \`{E} compito degli \Analisti{} controllare la corrispondenza tra i requisiti e le loro fonti (capitolato, casi d'uso, verbali di riunioni). Questa corrispondenza deve essere presentata nelle due tabelle di tracciamento Fonti-Requisiti e Requisiti-Fonti per facilitarne la consultazione. 
 
 \subsubsection{Progettazione}
-\paragraph{Specifica Tecnica}\mbox{}\\
-\`{E} compito dei \Progettisti{} descrivere la \PA{} ad alto livello del prodotto nella \SpecificaTecnica.
+La progettazione del sistema è compito dei \Progettisti{}, i quali hanno il compito di realizzare l'architettura del prodotto, prima ad alto livello e successivamente nel dettaglio. La progettazione deve essere effettuata tramite diagrammi esplicativi, supportati dalla documentazione.
+\paragraph{Progettazione architetturale}\mbox{}\\
+\`{E} compito dei \Progettisti{} eseguire la \PA{} ad alto livello del prodotto. È altresì compito loro descriverla nella \SpecificaTecnica.
 
 \subparagraph{Diagrammi UML}\mbox{}\\
 Devono essere realizzati i seguenti diagrammi:
@@ -90,31 +91,29 @@ Devono essere descritti i \glossario{design pattern} utilizzati specificando:
 	\item diagramma delle classi generico del design pattern.
 \end{itemize}
 
-\subparagraph{Tracciamento Componenti}\mbox{}\\
+\subparagraph{Tracciamento componenti}\mbox{}\\
 Deve essere tracciata la corrispondenza tra requisiti e componenti che li soddisfano.
 
-\paragraph{Definizione di Prodotto}\mbox{}\\
-\`{E} compito dei \Progettisti{} stilare la \DefinizioneDiProdotto, in cui è descritta la \PD{} del prodotto, ampliando quanto detto nella \SpecificaTecnica.
+\paragraph{Progettazione di dettaglio}\mbox{}\\
+\`{E} compito dei \Progettisti{} effettuare la \PD{} del prodotto, dettagliando quanto progettato ad alto livello e descritto nella \SpecificaTecnica{}. È altresì loro compito riportare quanto risultante nella \DefinizioneDiProdotto{}.
 
 \subparagraph{Diagrammi UML}\mbox{}\\
-Devono essere aggiornati i seguenti diagrammi:
+Devono essere realizzati i seguenti diagrammi:
 \begin{itemize}
 	\item Diagrammi delle classi;
-	\item Diagrammi di sequenza;
-	\item Diagrammi di attività.
+	\item Diagrammi di sequenza.
 \end{itemize}
 
-\subparagraph{Definizione di Classe}\mbox{}\\
-Nella \DefinizioneDiProdotto{} deve essere descritta ogni classe progettata, secondo lo standard UML 2.5. La descrizione deve essere costituita da:
+\subparagraph{Definizione di classe}\mbox{}\\
+Ogni classe progettata deve seguire lo standard UML 2.5 e deve avere le seguenti proprietà, accompagnate nella \DefinizioneDiProdotto{} da una descrizione chiarificante:
 \begin{itemize}
-	\item \textbf{attributi}: vanno indicati l'accessibilità, il nome e la descrizione di ognuno;
-	\item \textbf{metodi}: vanno indicati l'accessibilità, il nome e la descrizione di ognuno;
-	\item \textbf{parametri}: vanno racchiusi tra parentesi tonde e devono essere riportati con nome e tipo, separati da due punti;
-	\item \textbf{argomenti}: vanno indicati la direzione tra parentesi quadre, nome e tipo separati da due punti, seguiti da una breve descrizione.
+	\item \textbf{attributi}: vanno indicati l'accessibilità e il nome;
+	\item \textbf{metodi}: vanno indicati l'accessibilità e il nome;
+	\item \textbf{parametri}: vanno racchiusi tra parentesi tonde e devono essere riportati con nome e tipo, separati da due punti.
 \end{itemize}
 Ogni classe deve inoltre essere accompagnata da una descrizione che ne includa lo scopo e le funzionalità.
 
-\subparagraph{Tracciamento delle Classi}\mbox{}\\
+\subparagraph{Tracciamento delle classi}\mbox{}\\
 Deve essere tracciata la corrispondenza tra requisiti e classi che li soddisfano.
 
 \paragraph{Metriche per la progettazione}\mbox{}\\
