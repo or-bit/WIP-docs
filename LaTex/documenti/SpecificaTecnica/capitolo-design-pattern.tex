@@ -75,19 +75,19 @@ Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano ess
 Permette l'aggiornamento di più viste contemporaneamente, disinteressandosi di quante o quali esse siano.\\
 \textbf{Utilizzo:} \\
 Verrà usato per sincronizzare le varie bubble che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate e consistenti le une con le altre. Allo stesso modo l'OrderGateway contiene al suo interno un observer per gestire la connessione e la sincronizzazione degli eventi.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
-%	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
+	\caption{Applicazione pattern observer all'interno della \DemoName}
+\end{figure}
 
 \subsubsection{Strategy}
 \textbf{Scopo:} \\
 Definisce una famiglia di algoritmi, li incapsula e li rende interscambiabili. Il pattern strategy permette di variare l'algoritmo, indipendentemente dai clients che lo utilizzano.\\
 \textbf{Utilizzo:} \\
 Questo pattern verrà usato per indirizzare le informazioni dell'OrderGateway alla bubble corretta, tramite un handler interno ad esso.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
-%	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/strategy_demo.png}
+	\caption{Applicazione pattern strategy all'interno della \DemoName}
+\end{figure}
