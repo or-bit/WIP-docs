@@ -396,24 +396,24 @@ Classe che permette di effettuare confronti tramite espressioni regolari.
 \textbf{Attributi:}
 \begin{itemize}
 	\item \field{- regExp: string}: stringa contenente l'espressione regolare;
-	\item \field{- mod: Object}: oggetto contenente i modificatori;
-	\item \field{+ \ul{suffixQuantifiers: string[]}}: array contenente i quantificatori che sono suffissi dell'espressione regolare;
-	\item \field{+ \ul{prefixQuantifiers: string[]}}: array contenente i quantificatori che sono prefissi dell'espressione regolare.
+	\item \field{- mod: JSON}: oggetto contenente i modificatori;
+	\item \field{- suffixQuantifiers: string[]}: array contenente i quantificatori che sono suffissi dell'espressione regolare;
+	\item \field{- prefixQuantifiers: string[]}: array contenente i quantificatori che sono prefissi dell'espressione regolare.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ MatchRegularExpr(expr: string, m: Object)}: costruttore della classe, assegna i parametri agli attributi:
+	\item \method{+ MatchRegularExpr(expr: string, m: JSON)}: costruttore della classe, assegna i parametri agli attributi:
 	\begin{itemize}
 		\item \param{expr: string}: espressione regolare;
-		\item \param{m: Object}: oggetto contenente i modificatori
+		\item \param{m: JSON}: oggetto contenente i modificatori
 	\end{itemize}
 	\item \method{+ modifiersToString(): string}: ritorna i modificatori sotto forma di stringa;
-	\item \method{+ setModifiers(m: Object): void}: setta i modificatori:
+	\item \method{+ setModifiers(m: JSON): void}: setta i modificatori:
 	\begin{itemize}
-		\item \param{m: Object}: oggetto contenente i modificatori;
+		\item \param{m: JSON}: oggetto contenente i modificatori;
 	\end{itemize}
-	\item \method{+ getModifiers(): Object}: ritorna l'oggetto contenente i modificatori;
+	\item \method{+ getModifiers(): JSON}: ritorna l'oggetto contenente i modificatori;
 	\item \method{- \ul{quote(str: string): string}}: ritorna una stringa dove ai caratteri speciali per le espressioni regolari è anteposto un carattere di escape:
 	\begin{itemize}
 		\item \param{str: string}: stringa su cui effettuare l'escaping;
@@ -545,7 +545,7 @@ Viene utilizzato per raggruppare blocchi di elementi correlati tra loro.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- children: GUI[]}: array di componenti grafici.
+	\item \field{- children: GUI[]}: array di componenti grafici.\footnote{Nel diagramma sono preceduti da \virgolette{>>} i tipi appartenenti ad un sotto-package rispetto a quello attuale, indicandone quindi il percorso relativo.}
 \end{itemize}
 
 \textbf{Metodi:}
