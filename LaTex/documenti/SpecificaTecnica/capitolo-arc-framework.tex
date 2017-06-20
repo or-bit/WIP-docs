@@ -210,16 +210,16 @@ Questa bolla gestisce le comunicazioni tra l’interfaccia e la parte di busines
 %\end{samepage}
 \textbf{Descrizione:}\\
 La parte di View dedicata alla gestione dell'interfaccia utente del framework è strutturata come mostrato nel diagramma delle classi riportato sopra.
-Ogni elemento della GUI, come Button, TextEdit o Label, implementa l'interfaccia GUI, specificando opportunamente le funzioni a seconda che gli elementi siano di output o di input.\\
+Ogni elemento della GUI, come Button, TextEdit o Label, implementa metodi comuni, derivanti dal componente grafico base di React.\\
 Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. In questo modo il Controller potrà organizzare in modo più semplice lo scambio di informazioni tra la parte Model e quella View, inserendo diversi elementi di GUI relativi ad una specifica funzionalità in un unico container.
 
 \paragraph{Classi}\mbox{}
 
-\subparagraph{View\-::Gui}\label{gui}\mbox{}\\
-\textbf{Descrizione:}\\
-L'interfaccia GUI racchiude i dati riguardanti la visibilità e l'aggiornamento. Offre le funzionalità di gestione dell'evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
-\textbf{Utilizzo:}\\
-Questa classe viene usata per gestire gli eventi degli elementi grafici.
+%\subparagraph{View\-::Gui}\label{gui}\mbox{}\\
+%\textbf{Descrizione:}\\
+%L'interfaccia GUI racchiude i dati riguardanti la visibilità e l'aggiornamento. Offre le funzionalità di gestione dell'evento che andranno poi specificate in ogni classe che implementerà questa interfaccia.\\
+%\textbf{Utilizzo:}\\
+%Questa classe viene usata per gestire gli eventi degli elementi grafici.
 
 \subparagraph{View\-::Gui\-::Container}\label{gui-container}\mbox{}\\
 \textbf{Descrizione:}\\

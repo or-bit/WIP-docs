@@ -518,7 +518,7 @@ Viene utilizzata come base per creare le bubble.
 	\includegraphics[width=15cm]{./diagrammi/framework/view.png}
 	\caption{Classe \class}
 \end{figure}
-Il componente View è il contenitore principale per gli elementi grafici del framework. È composto al suo interno da un pattern Fa\c{c}ace sul sottosistema GUI e dalla classe GUIContainer che fa da contenitore per qualsiasi componente grafico.
+Il componente View è il contenitore principale per gli elementi grafici del framework. È composto al suo interno da un sottosistema di componenti grafici e dalla classe GUIContainer che fa da contenitore per qualsiasi componente derivato da React.Component.
 
 \setclass{Framework::View::GUIContainer}
 \paragraph[::GUIContainer]{\class}\mbox{}\\ \label{\class}
@@ -545,7 +545,7 @@ Viene utilizzato per raggruppare blocchi di elementi correlati tra loro.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- children: GUI[]}: array di componenti grafici.\footnote{Nel diagramma sono preceduti da \virgolette{>>} i tipi appartenenti ad un sotto-package rispetto a quello attuale, indicandone quindi il percorso relativo.}
+	\item \field{- children: React.Component[]}: array di componenti grafici.\footnote{Nel diagramma sono preceduti da \virgolette{>>} i tipi appartenenti ad un sotto-package rispetto a quello attuale, indicandone quindi il percorso relativo.}
 \end{itemize}
 
 \textbf{Metodi:}
@@ -557,43 +557,43 @@ Viene utilizzato per raggruppare blocchi di elementi correlati tra loro.
 	\item \method{+ render(): React::Component}: renderizza il contenitore.
 \end{itemize}
 
-\setclass{Framework::View::GUI::GUI}
-\paragraph[::GUI]{\class}\mbox{}\\ \label{\class}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=9cm]{./diagrammi/framework/view/gui/gui.png}
-	\caption{Classe \class}
-\end{figure}
-\textbf{Descrizione:}\\
-Classe che rappresenta un generico elemento grafico. Implementa il design pattern Fa\c{c}ade.
-
-\textbf{Utilizzo:}\\
-Viene utilizzato per costruire gli elementi grafici.
-
-\textbf{Classi ereditate:}
-\begin{itemize}
-	\item \code{React::Component}
-\end{itemize}
-
+%\setclass{Framework::View::GUI::GUI}
+%\paragraph[::GUI]{\class}\mbox{}\\ \label{\class}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=9cm]{./diagrammi/framework/view/gui/gui.png}
+%	\caption{Classe \class}
+%\end{figure}
+%\textbf{Descrizione:}\\
+%Classe che rappresenta un generico elemento grafico. Implementa il design pattern Fa\c{c}ade.
+%
+%\textbf{Utilizzo:}\\
+%Viene utilizzato per costruire gli elementi grafici.
+%
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{React::Component}
+%\end{itemize}
+%
 %\textbf{Sottoclassi:}
 %\begin{itemize}
 %	\item 
 %\end{itemize}
-
-\textbf{Attributi:}
-\begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà del componente da creare.
-\end{itemize}
-
-\textbf{Metodi:}
-\begin{itemize}
-	\item \method{+ GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
-	\begin{itemize}
-		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
-		\item \param{WrappedComponent: class}: componente da creare;
-	\end{itemize}
-	\item \method{+ render(): React::Component}: renderizza il componente.
-\end{itemize}
+%
+%\textbf{Attributi:}
+%\begin{itemize}
+%	\item \field{- props: Object[]}: array contenente le proprietà del componente da creare.
+%\end{itemize}
+%
+%\textbf{Metodi:}
+%\begin{itemize}
+%	\item \method{+ GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
+%	\begin{itemize}
+%		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
+%		\item \param{WrappedComponent: class}: componente da creare;
+%	\end{itemize}
+%	\item \method{+ render(): React::Component}: renderizza il componente.
+%\end{itemize}
 
 \setclass{Framework::View::GUI::BarChart}
 \paragraph[::BarChart]{\class}\mbox{}\\ \label{\class}
