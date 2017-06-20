@@ -11,6 +11,17 @@ In seguito ad una discussione tra i componenti del gruppo sui capitolati propost
 \end{itemize}
 Deve essere quindi convocata una riunione interna per la decisione finale sul capitolato su cui svolgere il progetto.
 
+\subsubsection{Consegna}
+La consegna deve avvenire entro il giorno 27-06-2017, come da \PianoDiProgetto{}, previo appuntamento, presso la sede del \Committente{}. Il collaudo finale del prodotto si terrà durante la \RA{}.\\
+Fanno parte del materiale da consegnare:
+\begin{itemize}
+	\item sorgente del framework e della demo;
+	\item documentazione completa del prodotto.
+\end{itemize}
+
+\subsubsection{Completamento del progetto}
+Con la consegna ed il collaudo effettuati nella \RA{}, il progetto è ritenuto concluso. Ulteriori modifiche saranno a carico dei singoli. Il gruppo Or-bit non si assume l'obbligo di mantenimento del codice sorgente, che rimarrà disponibile sul repository dedicato, in formato aperto.
+
 \subsection{Sviluppo}
 
 \subsubsection{Analisi dei Requisiti}
@@ -70,9 +81,36 @@ dove:
 \`{E} compito degli \Analisti{} controllare la corrispondenza tra i requisiti e le loro fonti (capitolato, casi d'uso, verbali di riunioni). Questa corrispondenza deve essere presentata nelle due tabelle di tracciamento Fonti-Requisiti e Requisiti-Fonti per facilitarne la consultazione. 
 
 \subsubsection{Progettazione}
-La progettazione del sistema è compito dei \Progettisti{}, i quali hanno il compito di realizzare l'architettura del prodotto, prima ad alto livello e successivamente nel dettaglio. La progettazione deve essere effettuata tramite diagrammi esplicativi, supportati dalla documentazione.
+Scopo delle attività di progettazione è la traduzione dei requisiti individuati durante l'analisi in una architettura software, soluzione del problema, unione dei sottosistemi che rappresentano le funzionalità.
+È quindi compito dei \Progettisti{} costruire una architettura logica del prodotto, che sia efficace ed efficiente, ovvero che funzioni, soddisfi i requisiti e lo faccia nel miglior modo possibile, riducendo il consumo di risorse allo stretto necessario. È altresì compito dei \Progettisti{} suddividere il sistema in componenti semplici, implementabili da singoli individui, così da guidare il lavoro dei \Programmatori{} durante i periodi di \Cod{}.\\
+Al fine di garantire la qualità, il prodotto della progettazione dovrà avere le seguenti caratteristiche:
+\begin{itemize}
+	\item sufficienza;
+	\item comprensibilità;
+	\item modularità;
+	\item robustezza;
+	\item flessibilità;
+	\item riusabilità;
+	\item efficienza;
+	\item affidabilità;
+	\item disponibilità;
+	\item sicurezza rispetto a malfunzionamenti;
+	\item sicurezza rispetto a intrusioni;
+	\item semplicità;
+	\item incapsulazione;
+	\item coesione;
+	\item basso accoppiamento.
+\end{itemize}
+
 \paragraph{Progettazione architetturale}\mbox{}\\
-\`{E} compito dei \Progettisti{} eseguire la \PA{} ad alto livello del prodotto. È altresì compito loro descriverla nella \SpecificaTecnica.
+\`{E} compito dei \Progettisti{} eseguire la \PA{} ad alto livello del prodotto. È altresì compito loro descriverla nella \SpecificaTecnica.\\
+Vanno perseguiti i seguenti obiettivi:
+\begin{itemize}
+	\item soddisfare i requisiti con un sistema di qualità;
+	\item impiegare componenti con specifica chiara e coesa, realizzabili con le risorse e i costi fissati;
+	\item realizzare una struttura che faciliti eventuali cambiamenti futuri;
+	\item identificare schemi architetturali utili al caso e componenti riusabili, sfruttando i design pattern.
+\end{itemize}
 
 \subparagraph{Diagrammi UML}\mbox{}\\
 Devono essere realizzati i seguenti diagrammi:
@@ -95,7 +133,13 @@ Devono essere descritti i \glossario{design pattern} utilizzati specificando:
 Deve essere tracciata la corrispondenza tra requisiti e componenti che li soddisfano.
 
 \paragraph{Progettazione di dettaglio}\mbox{}\\
-\`{E} compito dei \Progettisti{} effettuare la \PD{} del prodotto, dettagliando quanto progettato ad alto livello e descritto nella \SpecificaTecnica{}. È altresì loro compito riportare quanto risultante nella \DefinizioneDiProdotto{}.
+\`{E} compito dei \Progettisti{} effettuare la \PD{} del prodotto, dettagliando quanto progettato ad alto livello e descritto nella \SpecificaTecnica{}. È altresì loro compito riportare quanto risultante nella \DefinizioneDiProdotto{}.\\
+Vanno perseguiti i seguenti obiettivi:
+\begin{itemize}
+	\item dominare la complessità del sistema, suddividendolo in componenti con complessità trattabile e implementabili dai singoli;
+	\item riconoscere le componenti terminali;
+	\item mantenere un compromesso tra complessità delle unità e dell'integrazione di queste tra loro.
+\end{itemize}
 
 \subparagraph{Diagrammi UML}\mbox{}\\
 Devono essere realizzati i seguenti diagrammi:
