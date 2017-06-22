@@ -109,8 +109,10 @@ Questo package garantisce alla bubble la possibilità di avere accesso alla list
 Nel package di operazioni sul DB sono racchiuse le funzionalità per connettersi ad un database non relazionale ed effettuare al suo interno operazioni di lettura e di scrittura.\\
 \textbf{Scopo:}\\
 Oltre alle normali operazioni sul database l'utente avrà la possibilità di utilizzare un database esterno.\\
-\textbf{Dipendenze:}\\
-Implementa l'interfaccia MongoDB per adattare i metodi di lettura e scrittura del database all'applicazione.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{MongoDB}: permette di inizializzare, leggere e scrivere il database.
+\end{itemize}
 
 \begin{samepage}
 \subparagraph{Api\-::Input\-Limitation}\label{api-limiti}\mbox{}\\
@@ -200,7 +202,7 @@ La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra 
 Rappresenta la base per tutte le bubble.
 \textbf{Scopo:}\\
 Questa bolla gestisce le comunicazioni tra l'interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica e rimanda all'interfaccia gli eventuali output secondo le direttive fornite dall'utente.\\
-\textbf{Dipendenze:}\\
+\textbf{Dipendenze:}
 \begin{itemize}
 	\item \texttt{Model::Api::DBOperations::DBOperations}: dalla GenericBubble è possibile richiamare i metodi per la manipolazione del database;
 	\item \texttt{Model::Api::LifeCycle::LifeCycle}: all'interno della bubble generica è possibile settare le impostazioni per definirne il ciclo di vita.
@@ -234,84 +236,104 @@ Gli elementi della GUI possono essere inseriti e raggruppati in un contenitore. 
 \textbf{Descrizione:}\\
 La classe contiene una collezione di uno o più elementi della GUI.\\ 
 \textbf{Utilizzo:}\\
-Questa classe permette l'inserimento, la manipolazione e la rimozione di elementi dall'interno della collezione della GUI. 
+Questa classe permette l'inserimento, la manipolazione e la rimozione di elementi dall'interno della collezione della GUI.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: essendo un contenitore generico per gli elementi grafici, GUIContainer è una aggregazione di componenti React.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Label}\label{gui-label}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe Label offre all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
 Questa classe offre la possibilità di renderizzare un output nella bubble.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
 
 \subparagraph{View\-::Gui\-::File}\label{gui-file}\mbox{}\\
 \textbf{Descrizione:}\\
 Componente progettato per consentire alla bubble e al suo utilizzatore finale l'interazione con file generici.\\
 \textbf{Utilizzo:}\\
 Consente il caricamento di file nella bubble da parte dell'utente e permette alla stessa di rendere file generici disponibili ai suoi utilizzatori.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Button}\label{gui-button}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe che permette di inserire nella bubble un oggetto di tipo Button, per permettere alla stessa di interagire con i suoi utilizzatori.\\
 \textbf{Utilizzo:}\\
 Fornisce alla bubble la possibilità di interagire con l'utente suo utilizzatore mediante un bottone.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Text\-Edit}\label{gui-tedit}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe volta a fornire una funzionalità di interazione con l'utente mediante la modifica di testo.\\
 \textbf{Utilizzo:}\\
 Consentire all'utente l'inserimento nella bubble di testo ove fosse necessario.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Text\-View}\label{gui-tview}\mbox{}\\
 \textbf{Descrizione:}\\
 Classe volta alla realizzazione di un elemento in grado di mostrare all'utente del testo non modificabile.\\
 \textbf{Utilizzo:}\\
 Consentire all'utente la visualizzazione di testo nella bubble.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Image}\label{gui-image}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette di estendere le funzionalità della bubble mediante l'interazione con immagini.\\
 \textbf{Utilizzo:}\\
 Consentire nella bubble la visualizzazione di immagini.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Check\-Button}\label{gui-check}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe CheckButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Radio\-Button}\label{gui-radio}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe RadioButton porta all'interno del framework la possibilità di utilizzare l'equivalente presente in HTML.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un bottone selezionabile in modo esclusivo.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Pie\-Chart}\label{gui-pie}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe PieChart porta all'interno del framework la possibilità di utilizzare grafici a torta.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a torta per l'elaborazione grafica di dati.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
 
 \subparagraph{View\-::Gui\-::Bar\-Chart}\label{gui-bar}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe BarChart porta all'interno del framework la possibilità di utilizzare grafici a istogramma.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire un grafico a istogramma per l'elaborazione grafica di dati.\\
-\textbf{Relazioni con le altre classi:}\\
-Questa classe rappresenta un elemento grafico, deriva da GUI e ne eredita i metodi.
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{React::Component}: interfaccia implementata.
+\end{itemize}
