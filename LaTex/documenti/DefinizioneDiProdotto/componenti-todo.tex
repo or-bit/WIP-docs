@@ -116,14 +116,15 @@ Viene utilizzata per gestire la view della To-do list.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà degli elementi della lista.
+	\item \field{- checkBox: CheckBox}: checkBox per l'elemento;
+	\item \field{- label: Label}: label per l'elemento; 
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ ListItem(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ ListItem(label: Label)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array contenente le proprietà degli elementi.
+		\item \param{label: Label}: etichetta per l'elemento;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}

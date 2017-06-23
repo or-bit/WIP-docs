@@ -159,7 +159,7 @@ Classe che permette di effettuare richieste a API esterne.
 	\begin{itemize}
 		\item \param{url: string}: URI dell'API;
 	\end{itemize}
-	\item \method{+ getInitialState(): Object}: ritorna lo stato iniziale della classe, sotto forma di oggetto;
+	\item \method{+ getInitialState(): JSON}: ritorna lo stato iniziale della classe, sotto forma di oggetto;
 	\item \method{+ componentWillMount(): void}: aggiorna in memoria la risposta ricevuta;
 	\item \method{+ componentDidMount(): void}: effettua la richiesta vera e propria.
 \end{itemize}
@@ -259,12 +259,12 @@ Viene utilizzata per connettere la bubble al database e effettuare operazioni su
 	\item \method{+ readOne(collectionName: string, filter: Object): Promise}: effettua una ricerca e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
 	\begin{itemize}
 		\item \param{collectionName: string}: nome della collezione MongoDB in cui cercare;
-		\item \param{filter: Object}: query di ricerca sotto forma di oggetto;
+		\item \param{filter: JSON}: query di ricerca sotto forma di oggetto;
 	\end{itemize}
-	\item \method{+ insertOne(collectionName: string, element: Object): Promise}: inserisce un elemento nella collezione indicata e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
+	\item \method{+ insertOne(collectionName: string, element: JSON): Promise}: inserisce un elemento nella collezione indicata e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
 	\begin{itemize}
 		\item \param{collectionName: string}: nome della collezione;
-		\item \param{element: Object}: elemento da inserire.
+		\item \param{element: JSON}: elemento da inserire.
 	\end{itemize}
 \end{itemize}
 
@@ -458,7 +458,7 @@ Classe che permette di effettuare confronti tramite espressioni regolari.
 		\item \param{strings: string[]}: array contenente le stringhe da cercare;
 	\end{itemize}
 	\item \method{+ toString(): string}: ritorna l'espressione regolare sotto forma di stringa;
-	\item \method{+ execMatch(string: string): Object[]}: esegue la ricerca dell'espressione regolare costruita all'interno della stringa \texttt{string}, e ritorna un oggetto contenente informazioni sul match in caso sia presente, null altrimenti:
+	\item \method{+ execMatch(string: string): JSON}: esegue la ricerca dell'espressione regolare costruita all'interno della stringa \texttt{string}, e ritorna un oggetto contenente informazioni sul match in caso sia presente, null altrimenti:
 	\begin{itemize}
 		\item \param{string: string}: stringa su cui effettuare la ricerca;
 	\end{itemize}
@@ -1013,13 +1013,13 @@ Viene utilizzata per i bottoni radio all'interno della bubble.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ RadioButton(value: string, groupName: string, checked: boolean, label: string, optional: Object[])}: costruttore della classe, assegna gli attributi:
+	\item \method{+ RadioButton(value: string, groupName: string, checked: boolean, label: string, optional: JSON)}: costruttore della classe, assegna gli attributi:
 	\begin{itemize}
 		\item \param{value: string}: valore del bottone;
 		\item \param{groupName: string}: nome del gruppo di appartenenza;
 		\item \param{checked: boolean}: setta il bottone come selezionato se true (solo uno per gruppo dovrebbe avere questo parametro a true);
 		\item \param{label: string}: descrizione testuale del bottone;
-		\item \param{optional: Object[]}: array di oggetti contenente proprietà opzionali;
+		\item \param{optional: JSON}: array di oggetti contenente proprietà opzionali;
 	\end{itemize}
 	\item \method{+ getValuel(): string}: getter per \texttt{value};
 	\item \method{+ setValue(value: string): void}: setter per \texttt{value}:
