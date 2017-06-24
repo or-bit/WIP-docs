@@ -36,7 +36,7 @@ Verrà usato come contenitore per le variabili degli elementi di input e output 
 
 \subsubsection{API del framework}
 Ciascun package contiene classi di metodi, i quali garantiscono funzionalità che possono essere combinate nel corpo della bubble al fine di determinarne la business logic.\\
-Data la natura del progetto non sono rappresentate connessioni tra i vari package riportati nel diagramma sopra, in quanto, essendo questa parte del prodotto un framework volto a garantire la possibilità di creare bubble interattive a sviluppatori terzi, verrà perseguito l'obiettivo di massimizzare l'indipendenza tra queste funzionalità in maniera tale da altrettanto massimizzare le possibilità di riutilizzo delle stesse.
+Data la natura del progetto non sono rappresentate connessioni tra i vari package riportati nel diagramma sopra, in quanto, essendo questa parte del prodotto un framework volto a garantire la possibilità di creare bubble interattive a sviluppatori terzi, verrà perseguito l'obiettivo di massimizzare l'indipendenza tra queste funzionalità in maniera tale da incrementare le possibilità di riutilizzo delle stesse.
 
 \paragraph{Package interni}\mbox{}
 
@@ -199,7 +199,7 @@ L’insieme di questi elementi e le loro interazioni definiranno il comportament
 \end{samepage}
 \textbf{Descrizione:}\\
 La classe Generic Bubble permette di istanziare e gestire il flusso di dati tra la parte di interfaccia e la parte funzionale di una bubble.\\
-Rappresenta la base per tutte le bubble.
+Rappresenta la base per tutte le bubble. \\
 \textbf{Scopo:}\\
 Questa bolla gestisce le comunicazioni tra l'interfaccia e la parte di business logic. Invia gli input ricevuti alla rispettiva componente logica e rimanda all'interfaccia gli eventuali output secondo le direttive fornite dall'utente.\\
 \textbf{Dipendenze:}
