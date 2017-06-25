@@ -21,17 +21,17 @@ L'avanzamento dei processi è stato verificato sulla base di quanto riportato ne
 	
 	\endlastfoot
 	
-	\hline \NormeDiProgetto{} &  & 40-100 & 50-100 & Superato\\
-	\hline \PianoDiProgetto{} &  & 40-100 & 50-100 & Superato \\
-	\hline \PianoDiQualifica{} &  & 40-100 & 50-100 & Superato \\
-	\hline \AnalisiDeiRequisiti{} &  & 40-100 & 50-100 & Superato \\
-	\hline \Glossario{} &  & 40-100 & 50-100 & Superato \\
-	\hline \SpecificaTecnica{} &  & 40-100 & 50-100 & Superato\\
-	\hline \DefinizioneDiProdotto{} &  & 40-100 & 50-100 & Superato\\
-	\hline Demo User manual &  & 6-12 & 6-10 & Superato\\
-	\hline Framework User manual &  & 6-12 & 6-10 & Superato\\
-	\hline VerbaleInterno 18\_06\_2017 &  & 40-100 & 50-100 & Superato \\
-	\hline VerbaleEsterno 11\_06\_2017 &  & 40-100 & 50-100 & Superato \\
+	\hline \NormeDiProgetto{} & 80 & 40-100 & 50-100 & Superato\\
+	\hline \PianoDiProgetto{} & 80 & 40-100 & 50-100 & Superato \\
+	\hline \PianoDiQualifica{} & 82 & 40-100 & 50-100 & Superato \\
+	\hline \AnalisiDeiRequisiti{} & 92 & 40-100 & 50-100 & Superato \\
+	\hline \Glossario{} & 65 & 40-100 & 50-100 & Superato \\
+	\hline \SpecificaTecnica{} & 85 & 40-100 & 50-100 & Superato\\
+	\hline \DefinizioneDiProdotto{} & 78 & 40-100 & 50-100 & Superato\\
+	\hline Demo User manual & 8.3 & 6-12 & 6-10 & Superato\\
+	\hline Framework User manual & 7.9 & 6-12 & 6-10 & Superato\\
+	\hline VerbaleInterno 18\_06\_2017 & 87 & 40-100 & 50-100 & Superato \\
+	\hline VerbaleEsterno 11\_06\_2017 & 70 & 40-100 & 50-100 & Superato \\
 	\hline VerbaleInterno 25\_04\_2017 & 75 & 40-100 & 50-100 & Superato \\
 	\hline VerbaleInterno 10\_04\_2017 & 93 & 40-100 & 50-100 & Superato \\
 	\hline VerbaleInterno 29\_03\_2017 & 85 & 40-100 & 50-100 & Superato \\
@@ -51,8 +51,14 @@ L'avanzamento dei processi è stato verificato sulla base di quanto riportato ne
 
 
 \paragraph{Fallimento dei test}\mbox{}\\
-%La percentuale di test falliti sulla compilazione dei documenti ottenuta è del 13\%, un valore che ricade nel range di accettazione di questa metrica secondo quanto imposto da questo documento. \\
-%Il fallimento rilevato in questa metrica nella revisione precedente ha portato ad una maggiore attenzione all'evitare errori nella compilazione dei documenti in \LaTeX, riducendo il numero di test falliti.
+La percentuale di test falliti sulla compilazione dei documenti e del codice ottenuta è del 7\%, un valore che ricade nel range di accettazione di questa metrica secondo quanto imposto da questo documento. \\
+Il fallimento rilevato deriva principalmente dalla riorganizzazione dei contenuti nel codice sorgente e dal processo di integrazione a cui è stata sottoposta la \DemoName{}, la quale ora si attiene molto più allo stile del framework, utilizzandolo in tutte le sue parti.\\
+A seguire il grafico della tendenza di successo e fallimento dei test eseguiti:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./test.png}
+	\caption{Tendenza esito test eseguiti}
+\end{figure}
 
 \paragraph{Metriche di progettazione e di codifica}\mbox{}\\
 Vengono ora presentati i risultati ottenuti dalle misurazioni relativamente alle metriche di progettazione e di codifica:
@@ -83,20 +89,13 @@ Vengono ora presentati i risultati ottenuti dalle misurazioni relativamente alle
 	\hline Code coverage &  & 40-100 & 60-100 & Superato \\
 	\hline Branch coverage &  & 70-100 & 80-100 & Superato \\
 	\hline Function coverage &  & 70-100 & 80-100 & Superato \\
-	\hline Test di unità eseguiti &  & 85-100 & 100 & Non superato \\
-	\hline Test di integrazione eseguiti &  & 60-100 & 70-100 & Non superato \\
-	\hline Test di sistema eseguiti &  & 70-100 & 80-100 & Non superato \\
-	\hline Test superati &  & 85-100 & 100 & Superato \\
+	\hline Test di unità eseguiti & 83 & 85-100 & 100 & Non superato \\
+	\hline Test di integrazione eseguiti & 68 & 60-100 & 70-100 & Superato \\
+	\hline Test di sistema eseguiti & 70 & 70-100 & 80-100 & Superato \\
+	\hline Test superati & 90 & 85-100 & 100 & Superato \\
 	\hline
 	\caption{Metriche di processo - \RA{}}
 \end{longtable}
-
-A seguire il grafico della tendenza di successo e fallimento dei test eseguiti:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{./test.png}
-	\caption{Tendenza esito test eseguiti}
-\end{figure}
 
 \paragraph{Metriche di prodotto}\mbox{}\\
 \begin{longtable}{|m{5cm}|c|c|c|c|}
