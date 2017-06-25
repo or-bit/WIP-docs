@@ -25,14 +25,6 @@ The functional element Database is based on the \glossario{MongoDB} collection s
 	\caption{MongoDB}
 \end{figure}
 
-\subsubsection{BubbleMemory}
-\glossario{BubbleMemory} can emit signals to alert other components when the data collections that it stores is subject to changes. Different types of actions can operate on these collections, storing new objects, removing or editing them. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/4framework_model_memory.png}
-	\caption{BubbleMemory}
-\end{figure}
-
 \subsubsection{MatchRegularExpr}
 MatchRegularExpr stores a regular expression and allows the user to execute different methods of MatchRegularExpr on some text.
 It can either operate in \glossario{Case Sensitive} Mode or Multi-line mode and can execute multiple matches for a given text.
@@ -58,7 +50,7 @@ An action is executed on an object, is is described by a string, in the followin
 \end{figure}
 
 \subsubsection{IDGenerator}
-IDGenerator help generating ids for a MongoDB DataBase. 
+IDGenerator generates random id objects for a MongoDB DataBase. It is possible to get a String version of the id.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/idGenerator.png}
