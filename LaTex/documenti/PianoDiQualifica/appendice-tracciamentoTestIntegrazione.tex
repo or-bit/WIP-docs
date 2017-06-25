@@ -60,8 +60,8 @@
 	\hline \test{I}{L28} & Verificare che l'invio di un ordinazione da parte di un utente sia immagazzinata all'interno del database e che venga correttamente inoltrata allo Chef & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	\hline \test{I}{L29} & Verificare che con l'invio di un ordinazione da parte di un Customer con dati sbagliati l'ordinazione non venga salvata, non venga inoltrata allo Chef e venga invece ritornato all'utente un messaggio di errore & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	
-	\hline \test{I}{L30} & Verificare che con l'invio dei dati personali con dati corretti i dati vengano correttamente salvati nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I}{L31} & Verificare che con l'invio di dati personali con dati non corretti i dati non vengono salvati nel database e venga inviata una segnalazione di errore all'utente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L30} & Verificare che con l'invio dei dati personali corretti i dati vengano correttamente salvati nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L31} & Verificare che con l'invio di dati personali non corretti i dati non vengano salvati nel database e venga inviata una segnalazione di errore all'utente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	
 	\hline \test{I}{L32} & Verificare che con l'arrivo di un'ordinazione allo Chef l'ordinazione sia inserita nella to-do list dello Chef & DemoBubble\&eat::Restaurant:: Chef::BubbleChef\\
 	\hline \test{I}{L33} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef all'interno dell'ordine il piatto sia impostato come pronto & DemoBubble\&eat::Restaurant:: OrderGateway::Order::Order\\
@@ -71,7 +71,7 @@
 	\hline \test{I}{L35} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef con errore nel salvataggio venga mostrato allo Chef un messaggio d'errore & Demo Bubble\&eat::Restaurant:: Chef::BubbleChef\\
 	
 	\hline \test{I}{L36} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Deliveryman & DemoBubble\&eat::Restaurant:: Deliveryman::BubbleDeliveryman\\
-	\hline \test{I}{L37} & Verificare che al segnale di completamento della consegna da parte del Deliveryman il segnale arrivi correttamente correttamente all'Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L37} & Verificare che al segnale di completamento della consegna da parte del Deliveryman il segnale arrivi correttamente all'Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	\hline \test{I}{L38} & Verificare che al segnale di non completamento della consegna da parte del Deliveryman il segnale arrivi correttamente all’Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	\hline \test{I}{L39} & Verificare che al segnale di carenza di un ingrediente l'ingrediente mancante sia correttamente visualizzato nella lista del Purchasing Manager & DemoBubble\&eat::Restaurant:: PurchasingManager::BubblePurchasingManager\\
 	\hline \test{I}{L40} & Verificare che al segnale di ingrediente acquistato da parte del Purchasing Manager il dato sia correttamente salvato nel database e vengano incrementati i valori relativi a tale ingrediente nella lista delle scorte & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
