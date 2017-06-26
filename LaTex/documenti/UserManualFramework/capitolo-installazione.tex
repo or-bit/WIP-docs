@@ -10,14 +10,27 @@ To be able to install the Framework, npm v4.2.0 and nodejs v7.10.0 are required.
 \subsection{Installation}
 
 To install the Framework  please follow this procedure:
+1. Install rocket.chat (MAC OSX / LINUX):
 \begin{itemize}
-    \item create the project folder;
-    \item move in to the project folder;
-    \item ``npm init creates server project'';
-    \item ``npm i -g create-react-app'';
-    \item ``create-react-app frontend'';
-    \item ``cd frontend'';
-    \item ``npm i -S monolith-frontend''. 
+    \item ``curl https://install.meteor.com/ | sh'';
+    \item ``git clone git@github.com:RocketChat/Rocket.Chat.git'';
+    \item ``cd Rocket.chat'';
+    \item ``meteor npm install''; 
 \end{itemize}
 
-For further reference: https://github.com/facebookincubator/create-react-app .
+2. Install this integration package
+  From Rocket.Chat root source folder:
+ \begin{itemize}
+    \item ``git clone https://github.com/or-bit/monolith-rocketchat.git packages/monolith'';
+    \item ``meteor add monolith'';
+\end{itemize}
+
+# How do you use this package?
+From Rocket.Chat root source folder:
+\begin{itemize}
+\item navigate to packages/monolith-rocketchat
+\item create a file named "routes.js"
+\item inside "routes.js" you must write 2 objects:   url (type String)  routes (type Object)
+\end{itemize}
+
+The url string is the base url of your webapp, for example: "http://my-heroku-app.herokuapp.com".
